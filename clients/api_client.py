@@ -1,7 +1,8 @@
 from typing import Any
 
 from httpx import Client, Response, QueryParams, URL
-from httpx._types import RequestData, RequestFile
+
+# from httpx._types import RequestData, RequestFile
 
 
 class ApiClient:
@@ -31,8 +32,8 @@ class ApiClient:
         self,
         url: URL | str,
         json: Any | None = None,
-        data: RequestData | None = None,
-        files: RequestFile | None = None,
+        data: dict[str, str] | None = None,
+        files: str | None = None,
     ) -> Response:
         """Отправляет HTTP POST-запрос на указанный URL.
 

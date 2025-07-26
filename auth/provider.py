@@ -3,7 +3,10 @@ from typing import Protocol, TypeVar, Any
 from httpx import Response
 from pydantic import BaseModel, EmailStr
 
-from clients.authentication.authentication_client import AuthenticationClient
+from clients.authentication.authentication_client import (
+    AuthenticationClient,
+    LoginRequestDict,
+)
 
 T = TypeVar("T", bound=Any)
 Credentials = dict[str, Any]
@@ -71,6 +74,7 @@ class AuthClientProvider(IAuthProvider[Token]):
         Returns:
             Token: Объект токена доступа, извлеченный из JSON-ответа.
         """
+        print(response.json())
         data = TokenResponse(**response.json())
         return data.token
 
@@ -88,8 +92,11 @@ class AuthClientProvider(IAuthProvider[Token]):
         """
         try:
             user_cred = UserCredentials(**credintials)
-            response = self._client.login_api(user_cred.model_dump())
-            return self._parse_token_response(response)
+            print(f"{user_cred=}, {user_cred.model_dump()}")
+            response = self._client.login_api(
+                LoginRequestDict(**user_cred.model_dump())
+            )
+            return self._parse_token_response(response).accessToken
         except Exception as e:
             raise ValueError(f"Authentication failed: {str(e)}") from e
 
@@ -110,7 +117,7 @@ class AuthClientProvider(IAuthProvider[Token]):
 
         try:
             response = self._client.refresh_api(refresh_data)
-            return self._parse_token_response(response)
+            return self._parse_token_response(response).refreshToken
         except Exception as e:
             raise ValueError(
                 f"Обновление токена завершилось с ошибкой: {str(e)}"
