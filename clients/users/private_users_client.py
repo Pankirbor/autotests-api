@@ -5,6 +5,26 @@ from httpx import Response
 from clients.api_client import ApiClient
 
 
+class User(TypedDict):
+    """
+    Описание структуры пользователя.
+    """
+
+    id: str
+    email: str
+    lastName: str
+    firstName: str
+    middleName: str
+
+
+class GetUserResponseDict(TypedDict):
+    """
+    Описание структуры ответа получения пользователя.
+    """
+
+    user: User
+
+
 class UserUpdateRequestDict(TypedDict):
     """Класс, определяющий структуру данных для обновления информации о пользователе.
 
@@ -66,3 +86,7 @@ class PrivateUsersClient(ApiClient):
             Response: Ответ сервера подтверждающий удаление пользователя.
         """
         return self.delete(f"/api/v1/users/{user_id}")
+
+    def get_user(self, user_id: str) -> GetUserResponseDict:
+        response = self.get_user_api(user_id)
+        return response.json()

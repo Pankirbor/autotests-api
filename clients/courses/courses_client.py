@@ -3,6 +3,23 @@ from typing import TypedDict
 from httpx import Response
 
 from clients.api_client import ApiClient
+from clients.files.files_client import File
+from clients.users.private_users_client import User
+
+
+class Course(TypedDict):
+    """
+    Описание структуры курса.
+    """
+
+    id: str
+    title: str
+    maxScore: int
+    minScore: int
+    description: str
+    previewFile: File  # Вложенная структура файла
+    estimatedTime: str
+    createdByUser: User
 
 
 class GetCoursesQueryDict(TypedDict):
@@ -37,6 +54,14 @@ class UpdateCourseRequestDict(TypedDict):
     minScore: int | None
     description: str | None
     estimatedTime: str | None
+
+
+class CreateCourseResponseDict(TypedDict):
+    """
+    Описание структуры ответа создания курса.
+    """
+
+    course: Course
 
 
 class CoursesClient(ApiClient):
@@ -101,3 +126,9 @@ class CoursesClient(ApiClient):
             Response: Ответ сервера подтверждающий удаление курса.
         """
         return self.delete(f"/api/v1/courses/{course_id}")
+
+    def create_course(
+        self, request: CreateCourseRequestDict
+    ) -> CreateCourseResponseDict:
+        response = self.create_course_api(request)
+        return response.json()

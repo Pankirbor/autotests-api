@@ -1,27 +1,12 @@
-from typing import TypedDict
-
 from httpx import Response
 
 from clients.api_client import ApiClient
 
-
-class LoginRequestDict(TypedDict):
-    """Класс, определяющий структуру данных для запроса входа в систему.
-
-    Содержит обязательные поля для аутентификации пользователя.
-    """
-
-    username: str
-    password: str
-
-
-class RefreshRequestDict(TypedDict):
-    """Класс, представляющий структуру данных для запроса обновления токена.
-
-    Определяет обязательные ключи и их типы для передачи refresh-токена серверу.
-    """
-
-    refreshToken: str
+from clients.authentication.types import (
+    LoginRequestDict,
+    LoginResponseDict,
+    RefreshRequestDict,
+)
 
 
 class AuthenticationClient(ApiClient):
@@ -48,3 +33,17 @@ class AuthenticationClient(ApiClient):
             Response: Ответ сервера с новым токеном доступа.
         """
         return self.post("/api/v1/authentication/refresh", json=request)
+
+    def login(self, request: LoginRequestDict) -> LoginResponseDict:
+        """Выполняет аутентификацию пользователя и возвращает обработанный JSON-ответ.
+
+        Args:
+            request (LoginRequestDict): Учетные данные для входа в систему
+                (email и пароль пользователя).
+
+        Returns:
+            LoginResponseDict: Сериализованный JSON-ответ сервера, содержащий
+                информацию о результате аутентификации и токенах.
+        """
+        response = self.login_api(request)
+        return response.json()
