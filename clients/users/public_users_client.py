@@ -3,6 +3,7 @@ from typing import TypedDict
 from httpx import Response
 
 from clients.api_client import ApiClient
+from clients.public_http_builder import get_public_http_client
 from clients.users.users_schema import CreateUserRequestSchema, UserResponseSchema
 
 
@@ -34,3 +35,13 @@ class PublicUsersClient(ApiClient):
         """
         response = self.create_user_api(request)
         return UserResponseSchema.model_validate_json(response.text)
+
+
+def get_public_users_client() -> PublicUsersClient:
+    """
+    Функция создаёт экземпляр PublicUsersClient с уже настроенным HTTP-клиентом.
+
+    Returns:
+        PublicUsersClient: Экземпляр класса для работы с публичными эндпоинтами API.
+    """
+    return PublicUsersClient(client=get_public_http_client())

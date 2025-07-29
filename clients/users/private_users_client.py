@@ -3,7 +3,9 @@ from typing import TypedDict
 from httpx import Response
 
 from clients.api_client import ApiClient
+from clients.authentication.authentication_schema import AuthenticationUserSchema
 from clients.users.users_schema import UserResponseSchema, UpdateUserRequestSchema
+from clients.private_http_builder import get_private_http_client
 
 
 class PrivateUsersClient(ApiClient):
@@ -62,3 +64,16 @@ class PrivateUsersClient(ApiClient):
     def get_user(self, user_id: str) -> UserResponseSchema:
         response = self.get_user_api(user_id)
         return UserResponseSchema.model_validate_json(response.text)
+
+
+def get_private_users_client(user: AuthenticationUserSchema) -> PrivateUsersClient:
+    """
+    Функция создаёт экземпляр PrivateUsersClient с уже настроенным HTTP-клиентом.
+
+    Args:
+        user (AuthenticationUserSchema): Пользователь для авторизации.
+
+    Returns:
+        PrivateUsersClient: Экземпляр PrivateUsersClient с авторизованным HTTP-клиентом.
+    """
+    return PrivateUsersClient(client=get_private_http_client(user))

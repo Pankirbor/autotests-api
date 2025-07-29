@@ -1,5 +1,6 @@
-from clients.client_factory import client_factory
 from clients.authentication.authentication_schema import AuthenticationUserSchema
+from clients.users.public_users_client import get_public_users_client
+from clients.users.private_users_client import get_private_users_client
 from clients.users.users_schema import CreateUserRequestSchema
 from tools.fakers import get_random_email
 from tools.console_output_formatter import print_dict
@@ -13,7 +14,7 @@ create_user_request = CreateUserRequestSchema(
         "middleName": "none",
     }
 )
-public_users_client = client_factory.create_public_users_client()
+public_users_client = get_public_users_client()
 
 create_user_response = public_users_client.create_user(create_user_request)
 print_dict(
@@ -23,7 +24,7 @@ print_dict(
 )
 
 
-private_users_client = client_factory.create_private_users_client(
+private_users_client = get_private_users_client(
     AuthenticationUserSchema(
         email=create_user_request.email, password=create_user_request.password
     )

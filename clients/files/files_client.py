@@ -3,7 +3,9 @@ from typing import TypedDict
 from httpx import Response
 
 from clients.api_client import ApiClient
+from clients.authentication.authentication_schema import AuthenticationUserSchema
 from clients.files.files_schema import UploadFileRequestSchema, UploadFileResponseSchema
+from clients.private_http_builder import get_private_http_client
 
 
 class FilesClient(ApiClient):
@@ -63,3 +65,13 @@ class FilesClient(ApiClient):
         """
         response = self.upload_file_api(request)
         return UploadFileResponseSchema.model_validate_json(response.text)
+
+
+def get_files_client(user: AuthenticationUserSchema) -> FilesClient:
+    """
+    Функция создаёт экземпляр FilesClient с уже настроенным HTTP-клиентом.
+
+    Returns:
+        FilesClient: Экземпляр FilesClient с настроенным HTTP-клиентом.
+    """
+    return FilesClient(client=get_private_http_client(user))

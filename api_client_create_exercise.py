@@ -1,8 +1,11 @@
-from clients.client_factory import client_factory
 from clients.authentication.authentication_schema import AuthenticationUserSchema
-from clients.courses.courses_schema import CreateCourseRequestSchema
+from clients.exercises.exercises_client import get_exercises_client
 from clients.exercises.exercises_schema import CreateExerciseRequestSchema
+from clients.courses.courses_client import get_courses_client
+from clients.courses.courses_schema import CreateCourseRequestSchema
+from clients.files.files_client import get_files_client
 from clients.files.files_schema import UploadFileRequestSchema
+from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema
 from tools.console_output_formatter import print_dict
 from tools.fakers import get_random_email
@@ -24,7 +27,7 @@ upload_file_request = UploadFileRequestSchema(
     }
 )
 
-public_users_client = client_factory.create_public_users_client()
+public_users_client = get_public_users_client()
 created_user = public_users_client.create_user(create_user_request)
 
 print_dict(
@@ -37,7 +40,7 @@ login_data = AuthenticationUserSchema(
     email=create_user_request.email, password=create_user_request.password
 )
 
-file_client = client_factory.create_files_client(login_data)
+file_client = get_files_client(login_data)
 created_file = file_client.upload_file(upload_file_request)
 
 print_dict(
@@ -59,7 +62,7 @@ create_course_request = CreateCourseRequestSchema(
     }
 )
 
-courses_client = client_factory.create_courses_client(login_data)
+courses_client = get_courses_client(login_data)
 created_course = courses_client.create_course(create_course_request)
 
 print_dict(
@@ -81,7 +84,7 @@ create_exercises_request = CreateExerciseRequestSchema(
     }
 )
 
-exercises_client = client_factory.create_exercises_client(login_data)
+exercises_client = get_exercises_client(login_data)
 created_exercise = exercises_client.create_exercise(create_exercises_request)
 
 print_dict(

@@ -1,7 +1,9 @@
-from clients.client_factory import client_factory
 from clients.authentication.authentication_schema import AuthenticationUserSchema
+from clients.courses.courses_client import get_courses_client
 from clients.courses.courses_schema import CreateCourseRequestSchema
+from clients.files.files_client import get_files_client
 from clients.files.files_schema import UploadFileRequestSchema
+from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema
 from tools.console_output_formatter import print_dict
 from tools.fakers import get_random_email
@@ -25,7 +27,7 @@ create_file_request = UploadFileRequestSchema(
     upload_file="./testdata/files/image.jpg",
 )
 
-puplic_users_client = client_factory.create_public_users_client()
+puplic_users_client = get_public_users_client()
 create_user_response = puplic_users_client.create_user(create_user_request)
 
 print_dict(
@@ -34,7 +36,7 @@ print_dict(
     message=f"Пользователь: {create_user_response.user.first_name}",
 )
 
-files_client = client_factory.create_files_client(authentication_user)
+files_client = get_files_client(authentication_user)
 create_file_response = files_client.upload_file(create_file_request)
 
 print_dict(
@@ -43,7 +45,7 @@ print_dict(
     message=f"Файл: {create_file_response.file.filename}",
 )
 
-courses_client = client_factory.create_courses_client(authentication_user)
+courses_client = get_courses_client(authentication_user)
 create_course_request = CreateCourseRequestSchema(
     **{
         "title": "Основы Python",

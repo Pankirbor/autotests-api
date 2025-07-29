@@ -3,6 +3,7 @@ from typing import TypedDict
 from httpx import Response
 
 from clients.api_client import ApiClient
+from clients.authentication.authentication_schema import AuthenticationUserSchema
 from clients.exercises.exercises_schema import (
     GetExercisesQuerySchema,
     GetExercisesResponseSchema,
@@ -10,6 +11,7 @@ from clients.exercises.exercises_schema import (
     UpdateExerciseRequestSchema,
     ExerciseResponseSchema,
 )
+from clients.private_http_builder import get_private_http_client
 
 
 class ExercisesClient(ApiClient):
@@ -130,3 +132,16 @@ class ExercisesClient(ApiClient):
         """
         response = self.update_exercise_api(exercise_id, request)
         return ExerciseResponseSchema.model_validate_json(response.text)
+
+
+def get_exercises_client(user: AuthenticationUserSchema) -> ExercisesClient:
+    """
+    Создает экземпляр ExercisesClient с уже настроенным HTTP-клиентом.
+
+    Args:
+        user (AuthenticationUserSchema): Данные пользователя для авторизации.
+
+    Returns:
+        ExercisesClient: Экземпляр ExercisesClient с настроенным HTTP-клиентом.
+    """
+    return ExercisesClient(client=get_private_http_client(user))

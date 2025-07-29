@@ -1,6 +1,7 @@
 from httpx import Response
 
 from clients.api_client import ApiClient
+from clients.public_http_builder import get_public_http_client
 
 from clients.authentication.authentication_schema import (
     LoginRequestSchema,
@@ -16,7 +17,7 @@ class AuthenticationClient(ApiClient):
         """Отправляет запрос на аутентификацию пользователя.
 
         Args:
-            request (LoginRequestDict): Данные для входа в систему (логин/пароль и т.д.).
+            request (LoginRequestSchema): Данные для входа в систему (логин/пароль и т.д.).
 
         Returns:
             Response: Ответ сервера после выполнения запроса на аутентификацию.
@@ -29,7 +30,7 @@ class AuthenticationClient(ApiClient):
         """Обновляет токен доступа пользователя.
 
         Args:
-            request (RefreshRequestDict): Данные для обновления токена (refresh token и т.д.).
+            request (RefreshRequestSchema): Данные для обновления токена (refresh token и т.д.).
 
         Returns:
             Response: Ответ сервера с новым токеном доступа.
@@ -42,12 +43,22 @@ class AuthenticationClient(ApiClient):
         """Выполняет аутентификацию пользователя и возвращает обработанный JSON-ответ.
 
         Args:
-            request (LoginRequestDict): Учетные данные для входа в систему
+            request (LoginRequestSchema): Учетные данные для входа в систему
                 (email и пароль пользователя).
 
         Returns:
-            LoginResponseDict: Сериализованный JSON-ответ сервера, содержащий
+            LoginResponseSchema: Сериализованный JSON-ответ сервера, содержащий
                 информацию о результате аутентификации и токенах.
         """
         response = self.login_api(request)
         return LoginResponseSchema.model_validate_json(response.text)
+
+
+def get_authentication_client() -> AuthenticationClient:
+    """
+    Функция создаёт экземпляр AuthenticationClient с уже настроенным HTTP-клиентом
+
+    Returns:
+        AuthenticationClient: Экземпляр AuthenticationClient с настроенным HTTP-клиентом.
+    """
+    return AuthenticationClient(client=get_public_http_client())

@@ -1,6 +1,8 @@
 from httpx import Response
 
 from clients.api_client import ApiClient
+from clients.private_http_builder import get_private_http_client
+from clients.authentication.authentication_schema import AuthenticationUserSchema
 from clients.courses.courses_schema import (
     GetCoursesQuerySchema,
     CreateCourseRequestSchema,
@@ -86,3 +88,13 @@ class CoursesClient(ApiClient):
         """
         response = self.create_course_api(request)
         return CourseResponseSchema.model_validate_json(response.text)
+
+
+def get_courses_client(user: AuthenticationUserSchema) -> CoursesClient:
+    """
+    Функция создаёт экземпляр CoursesClient с уже настроенным HTTP-клиентом.
+
+    Returns:
+        CoursesClient: Экземпляр CoursesClient с авторизованным HTTP-клиентом.
+    """
+    return CoursesClient(client=get_private_http_client(user))
