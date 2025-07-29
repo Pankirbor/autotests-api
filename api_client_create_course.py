@@ -1,12 +1,13 @@
-from clients.client_factory import AuthenticationUserDict, client_factory
-from clients.courses.courses_client import CreateCourseRequestDict
-from clients.files.files_client import UploadFileRequestDict
-from clients.users.public_users_client import CreateUserRequestDict
+from clients.client_factory import client_factory
+from clients.authentication.authentication_schema import AuthenticationUserSchema
+from clients.courses.courses_schema import CreateCourseRequestSchema
+from clients.files.files_schema import UploadFileRequestSchema
+from clients.users.users_schema import CreateUserRequestSchema
 from tools.console_output_formatter import print_dict
 from tools.fakers import get_random_email
 
 
-create_user_request = CreateUserRequestDict(
+create_user_request = CreateUserRequestSchema(
     email=get_random_email(),
     password="string",
     lastName="string",
@@ -14,11 +15,11 @@ create_user_request = CreateUserRequestDict(
     middleName="string",
 )
 
-authentication_user = AuthenticationUserDict(
-    email=create_user_request["email"], password=create_user_request["password"]
+authentication_user = AuthenticationUserSchema(
+    email=create_user_request.email, password=create_user_request.password
 )
 
-create_file_request = UploadFileRequestDict(
+create_file_request = UploadFileRequestSchema(
     filename="python_course_preview_image.jpg",
     directory="courses",
     upload_file="./testdata/files/image.jpg",
@@ -28,34 +29,36 @@ puplic_users_client = client_factory.create_public_users_client()
 create_user_response = puplic_users_client.create_user(create_user_request)
 
 print_dict(
-    create_user_response,
+    create_user_response.model_dump(by_alias=True),
     title="Пользователь создан",
-    message=f"Пользователь: {create_user_response['user']['firstName']}",
+    message=f"Пользователь: {create_user_response.user.first_name}",
 )
 
 files_client = client_factory.create_files_client(authentication_user)
 create_file_response = files_client.upload_file(create_file_request)
 
 print_dict(
-    create_file_response,
+    create_file_response.model_dump(by_alias=True),
     title="Файл загружен",
-    message=f"Файл: {create_file_response['file']['filename']}",
+    message=f"Файл: {create_file_response.file.filename}",
 )
 
 courses_client = client_factory.create_courses_client(authentication_user)
-create_course_request = CreateCourseRequestDict(
-    title="Python",
-    maxScore=100,
-    minScore=10,
-    description="Python API course",
-    estimatedTime="2 weeks",
-    previewFileId=create_file_response["file"]["id"],
-    createdByUserId=create_user_response["user"]["id"],
+create_course_request = CreateCourseRequestSchema(
+    **{
+        "title": "Основы Python",
+        "maxScore": 100,
+        "minScore": 50,
+        "description": "Курс по основам программирования на Python для начинающих.",
+        "estimatedTime": "10 часов",
+        "previewFileId": create_file_response.file.id,
+        "createdByUserId": create_user_response.user.id,
+    }
 )
 create_course_response = courses_client.create_course(create_course_request)
 
 print_dict(
-    create_course_response,
+    create_course_response.model_dump(by_alias=True),
     title="Курс создан",
-    message=f"Курс: {create_course_response['course']['title']}",
+    message=f"Курс: {create_course_response.course.title}",
 )

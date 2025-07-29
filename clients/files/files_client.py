@@ -3,42 +3,13 @@ from typing import TypedDict
 from httpx import Response
 
 from clients.api_client import ApiClient
-
-
-class File(TypedDict):
-    """
-    Описание структуры файла.
-    """
-
-    id: str
-    url: str
-    filename: str
-    directory: str
-
-
-class UploadFileRequestDict(TypedDict):
-    """Класс, определяющий структуру данных для запроса загрузки файла.
-
-    Содержит обязательные параметры, необходимые для передачи файла на сервер.
-    """
-
-    filename: str
-    directory: str
-    upload_file: str
-
-
-class UploadFileResponseDict(TypedDict):
-    """
-    Описание структуры ответа создания файла.
-    """
-
-    file: File
+from clients.files.files_schema import UploadFileRequestSchema, UploadFileResponseSchema
 
 
 class FilesClient(ApiClient):
     """Клиент для взаимодействия с эндпоинтами API управления файлами."""
 
-    def upload_file_api(self, request: UploadFileRequestDict) -> Response:
+    def upload_file_api(self, request: UploadFileRequestSchema) -> Response:
         """Загружает файл на сервер.
 
         Args:
@@ -50,8 +21,11 @@ class FilesClient(ApiClient):
         """
         return self.post(
             "/api/v1/files",
-            data=request,
-            files={"upload_file": open(request["upload_file"], "rb")},
+            data=request.model_dump(
+                by_alias=True,
+                exclude={"upload_file"},
+            ),
+            files={"upload_file": open(request.upload_file, "rb")},
         )
 
     def get_file_api(self, file_id: str) -> Response:
@@ -76,6 +50,16 @@ class FilesClient(ApiClient):
         """
         return self.delete(f"/api/v1/files/{file_id}")
 
-    def upload_file(self, request: UploadFileRequestDict) -> UploadFileResponseDict:
+    def upload_file(self, request: UploadFileRequestSchema) -> UploadFileResponseSchema:
+        """
+        Загружает файл на сервер и возвращает информацию о нем.
+
+        Args:
+            request (UploadFileRequestSchema): Данные для загрузки файла.
+
+        Returns:
+            UploadFileResponseSchema: Сериализованный JSON-ответ сервера,
+            содержащий информацию о загруженном файле.
+        """
         response = self.upload_file_api(request)
-        return response.json()
+        return UploadFileResponseSchema.model_validate_json(response.text)

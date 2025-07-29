@@ -3,39 +3,7 @@ from typing import TypedDict
 from httpx import Response
 
 from clients.api_client import ApiClient
-
-
-class User(TypedDict):
-    """
-    Описание структуры пользователя.
-    """
-
-    id: str
-    email: str
-    lastName: str
-    firstName: str
-    middleName: str
-
-
-class GetUserResponseDict(TypedDict):
-    """
-    Описание структуры ответа получения пользователя.
-    """
-
-    user: User
-
-
-class UserUpdateRequestDict(TypedDict):
-    """Класс, определяющий структуру данных для обновления информации о пользователе.
-
-    Содержит необязательные поля, которые могут быть изменены при редактировании профиля.
-    Все поля допускают значение None, что означает отсутствие изменения конкретного параметра.
-    """
-
-    email: str | None
-    lastName: str | None
-    firstName: str | None
-    middleName: str | None
+from clients.users.users_schema import UserResponseSchema, UpdateUserRequestSchema
 
 
 class PrivateUsersClient(ApiClient):
@@ -64,7 +32,9 @@ class PrivateUsersClient(ApiClient):
         """
         return self.get(f"/api/v1/users/{user_id}")
 
-    def update_user_api(self, user_id: str, request: UserUpdateRequestDict) -> Response:
+    def update_user_api(
+        self, user_id: str, request: UpdateUserRequestSchema
+    ) -> Response:
         """Обновляет информацию о пользователе по его идентификатору.
 
         Args:
@@ -74,7 +44,9 @@ class PrivateUsersClient(ApiClient):
         Returns:
             Response: Ответ сервера после обновления данных пользователя.
         """
-        return self.patch(f"/api/v1/users/{user_id}", json=request)
+        return self.patch(
+            f"/api/v1/users/{user_id}", json=request.model_dump(by_alias=True)
+        )
 
     def delete_user_api(self, user_id: str) -> Response:
         """Удаляет пользователя по его идентификатору.
@@ -87,6 +59,6 @@ class PrivateUsersClient(ApiClient):
         """
         return self.delete(f"/api/v1/users/{user_id}")
 
-    def get_user(self, user_id: str) -> GetUserResponseDict:
+    def get_user(self, user_id: str) -> UserResponseSchema:
         response = self.get_user_api(user_id)
-        return response.json()
+        return UserResponseSchema.model_validate_json(response.text)

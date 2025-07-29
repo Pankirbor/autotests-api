@@ -60,7 +60,7 @@ class CreateUserRequestSchema(BaseUserSchema):
     отправкой запроса на создание пользователя.
     """
 
-    pass
+    password: str
 
 
 class CreateUserResponseSchema(BaseModel):

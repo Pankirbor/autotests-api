@@ -1,8 +1,9 @@
-from typing import TypedDict
-
 from httpx import Client
 
-from clients.authentication.types import LoginRequestDict
+from clients.authentication.authentication_schema import (
+    LoginRequestSchema,
+    AuthenticationUserSchema,
+)
 from clients import (
     AuthenticationClient,
     CoursesClient,
@@ -11,11 +12,6 @@ from clients import (
     PublicUsersClient,
     PrivateUsersClient,
 )
-
-
-class AuthenticationUserDict(TypedDict):
-    email: str
-    password: str
 
 
 class ClientFactory:
@@ -39,7 +35,7 @@ class ClientFactory:
         """
         return Client(base_url=self.base_url, timeout=self.timeout)
 
-    def _create_private_http_client(self, user: AuthenticationUserDict) -> Client:
+    def _create_private_http_client(self, user: AuthenticationUserSchema) -> Client:
         """Создает приватный HTTP-клиент с авторизацией через токен.
 
         Args:
@@ -52,14 +48,12 @@ class ClientFactory:
         """
         authentication_client = self.create_authentication_client()
         login_response = authentication_client.login(
-            LoginRequestDict(email=user.get("email"), password=user.get("password"))
+            LoginRequestSchema(email=user.email, password=user.password)
         )
         return Client(
             base_url=self.base_url,
             timeout=self.timeout,
-            headers={
-                "Authorization": f"Bearer {login_response['token']['accessToken']}"
-            },
+            headers={"Authorization": f"Bearer {login_response.token.access_token}"},
         )
 
     def create_authentication_client(self) -> AuthenticationClient:
@@ -79,7 +73,7 @@ class ClientFactory:
         return PublicUsersClient(client=self._create_public_http_client())
 
     def create_private_users_client(
-        self, user: AuthenticationUserDict
+        self, user: AuthenticationUserSchema
     ) -> PrivateUsersClient:
         """Создает клиент для работы с закрытыми эндпоинтами управления пользователями.
 
@@ -92,7 +86,7 @@ class ClientFactory:
         """
         return PrivateUsersClient(client=self._create_private_http_client(user))
 
-    def create_files_client(self, user: AuthenticationUserDict) -> FilesClient:
+    def create_files_client(self, user: AuthenticationUserSchema) -> FilesClient:
         """Создает клиент для работы с файлами.
 
         Args:
@@ -104,7 +98,7 @@ class ClientFactory:
         """
         return FilesClient(client=self._create_private_http_client(user))
 
-    def create_courses_client(self, user: AuthenticationUserDict) -> CoursesClient:
+    def create_courses_client(self, user: AuthenticationUserSchema) -> CoursesClient:
         """Создает клиент для работы с курсами.
 
         Args:
@@ -116,7 +110,9 @@ class ClientFactory:
         """
         return CoursesClient(client=self._create_private_http_client(user))
 
-    def create_exercises_client(self, user: AuthenticationUserDict) -> ExercisesClient:
+    def create_exercises_client(
+        self, user: AuthenticationUserSchema
+    ) -> ExercisesClient:
         """Создает клиент для работы с упражнениями.
 
         Args:
