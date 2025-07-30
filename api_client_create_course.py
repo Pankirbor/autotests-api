@@ -6,24 +6,15 @@ from clients.files.files_schema import UploadFileRequestSchema
 from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema
 from tools.console_output_formatter import print_dict
-from tools.fakers import get_random_email
 
 
-create_user_request = CreateUserRequestSchema(
-    email=get_random_email(),
-    password="string",
-    lastName="string",
-    firstName="string",
-    middleName="string",
-)
+create_user_request = CreateUserRequestSchema()
 
 authentication_user = AuthenticationUserSchema(
     email=create_user_request.email, password=create_user_request.password
 )
 
 create_file_request = UploadFileRequestSchema(
-    filename="python_course_preview_image.jpg",
-    directory="courses",
     upload_file="./testdata/files/image.jpg",
 )
 
@@ -47,15 +38,8 @@ print_dict(
 
 courses_client = get_courses_client(authentication_user)
 create_course_request = CreateCourseRequestSchema(
-    **{
-        "title": "Основы Python",
-        "maxScore": 100,
-        "minScore": 50,
-        "description": "Курс по основам программирования на Python для начинающих.",
-        "estimatedTime": "10 часов",
-        "previewFileId": create_file_response.file.id,
-        "createdByUserId": create_user_response.user.id,
-    }
+    preview_file_id=create_file_response.file.id,
+    created_by_user_id=create_user_response.user.id,
 )
 create_course_response = courses_client.create_course(create_course_request)
 

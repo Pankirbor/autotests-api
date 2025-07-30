@@ -1,7 +1,7 @@
 from uuid import uuid4
 
 from pydantic import BaseModel, Field, EmailStr
-from tools.fakers import get_random_email
+from tools.fakers import fake
 from tools.console_output_formatter import print_dict
 
 
@@ -21,7 +21,7 @@ class BaseUserSchema(BaseModel):
     """
 
     email: EmailStr = Field(
-        default_factory=get_random_email,
+        default_factory=fake.email,
         description="Электронная почта пользователя (валидный email)",
     )
 

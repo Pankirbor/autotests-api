@@ -1,10 +1,10 @@
 import httpx
 
 from tools.api_routes import APIRoutes
-from tools.fakers import get_random_email
+from tools.fakers import fake
 
 user_create_data = {
-    "email": get_random_email(),
+    "email": fake.email(),
     "password": "1234",
     "lastName": "Tolstoy",
     "firstName": "Leo",
@@ -16,7 +16,7 @@ user_login_data = {
     "password": user_create_data["password"],
 }
 user_update_data = {
-    "email": get_random_email(),
+    "email": fake.email(),
     "lastName": "Tolstoy",
     "firstName": "Leo",
     "middleName": "none",

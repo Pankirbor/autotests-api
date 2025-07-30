@@ -8,24 +8,10 @@ from clients.files.files_schema import UploadFileRequestSchema
 from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema
 from tools.console_output_formatter import print_dict
-from tools.fakers import get_random_email
 
-user_data = {
-    "email": get_random_email(),
-    "password": "1234",
-    "lastName": "Tolstoy",
-    "firstName": "Leo",
-    "middleName": "none",
-}
-create_user_request = CreateUserRequestSchema(**user_data)
+create_user_request = CreateUserRequestSchema()
 
-upload_file_request = UploadFileRequestSchema(
-    **{
-        "filename": "image.jpg",
-        "directory": "/course",
-        "upload_file": "./testdata/files/image.jpg",
-    }
-)
+upload_file_request = UploadFileRequestSchema(upload_file="./testdata/files/image.jpg")
 
 public_users_client = get_public_users_client()
 created_user = public_users_client.create_user(create_user_request)
@@ -51,16 +37,10 @@ print_dict(
 
 
 create_course_request = CreateCourseRequestSchema(
-    **{
-        "title": "Основы Python",
-        "maxScore": 100,
-        "minScore": 50,
-        "description": "Курс по основам программирования на Python для начинающих.",
-        "estimatedTime": "10 часов",
-        "previewFileId": created_file.file.id,
-        "createdByUserId": created_user.user.id,
-    }
+    preview_file_id=created_file.file.id,
+    created_by_user_id=created_user.user.id,
 )
+
 
 courses_client = get_courses_client(login_data)
 created_course = courses_client.create_course(create_course_request)
@@ -73,15 +53,7 @@ print_dict(
 
 
 create_exercises_request = CreateExerciseRequestSchema(
-    **{
-        "title": "Упражнение 1: Синтаксис Python",
-        "courseId": created_course.course.id,
-        "maxScore": 10,
-        "minScore": 5,
-        "orderIndex": 1,
-        "description": "Напишите первую программу на Python.",
-        "estimatedTime": "30 минут",
-    }
+    course_id=created_course.course.id
 )
 
 exercises_client = get_exercises_client(login_data)
