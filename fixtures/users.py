@@ -1,10 +1,6 @@
 from pydantic import BaseModel
 import pytest
 
-from clients.authentication.authentication_client import (
-    AuthenticationClient,
-    get_authentication_client,
-)
 from clients.authentication.authentication_schema import AuthenticationUserSchema
 from clients.users.users_schema import CreateUserRequestSchema, UserResponseSchema
 from clients.users.public_users_client import PublicUsersClient, get_public_users_client
@@ -67,16 +63,6 @@ def public_users_client() -> PublicUsersClient:
          с публичными users эндпоинтами API.
     """
     return get_public_users_client()
-
-
-@pytest.fixture
-def authentication_client() -> AuthenticationClient:
-    """Фикстура возвращает экземпляр AuthenticationClient.
-
-    Returns:
-        AuthenticationClient: Экземпляр класса для работы с аутентификацией.
-    """
-    return get_authentication_client()
 
 
 @pytest.fixture
