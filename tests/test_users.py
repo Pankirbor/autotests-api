@@ -9,6 +9,8 @@ from tools.assertions.base import assert_status_code
 from tools.assertions.users import assert_create_user_response
 
 
+@pytest.mark.regression
+@pytest.mark.users
 def test_create_user():
     """Тест создания пользователя."""
 
