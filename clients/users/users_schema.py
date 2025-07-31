@@ -30,6 +30,18 @@ class CreateUserRequestSchema(BaseModel):
     first_name: str = Field(alias="firstName", default_factory=fake.first_name)
     middle_name: str = Field(alias="middleName", default_factory=fake.middle_name)
 
+    def get_login_data(self):
+        """
+        Метод для получения данных для входа в систему.
+
+        Returns:
+            dict: Словарь с данными для входа в систему.
+        """
+        return {
+            "email": self.email,
+            "password": self.password,
+        }
+
 
 # Добавили описание структуры ответа создания пользователя
 class UserResponseSchema(BaseModel):
