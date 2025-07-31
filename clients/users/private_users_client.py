@@ -1,4 +1,4 @@
-from typing import TypedDict
+from functools import lru_cache
 
 from httpx import Response
 
@@ -66,6 +66,7 @@ class PrivateUsersClient(ApiClient):
         return UserResponseSchema.model_validate_json(response.text)
 
 
+@lru_cache(maxsize=None)
 def get_private_users_client(user: AuthenticationUserSchema) -> PrivateUsersClient:
     """
     Функция создаёт экземпляр PrivateUsersClient с уже настроенным HTTP-клиентом.

@@ -1,1 +1,8 @@
-pytest_plugins = ["fixtures.websocket", "fixtures.users", "fixtures.authentication"]
+pytest_plugins = [
+    "fixtures.authentication",
+    "fixtures.courses",
+    "fixtures.exercises",
+    "fixtures.files",
+    "fixtures.users",
+    "fixtures.websocket",
+]

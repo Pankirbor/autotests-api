@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
 
 from tools.fakers import fake
 
@@ -28,6 +28,7 @@ class AuthenticationUserSchema(LoginRequestSchema):
         password (str): Пароль пользователя.
     """
 
+    model_config = ConfigDict(frozen=True)
     pass
 
 
