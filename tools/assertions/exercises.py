@@ -67,3 +67,30 @@ def assert_get_exercise_response(
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
     assert_exercise(response.exercise, expected_response.exercise)
+
+
+def assert_update_exercise_response(
+    request: UpdateExerciseRequestSchema,
+    response: ExerciseResponseSchema,
+    exercise_id: int,
+):
+    """
+    Проверяет, что при обновлении упражнения данные в ответе соответствуют ожиданиям.
+
+    Args:
+        request (UpdateExerciseRequestSchema): Отправленные данные для обновления.
+        response (ExerciseResponseSchema): Ответ сервера после обновления.
+        exercise_id (int): Идентификатор упражнения, который должен быть в ответе.
+
+    Raises:
+        AssertionError: Если данные не совпадают.
+    """
+
+    assert_equal(response.exercise.id, exercise_id, "id")
+
+    for field_name in request.model_dump().keys():
+        assert_equal(
+            getattr(response.exercise, field_name),
+            getattr(request, field_name),
+            field_name,
+        )
