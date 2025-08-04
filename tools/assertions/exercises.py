@@ -1,3 +1,4 @@
+from clients.errors_schema import InternalErrorResponseSchema
 from clients.exercises.exercises_schema import (
     ExerciseSchema,
     ExerciseResponseSchema,
@@ -7,6 +8,7 @@ from clients.exercises.exercises_schema import (
     GetExercisesQuerySchema,
 )
 from tools.assertions.base import assert_equal
+from tools.assertions.errors import assert_internal_error_response
 
 
 def assert_exercise(actual: ExerciseSchema, expected: ExerciseSchema):
@@ -94,3 +96,19 @@ def assert_update_exercise_response(
             getattr(request, field_name),
             field_name,
         )
+
+
+def assert_not_found_exercise_response(actual: InternalErrorResponseSchema):
+    """
+    Проверяет, что при запросе несуществующего упражнения сервер возвращает ошибку.
+
+    Args:
+        actual (InternalErrorResponseSchema): Ответ сервера после запроса упражнения.
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
+
+    expected = InternalErrorResponseSchema(details="Exercise not found")
+
+    assert_internal_error_response(actual=actual, expected=expected)
