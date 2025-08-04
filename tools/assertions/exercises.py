@@ -50,3 +50,20 @@ def assert_create_exercise_response(
             getattr(request, field_name),
             field_name,
         )
+
+
+def assert_get_exercise_response(
+    expected_response: ExerciseResponseSchema,
+    response: ExerciseResponseSchema,
+):
+    """
+    Проверка ответа на запрос получения упражнения.
+
+    Args:
+        expected_response (ExerciseResponseSchema): Ожидаемый ответ.
+        response (ExerciseResponseSchema): Текущий ответ.
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
+    assert_exercise(response.exercise, expected_response.exercise)

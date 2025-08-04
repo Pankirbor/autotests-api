@@ -25,6 +25,16 @@ class ExerciseFixture(BaseModel):
     request: CreateExerciseRequestSchema
     response: ExerciseResponseSchema
 
+    @property
+    def exercise_id(self) -> str:
+        """
+        Получение идентификатора упражнения.
+
+        Returns:
+            str: идентификатор упражнения.
+        """
+        return self.response.exercise.id
+
 
 @pytest.fixture
 def exercises_client(function_user: UserFixture) -> ExercisesClient:
@@ -42,7 +52,9 @@ def exercises_client(function_user: UserFixture) -> ExercisesClient:
 
 
 @pytest.fixture
-def function_exercise(function_course: CourseFixture) -> ExerciseFixture:
+def function_exercise(
+    exercises_client: ExercisesClient, function_course: CourseFixture
+) -> ExerciseFixture:
     """
     Фикстура для создания упражнения.
 
