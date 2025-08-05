@@ -1,6 +1,7 @@
 from http import HTTPStatus
 import pytest
 
+from clients.courses.constants import MAX_LENGTH_FIELDS
 from clients.courses.courses_client import CoursesClient
 from clients.courses.courses_schema import (
     GetCoursesQuerySchema,
@@ -196,13 +197,15 @@ class TestCourses:
             courses_client (CoursesClient): Клиент для работы с курсами.
         """
 
-        OVERFLOW = 256
-        request = CreateCourseRequestSchema(title="a" * OVERFLOW)
+        too_long_string = "a" * (MAX_LENGTH_FIELDS.get("title") + 1)
+        request = CreateCourseRequestSchema(title=too_long_string)
         response = courses_client.create_course_api(request)
         response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
 
         assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
-        assert_create_or_update_course_with_too_long_title_response(response_data)
+        assert_create_or_update_course_with_too_long_title_response(
+            response_data, too_long_string
+        )
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
@@ -217,12 +220,14 @@ class TestCourses:
             function_course (CourseFixture): Фикстура с данными курса.
         """
 
-        OVERFLOW = 256
-        request = UpdateCourseRequestSchema(title="a" * OVERFLOW)
+        too_long_string = "a" * (MAX_LENGTH_FIELDS.get("title") + 1)
+        request = UpdateCourseRequestSchema(title=too_long_string)
         response = courses_client.update_course_api(function_course.course_id, request)
         response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
 
         assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
-        assert_create_or_update_course_with_too_long_title_response(response_data)
+        assert_create_or_update_course_with_too_long_title_response(
+            response_data, too_long_string
+        )
 
         validate_json_schema(response.json(), response_data.model_json_schema())

@@ -1,4 +1,7 @@
-from clients.errors_schema import InternalErrorResponseSchema
+from clients.errors_schema import (
+    InternalErrorResponseSchema,
+    ValidationErrorResponseSchema,
+)
 from clients.exercises.exercises_schema import (
     ExerciseSchema,
     ExerciseResponseSchema,
@@ -7,9 +10,18 @@ from clients.exercises.exercises_schema import (
     UpdateExerciseRequestSchema,
     GetExercisesQuerySchema,
 )
+from clients.exercises.constants import FIELD_NAME_MAPPING, MAX_LENGTH_FIELDS
 from fixtures.exercises import ExercisesListFixture
 from tools.assertions.base import assert_equal
-from tools.assertions.errors import assert_internal_error_response
+from tools.assertions.api_error_constants import ErrorContext
+from tools.assertions.error_builder import ValidationErrorBuilder
+from tools.assertions.errors import (
+    assert_internal_error_response,
+    assert_validation_error_response,
+)
+
+
+err_builder = ValidationErrorBuilder()
 
 
 def assert_exercise(actual: ExerciseSchema, expected: ExerciseSchema):
@@ -134,3 +146,116 @@ def assert_get_exercises_response(
     assert_equal(expected_response.request.course_id, request.course_id, "course_id")
     for index, exercise in enumerate(expected_response.response.exercises):
         assert_exercise(actual=response.exercises[index], expected=exercise)
+
+
+def assert_create_exercise_with_invalid_course_id_response(
+    actual: ValidationErrorResponseSchema,
+):
+    """
+    Проверяет, что при отправке невалидного id курса в поле course_id,
+    при создании упражнения сервер возвращает ошибку.
+
+    Args:
+        actual (ValidationErrorResponseSchema): Ответ сервера после запроса упражнения.
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
+    expected = (
+        err_builder.with_input("incorrect_course_id")
+        .with_error(ErrorContext.INVALID_UUID_CHAR, char="i", position=1)
+        .at_location("body", "courseId")
+        .build()
+    )
+    assert_validation_error_response(actual=actual, expected=expected)
+
+
+def assert_create_or_update_exercise_with_empty_required_string_field_response(
+    actual: ValidationErrorResponseSchema, field_name: str
+):
+    """
+    Проверяет, что при отправке пустой строки в поле с обязательным строковым параметром,
+    при создании или обновлении упражнения сервер возвращает ошибку.
+
+    Args:
+        actual (ValidationErrorResponseSchema): Ответ сервера после запроса упражнения.
+        field_name (str): Имя поля, в котором должен быть пустой строковый параметр.
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
+
+    if field_name == "course_id":
+        err_params = {"err_context": ErrorContext.INVALID_UUID_LENGTH, "length": 0}
+    else:
+        err_params = {"err_context": ErrorContext.STRING_TOO_SHORT, "min_length": 1}
+
+    expected = (
+        err_builder.with_input("")
+        .with_error(**err_params)
+        .at_location("body", FIELD_NAME_MAPPING.get(field_name))
+        .build()
+    )
+
+    assert_validation_error_response(actual=actual, expected=expected)
+
+
+def assert_create_or_update_exercise_with_too_long_string_field_response(
+    actual: ValidationErrorResponseSchema, field_name: str, input_val: str
+):
+    """
+    Проверяет, что при отправке слишком длинного значения в поле с строковым параметром,
+    при создании или обновлении упражнения сервер возвращает ошибку.
+
+    Args:
+        actual (ValidationErrorResponseSchema): Ответ сервера после запроса упражнения.
+        field_name (str): Имя поля, в котором должен быть слишком длинный строковый параметр.
+        input_val (str): Значение, которое должно быть отправлено в поле.
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
+
+    expected = (
+        err_builder.with_input(input_val)
+        .with_error(
+            ErrorContext.STRING_TOO_LONG, max_length=MAX_LENGTH_FIELDS.get(field_name)
+        )
+        .at_location("body", FIELD_NAME_MAPPING.get(field_name))
+        .build()
+    )
+    assert_validation_error_response(actual=actual, expected=expected)
+
+
+def assert_create_or_update_exercise_with_incorrect_score_response(
+    actual: ValidationErrorResponseSchema,
+    request: UpdateExerciseRequestSchema,
+):
+    """
+    Проверяет, что при отправке некорректного значения в поле minScore,
+    при создании или обновлении упражнения сервер возвращает ошибку.
+
+    Args:
+        actual (ValidationErrorResponseSchema): Ответ сервера после запроса упражнения.
+        request (UpdateExerciseRequestSchema): Отправленные данные для обновления.
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
+
+    if request.min_score > request.max_score:
+        expected = (
+            err_builder.with_input(request.model_dump(by_alias=True))
+            .with_error(ErrorContext.SCORE_VALIDATION)
+            .at_location("body")
+            .build()
+        )
+    else:
+        expected = (
+            err_builder.with_input(request.min_score)
+            .with_error(ErrorContext.NON_NEGATIVE_NUMBER, ge=0)
+            .at_location("body", "minScore")
+            .build()
+        )
+
+    assert_validation_error_response(actual=actual, expected=expected)

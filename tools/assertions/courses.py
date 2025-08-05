@@ -9,6 +9,7 @@ from clients.errors_schema import (
     InternalErrorResponseSchema,
     ValidationErrorResponseSchema,
 )
+from clients.courses.constants import FIELD_NAME_MAPPING, MAX_LENGTH_FIELDS
 from tools.assertions.api_error_constants import ErrorContext
 from tools.assertions.error_builder import ValidationErrorBuilder
 from tools.assertions.base import assert_equal
@@ -163,12 +164,7 @@ def assert_create_course_with_empty_field_response(
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
-    camel_case_field_names = {
-        "preview_file_id": "previewFileId",
-        "created_by_user_id": "createdByUserId",
-        "title": "title",
-        "description": "description",
-    }
+
     expected = None
     if field_name in ["title", "description"]:
         error_param = {"err_context": ErrorContext.STRING_TOO_SHORT, "min_length": 1}
@@ -179,7 +175,7 @@ def assert_create_course_with_empty_field_response(
     expected = (
         err_builder.with_input("")
         .with_error(**error_param)
-        .at_location("body", camel_case_field_names.get(field_name))
+        .at_location("body", FIELD_NAME_MAPPING.get(field_name))
         .build()
     )
 
@@ -200,15 +196,11 @@ def assert_create_course_with_incorrect_field_id_response(
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
-    camel_case_field_names = {
-        "preview_file_id": "previewFileId",
-        "created_by_user_id": "createdByUserId",
-    }
 
     expected = (
         err_builder.with_input("incorrect-id")
         .with_error(ErrorContext.INVALID_UUID_CHAR, char="i", position=1)
-        .at_location("body", camel_case_field_names.get(field_name))
+        .at_location("body", FIELD_NAME_MAPPING.get(field_name))
         .build()
     )
     assert_validation_error_response(actual, expected)
@@ -216,6 +208,7 @@ def assert_create_course_with_incorrect_field_id_response(
 
 def assert_create_or_update_course_with_too_long_title_response(
     actual: ValidationErrorResponseSchema,
+    input_val: str,
 ):
     """
     Проверяет, что при отправке слишком длинного значения в поле title,
@@ -228,8 +221,10 @@ def assert_create_or_update_course_with_too_long_title_response(
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
     expected = (
-        err_builder.with_input("a" * 256)
-        .with_error(ErrorContext.STRING_TOO_LONG, max_length=250)
+        err_builder.with_input(input_val)
+        .with_error(
+            ErrorContext.STRING_TOO_LONG, max_length=MAX_LENGTH_FIELDS.get("title")
+        )
         .at_location("body", "title")
         .build()
     )
