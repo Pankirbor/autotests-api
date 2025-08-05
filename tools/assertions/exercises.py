@@ -7,6 +7,7 @@ from clients.exercises.exercises_schema import (
     UpdateExerciseRequestSchema,
     GetExercisesQuerySchema,
 )
+from fixtures.exercises import ExercisesListFixture
 from tools.assertions.base import assert_equal
 from tools.assertions.errors import assert_internal_error_response
 
@@ -112,3 +113,24 @@ def assert_not_found_exercise_response(actual: InternalErrorResponseSchema):
     expected = InternalErrorResponseSchema(details="Exercise not found")
 
     assert_internal_error_response(actual=actual, expected=expected)
+
+
+def assert_get_exercises_response(
+    request: GetExercisesQuerySchema,
+    expected_response: ExercisesListFixture,
+    response: GetExercisesResponseSchema,
+):
+    """
+    Проверяет, что при запросе списка упражнений данные в ответе соответствуют ожиданиям.
+
+    Args:
+        request (GetExercisesQuerySchema): Отправленные данные для запроса списка упражнений.
+        expected_response (ExercisesListFixture): Ожидаемый ответ.
+        response (GetExercisesResponseSchema): Текущий ответ.
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
+    assert_equal(expected_response.request.course_id, request.course_id, "course_id")
+    for index, exercise in enumerate(expected_response.response.exercises):
+        assert_exercise(actual=response.exercises[index], expected=exercise)

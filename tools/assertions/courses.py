@@ -8,8 +8,9 @@ from clients.courses.courses_schema import (
 from clients.errors_schema import (
     InternalErrorResponseSchema,
     ValidationErrorResponseSchema,
-    ValidationErrorSchema,
 )
+from tools.assertions.api_error_constants import ErrorContext
+from tools.assertions.error_builder import ValidationErrorBuilder
 from tools.assertions.base import assert_equal
 from tools.assertions.errors import (
     assert_internal_error_response,
@@ -17,6 +18,9 @@ from tools.assertions.errors import (
 )
 from tools.assertions.files import assert_file
 from tools.assertions.users import assert_user
+
+
+err_builder = ValidationErrorBuilder()
 
 
 def assert_course(actual: CourseSchema, expected: CourseSchema):
@@ -105,7 +109,6 @@ def assert_get_courses_response(
         AssertionError: Если данные не совпадают.
     """
     for index, course in enumerate(expected_response.courses):
-        print("COURSE", course)
         assert_course(response.courses[index], course)
 
 
@@ -160,37 +163,26 @@ def assert_create_course_with_empty_field_response(
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
+    camel_case_field_names = {
+        "preview_file_id": "previewFileId",
+        "created_by_user_id": "createdByUserId",
+        "title": "title",
+        "description": "description",
+    }
     expected = None
     if field_name in ["title", "description"]:
-        expected = ValidationErrorResponseSchema(
-            details=[
-                ValidationErrorSchema(
-                    type="string_too_short",
-                    input="",
-                    context={"min_length": 1},
-                    message="String should have at least 1 character",
-                    location=["body", field_name],
-                )
-            ]
-        )
+        error_param = {"err_context": ErrorContext.STRING_TOO_SHORT, "min_length": 1}
+
     elif field_name in ["preview_file_id", "created_by_user_id"]:
-        camel_case_field_names = {
-            "preview_file_id": "previewFileId",
-            "created_by_user_id": "createdByUserId",
-        }
-        context_msg = "invalid length: expected length 32 for simple format, found 0"
-        msg = f"Input should be a valid UUID, {context_msg}"
-        expected = ValidationErrorResponseSchema(
-            details=[
-                ValidationErrorSchema(
-                    type="uuid_parsing",
-                    input="",
-                    context={"error": context_msg},
-                    message=msg,
-                    location=["body", camel_case_field_names.get(field_name)],
-                )
-            ]
-        )
+        error_param = {"err_context": ErrorContext.INVALID_UUID_LENGTH, "length": 0}
+
+    expected = (
+        err_builder.with_input("")
+        .with_error(**error_param)
+        .at_location("body", camel_case_field_names.get(field_name))
+        .build()
+    )
+
     assert_validation_error_response(actual, expected)
 
 
@@ -212,26 +204,17 @@ def assert_create_course_with_incorrect_field_id_response(
         "preview_file_id": "previewFileId",
         "created_by_user_id": "createdByUserId",
     }
-    context_error_val = (
-        f"invalid character: expected an optional prefix of "
-        f"`urn:uuid:` followed by [0-9a-fA-F-], found `i` at 1"
-    )
-    msg = f"Input should be a valid UUID, {context_error_val}"
-    expected = ValidationErrorResponseSchema(
-        details=[
-            ValidationErrorSchema(
-                type="uuid_parsing",
-                input="incorrect-id",
-                context={"error": context_error_val},
-                message=msg,
-                loc=["body", camel_case_field_names.get(field_name)],
-            )
-        ]
+
+    expected = (
+        err_builder.with_input("incorrect-id")
+        .with_error(ErrorContext.INVALID_UUID_CHAR, char="i", position=1)
+        .at_location("body", camel_case_field_names.get(field_name))
+        .build()
     )
     assert_validation_error_response(actual, expected)
 
 
-def assert_create_course_with_too_long_title_response(
+def assert_create_or_update_course_with_too_long_title_response(
     actual: ValidationErrorResponseSchema,
 ):
     """
@@ -244,42 +227,10 @@ def assert_create_course_with_too_long_title_response(
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
-    expected = ValidationErrorResponseSchema(
-        details=[
-            ValidationErrorSchema(
-                type="string_too_long",
-                input="a" * 256,
-                context={"max_length": 250},
-                message="String should have at most 250 characters",
-                location=["body", "title"],
-            )
-        ]
-    )
-    assert_validation_error_response(actual, expected)
-
-
-def assert_update_course_with_too_long_title_response(
-    actual: ValidationErrorResponseSchema,
-):
-    """
-    Проверяет, что при отправке слишком длинного значения в поле title,
-    при обновлении курса, сервер возвращает ошибку.
-
-    Args:
-        actual (ValidationErrorResponseSchema): Ответ сервера после запроса.
-
-    Raises:
-        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
-    """
-    expected = ValidationErrorResponseSchema(
-        details=[
-            ValidationErrorSchema(
-                type="string_too_long",
-                input="a" * 256,
-                context={"max_length": 250},
-                message="String should have at most 250 characters",
-                location=["body", "title"],
-            )
-        ]
+    expected = (
+        err_builder.with_input("a" * 256)
+        .with_error(ErrorContext.STRING_TOO_LONG, max_length=250)
+        .at_location("body", "title")
+        .build()
     )
     assert_validation_error_response(actual, expected)

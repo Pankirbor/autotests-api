@@ -7,6 +7,8 @@ from clients.exercises.exercises_client import ExercisesClient, get_exercises_cl
 from clients.exercises.exercises_schema import (
     CreateExerciseRequestSchema,
     ExerciseResponseSchema,
+    GetExercisesQuerySchema,
+    GetExercisesResponseSchema,
 )
 
 
@@ -34,6 +36,22 @@ class ExerciseFixture(BaseModel):
             str: идентификатор упражнения.
         """
         return self.response.exercise.id
+
+
+class ExercisesListFixture(BaseModel):
+    """
+    Класс для хранения списка упражнений.
+
+    Attrs:
+        request (GetExercisesQuerySchema):
+            данные запроса на получение списка упражнений.
+
+        response (GetExercisesResponseSchema):
+            данные ответа на запрос получения списка упражнений.
+    """
+
+    request: GetExercisesQuerySchema
+    response: GetExercisesResponseSchema
 
 
 @pytest.fixture
@@ -69,3 +87,37 @@ def function_exercise(
     response = exercises_client.create_exercise(request)
 
     return ExerciseFixture(request=request, response=response)
+
+
+@pytest.fixture
+def function_exercises(
+    exercises_client: ExercisesClient, function_course: CourseFixture
+) -> ExercisesListFixture:
+    """
+    Фикстура для получения списка упражнений.
+
+    Args:
+        exercises_client (ExercisesClient): экземпляр класса ExercisesClient.
+        function_course (CourseFixture): фикстура с данными курса.
+
+    Returns:
+        ExercisesListFixture:
+        Объект с данными о созданных упражнениях.
+    """
+
+    create_exercise_requests = [
+        CreateExerciseRequestSchema(course_id=function_course.course_id)
+        for _ in range(2)
+    ]
+    exercises = [
+        exercises_client.create_exercise(request).exercise
+        for request in create_exercise_requests
+    ]
+    return ExercisesListFixture(
+        request=GetExercisesQuerySchema(
+            course_id=function_course.course_id,
+        ),
+        response=GetExercisesResponseSchema(
+            exercises=exercises,
+        ),
+    )

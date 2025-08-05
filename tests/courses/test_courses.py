@@ -21,12 +21,11 @@ from tools.assertions.courses import (
     assert_create_course_response,
     assert_create_course_with_empty_field_response,
     assert_create_course_with_incorrect_field_id_response,
-    assert_create_course_with_too_long_title_response,
+    assert_create_or_update_course_with_too_long_title_response,
     assert_get_courses_response,
     assert_not_found_course_response,
     assert_update_course_response,
     assert_get_course_response,
-    assert_update_course_with_too_long_title_response,
 )
 from tools.assertions.schema import validate_json_schema
 
@@ -203,7 +202,7 @@ class TestCourses:
         response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
 
         assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
-        assert_create_course_with_too_long_title_response(response_data)
+        assert_create_or_update_course_with_too_long_title_response(response_data)
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
@@ -224,6 +223,6 @@ class TestCourses:
         response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
 
         assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
-        assert_update_course_with_too_long_title_response(response_data)
+        assert_create_or_update_course_with_too_long_title_response(response_data)
 
         validate_json_schema(response.json(), response_data.model_json_schema())

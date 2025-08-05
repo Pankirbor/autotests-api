@@ -6,14 +6,17 @@ from clients.exercises.exercises_client import ExercisesClient
 from clients.exercises.exercises_schema import (
     CreateExerciseRequestSchema,
     ExerciseResponseSchema,
+    GetExercisesQuerySchema,
+    GetExercisesResponseSchema,
     UpdateExerciseRequestSchema,
 )
 from fixtures.courses import CourseFixture
-from fixtures.exercises import ExerciseFixture
+from fixtures.exercises import ExerciseFixture, ExercisesListFixture
 from tools.assertions.base import assert_status_code
 from tools.assertions.exercises import (
     assert_create_exercise_response,
     assert_get_exercise_response,
+    assert_get_exercises_response,
     assert_not_found_exercise_response,
     assert_update_exercise_response,
 )
@@ -96,3 +99,25 @@ class TestExercises:
         assert_not_found_exercise_response(get_response_data)
 
         validate_json_schema(get_response.json(), get_response_data.model_json_schema())
+
+    def test_get_exercises(
+        self,
+        exercises_client: ExercisesClient,
+        function_course: CourseFixture,
+        function_exercises: ExercisesListFixture,
+    ):
+        """Тест получения списка упражнений."""
+
+        request = GetExercisesQuerySchema(course_id=function_course.course_id)
+        response = exercises_client.get_exercises_api(request)
+        response_data = GetExercisesResponseSchema.model_validate_json(response.text)
+
+        assert_status_code(response.status_code, HTTPStatus.OK)
+
+        assert_get_exercises_response(
+            request=request,
+            expected_response=function_exercises,
+            response=response_data,
+        )
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
