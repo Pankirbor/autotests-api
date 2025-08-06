@@ -1,26 +1,12 @@
-from typing import Any, Sized
+from typing import Any
+
+import allure
 
 from clients.errors_schema import ValidationErrorSchema, ValidationErrorResponseSchema
-from tools.assertions.base import assert_equal
+from tools.assertions.base import assert_equal, assert_length
 
 
-def assert_length(actual: Sized, expected: Sized, name: str) -> None:
-    """
-    Проверяет соответствие длин коллекций.
-
-    Args:
-        actual (Sized): Текущая длина коллекции.
-        expected (Sized): Ожидаемая длина коллекции.
-        name (str): Название переменной для вывода в сообщении об ошибке.
-
-    Raises:
-        AssertionError: Если длины не совпадают.
-    """
-    assert len(actual) == len(
-        expected
-    ), f"Incorrect '{name}' length. Expected: '{len(expected)}', resived: '{len(actual)}'"
-
-
+@allure.step("Проверяем данные ожидаемой валидационной ошибки")
 def assert_validation_error(
     actual: ValidationErrorSchema, expected: ValidationErrorSchema
 ) -> None:
@@ -41,6 +27,7 @@ def assert_validation_error(
     assert_equal(actual.context, expected.context, "context")
 
 
+@allure.step("Проверяем ответ сервера с ожидаемой валидационной ошибкой")
 def assert_validation_error_response(
     actual: ValidationErrorResponseSchema, expected: ValidationErrorResponseSchema
 ) -> None:
@@ -60,6 +47,7 @@ def assert_validation_error_response(
         assert_validation_error(actual_detail, expected_detail)
 
 
+@allure.step("Проверяем ответ сервера с ожидаемой внутренней ошибкой")
 def assert_internal_error_response(actual: Any, expected: Any) -> None:
     """
     Проверяет соответствие данных ошибки.

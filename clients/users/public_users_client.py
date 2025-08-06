@@ -9,7 +9,7 @@ from clients.users.users_schema import CreateUserRequestSchema, UserResponseSche
 class PublicUsersClient(ApiClient):
     """Клиент для работы с публичными эндпоинтами API управления пользователями."""
 
-    @allure.step("Создаю пользователя")
+    @allure.step("Создаем пользователя")
     def create_user_api(self, request: CreateUserRequestSchema) -> Response:
         """Создает нового пользователя через API.
 

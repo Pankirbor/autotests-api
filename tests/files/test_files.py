@@ -108,7 +108,7 @@ class TestFiles:
         Raises:
             AssertionError: Если данные в ответе не совпадают с ожидаемыми.
         """
-        allure.dynamic.title("Upload file with missing request field: {field_name}")
+        allure.dynamic.title(f"Upload file with missing request field: {field_name}")
         request = UploadFileRequestSchema(upload_file="./testdata/files/image.jpg")
         setattr(request, field_name, "")
         response = files_client.upload_file_api(request)

@@ -1,3 +1,5 @@
+import allure
+
 from clients.errors_schema import (
     InternalErrorResponseSchema,
     ValidationErrorResponseSchema,
@@ -12,7 +14,7 @@ from clients.exercises.exercises_schema import (
 )
 from clients.exercises.constants import FIELD_NAME_MAPPING, MAX_LENGTH_FIELDS
 from fixtures.exercises import ExercisesListFixture
-from tools.assertions.base import assert_equal
+from tools.assertions.base import assert_equal, assert_length
 from tools.assertions.api_error_constants import ErrorContext
 from tools.assertions.error_builder import ValidationErrorBuilder
 from tools.assertions.errors import (
@@ -24,6 +26,7 @@ from tools.assertions.errors import (
 err_builder = ValidationErrorBuilder()
 
 
+@allure.step("Проверяем соответсвие данных упражнения")
 def assert_exercise(actual: ExerciseSchema, expected: ExerciseSchema):
     """
     Проверка соответствия данных упражнения.
@@ -45,6 +48,7 @@ def assert_exercise(actual: ExerciseSchema, expected: ExerciseSchema):
     assert_equal(actual.estimated_time, expected.estimated_time, "estimated_time")
 
 
+@allure.step("Проверяем ответ сервера на запрос создания упражнения")
 def assert_create_exercise_response(
     response: ExerciseResponseSchema,
     request: CreateExerciseRequestSchema,
@@ -67,6 +71,7 @@ def assert_create_exercise_response(
         )
 
 
+@allure.step("Проверяем ответ сервера на запрос получения упражнения")
 def assert_get_exercise_response(
     expected_response: ExerciseResponseSchema,
     response: ExerciseResponseSchema,
@@ -84,6 +89,7 @@ def assert_get_exercise_response(
     assert_exercise(response.exercise, expected_response.exercise)
 
 
+@allure.step("Проверяем ответ сервера на запрос обновления упражнения")
 def assert_update_exercise_response(
     request: UpdateExerciseRequestSchema,
     response: ExerciseResponseSchema,
@@ -111,6 +117,7 @@ def assert_update_exercise_response(
         )
 
 
+@allure.step("Проверяем ответ сервера на запрос несуществующего упражнения")
 def assert_not_found_exercise_response(actual: InternalErrorResponseSchema):
     """
     Проверяет, что при запросе несуществующего упражнения сервер возвращает ошибку.
@@ -127,6 +134,7 @@ def assert_not_found_exercise_response(actual: InternalErrorResponseSchema):
     assert_internal_error_response(actual=actual, expected=expected)
 
 
+@allure.step("Проверяем ответ сервера на запрос списка упражнений")
 def assert_get_exercises_response(
     request: GetExercisesQuerySchema,
     expected_response: ExercisesListFixture,
@@ -144,10 +152,14 @@ def assert_get_exercises_response(
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
     assert_equal(expected_response.request.course_id, request.course_id, "course_id")
+    assert_length(response.exercises, expected_response.response.exercises, "exercises")
     for index, exercise in enumerate(expected_response.response.exercises):
         assert_exercise(actual=response.exercises[index], expected=exercise)
 
 
+@allure.step(
+    "Проверяем ответ сервера на запрос создания упражнения с некорректным id курса"
+)
 def assert_create_exercise_with_invalid_course_id_response(
     actual: ValidationErrorResponseSchema,
 ):
@@ -170,6 +182,9 @@ def assert_create_exercise_with_invalid_course_id_response(
     assert_validation_error_response(actual=actual, expected=expected)
 
 
+@allure.step(
+    "Проверям ответ сервера после запроса на создание или обновление упражнения с пустым обязательным параметром"
+)
 def assert_create_or_update_exercise_with_empty_required_string_field_response(
     actual: ValidationErrorResponseSchema, field_name: str
 ):
@@ -200,6 +215,9 @@ def assert_create_or_update_exercise_with_empty_required_string_field_response(
     assert_validation_error_response(actual=actual, expected=expected)
 
 
+@allure.step(
+    "Проверям ответ сервера после запроса на создание или обновление упражнения с слишком длинным строковым параметром"
+)
 def assert_create_or_update_exercise_with_too_long_string_field_response(
     actual: ValidationErrorResponseSchema, field_name: str, input_val: str
 ):
@@ -227,6 +245,9 @@ def assert_create_or_update_exercise_with_too_long_string_field_response(
     assert_validation_error_response(actual=actual, expected=expected)
 
 
+@allure.step(
+    "Проверям ответ сервера после запроса на создание или обновление упражнения с некорректным score"
+)
 def assert_create_or_update_exercise_with_incorrect_score_response(
     actual: ValidationErrorResponseSchema,
     request: UpdateExerciseRequestSchema,

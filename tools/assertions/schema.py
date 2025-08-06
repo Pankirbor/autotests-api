@@ -1,10 +1,12 @@
 from typing import Any
 
+import allure
 from jsonschema import validate
 from jsonschema.exceptions import ValidationError
 from jsonschema.validators import Draft202012Validator
 
 
+@allure.step("Проверяем, соответствует ли ответ сервера JSON-схеме")
 def validate_json_schema(instance: Any, schema: Any) -> None:
     """
     Функция для валидации JSON-схемы.

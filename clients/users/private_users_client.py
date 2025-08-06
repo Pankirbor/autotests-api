@@ -14,7 +14,7 @@ class PrivateUsersClient(ApiClient):
     требующих авторизации.
     """
 
-    @allure.step("Получение информации о текущем пользователе")
+    @allure.step("Получаем информацию о текущем пользователе")
     def get_user_me_api(self) -> Response:
         """Возвращает информацию о текущем авторизованном пользователе.
 
@@ -23,7 +23,7 @@ class PrivateUsersClient(ApiClient):
         """
         return self.get("/api/v1/users/me")
 
-    @allure.step("Получение информации о пользователе по user_id")
+    @allure.step("Получаем информацию о пользователе по user_id")
     def get_user_api(self, user_id: str) -> Response:
         """Получает информацию о пользователе по его идентификатору.
 
@@ -35,7 +35,7 @@ class PrivateUsersClient(ApiClient):
         """
         return self.get(f"/api/v1/users/{user_id}")
 
-    @allure.step("Обновление информации о пользователе по user_id")
+    @allure.step("Обновляем информацию о пользователе по user_id")
     def update_user_api(
         self, user_id: str, request: UpdateUserRequestSchema
     ) -> Response:
@@ -52,7 +52,7 @@ class PrivateUsersClient(ApiClient):
             f"/api/v1/users/{user_id}", json=request.model_dump(by_alias=True)
         )
 
-    @allure.step("Удаление пользователя по user_id")
+    @allure.step("Удаляем пользователя по user_id")
     def delete_user_api(self, user_id: str) -> Response:
         """Удаляет пользователя по его идентификатору.
 

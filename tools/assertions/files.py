@@ -1,3 +1,5 @@
+import allure
+
 from clients.errors_schema import (
     InternalErrorResponseSchema,
     ValidationErrorResponseSchema,
@@ -16,6 +18,7 @@ from tools.assertions.errors import (
 from clients.files.files_client import FilesClient
 
 
+@allure.step("Проверяем ответ сервера после загрузки файла")
 def assert_upload_file_response(
     request: UploadFileRequestSchema, response: UploadFileResponseSchema
 ):
@@ -38,6 +41,7 @@ def assert_upload_file_response(
     assert_equal(str(response.file.url), expected_url, "url")
 
 
+@allure.step("Проверяем доступность файла по URL")
 def assert_file_is_accessible(
     client: FilesClient, file_id: str, expected_status_code: int
 ):
@@ -57,6 +61,7 @@ def assert_file_is_accessible(
     assert_status_code(response.status_code, expected_status_code)
 
 
+@allure.step("Проверяем соответствие данных файла")
 def assert_file(actual: FileSchema, expected: FileSchema):
     """
     Проверяет соответствие данных файла.
@@ -75,6 +80,7 @@ def assert_file(actual: FileSchema, expected: FileSchema):
     assert_equal(actual.url, expected.url, "url")
 
 
+@allure.step("Проверяем ответ сервера на запрос файла")
 def assert_get_file_response(
     get_file_response: UploadFileResponseSchema,
     create_file_response: UploadFileResponseSchema,
@@ -93,6 +99,7 @@ def assert_get_file_response(
     assert_file(get_file_response.file, create_file_response.file)
 
 
+@allure.step("Проверяем ответ сервера на запрос создания файла с пустым полем")
 def assert_create_file_with_empty_field_response(
     actual: ValidationErrorResponseSchema, field: str
 ):
@@ -119,6 +126,7 @@ def assert_create_file_with_empty_field_response(
     assert_validation_error_response(actual, expected)
 
 
+@allure.step("Проверяем ответ сервера на запрос несуществующего файла")
 def assert_file_not_found_response(actual: InternalErrorResponseSchema):
     """
     Проверяет, что при запросе несуществующего файла сервер возвращает ошибку.
@@ -134,6 +142,7 @@ def assert_file_not_found_response(actual: InternalErrorResponseSchema):
     assert_internal_error_response(actual, expected)
 
 
+@allure.step("Проверяем ответ сервера на запрос файла с некорректным id")
 def assert_get_file_with_incorrect_file_id_response(
     actual: ValidationErrorResponseSchema,
 ):

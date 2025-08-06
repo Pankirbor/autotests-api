@@ -203,7 +203,7 @@ class TestExercises:
         """
         Тест создания упражнения с пустым обязательным полем.
         """
-        allure.dynamic.title("Attempt create exercise with empty {field_name} field")
+        allure.dynamic.title(f"Attempt create exercise with empty {field_name} field")
         request = CreateExerciseRequestSchema(course_id=function_course.course_id)
         setattr(request, field_name, "")
         response = exercises_client.create_exercise_api(request)
@@ -231,7 +231,7 @@ class TestExercises:
         """Тест создания упражнения с слишком длинным строковым полем."""
 
         allure.dynamic.title(
-            "Attempt create exercise with to long value in {field_name} field"
+            f"Attempt create exercise with to long value in {field_name} field"
         )
         to_long_string = "a" * (MAX_LENGTH_FIELDS.get(field_name) + 1)
         request = CreateExerciseRequestSchema(course_id=function_course.course_id)
@@ -260,7 +260,7 @@ class TestExercises:
     ):
         """Тест обновления упражнения с пустым обязательным полем."""
 
-        allure.dynamic.title("Attempt update exercise with empty {field_name} field")
+        allure.dynamic.title(f"Attempt update exercise with empty {field_name} field")
         request = UpdateExerciseRequestSchema()
         setattr(request, field_name, "")
         response = exercises_client.update_exercise_api(

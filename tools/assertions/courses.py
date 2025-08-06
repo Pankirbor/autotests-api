@@ -1,3 +1,5 @@
+import allure
+
 from clients.courses.courses_schema import (
     CourseSchema,
     UpdateCourseRequestSchema,
@@ -12,7 +14,7 @@ from clients.errors_schema import (
 from clients.courses.constants import FIELD_NAME_MAPPING, MAX_LENGTH_FIELDS
 from tools.assertions.api_error_constants import ErrorContext
 from tools.assertions.error_builder import ValidationErrorBuilder
-from tools.assertions.base import assert_equal
+from tools.assertions.base import assert_equal, assert_length
 from tools.assertions.errors import (
     assert_internal_error_response,
     assert_validation_error_response,
@@ -24,6 +26,7 @@ from tools.assertions.users import assert_user
 err_builder = ValidationErrorBuilder()
 
 
+@allure.step("Проверяем соответсвие данных курса")
 def assert_course(actual: CourseSchema, expected: CourseSchema):
     """
     Проверка соответствия данных курса.
@@ -45,6 +48,7 @@ def assert_course(actual: CourseSchema, expected: CourseSchema):
     assert_user(actual.created_by_user, expected.created_by_user)
 
 
+@allure.step("Проверяем ответ сервера на запрос создания курса")
 def assert_create_course_response(
     request: CreateCourseRequestSchema, response: CourseResponseSchema
 ):
@@ -80,6 +84,7 @@ def assert_create_course_response(
     )
 
 
+@allure.step("Проверяем ответ сервера на запрос курса")
 def assert_get_course_response(
     expected_response: CourseResponseSchema, response: CourseResponseSchema
 ):
@@ -96,6 +101,7 @@ def assert_get_course_response(
     assert_course(expected_response.course, response.course)
 
 
+@allure.step("Проверяем ответ сервера на запрос списка курсов")
 def assert_get_courses_response(
     expected_response: GetCoursesResponseSchema,
     response: GetCoursesResponseSchema,
@@ -109,10 +115,14 @@ def assert_get_courses_response(
     Raises:
         AssertionError: Если данные не совпадают.
     """
+
+    assert_length(response.courses, expected_response.courses, "courses")
+
     for index, course in enumerate(expected_response.courses):
         assert_course(response.courses[index], course)
 
 
+@allure.step("Проверяем ответ сервера на запрос обновления курса")
 def assert_update_course_response(
     request: UpdateCourseRequestSchema, response: CourseResponseSchema, course_id: str
 ):
@@ -137,6 +147,7 @@ def assert_update_course_response(
         )
 
 
+@allure.step("Проверяем ответ сервера на запрос несуществующего курса")
 def assert_not_found_course_response(actual: InternalErrorResponseSchema):
     """
     Проверяет, что при запросе несуществующего курса сервер возвращает ошибку.
@@ -150,6 +161,7 @@ def assert_not_found_course_response(actual: InternalErrorResponseSchema):
     assert_internal_error_response(actual, expected)
 
 
+@allure.step("Проверяем ответ сервера на запрос курса с пустым обязательным параметром")
 def assert_create_course_with_empty_field_response(
     actual: ValidationErrorResponseSchema, field_name: str
 ):
@@ -182,6 +194,9 @@ def assert_create_course_with_empty_field_response(
     assert_validation_error_response(actual, expected)
 
 
+@allure.step(
+    "Проверяем ответ сервера на запрос создания курса с некорректным id полем в теле запроса"
+)
 def assert_create_course_with_incorrect_field_id_response(
     actual: ValidationErrorResponseSchema, field_name: str
 ):
@@ -206,6 +221,7 @@ def assert_create_course_with_incorrect_field_id_response(
     assert_validation_error_response(actual, expected)
 
 
+@allure.step("Проверяем ответ сервера на запрос создания курса с слишком длинным title")
 def assert_create_or_update_course_with_too_long_title_response(
     actual: ValidationErrorResponseSchema,
     input_val: str,

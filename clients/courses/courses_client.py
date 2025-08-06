@@ -15,7 +15,7 @@ from clients.courses.courses_schema import (
 class CoursesClient(ApiClient):
     """Клиент для взаимодействия с эндпоинтами API управления курсами."""
 
-    @allure.step("Получаю список курсов")
+    @allure.step("Получаем список курсов")
     def get_courses_api(self, params: GetCoursesQuerySchema) -> Response:
         """Получает список курсов с возможностью фильтрации и сортировки.
 
@@ -27,7 +27,7 @@ class CoursesClient(ApiClient):
         """
         return self.get("/api/v1/courses", params=params.model_dump(by_alias=True))
 
-    @allure.step("Получаю информацию о курсе по course_id")
+    @allure.step("Получаем информацию о курсе по course_id")
     def get_course_api(self, course_id: str) -> Response:
         """Получает информацию о конкретном курсе по его идентификатору.
 
@@ -39,7 +39,7 @@ class CoursesClient(ApiClient):
         """
         return self.get(f"/api/v1/courses/{course_id}")
 
-    @allure.step("Создаю курс")
+    @allure.step("Создаем курс")
     def create_course_api(self, request: CreateCourseRequestSchema) -> Response:
         """Создает новый курс на сервере.
 
@@ -51,7 +51,7 @@ class CoursesClient(ApiClient):
         """
         return self.post(f"/api/v1/courses", json=request.model_dump(by_alias=True))
 
-    @allure.step("Обновляю курс по course_id")
+    @allure.step("Обновляем курс по course_id")
     def update_course_api(
         self, course_id: str, request: UpdateCourseRequestSchema
     ) -> Response:
@@ -69,7 +69,7 @@ class CoursesClient(ApiClient):
             f"/api/v1/courses/{course_id}", json=request.model_dump(by_alias=True)
         )
 
-    @allure.step("Удаляю курс по course_id")
+    @allure.step("Удаляем курс по course_id")
     def delete_course_api(self, course_id: str) -> Response:
         """Удаляет курс с сервера по его идентификатору.
 

@@ -15,7 +15,7 @@ class ApiClient:
         """
         self.client = client
 
-    @allure.step("Отправляю GET-запрос на {url}")
+    @allure.step("Отправляем GET-запрос на {url}")
     def get(self, url: URL | str, params: QueryParams | None = None) -> Response:
         """Отправляет HTTP GET-запрос на указанный URL.
 
@@ -28,7 +28,7 @@ class ApiClient:
         """
         return self.client.get(url=url, params=params)
 
-    @allure.step("Отправляю POST-запрос на {url}")
+    @allure.step("Отправляем POST-запрос на {url}")
     def post(
         self,
         url: URL | str,
@@ -48,7 +48,7 @@ class ApiClient:
         """
         return self.client.post(url=url, json=json, data=data, files=files)
 
-    @allure.step("Отправляю PATCH-запрос на {url}")
+    @allure.step("Отправляем PATCH-запрос на {url}")
     def patch(self, url: URL | str, json: Any | None = None) -> Response:
         """Отправляет HTTP PATCH-запрос на указанный URL.
 
@@ -61,7 +61,7 @@ class ApiClient:
         """
         return self.client.patch(url=url, json=json)
 
-    @allure.step("Отправляю DELETE-запрос на {url}")
+    @allure.step("Отправляем DELETE-запрос на {url}")
     def delete(self, url: URL | str) -> Response:
         """Отправляет HTTP DELETE-запрос на указанный URL.
 
