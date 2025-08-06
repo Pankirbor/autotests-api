@@ -1,5 +1,4 @@
-from functools import lru_cache
-
+import allure
 from httpx import Response
 
 from clients.api_client import ApiClient
@@ -15,6 +14,7 @@ class PrivateUsersClient(ApiClient):
     требующих авторизации.
     """
 
+    @allure.step("Получение информации о текущем пользователе")
     def get_user_me_api(self) -> Response:
         """Возвращает информацию о текущем авторизованном пользователе.
 
@@ -23,6 +23,7 @@ class PrivateUsersClient(ApiClient):
         """
         return self.get("/api/v1/users/me")
 
+    @allure.step("Получение информации о пользователе по user_id")
     def get_user_api(self, user_id: str) -> Response:
         """Получает информацию о пользователе по его идентификатору.
 
@@ -34,6 +35,7 @@ class PrivateUsersClient(ApiClient):
         """
         return self.get(f"/api/v1/users/{user_id}")
 
+    @allure.step("Обновление информации о пользователе по user_id")
     def update_user_api(
         self, user_id: str, request: UpdateUserRequestSchema
     ) -> Response:
@@ -50,6 +52,7 @@ class PrivateUsersClient(ApiClient):
             f"/api/v1/users/{user_id}", json=request.model_dump(by_alias=True)
         )
 
+    @allure.step("Удаление пользователя по user_id")
     def delete_user_api(self, user_id: str) -> Response:
         """Удаляет пользователя по его идентификатору.
 
@@ -62,6 +65,15 @@ class PrivateUsersClient(ApiClient):
         return self.delete(f"/api/v1/users/{user_id}")
 
     def get_user(self, user_id: str) -> UserResponseSchema:
+        """
+        Метод получает информацию о пользователе по его идентификатору.
+
+        Args:
+            user_id (str): Уникальный идентификатор пользователя.
+
+        Returns:
+            UserResponseSchema: Объект с данными пользователя.
+        """
         response = self.get_user_api(user_id)
         return UserResponseSchema.model_validate_json(response.text)
 
