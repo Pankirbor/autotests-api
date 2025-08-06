@@ -1,4 +1,7 @@
 from http import HTTPStatus
+
+import allure
+from allure_commons.types import Severity
 import pytest
 
 from clients.files.files_client import FilesClient
@@ -8,6 +11,10 @@ from clients.errors_schema import (
     ValidationErrorResponseSchema,
 )
 from fixtures.files import FileFixture
+from tools.allure.epics import AllureEpic
+from tools.allure.features import AllureFeature
+from tools.allure.stories import AllureStory
+from tools.allure.tags import AllureTag
 from tools.assertions.base import assert_status_code
 from tools.assertions.files import (
     assert_create_file_with_empty_field_response,
@@ -22,8 +29,18 @@ from tools.assertions.schema import validate_json_schema
 
 @pytest.mark.files
 @pytest.mark.regression
+@allure.tag(AllureTag.FILES, AllureTag.REGRESSION)
+@allure.epic(AllureEpic.LMS)
+@allure.parent_suite(AllureEpic.LMS)
+@allure.feature(AllureFeature.FILES)
+@allure.suite(AllureFeature.FILES)
 class TestFiles:
 
+    @allure.tag(AllureTag.CREATE_ENTITY)
+    @allure.story(AllureStory.CREATE_ENTITY)
+    @allure.sub_suite(AllureStory.CREATE_ENTITY)
+    @allure.severity(Severity.CRITICAL)
+    @allure.title("Upload file")
     def test_upload_file(self, files_client: FilesClient):
         """
         Тест проверяет, что при загрузке файла на сервер,
@@ -45,6 +62,11 @@ class TestFiles:
         assert_file_is_accessible(files_client, response_data.file.id, HTTPStatus.OK)
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.tag(AllureTag.GET_ENTITY)
+    @allure.story(AllureStory.GET_ENTITY)
+    @allure.sub_suite(AllureStory.GET_ENTITY)
+    @allure.severity(Severity.CRITICAL)
+    @allure.title("Get file")
     def test_get_file(self, files_client: FilesClient, function_file: FileFixture):
         """
         Тест проверяет, что при запросе файла по его идентификатору,
@@ -66,10 +88,12 @@ class TestFiles:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
-    def test_delete_file(self):
-        pass
-
     @pytest.mark.parametrize("field_name", ["filename", "directory"])
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.CRITICAL)
+    @allure.title("Upload file with missing request field")
     def test_upload_file_with_missing_request_field(
         self, field_name: str, files_client: FilesClient
     ):
@@ -84,7 +108,7 @@ class TestFiles:
         Raises:
             AssertionError: Если данные в ответе не совпадают с ожидаемыми.
         """
-
+        allure.dynamic.title("Upload file with missing request field: {field_name}")
         request = UploadFileRequestSchema(upload_file="./testdata/files/image.jpg")
         setattr(request, field_name, "")
         response = files_client.upload_file_api(request)
@@ -94,6 +118,11 @@ class TestFiles:
         assert_create_file_with_empty_field_response(response_data, field_name)
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.tag(AllureTag.DELETE_ENTITY)
+    @allure.story(AllureStory.DELETE_ENTITY)
+    @allure.sub_suite(AllureStory.DELETE_ENTITY)
+    @allure.severity(Severity.NORMAL)
+    @allure.title("Delete file")
     def test_delete_file(self, files_client: FilesClient, function_file: FileFixture):
         """
         Тест проверяет, что при удалении файла,
@@ -121,6 +150,11 @@ class TestFiles:
 
         validate_json_schema(get_response.json(), get_response_data.model_json_schema())
 
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.CRITICAL)
+    @allure.title("Get file with incorrect file id")
     def test_get_file_with_incorrect_file_id(self, files_client: FilesClient):
         """
         Тест проверяет, что при запросе несуществующего файла,

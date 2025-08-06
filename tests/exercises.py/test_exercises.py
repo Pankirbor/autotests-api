@@ -1,4 +1,7 @@
 from http import HTTPStatus
+
+import allure
+from allure_commons.types import Severity
 import pytest
 
 from clients.courses.constants import MAX_LENGTH_FIELDS
@@ -16,6 +19,10 @@ from clients.exercises.exercises_schema import (
 )
 from fixtures.courses import CourseFixture
 from fixtures.exercises import ExerciseFixture, ExercisesListFixture
+from tools.allure.epics import AllureEpic
+from tools.allure.features import AllureFeature
+from tools.allure.stories import AllureStory
+from tools.allure.tags import AllureTag
 from tools.assertions.base import assert_status_code
 from tools.assertions.exercises import (
     assert_create_exercise_response,
@@ -33,8 +40,18 @@ from tools.assertions.schema import validate_json_schema
 
 @pytest.mark.regression
 @pytest.mark.exercises
+@allure.tag(AllureTag.EXERCISES, AllureTag.REGRESSION)
+@allure.epic(AllureEpic.LMS)
+@allure.parent_suite(AllureEpic.LMS)
+@allure.feature(AllureFeature.EXERCISES)
+@allure.suite(AllureFeature.EXERCISES)
 class TestExercises:
 
+    @allure.tag(AllureTag.CREATE_ENTITY)
+    @allure.story(AllureStory.CREATE_ENTITY)
+    @allure.sub_suite(AllureStory.CREATE_ENTITY)
+    @allure.severity(Severity.BLOCKER)
+    @allure.title("Create exercise")
     def test_create_exercise(
         self, exercises_client: ExercisesClient, function_course: CourseFixture
     ):
@@ -49,6 +66,11 @@ class TestExercises:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.tag(AllureTag.GET_ENTITY)
+    @allure.severity(Severity.BLOCKER)
+    @allure.story(AllureStory.GET_ENTITY)
+    @allure.sub_suite(AllureStory.GET_ENTITY)
+    @allure.title("Get exercise")
     def test_get_exercise(
         self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture
     ):
@@ -64,6 +86,11 @@ class TestExercises:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.tag(AllureTag.UPDATE_ENTITY)
+    @allure.severity(Severity.CRITICAL)
+    @allure.story(AllureStory.UPDATE_ENTITY)
+    @allure.sub_suite(AllureStory.UPDATE_ENTITY)
+    @allure.title("Update exercise")
     def test_update_exercise(
         self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture
     ):
@@ -86,6 +113,11 @@ class TestExercises:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.tag(AllureTag.DELETE_ENTITY)
+    @allure.severity(Severity.CRITICAL)
+    @allure.story(AllureStory.DELETE_ENTITY)
+    @allure.sub_suite(AllureStory.DELETE_ENTITY)
+    @allure.title("Delete exercise")
     def test_delete_exercise(
         self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture
     ):
@@ -108,6 +140,11 @@ class TestExercises:
 
         validate_json_schema(get_response.json(), get_response_data.model_json_schema())
 
+    @allure.tag(AllureTag.GET_ENTITIES)
+    @allure.severity(Severity.BLOCKER)
+    @allure.story(AllureStory.GET_ENTITIES)
+    @allure.sub_suite(AllureStory.GET_ENTITIES)
+    @allure.title("Get exercises")
     def test_get_exercises(
         self,
         exercises_client: ExercisesClient,
@@ -130,6 +167,11 @@ class TestExercises:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.severity(Severity.BLOCKER)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.title("Create exercise with invalid course_id")
     def test_create_exercise_with_invalid_course_id(
         self, exercises_client: ExercisesClient
     ):
@@ -147,6 +189,11 @@ class TestExercises:
     @pytest.mark.parametrize(
         "field_name", ["title", "description", "course_id", "estimated_time"]
     )
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.severity(Severity.BLOCKER)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.title("Create exercise with empty required string fields")
     def test_create_exercise_with_empty_required_string_fields(
         self,
         exercises_client: ExercisesClient,
@@ -156,6 +203,7 @@ class TestExercises:
         """
         Тест создания упражнения с пустым обязательным полем.
         """
+        allure.dynamic.title("Attempt create exercise with empty {field_name} field")
         request = CreateExerciseRequestSchema(course_id=function_course.course_id)
         setattr(request, field_name, "")
         response = exercises_client.create_exercise_api(request)
@@ -169,6 +217,11 @@ class TestExercises:
         validate_json_schema(response.json(), response_data.model_json_schema())
 
     @pytest.mark.parametrize("field_name", ["title", "estimated_time"])
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.severity(Severity.NORMAL)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.title("Create exercise with too long string fields")
     def test_create_exercise_with_too_long_string_fields(
         self,
         exercises_client: ExercisesClient,
@@ -177,6 +230,9 @@ class TestExercises:
     ):
         """Тест создания упражнения с слишком длинным строковым полем."""
 
+        allure.dynamic.title(
+            "Attempt create exercise with to long value in {field_name} field"
+        )
         to_long_string = "a" * (MAX_LENGTH_FIELDS.get(field_name) + 1)
         request = CreateExerciseRequestSchema(course_id=function_course.course_id)
         setattr(request, field_name, to_long_string)
@@ -191,6 +247,11 @@ class TestExercises:
         validate_json_schema(response.json(), response_data.model_json_schema())
 
     @pytest.mark.parametrize("field_name", ["title", "description", "estimated_time"])
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.severity(Severity.BLOCKER)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.title("Update exercise with empty required string fields")
     def test_update_exercise_with_empty_required_string_fields(
         self,
         exercises_client: ExercisesClient,
@@ -199,6 +260,7 @@ class TestExercises:
     ):
         """Тест обновления упражнения с пустым обязательным полем."""
 
+        allure.dynamic.title("Attempt update exercise with empty {field_name} field")
         request = UpdateExerciseRequestSchema()
         setattr(request, field_name, "")
         response = exercises_client.update_exercise_api(
@@ -214,6 +276,11 @@ class TestExercises:
         validate_json_schema(response.json(), response_data.model_json_schema())
 
     @pytest.mark.parametrize("field_name", ["title", "estimated_time"])
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.severity(Severity.NORMAL)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.title("Update exercise with too long string fields")
     def test_update_exercise_with_too_long_string_fields(
         self,
         exercises_client: ExercisesClient,
@@ -222,6 +289,9 @@ class TestExercises:
     ):
         """Тест обновления упражнения с слишком длинным строковым полем."""
 
+        allure.dynamic.title(
+            f"Attempt update exercise with to long value in {field_name} field"
+        )
         to_long_string = "a" * (MAX_LENGTH_FIELDS.get(field_name) + 1)
         request = UpdateExerciseRequestSchema()
         setattr(request, field_name, to_long_string)
@@ -244,6 +314,11 @@ class TestExercises:
             pytest.param(-10, 0, marks=pytest.mark.xfail(reason="В разработке")),
         ],
     )
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.severity(Severity.NORMAL)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.title("Create exercise with incorrect score")
     def test_create_exercise_with_incorrect_score(
         self,
         exercises_client: ExercisesClient,
@@ -272,6 +347,11 @@ class TestExercises:
             pytest.param(-10, 0, marks=pytest.mark.xfail(reason="В разработке")),
         ],
     )
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.severity(Severity.NORMAL)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.title("Update exercise with incorrect score")
     def test_update_exercise_with_incorrect_score(
         self,
         exercises_client: ExercisesClient,

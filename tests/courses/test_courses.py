@@ -1,4 +1,7 @@
 from http import HTTPStatus
+
+import allure
+from allure_commons.types import Severity
 import pytest
 
 from clients.courses.constants import MAX_LENGTH_FIELDS
@@ -17,6 +20,10 @@ from clients.errors_schema import (
 from fixtures.courses import CourseFixture, CoursesListFixture
 from fixtures.users import UserFixture
 from fixtures.files import FileFixture
+from tools.allure.epics import AllureEpic
+from tools.allure.features import AllureFeature
+from tools.allure.stories import AllureStory
+from tools.allure.tags import AllureTag
 from tools.assertions.base import assert_status_code
 from tools.assertions.courses import (
     assert_create_course_response,
@@ -33,8 +40,18 @@ from tools.assertions.schema import validate_json_schema
 
 @pytest.mark.regression
 @pytest.mark.courses
+@allure.tag(AllureTag.COURSES, AllureTag.REGRESSION)
+@allure.epic(AllureEpic.LMS)
+@allure.parent_suite(AllureEpic.LMS)
+@allure.feature(AllureFeature.COURSES)
+@allure.suite(AllureFeature.COURSES)
 class TestCourses:
 
+    @allure.tag(AllureTag.GET_ENTITIES)
+    @allure.story(AllureStory.GET_ENTITIES)
+    @allure.sub_suite(AllureStory.GET_ENTITIES)
+    @allure.severity(Severity.BLOCKER)
+    @allure.title("Get courses")
     def test_get_courses(
         self, function_courses_list: CoursesListFixture, courses_client: CoursesClient
     ):
@@ -55,6 +72,11 @@ class TestCourses:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.tag(AllureTag.CREATE_ENTITY)
+    @allure.story(AllureStory.CREATE_ENTITY)
+    @allure.sub_suite(AllureStory.CREATE_ENTITY)
+    @allure.severity(Severity.BLOCKER)
+    @allure.title("Create course")
     def test_create_course(
         self,
         courses_client: CoursesClient,
@@ -82,6 +104,11 @@ class TestCourses:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.tag(AllureTag.GET_ENTITY)
+    @allure.story(AllureStory.GET_ENTITY)
+    @allure.sub_suite(AllureStory.GET_ENTITY)
+    @allure.severity(Severity.BLOCKER)
+    @allure.title("Get course")
     def test_get_course(
         self, function_course: CourseFixture, courses_client: CoursesClient
     ):
@@ -100,6 +127,11 @@ class TestCourses:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.tag(AllureTag.UPDATE_ENTITY)
+    @allure.story(AllureStory.UPDATE_ENTITY)
+    @allure.sub_suite(AllureStory.UPDATE_ENTITY)
+    @allure.severity(Severity.CRITICAL)
+    @allure.title("Update course")
     def test_update_course(
         self, function_course: CourseFixture, courses_client: CoursesClient
     ):
@@ -121,6 +153,11 @@ class TestCourses:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.tag(AllureTag.DELETE_ENTITY)
+    @allure.story(AllureStory.DELETE_ENTITY)
+    @allure.sub_suite(AllureStory.DELETE_ENTITY)
+    @allure.severity(Severity.CRITICAL)
+    @allure.title("Delete course")
     def test_delete_course(
         self, function_course: CourseFixture, courses_client: CoursesClient
     ):
@@ -146,6 +183,11 @@ class TestCourses:
     @pytest.mark.parametrize(
         "field_name", ["title", "description", "preview_file_id", "created_by_user_id"]
     )
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.BLOCKER)
+    @allure.title("Create course with empty required field")
     def test_create_course_with_empty_required_field(
         self, courses_client: CoursesClient, field_name: str
     ):
@@ -157,6 +199,7 @@ class TestCourses:
             field_name (str): Имя поля, которое будет пустым в запросе.
         """
 
+        allure.dynamic.title(f"Attempt to create course with empty {field_name} field")
         request = CreateCourseRequestSchema()
         setattr(request, field_name, "")
 
@@ -169,6 +212,11 @@ class TestCourses:
         validate_json_schema(response.json(), response_data.model_json_schema())
 
     @pytest.mark.parametrize("field_name", ["preview_file_id", "created_by_user_id"])
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.CRITICAL)
+    @allure.title("Create course with invalid id field")
     def test_create_course_with_invalid_id_field(
         self, courses_client: CoursesClient, field_name: str
     ):
@@ -181,6 +229,9 @@ class TestCourses:
             некорректное значение в запросе.
         """
 
+        allure.dynamic.title(
+            f"Attempt to create course with invalid {field_name} field"
+        )
         request = CreateCourseRequestSchema()
         setattr(request, field_name, "incorrect-id")
         response = courses_client.create_course_api(request)
@@ -189,6 +240,11 @@ class TestCourses:
         assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
         assert_create_course_with_incorrect_field_id_response(response_data, field_name)
 
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.NORMAL)
+    @allure.title("Create course with too long title")
     def test_create_course_with_too_long_title(self, courses_client: CoursesClient):
         """
         Тест создания курса с слишком длинным названием.
@@ -209,6 +265,11 @@ class TestCourses:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.NORMAL)
+    @allure.title("Update course with too long title")
     def test_update_course_with_too_long_title(
         self, courses_client: CoursesClient, function_course: CourseFixture
     ):

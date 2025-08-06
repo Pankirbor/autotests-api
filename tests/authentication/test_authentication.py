@@ -1,6 +1,8 @@
-import pytest
-
 from http import HTTPStatus
+
+import allure
+from allure_commons.types import Severity
+import pytest
 
 from clients.authentication.authentication_client import AuthenticationClient
 from clients.authentication.authentication_schema import (
@@ -9,6 +11,10 @@ from clients.authentication.authentication_schema import (
 )
 
 from fixtures.users import UserFixture
+from tools.allure.epics import AllureEpic
+from tools.allure.features import AllureFeature
+from tools.allure.stories import AllureStory
+from tools.allure.tags import AllureTag
 from tools.assertions.authentication import assert_login_response
 from tools.assertions.base import assert_status_code
 from tools.assertions.schema import validate_json_schema
@@ -16,9 +22,18 @@ from tools.assertions.schema import validate_json_schema
 
 @pytest.mark.authentication
 @pytest.mark.regression
+@allure.tag(AllureTag.AUTHENTICATION, AllureTag.REGRESSION)
+@allure.epic(AllureEpic.LMS)
+@allure.parent_suite(AllureEpic.LMS)
+@allure.feature(AllureFeature.AUTHENTICATION)
+@allure.suite(AllureFeature.AUTHENTICATION)
 class TestAuthentication:
     """Тесты для проверки API аутентификации."""
 
+    @allure.story(AllureStory.LOGIN)
+    @allure.sub_suite(AllureStory.LOGIN)
+    @allure.severity(Severity.BLOCKER)
+    @allure.title("Login with correct email and password")
     def test_login(
         self,
         function_user: UserFixture,
