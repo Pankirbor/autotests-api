@@ -9,6 +9,7 @@ from clients.authentication.authentication_schema import (
     LoginResponseSchema,
     RefreshRequestSchema,
 )
+from tools.routes.api_routes import APIRoutes
 
 
 class AuthenticationClient(ApiClient):
@@ -25,7 +26,8 @@ class AuthenticationClient(ApiClient):
             Response: Ответ сервера после выполнения запроса на аутентификацию.
         """
         return self.post(
-            "/api/v1/authentication/login", json=request.model_dump(by_alias=True)
+            f"{APIRoutes.AUTHENTICATION.base_url}/login",
+            json=request.model_dump(by_alias=True),
         )
 
     @allure.step("Обновляем токен")
@@ -39,7 +41,8 @@ class AuthenticationClient(ApiClient):
             Response: Ответ сервера с новым токеном доступа.
         """
         return self.post(
-            "/api/v1/authentication/refresh", json=request.model_dump(by_alias=True)
+            f"{APIRoutes.AUTHENTICATION.base_url}/refresh",
+            json=request.model_dump(by_alias=True),
         )
 
     def login(self, request: LoginRequestSchema) -> LoginResponseSchema:

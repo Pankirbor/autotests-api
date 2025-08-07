@@ -11,6 +11,7 @@ from clients.exercises.exercises_schema import (
     ExerciseResponseSchema,
 )
 from clients.private_http_builder import get_private_http_client
+from tools.routes.api_routes import APIRoutes
 
 
 class ExercisesClient(ApiClient):
@@ -26,7 +27,9 @@ class ExercisesClient(ApiClient):
         Returns:
             Response: Ответ сервера со списком упражнений.
         """
-        return self.get("/api/v1/exercises", params=params.model_dump(by_alias=True))
+        return self.get(
+            APIRoutes.EXERCISES.base_url, params=params.model_dump(by_alias=True)
+        )
 
     @allure.step("Получаем информацию об упражнении")
     def get_exercise_api(self, exercise_id: str) -> Response:
@@ -38,7 +41,7 @@ class ExercisesClient(ApiClient):
         Returns:
             Response: Ответ сервера с данными о запрошенном упражнении.
         """
-        return self.get(f"/api/v1/exercises/{exercise_id}")
+        return self.get(APIRoutes.EXERCISES.with_id(exercise_id))
 
     @allure.step("Создаем упражнение")
     def create_exercise_api(self, request: CreateExerciseRequestSchema) -> Response:
@@ -51,7 +54,9 @@ class ExercisesClient(ApiClient):
         Returns:
             Response: Ответ сервера после создания упражнения.
         """
-        return self.post(f"/api/v1/exercises", json=request.model_dump(by_alias=True))
+        return self.post(
+            APIRoutes.EXERCISES.base_url, json=request.model_dump(by_alias=True)
+        )
 
     @allure.step("Обновляем упражнение")
     def update_exercise_api(
@@ -68,7 +73,8 @@ class ExercisesClient(ApiClient):
             Response: Ответ сервера после обновления данных упражнения.
         """
         return self.patch(
-            f"/api/v1/exercises/{exercise_id}", json=request.model_dump(by_alias=True)
+            APIRoutes.EXERCISES.with_id(exercise_id),
+            json=request.model_dump(by_alias=True),
         )
 
     @allure.step("Удаляем упражнение")
@@ -81,7 +87,7 @@ class ExercisesClient(ApiClient):
         Returns:
             Response: Ответ сервера подтверждающий удаление упражнения.
         """
-        return self.delete(f"/api/v1/exercises/{exercise_id}")
+        return self.delete(APIRoutes.EXERCISES.with_id(exercise_id))
 
     def get_exercises(
         self, params: GetExercisesQuerySchema
@@ -92,9 +98,7 @@ class ExercisesClient(ApiClient):
         Returns:
             GetExercisesResponseDict: Ответ сервера со списком упражнений.
         """
-        response = self.get(
-            "/api/v1/exercises", params=params.model_dump(by_alias=True)
-        )
+        response = self.get_exercises_api(params=params.model_dump(by_alias=True))
         return GetExercisesResponseSchema.model_validate_json(response.text)
 
     def create_exercise(

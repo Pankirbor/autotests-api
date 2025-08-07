@@ -4,6 +4,7 @@ from httpx import Response
 from clients.api_client import ApiClient
 from clients.public_http_builder import get_public_http_client
 from clients.users.users_schema import CreateUserRequestSchema, UserResponseSchema
+from tools.routes.api_routes import APIRoutes
 
 
 class PublicUsersClient(ApiClient):
@@ -20,7 +21,9 @@ class PublicUsersClient(ApiClient):
         Returns:
             Response: Ответ сервера после попытки создания пользователя.
         """
-        return self.post("/api/v1/users", json=request.model_dump(by_alias=True))
+        return self.post(
+            APIRoutes.USERS.base_url, json=request.model_dump(by_alias=True)
+        )
 
     def create_user(self, request: CreateUserRequestSchema) -> UserResponseSchema:
         """Выполняет регистрацию пользователя и возвращает обработанный JSON-ответ.

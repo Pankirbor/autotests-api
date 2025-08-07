@@ -1,6 +1,6 @@
 import httpx
 
-from tools.api_routes import APIRoutes
+from tools.routes.api_routes import APIRoutes
 from tools.fakers import fake
 
 user_create_data = {
@@ -33,9 +33,7 @@ def get_token(client: httpx.Client, user_data: str | dict[str, str]) -> dict[str
 
 
 with httpx.Client() as client:
-    response = client.post(
-        APIRoutes.USERS.join_path("", delimitr=""), json=user_create_data
-    )
+    response = client.post(APIRoutes.USERS.base_url, json=user_create_data)
     print("Статус код запроса на создание пользователя:\n", response.status_code)
     user = response.json()["user"]
     print("Данные от сервера:\n", user, end="\n\n")
@@ -44,7 +42,7 @@ with httpx.Client() as client:
     if token:
         client.headers = {"Authorization": f"Bearer {token}"}
         response_update = client.patch(
-            APIRoutes.USERS.join_path(str(user["id"])), json=user_update_data
+            APIRoutes.USERS.with_id(str(user["id"])), json=user_update_data
         )
         print(
             "Статус код запроса на изменение пользователя:\n",

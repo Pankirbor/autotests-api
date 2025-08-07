@@ -5,6 +5,7 @@ from clients.api_client import ApiClient
 from clients.authentication.authentication_schema import AuthenticationUserSchema
 from clients.users.users_schema import UserResponseSchema, UpdateUserRequestSchema
 from clients.private_http_builder import get_private_http_client
+from tools.routes.api_routes import APIRoutes
 
 
 class PrivateUsersClient(ApiClient):
@@ -21,7 +22,7 @@ class PrivateUsersClient(ApiClient):
         Returns:
             Response: Ответ сервера с данными текущего пользователя.
         """
-        return self.get("/api/v1/users/me")
+        return self.get(f"{APIRoutes.USERS.base_url}/me")
 
     @allure.step("Получаем информацию о пользователе по user_id")
     def get_user_api(self, user_id: str) -> Response:
@@ -33,7 +34,7 @@ class PrivateUsersClient(ApiClient):
         Returns:
             Response: Ответ сервера с данными запрошенного пользователя.
         """
-        return self.get(f"/api/v1/users/{user_id}")
+        return self.get(APIRoutes.USERS.with_id(user_id))
 
     @allure.step("Обновляем информацию о пользователе по user_id")
     def update_user_api(
@@ -49,7 +50,7 @@ class PrivateUsersClient(ApiClient):
             Response: Ответ сервера после обновления данных пользователя.
         """
         return self.patch(
-            f"/api/v1/users/{user_id}", json=request.model_dump(by_alias=True)
+            APIRoutes.USERS.with_id(user_id), json=request.model_dump(by_alias=True)
         )
 
     @allure.step("Удаляем пользователя по user_id")
@@ -62,7 +63,7 @@ class PrivateUsersClient(ApiClient):
         Returns:
             Response: Ответ сервера подтверждающий удаление пользователя.
         """
-        return self.delete(f"/api/v1/users/{user_id}")
+        return self.delete(APIRoutes.USERS.with_id(user_id))
 
     def get_user(self, user_id: str) -> UserResponseSchema:
         """

@@ -10,6 +10,7 @@ from clients.courses.courses_schema import (
     CourseResponseSchema,
     UpdateCourseRequestSchema,
 )
+from tools.routes.api_routes import APIRoutes
 
 
 class CoursesClient(ApiClient):
@@ -25,7 +26,9 @@ class CoursesClient(ApiClient):
         Returns:
             Response: Ответ сервера со списком курсов.
         """
-        return self.get("/api/v1/courses", params=params.model_dump(by_alias=True))
+        return self.get(
+            APIRoutes.COURSES.base_url, params=params.model_dump(by_alias=True)
+        )
 
     @allure.step("Получаем информацию о курсе по course_id")
     def get_course_api(self, course_id: str) -> Response:
@@ -37,7 +40,7 @@ class CoursesClient(ApiClient):
         Returns:
             Response: Ответ сервера с данными о запрошенном курсе.
         """
-        return self.get(f"/api/v1/courses/{course_id}")
+        return self.get(APIRoutes.COURSES.with_id(course_id))
 
     @allure.step("Создаем курс")
     def create_course_api(self, request: CreateCourseRequestSchema) -> Response:
@@ -66,7 +69,7 @@ class CoursesClient(ApiClient):
             Response: Ответ сервера после обновления данных курса.
         """
         return self.patch(
-            f"/api/v1/courses/{course_id}", json=request.model_dump(by_alias=True)
+            APIRoutes.COURSES.with_id(course_id), json=request.model_dump(by_alias=True)
         )
 
     @allure.step("Удаляем курс по course_id")
@@ -79,7 +82,7 @@ class CoursesClient(ApiClient):
         Returns:
             Response: Ответ сервера подтверждающий удаление курса.
         """
-        return self.delete(f"/api/v1/courses/{course_id}")
+        return self.delete(APIRoutes.COURSES.with_id(course_id))
 
     def create_course(self, request: CreateCourseRequestSchema) -> CourseResponseSchema:
         """

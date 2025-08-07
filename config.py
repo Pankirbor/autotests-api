@@ -28,10 +28,6 @@ class TestData(BaseModel):
 
     IMAGE_JPEG_FILE: FilePath
 
-    @property
-    def image_path_as_str(self) -> str:
-        return str(self.IMAGE_JPEG_FILE)
-
 
 class Settings(BaseSettings):
     """
@@ -49,6 +45,7 @@ class Settings(BaseSettings):
     HTTP_CLIENT: HTTPClientConfig
     APP_INTERHAL_HOST: HttpUrl
     ALLURE_RESULTS_DIR: DirectoryPath
+    API_VERSION: str = "/api/v1"
 
     @classmethod
     def initialize(cls) -> Self:
