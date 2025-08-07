@@ -10,6 +10,7 @@ from clients.files.files_schema import (
     UploadFileRequestSchema,
     UploadFileResponseSchema,
 )
+from config import settings
 from tools.assertions.base import assert_equal, assert_status_code
 from tools.assertions.errors import (
     assert_internal_error_response,
@@ -34,7 +35,7 @@ def assert_upload_file_response(
     """
 
     expected_url = (
-        f"http://localhost:8000/static/{request.directory}/{request.filename}"
+        f"{settings.APP_INTERHAL_HOST}static/{request.directory}/{request.filename}"
     )
     assert_equal(response.file.filename, request.filename, "filename")
     assert_equal(response.file.directory, request.directory, "directory")

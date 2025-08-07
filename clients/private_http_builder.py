@@ -7,6 +7,7 @@ from clients.authentication.authentication_schema import (
     AuthenticationUserSchema,
     LoginRequestSchema,
 )
+from config import settings
 from clients.event_hooks import curl_event_hook
 
 
@@ -27,8 +28,8 @@ def get_private_http_client(user: AuthenticationUserSchema) -> Client:
     login_response = authentication_client.login(login_request)
 
     return Client(
-        timeout=100,
-        base_url="http://localhost:8001",
+        timeout=settings.HTTP_CLIENT.TIMEOUT,
+        base_url=settings.HTTP_CLIENT.url_as_string,
         headers={"Authorization": f"Bearer {login_response.token.access_token}"},
         event_hooks={"request": [curl_event_hook]},
     )

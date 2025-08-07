@@ -10,6 +10,7 @@ from clients.errors_schema import (
     InternalErrorResponseSchema,
     ValidationErrorResponseSchema,
 )
+from config import settings
 from fixtures.files import FileFixture
 from tools.allure.epics import AllureEpic
 from tools.allure.features import AllureFeature
@@ -53,7 +54,9 @@ class TestFiles:
             AssertionError: Если данные в ответе не совпадают с ожидаемыми.
         """
 
-        request = UploadFileRequestSchema(upload_file="./testdata/files/image.jpg")
+        request = UploadFileRequestSchema(
+            upload_file=settings.TEST_DATA.IMAGE_JPEG_FILE
+        )
         response = files_client.upload_file_api(request)
         response_data = UploadFileResponseSchema.model_validate_json(response.text)
 
@@ -109,7 +112,9 @@ class TestFiles:
             AssertionError: Если данные в ответе не совпадают с ожидаемыми.
         """
         allure.dynamic.title(f"Upload file with missing request field: {field_name}")
-        request = UploadFileRequestSchema(upload_file="./testdata/files/image.jpg")
+        request = UploadFileRequestSchema(
+            upload_file=settings.TEST_DATA.IMAGE_JPEG_FILE
+        )
         setattr(request, field_name, "")
         response = files_client.upload_file_api(request)
         response_data = ValidationErrorResponseSchema.model_validate_json(response.text)

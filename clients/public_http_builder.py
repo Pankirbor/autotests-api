@@ -1,6 +1,7 @@
 from httpx import Client
 
 from clients.event_hooks import curl_event_hook
+from config import settings
 
 
 def get_public_http_client() -> Client:
@@ -11,8 +12,8 @@ def get_public_http_client() -> Client:
         Готовый к использованию объект httpx.Client.
     """
     return Client(
-        timeout=100,
-        base_url="http://localhost:8001",
+        timeout=settings.HTTP_CLIENT.TIMEOUT,
+        base_url=settings.HTTP_CLIENT.url_as_string,
         event_hooks={
             "request": [curl_event_hook],
         },

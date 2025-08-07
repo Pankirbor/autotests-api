@@ -27,7 +27,7 @@ class FilesClient(ApiClient):
                 by_alias=True,
                 exclude={"upload_file"},
             ),
-            files={"upload_file": open(request.upload_file, "rb")},
+            files={"upload_file": request.upload_file.read_bytes()},
         )
 
     @allure.step("Получаем информацию о файле по file_id")
