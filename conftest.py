@@ -5,4 +5,5 @@ pytest_plugins = [
     "fixtures.files",
     "fixtures.users",
     "fixtures.websocket",
+    "fixtures.allure",
 ]
