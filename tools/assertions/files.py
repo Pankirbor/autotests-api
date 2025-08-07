@@ -10,13 +10,20 @@ from clients.files.files_schema import (
     UploadFileRequestSchema,
     UploadFileResponseSchema,
 )
+from clients.files.files_client import FilesClient
 from config import settings
 from tools.assertions.base import assert_equal, assert_status_code
 from tools.assertions.errors import (
     assert_internal_error_response,
     assert_validation_error_response,
 )
-from clients.files.files_client import FilesClient
+from tools.assertions.api_error_constants import ErrorContext
+from tools.assertions.error_builder import ValidationErrorBuilder
+from tools.logger import get_logger
+
+
+err_builder = ValidationErrorBuilder()
+logger = get_logger("FILES_ASSERTIONS")
 
 
 @allure.step("Проверяем ответ сервера после загрузки файла")
@@ -37,27 +44,28 @@ def assert_upload_file_response(
     expected_url = (
         f"{settings.APP_INTERHAL_HOST}static/{request.directory}/{request.filename}"
     )
+    logger.info("Проверяем ответ сервера после загрузки файла")
     assert_equal(response.file.filename, request.filename, "filename")
     assert_equal(response.file.directory, request.directory, "directory")
     assert_equal(str(response.file.url), expected_url, "url")
 
 
-@allure.step("Проверяем доступность файла по URL")
+@allure.step("Проверяем доступность файла по id")
 def assert_file_is_accessible(
     client: FilesClient, file_id: str, expected_status_code: int
 ):
     """
-    Проверяет, что файл доступен по указанному URL.
+    Проверяет, что файл доступен по указанному id.
 
     Args:
         client (FilesClient): HTTP-клиент для взаимодействия с сервером.
-        url (str): URL, по которому должен быть доступен файл.
-        expected_status_code (int): Ожидаемый HTTP-код ответа.
+        file_id (str): Идентификатор файла.
+        expected_status_code (int): Ожидаемый статус код ответа.
 
     Raises:
         AssertionError: Если статус код ответа не соответствует ожидаемому.
     """
-
+    logger.info("Проверяем доступность файла по id")
     response = client.get_file_api(file_id)
     assert_status_code(response.status_code, expected_status_code)
 
@@ -74,7 +82,7 @@ def assert_file(actual: FileSchema, expected: FileSchema):
     Raises:
         AssertionError: Если данные не совпадают.
     """
-
+    logger.info("Проверяем соответствие данных файла")
     assert_equal(actual.id, expected.id, "id")
     assert_equal(actual.filename, expected.filename, "filename")
     assert_equal(actual.directory, expected.directory, "directory")
@@ -97,6 +105,7 @@ def assert_get_file_response(
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
 
+    logger.info("Проверяем ответ сервера на запрос файла")
     assert_file(get_file_response.file, create_file_response.file)
 
 
@@ -112,18 +121,24 @@ def assert_create_file_with_empty_field_response(
         field (str): Имя поля, в котором должен быть пустой строковый параметр.
     """
 
-    expected = ValidationErrorResponseSchema(
-        detail=[
-            ValidationErrorSchema(
-                type="string_too_short",
-                input="",
-                context={"min_length": 1},
-                message="String should have at least 1 character",
-                location=["body", field],
-            )
-        ]
+    # expected = ValidationErrorResponseSchema(
+    #     detail=[
+    #         ValidationErrorSchema(
+    #             type="string_too_short",
+    #             input="",
+    #             context={"min_length": 1},
+    #             message="String should have at least 1 character",
+    #             location=["body", field],
+    #         )
+    #     ]
+    # )
+    expected = (
+        err_builder.with_input("")
+        .with_error(ErrorContext.STRING_TOO_SHORT, min_length=1)
+        .at_location("body", field)
+        .build()
     )
-
+    logger.info("Проверяем ответ сервера на запрос создания файла с пустым полем")
     assert_validation_error_response(actual, expected)
 
 
@@ -138,8 +153,8 @@ def assert_file_not_found_response(actual: InternalErrorResponseSchema):
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
-
     expected = InternalErrorResponseSchema(details="File not found")
+    logger.info("Проверяем ответ сервера на запрос несуществующего файла")
     assert_internal_error_response(actual, expected)
 
 
@@ -157,20 +172,27 @@ def assert_get_file_with_incorrect_file_id_response(
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
 
-    context_error_val = (
-        f"invalid character: expected an optional prefix of "
-        f"`urn:uuid:` followed by [0-9a-fA-F-], found `i` at 1"
+    # context_error_val = (
+    #     f"invalid character: expected an optional prefix of "
+    #     f"`urn:uuid:` followed by [0-9a-fA-F-], found `i` at 1"
+    # )
+    # msg = f"Input should be a valid UUID, {context_error_val}"
+    # expected = ValidationErrorResponseSchema(
+    #     details=[
+    #         ValidationErrorSchema(
+    #             type="uuid_parsing",
+    #             input="incorrect-file-id",
+    #             context={"error": context_error_val},
+    #             message=msg,
+    #             loc=["path", "file_id"],
+    #         )
+    #     ]
+    # )
+    expected = (
+        err_builder.with_input("incorrect-file-id")
+        .with_error(ErrorContext.INVALID_UUID_CHAR, char="i", position=1)
+        .at_location("path", "file_id")
+        .build()
     )
-    msg = f"Input should be a valid UUID, {context_error_val}"
-    expected = ValidationErrorResponseSchema(
-        details=[
-            ValidationErrorSchema(
-                type="uuid_parsing",
-                input="incorrect-file-id",
-                context={"error": context_error_val},
-                message=msg,
-                loc=["path", "file_id"],
-            )
-        ]
-    )
+    logger.info("Проверяем ответ сервера на запрос файла с некорректным id")
     assert_validation_error_response(actual, expected)

@@ -21,9 +21,11 @@ from tools.assertions.errors import (
     assert_internal_error_response,
     assert_validation_error_response,
 )
+from tools.logger import get_logger
 
 
 err_builder = ValidationErrorBuilder()
+logger = get_logger("EXERCISES_ASSERTIONS")
 
 
 @allure.step("Проверяем соответсвие данных упражнения")
@@ -38,6 +40,7 @@ def assert_exercise(actual: ExerciseSchema, expected: ExerciseSchema):
     Raises:
         AssertionError: Если данные не совпадают.
     """
+    logger.info("Проверяем соответсвие данных упражнения")
     assert_equal(actual.id, expected.id, "id")
     assert_equal(actual.title, expected.title, "title")
     assert_equal(actual.course_id, expected.course_id, "course_id")
@@ -63,6 +66,7 @@ def assert_create_exercise_response(
     Raises:
         AssertionError: Если данные не совпадают.
     """
+    logger.info("Проверяем ответ сервера на запрос создания упражнения")
     for field_name in request.model_dump().keys():
         assert_equal(
             getattr(response.exercise, field_name),
@@ -86,6 +90,7 @@ def assert_get_exercise_response(
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
+    logger.info("Проверяем ответ сервера на запрос получения упражнения")
     assert_exercise(response.exercise, expected_response.exercise)
 
 
@@ -106,7 +111,7 @@ def assert_update_exercise_response(
     Raises:
         AssertionError: Если данные не совпадают.
     """
-
+    logger.info("Проверяем ответ сервера на запрос обновления упражнения")
     assert_equal(response.exercise.id, exercise_id, "id")
 
     for field_name in request.model_dump().keys():
@@ -130,7 +135,7 @@ def assert_not_found_exercise_response(actual: InternalErrorResponseSchema):
     """
 
     expected = InternalErrorResponseSchema(details="Exercise not found")
-
+    logger.info("Проверяем ответ сервера на запрос несуществующего упражнения")
     assert_internal_error_response(actual=actual, expected=expected)
 
 
@@ -151,6 +156,7 @@ def assert_get_exercises_response(
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
+    logger.info("Проверяем ответ сервера на запрос списка упражнений")
     assert_equal(expected_response.request.course_id, request.course_id, "course_id")
     assert_length(response.exercises, expected_response.response.exercises, "exercises")
     for index, exercise in enumerate(expected_response.response.exercises):
@@ -178,6 +184,9 @@ def assert_create_exercise_with_invalid_course_id_response(
         .with_error(ErrorContext.INVALID_UUID_CHAR, char="i", position=1)
         .at_location("body", "courseId")
         .build()
+    )
+    logger.info(
+        "Проверяем ответ сервера на запрос создания упражнения с некорректным id курса"
     )
     assert_validation_error_response(actual=actual, expected=expected)
 
@@ -211,7 +220,9 @@ def assert_create_or_update_exercise_with_empty_required_string_field_response(
         .at_location("body", FIELD_NAME_MAPPING.get(field_name))
         .build()
     )
-
+    logger.info(
+        "Проверям ответ сервера после запроса на создание или обновление упражнения с пустым обязательным параметром"
+    )
     assert_validation_error_response(actual=actual, expected=expected)
 
 
@@ -241,6 +252,10 @@ def assert_create_or_update_exercise_with_too_long_string_field_response(
         )
         .at_location("body", FIELD_NAME_MAPPING.get(field_name))
         .build()
+    )
+
+    logger.info(
+        "Проверям ответ сервера после запроса на создание или обновление упражнения с слишком длинным строковым параметром"
     )
     assert_validation_error_response(actual=actual, expected=expected)
 
@@ -279,4 +294,7 @@ def assert_create_or_update_exercise_with_incorrect_score_response(
             .build()
         )
 
+    logger.info(
+        "Проверям ответ сервера после запроса на создание или обновление упражнения с некорректным score"
+    )
     assert_validation_error_response(actual=actual, expected=expected)

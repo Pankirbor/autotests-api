@@ -4,6 +4,10 @@ import allure
 
 from clients.errors_schema import ValidationErrorSchema, ValidationErrorResponseSchema
 from tools.assertions.base import assert_equal, assert_length
+from tools.logger import get_logger
+
+
+logger = get_logger("ERRORS_ASSSERTIONS")
 
 
 @allure.step("Проверяем данные ожидаемой валидационной ошибки")
@@ -20,6 +24,8 @@ def assert_validation_error(
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
+
+    logger.info("Проверяем данные ожидаемой валидационной ошибки")
     assert_equal(actual.type, expected.type, "type")
     assert_equal(actual.message, expected.message, "message")
     assert_equal(actual.location, expected.location, "location")
@@ -41,6 +47,9 @@ def assert_validation_error_response(
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
+
+    logger.info("Проверяем ответ сервера с ожидаемой валидационной ошибкой")
+
     assert_length(actual.details, expected.details, "details")
 
     for actual_detail, expected_detail in zip(actual.details, expected.details):
@@ -59,4 +68,6 @@ def assert_internal_error_response(actual: Any, expected: Any) -> None:
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
+
+    logger.info("Проверяем ответ сервера с ожидаемой внутренней ошибкой")
     assert_equal(actual.details, expected.details, "details"),

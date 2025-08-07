@@ -21,9 +21,11 @@ from tools.assertions.errors import (
 )
 from tools.assertions.files import assert_file
 from tools.assertions.users import assert_user
+from tools.logger import get_logger
 
 
 err_builder = ValidationErrorBuilder()
+logger = get_logger("COURSES_ASSERTIONS")
 
 
 @allure.step("Проверяем соответсвие данных курса")
@@ -38,6 +40,7 @@ def assert_course(actual: CourseSchema, expected: CourseSchema):
     Raises:
         AssertionError: Если данные не совпадают.
     """
+    logger.info("Проверяем соответсвие данных курса")
     assert_equal(actual.id, expected.id, "id")
     assert_equal(actual.title, expected.title, "title")
     assert_equal(actual.description, expected.description, "description")
@@ -63,6 +66,7 @@ def assert_create_course_response(
         AssertionError: Если данные не совпадают.
     """
 
+    logger.info("Проверяем ответ сервера на запрос создания курса")
     assert_equal(response.course.title, request.title, "title")
     assert_equal(response.course.description, request.description, "description")
     assert_equal(response.course.max_score, request.max_score, "max_score")
@@ -98,6 +102,8 @@ def assert_get_course_response(
     Raises:
         AssertionError: Если данные не совпадают.
     """
+
+    logger.info("Проверяем ответ сервера на запрос курса")
     assert_course(expected_response.course, response.course)
 
 
@@ -116,6 +122,7 @@ def assert_get_courses_response(
         AssertionError: Если данные не совпадают.
     """
 
+    logger.info("Проверяем ответ сервера на запрос списка курсов")
     assert_length(response.courses, expected_response.courses, "courses")
 
     for index, course in enumerate(expected_response.courses):
@@ -137,6 +144,8 @@ def assert_update_course_response(
     Raises:
         AssertionError: Если данные не совпадают.
     """
+
+    logger.info("Проверяем ответ сервера на запрос обновления курса")
     assert_equal(response.course.id, course_id, "id")
 
     for field_name in request.model_dump().keys():
@@ -158,6 +167,8 @@ def assert_not_found_course_response(actual: InternalErrorResponseSchema):
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
     expected = InternalErrorResponseSchema(details="Course not found")
+
+    logger.info("Проверяем ответ сервера на запрос несуществующего курса")
     assert_internal_error_response(actual, expected)
 
 
@@ -190,7 +201,9 @@ def assert_create_course_with_empty_field_response(
         .at_location("body", FIELD_NAME_MAPPING.get(field_name))
         .build()
     )
-
+    logger.info(
+        "Проверяем ответ сервера на запрос курса с пустым обязательным параметром"
+    )
     assert_validation_error_response(actual, expected)
 
 
@@ -218,6 +231,9 @@ def assert_create_course_with_incorrect_field_id_response(
         .at_location("body", FIELD_NAME_MAPPING.get(field_name))
         .build()
     )
+    logger.info(
+        "Проверяем ответ сервера на запрос создания курса с некорректным id полем в теле запроса"
+    )
     assert_validation_error_response(actual, expected)
 
 
@@ -243,5 +259,8 @@ def assert_create_or_update_course_with_too_long_title_response(
         )
         .at_location("body", "title")
         .build()
+    )
+    logger.info(
+        "Проверяем ответ сервера на запрос создания курса с слишком длинным title"
     )
     assert_validation_error_response(actual, expected)
