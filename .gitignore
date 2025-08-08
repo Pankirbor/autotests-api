@@ -133,3 +133,7 @@ dmypy.json
 .vscode
 
 trash.py
+
+# allure
+allure-results
+allure-report
