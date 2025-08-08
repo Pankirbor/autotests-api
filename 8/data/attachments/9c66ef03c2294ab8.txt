@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjM3LjU0MzgyMCIsInVzZXJfaWQiOiI0NzM4MWUyNy1jNGQ1LTQyOTMtYjMyYi1kNDYzZDdhMzczOTEifQ.ieTwIWpw41fvF0f2FlN4o3IBoFmScrQgSWZ4SdSPjQg' \
+ -H 'content-length: 735' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","minScore":18,"maxScore":61,"description":"Написать инвалид помимо дыхание виднеться банк угроза.\nНаткнуться отъезд художественный вообще лапа. Ход поговорить бригада. Темнеть космос тревога издали.","estimatedTime":"7 weeks","previewFileId":"ca37dc0c-0efe-48b4-986a-ee8446c9cb62","createdByUserId":"c29b371e-fd17-4811-890f-36c122f6df85"}'

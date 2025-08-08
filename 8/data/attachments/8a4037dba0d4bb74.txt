@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjQyLjM1Mzk2NyIsInVzZXJfaWQiOiI0MGYzODA1Mi02ZGNjLTQyMjEtODE4ZS0zNjVhOTI4ZmRiYjcifQ.YIPIf6qGIgq1mjj6utmuHI4RvJbQS5Pu8ktdHsNL-Og' \
+ -H 'content-length: 597' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Войти засунуть светило налево ответить монета единый вряд.","courseId":"e3b58e3d-98c8-45de-8cd2-9a20fbb40ac2","maxScore":57,"minScore":7,"orderIndex":20,"description":"Вообще ребятишки дорогой означать а. Направо ремень дремать за манера выбирать. Беспомощный актриса витрина секунда ведь ботинок юный четко. Тысяча еврейский правильный горький смелый.","estimatedTime":"4 weeks"}'

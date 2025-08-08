@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjM5LjY4MDEwOCIsInVzZXJfaWQiOiJmNzA1ZTE4Yi1jYTA4LTQzMGYtOThmMS00NGVhY2Y0OTM2OGEifQ._jHJXkwZS3q1_wSAjvoo37HMycp56j8Zpg5GnMrjOoQ' \
+ -H 'content-length: 440' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Сходить прежде банда бак очутиться витрина.","minScore":12,"maxScore":57,"description":"Обида выражение тревога цвет близко триста актриса. Конференция лапа дорогой слать более.","estimatedTime":"9 weeks","previewFileId":"6ce242c5-1443-439c-bdb4-6108ec9a9a4d","createdByUserId":"f705e18b-ca08-430f-98f1-44eacf49368a"}'

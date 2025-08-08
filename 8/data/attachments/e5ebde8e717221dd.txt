@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjM5Ljk1MjQ5MiIsInVzZXJfaWQiOiJlMjBjYmM2NC03ZTMxLTQyNmEtYjNmZC1lYzM2ZjgxNTBlZDYifQ.k9rx5p9xljZPUUxUpSfsGLf5dPG-D5BK8_LYYSGPELg' \
+ -H 'content-length: 601' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Неожиданно кожа некоторый слишком печатать.","minScore":5,"maxScore":84,"description":"Ботинок термин руководитель приличный армейский спасть. Термин головной социалистический командование спорт сустав. Хозяйка горький район.\nКоманда цель бак банк предоставить.","estimatedTime":"8 weeks","previewFileId":"1995ce6a-7ca8-430a-99f6-35f088dbae16","createdByUserId":"e20cbc64-7e31-426a-b3fd-ec36f8150ed6"}'

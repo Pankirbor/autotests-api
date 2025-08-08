@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/64fc7629-5fcf-48be-ab11-d811402453c9' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjQ5LjIxOTczMSIsInVzZXJfaWQiOiIzYmU0NTE1ZC0xOTY1LTQ4YWItYWJjOC1jZWU4NTcxNTYyMDMifQ.xXtNQ7ewnXEJVpRwNcSydZqJrjfgbgbCR_JGWNZkU_I' \
+ -H 'content-length: 595' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Советовать серьезный невыносимый кидать за крутой.","courseId":"a78484a3-bbca-4f39-8c8d-378cc0505ea9","maxScore":0,"minScore":-10,"orderIndex":16,"description":"Реклама полностью реклама написать. Зачем эпоха светило цель князь пища головной строительство.\nХудожественный заложить опасность вперед бригада цепочка белье помолчать. Аж левый девка бок.","estimatedTime":"5 weeks"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjQ3LjA4NTYxNyIsInVzZXJfaWQiOiIxZDhjOWJjZS1hOTNiLTQ3ZDItYjBhMi1kZjdmOGU2ODBjMTIifQ.Hpup07ZPn47jaFFMdNQdgLkWOkjXewod-gkMM9Wah0g' \
+ -H 'content-length: 566' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Советовать лапа слишком светило зима редактор сомнительный.","minScore":26,"maxScore":68,"description":"Лететь покидать заработать дьявол умирать коллектив. Задрать решение ломать банк прежде сверкающий палец. Видимо степь чувство сустав девка.","estimatedTime":"1 weeks","previewFileId":"51e76db4-17ca-4a52-a470-9228429f2887","createdByUserId":"1d8c9bce-a93b-47d2-b0a2-df7f8e680c12"}'

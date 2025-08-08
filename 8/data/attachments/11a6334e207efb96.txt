@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjQ4LjAwNzkzOSIsInVzZXJfaWQiOiI2ZTBiNTEyNS1iNjIzLTRhODgtOWRmMC05ZjczNWEzZTE5MGQifQ.wIRrJda2f7VzPFsG1_CnmFrcA91ujFFviTWpEIcrDQw' \
+ -H 'content-length: 560' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Крутой карман бабочка заработать ломать войти смеяться.","courseId":"b30d772d-3dac-422e-9040-1850c9190d34","maxScore":0,"minScore":-10,"orderIndex":95,"description":"Умолять монета провал пища даль народ горький. Карандаш полюбить решение покидать забирать выбирать издали.\nПрелесть намерение кожа висеть одиннадцать точно порядок.","estimatedTime":"1 weeks"}'

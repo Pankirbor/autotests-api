@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjM1LjE5NjA0NyIsInVzZXJfaWQiOiIzNTk2MmZkYS1jMjIzLTQxNzAtYWUyYi1iYTU0MzA1YTdmMjgifQ.MJKjEMn4zomBcuaErmutx8fGSOqfUI88xI6k4NlF8bc' \
+ -H 'content-length: 453' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Около палата поговорить виднеться.","minScore":4,"maxScore":98,"description":"Дошлый парень строительство неправда. Ход отметить гулять падать еврейский. Умирать разуметься сохранять князь поезд.","estimatedTime":"10 weeks","previewFileId":"incorrect-id","createdByUserId":"a12902b7-b2a1-4598-a89a-b9983d132141"}'

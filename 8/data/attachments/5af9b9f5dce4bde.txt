@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjMwLjQzMTA1NCIsInVzZXJfaWQiOiJhYTI5YzBiMS0xODA0LTQyNDEtYjE3Ni1mOThmOGEzMmJhNTAifQ.0Jbq6bnoohNU_q4B6JOxre63D_SOL3OLyBoMsGqBxFI' \
+ -H 'content-length: 421' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Теория сустав гулять пробовать.","minScore":25,"maxScore":52,"description":"Назначить прелесть какой термин. Степь бегать возбуждение зачем способ низкий применяться.","estimatedTime":"7 weeks","previewFileId":"418d5b24-a221-4c1e-bb09-4f830d494c0f","createdByUserId":"aa29c0b1-1804-4241-b176-f98f8a32ba50"}'

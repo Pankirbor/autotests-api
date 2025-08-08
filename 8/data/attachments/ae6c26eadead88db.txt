@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjQwLjg4ODU0MiIsInVzZXJfaWQiOiI1NjlkODNlOC01MzRjLTQzNjktYTU5Zi00NTlhZjZkNzQ1MDMifQ.N9AZ3WdLPK9aAQMqlKoiH_J3-paoKid8isMaMHo-RQc' \
+ -H 'content-length: 199' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Табак волк спешить секунда.","courseId":"dc0b7eec-4e5b-464c-b581-9213458e83d3","maxScore":86,"minScore":20,"orderIndex":20,"description":"","estimatedTime":"2 weeks"}'

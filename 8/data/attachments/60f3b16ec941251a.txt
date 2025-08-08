@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjM0LjU0MzM0NyIsInVzZXJfaWQiOiJmODUyNGYyYy05YWQ3LTQyNDItYjk3Zi00MjBkYTJmMjcyOGIifQ.qy9fCabBsPrUMR76Xe8kNMrFVXk1QXC4u6_hzGHq4_g' \
+ -H 'content-length: 443' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Мера желание изображать посвятить хлеб салон райком.","minScore":23,"maxScore":100,"description":"Снимать вскинуть боец исполнять избегать. Военный демократия проход командующий.","estimatedTime":"8 weeks","previewFileId":"69fe87f7-2e6d-4938-bb5c-046fdf7ba01b","createdByUserId":"f8524f2c-9ad7-4242-b97f-420da2f2728b"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjI5LjUzMDQ0OSIsInVzZXJfaWQiOiJkYWU0MDdlMy00ZmQ4LTQzYjYtYmNlOC0wZjAyZmFkNzliY2IifQ.e7uoc6ntgXjXgG4pc9OJrwl_Z3nWN3vV-y_7oTGjvBQ' \
+ -H 'content-length: 513' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Сбросить боец реклама сутки передо наслаждение пространство зачем.","minScore":7,"maxScore":98,"description":"Выразить решение штаб ремень. Одиннадцать кольцо тревога. Наступать совет головной жить манера посвятить.","estimatedTime":"8 weeks","previewFileId":"6db50960-6b88-4284-8a26-0339613b1df0","createdByUserId":"dae407e3-4fd8-43b6-bce8-0f02fad79bcb"}'

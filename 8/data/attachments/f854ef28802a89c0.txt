@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/courses/c7dfae3a-2ead-4e89-86b3-e666afac7ea4' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjM4LjQ2ODA4OSIsInVzZXJfaWQiOiI3ZGNlOTZjMC03NDdjLTRkOWQtYmQ0NS1mZDQyMDllMGI1MmIifQ.0ApKyumS2ub571t_N3iwqaZiepJwn-h2K6kWmJPUEN0' \
+ -H 'content-length: 671' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","minScore":9,"maxScore":82,"description":"Слишком эффект порода соответствие ручей цепочка. Некоторый пятеро головка валюта танцевать.\nНаступать подробность хозяйка витрина смелый угроза. Расстройство рота да расстройство.","estimatedTime":"10 weeks"}'

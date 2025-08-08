@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjM1Ljc3NTg4NCIsInVzZXJfaWQiOiIzOTBmZTJmMy1mMjliLTQyZTMtOWZkOC1kYjBiMjZiZTU0OTkifQ.-5Ix9m91ARm8V12vJvst8rjy2ElyGY_0HH8eQpTHELk' \
+ -H 'content-length: 488' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Расстройство некоторый присесть сходить приличный новый.","minScore":9,"maxScore":54,"description":"Легко о правильный ребятишки решение. Результат порядок реклама. Дошлый полностью покидать наступать.","estimatedTime":"4 weeks","previewFileId":"f7c0e3fb-b160-4d55-8cb1-3dc02f6e3a82","createdByUserId":"390fe2f3-f29b-42e3-9fd8-db0b26be5499"}'

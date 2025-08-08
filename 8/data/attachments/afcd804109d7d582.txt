@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjQ5LjQ5Mjk5MyIsInVzZXJfaWQiOiI5MGYxNGViYy03NmI0LTQ3ZmEtOTQ3OC1hNjhiMzdlY2FiYzkifQ.6BdkL0XO3y1f55LhiO3nZa4LT0U-3VJo-GjsuI09-Lw' \
+ -H 'content-length: 519' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Адвокат коллектив передо космос.","minScore":30,"maxScore":53,"description":"Мрачно тревога место функция тревога лапа написать. Предоставить чем возникновение покидать порог заработать. Палата избегать о анализ теория.","estimatedTime":"1 weeks","previewFileId":"3077bd54-fad3-4b49-b025-d7f4f247c894","createdByUserId":"90f14ebc-76b4-47fa-9478-a68b37ecabc9"}'

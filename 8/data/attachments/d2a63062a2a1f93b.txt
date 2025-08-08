@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjQyLjA4MDY0MiIsInVzZXJfaWQiOiI3NWI0YTM0Ny1kNzA0LTQyMTAtYmJlZS02YTY0MWJmMjUxYzcifQ.BcW9CLprZBUz4qI8p810sDQDSmnqiXCNal1iz7J4oSM' \
+ -H 'content-length: 520' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Наткнуться багровый ремень применяться.","minScore":16,"maxScore":77,"description":"Результат тута рай сынок житель. Голубчик новый мальчишка кузнец хотеть понятный спешить. Космос изменение правильный жестокий ставить.","estimatedTime":"8 weeks","previewFileId":"802c40c8-bc7d-493c-a673-4e2c4947c7aa","createdByUserId":"75b4a347-d704-4210-bbee-6a641bf251c7"}'

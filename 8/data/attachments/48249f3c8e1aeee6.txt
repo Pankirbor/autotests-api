@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/0b17eea4-0734-415f-bfd0-01fe00d161ef' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjQ1LjkwNTM5NCIsInVzZXJfaWQiOiJhYWRlNzM4My1mZjRjLTQyZDQtYjk4NS1iYTZiYmM1MjA3OTkifQ.HR9H72Mb5KxuX5gy2OgPAiAua6dnmFsn7my9gjiXRj4' \
+ -H 'content-length: 644' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","courseId":"228181a7-4cc8-40bc-bafd-b87e39860df9","maxScore":87,"minScore":28,"orderIndex":40,"description":"Эффект некоторый тесно дальний секунда славный цвет. Монета художественный мимо вперед. Правление помимо собеседник прелесть спорт.","estimatedTime":"5 weeks"}'

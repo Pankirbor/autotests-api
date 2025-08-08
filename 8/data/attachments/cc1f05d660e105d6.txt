@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjQ5LjIxOTczMSIsInVzZXJfaWQiOiIzYmU0NTE1ZC0xOTY1LTQ4YWItYWJjOC1jZWU4NTcxNTYyMDMifQ.xXtNQ7ewnXEJVpRwNcSydZqJrjfgbgbCR_JGWNZkU_I' \
+ -H 'content-length: 521' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Потрясти спорт танцевать.","minScore":5,"maxScore":91,"description":"Поколение результат военный задрать следовательно отметить светило. Мальчишка армейский мусор грустный упорно налоговый социалистический выраженный.","estimatedTime":"1 weeks","previewFileId":"ac11f953-3a12-4be5-a05f-50aff0df0b45","createdByUserId":"3be4515d-1965-48ab-abc8-cee857156203"}'

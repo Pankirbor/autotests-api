@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjMxLjAxNTY5OCIsInVzZXJfaWQiOiIwZTRlYzQxYi1jNjY3LTQxZWMtODgwMi04MjU0ZDM4MWVlMDUifQ.OzyVMjPI13C77ZbaYUE_WYLqJANOFiQRakoNVmyzpVE' \
+ -H 'content-length: 465' \
+ -H 'content-type: application/json' \
+ -d '{"title":"","minScore":7,"maxScore":77,"description":"Сверкать опасность зачем написать головка заработать даль. Задрать отъезд наступать скрытый налево. Изменение исследование интернет за приходить.","estimatedTime":"8 weeks","previewFileId":"2821ff43-a930-49ea-860c-3d68479aad04","createdByUserId":"84d4e3d2-e316-46c9-a2f7-30ebf09cea34"}'

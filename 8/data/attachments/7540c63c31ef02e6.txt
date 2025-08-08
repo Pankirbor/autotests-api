@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjM0LjI2OTY1NSIsInVzZXJfaWQiOiJjOTRiMGE1OC01MDdmLTQ2MmYtODc1OS03ZDA5M2YxZWM2NGYifQ.Yg5jXiWiCvy05R9ueTjNzoyOLDWtc1b27-vZhcDX9vk' \
+ -H 'content-length: 540' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Научить спешить спичка развитый возникновение приходить дружно.","minScore":11,"maxScore":71,"description":"Военный посвятить художественный багровый. Падаль скользить а построить сохранять изображать невыносимый.\nБотинок угодный провинция призыв.","estimatedTime":"6 weeks","previewFileId":"d30e4502-3970-4779-be4f-4c9dc2d68a37","createdByUserId":""}'

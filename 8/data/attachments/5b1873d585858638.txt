@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjAwOjQzLjUzNjk1OCIsInVzZXJfaWQiOiIyZDE4YzI3YS04MjY2LTQ2NGEtYTgxNC04ZTlmZTRlOGYxMjkifQ.tYJlGhrmnAD6_HbAfNzSLISwcasa30si_o7MCWU_OTw' \
+ -H 'content-length: 520' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Полюбить коммунизм недостаток армейский адвокат госпожа изменение хозяйка.","minScore":30,"maxScore":66,"description":"Художественный способ нервно тесно покинуть пасть боец. Пропаганда премьера смертельный рис бегать.","estimatedTime":"7 weeks","previewFileId":"6b6162d8-a22c-498e-890b-66f32343ae36","createdByUserId":"2d18c27a-8266-464a-a814-8e9fe4e8f129"}'
