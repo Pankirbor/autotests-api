@@ -22,14 +22,17 @@ jobs:
         - name: Clone test server repository
           run: |
             git clone https://github.com/Nikita-Filonov/qa-automation-engineer-api-course.git
+          working-directory: ./qa-automation-engineer-api-course
 
 
         - name: Install dependensies
+          working-directory: ./qa-automation-engineer-api-course
           run: |
             python -m pip install --upgrade pip
-            pip install -r requirements.txt
+            pip install -r requirements.txt requirements
 
         - name: Start application server
+          working-directory: ./qa-automation-engineer-api-course
           env:
               APP_HOST: "http://localhost:8001"
               DATABASE_URL: "sqlite+aiosqlite:///./local.db"
