@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/03cd85c0-240b-42c0-99a3-b0398d4f3e35' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjQ4LjI1NTU2MCIsInVzZXJfaWQiOiI1NzVjMTcxNS0zMjdlLTRmNTMtODM4NS1iOGI2MjE0OWE2NGYifQ.UATahROApw7jkSWcBAjHkv2UtbZI2Mh7tXCSfakNsGA' \
+ -H 'content-length: 582' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Мотоцикл услать провинция головной мелькнуть приятель.","courseId":"0de0e2e3-2fe6-46e5-9188-cde757a7bd33","maxScore":52,"minScore":5,"orderIndex":82,"description":"Бок горький господь умирать потянуться торопливый грудь плавно. Самостоятельно совет точно адвокат домашний вытаскивать спичка. Невыносимый пища наслаждение пятеро лиловый жестокий.","estimatedTime":""}'

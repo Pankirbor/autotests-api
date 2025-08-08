@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjUxLjc4MzQ1NSIsInVzZXJfaWQiOiJhYTU0MDQ3NC05NTcxLTQ1NDktODcxZS1iMzNmNGM4YTQ0ZGUifQ.soITqV6hzlOzX_Y5_QdrClnyaELC2Zwp4jc_RA6e6QI' \
+ -H 'content-length: 614' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Налоговый торопливый смеяться задержать дрогнуть развернуться куча.","minScore":3,"maxScore":96,"description":"Умирать провал падаль художественный помолчать граница команда. Рота понятный реклама научить дорогой присесть расстегнуть. Господь блин жить очко роскошный.","estimatedTime":"8 weeks","previewFileId":"349eb991-e6e4-4b6c-9118-20a8687e6965","createdByUserId":"aa540474-9571-4549-871e-b33f4c8a44de"}'

@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/courses/4bc8e05f-cf69-4517-bc14-7ecf8cc80502' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjQyLjA2Mzk2MCIsInVzZXJfaWQiOiJmNGM5OWJkZi00YjBjLTQ4OGUtOTE2OC1iMzQ1Mzg2MTM5MGUifQ.T2v-pDQIZX0aOV7FIIJnXk3rPlyVsKVFMsNUR4h5Nws' \
+ -H 'content-length: 600' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","minScore":5,"maxScore":58,"description":"Подробность налево разводить. Покидать редактор приятель передо песня отражение кузнец. Неправда деловой ремень реклама горький космос господь.","estimatedTime":"1 weeks"}'

@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/10273c46-0f1e-4e73-980a-55ffe0437716' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjQ5LjQzMTQ3NCIsInVzZXJfaWQiOiIzZmI1OWMxOC1hMTk2LTQ3M2YtYjM5OC00ZmU4NDA0ZDJjOWUifQ.42Cu30zAK2qtbn-hsBJz7NuSYLwFEeh18UnfEl_Mv9g' \
+ -H 'content-length: 525' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","courseId":"23a03dbc-430b-49a4-b056-f157f66f82c3","maxScore":79,"minScore":5,"orderIndex":66,"description":"Грудь болото тревога палец. Юный заложить скрытый спешить полностью.","estimatedTime":"3 weeks"}'

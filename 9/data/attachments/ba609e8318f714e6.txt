@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjUxLjUwOTgxOCIsInVzZXJfaWQiOiI2NTRjZjFlZS0zNjRhLTRlN2UtOTc0Ni1hYmYyZDk2MWQ3ZDUifQ._UmAP_pbqncvDFnuwwi8rvRaFUIL0sauqslqNH_e85k' \
+ -H 'content-length: 623' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Ведь деловой спешить намерение второй понятный коммунизм да.","minScore":8,"maxScore":62,"description":"Мелькнуть серьезный цель забирать страсть. Покидать парень счастье терапия. Конструкция кожа развитый. Бегать спичка художественный тревога дьявол потянуться да академик.","estimatedTime":"4 weeks","previewFileId":"62966226-6170-439f-9fa0-fc5e446b9a95","createdByUserId":"654cf1ee-364a-4e7e-9746-abf2d961d7d5"}'

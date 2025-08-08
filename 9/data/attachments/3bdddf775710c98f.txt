@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjQzLjUzOTUyOSIsInVzZXJfaWQiOiJiYjkxNDZlOS01MjI0LTRlY2QtODY1Yy1mMGRiZDFmZjQ3YmUifQ.fUH0xVycVmrYP5wF0EBu7QsxapZOwaDZx_POcD6A8fo' \
+ -H 'content-length: 553' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Болото увеличиваться угол солнце ломать.","courseId":"e7d7b34a-48cf-455e-90ee-0b40b9865b15","maxScore":56,"minScore":14,"orderIndex":21,"description":"Командующий наткнуться жестокий дрогнуть. Некоторый премьера тюрьма зарплата лиловый дремать сверкать. Холодно важный появление единый миллиард сохранять народ художественный.","estimatedTime":"6 weeks"}'

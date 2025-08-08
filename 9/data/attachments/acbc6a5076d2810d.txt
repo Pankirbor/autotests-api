@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjM4LjgzMTgzNSIsInVzZXJfaWQiOiI0N2FjNzg1OC0wZjkzLTRjYTctODdiOS02YTVjZmNkYzZmYTgifQ.cbvENfodBN9XeJ4171RSfpOwkWJcC_fC48KRVikclM4' \
+ -H 'content-length: 538' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Бегать четко висеть заплакать.","minScore":3,"maxScore":86,"description":"Порода вчера встать советовать господь строительство. Белье жидкий выдержать бочок. Наткнуться ягода командующий. Бетонный подробность присесть трубка да развернуться.","estimatedTime":"2 weeks","previewFileId":"incorrect-id","createdByUserId":"80962115-dbc1-409f-80ca-8c2653b0e04d"}'

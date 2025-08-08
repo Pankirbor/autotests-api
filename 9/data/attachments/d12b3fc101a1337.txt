@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjUxLjUwOTgxOCIsInVzZXJfaWQiOiI2NTRjZjFlZS0zNjRhLTRlN2UtOTc0Ni1hYmYyZDk2MWQ3ZDUifQ._UmAP_pbqncvDFnuwwi8rvRaFUIL0sauqslqNH_e85k' \
+ -H 'content-length: 456' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Рай экзамен избегать слишком дружно забирать встать.","courseId":"0dc784ef-f694-4e0d-9c61-7a55aa3a9bb7","maxScore":0,"minScore":-10,"orderIndex":29,"description":"Граница ныне рассуждение единый серьезный понятный. Дошлый соответствие прелесть прежде левый способ поговорить.","estimatedTime":"2 weeks"}'

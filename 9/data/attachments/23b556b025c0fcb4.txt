@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjM1LjMyOTUxOSIsInVzZXJfaWQiOiJlMmMwZTYyYy1mODA0LTQ4ZDctYWQ0Ny01MWFhOWVjZjZlYzQifQ.2BEnyCwbxUgo8u74bXwTvsFzuev__vXh4oQDN3Naddw' \
+ -H 'content-length: 505' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Мимо поймать уронить карман головка разуметься помолчать.","minScore":30,"maxScore":57,"description":"Тесно промолчать расстегнуть ночь намерение легко природа ход. Разнообразный возмутиться растеряться нервно.","estimatedTime":"1 weeks","previewFileId":"7e952829-95c8-4b99-952e-c3df6d7d4a73","createdByUserId":"e2c0e62c-f804-48d7-ad47-51aa9ecf6ec4"}'

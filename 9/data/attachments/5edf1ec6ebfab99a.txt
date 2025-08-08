@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjQ1Ljg5Mzk0OCIsInVzZXJfaWQiOiJiN2I4NTNlMi1hODUwLTQ3MTMtYWIzMC05NDE1MzBkOTgxN2QifQ.Kh5x-EmO52EkS5IaiGGAtVIHk4oONv2d2hJEVQChTzQ' \
+ -H 'content-length: 580' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Забирать более витрина наслаждение.","courseId":"9b1237c6-64ff-4d11-8517-8cec16f41c84","maxScore":93,"minScore":19,"orderIndex":74,"description":"Важный необычный эпоха трясти. Цепочка бочок изредка прощение зарплата.\nСекунда нервно опасность вперед. Школьный сынок дьявол добиться фонарик триста. Угроза поезд витрина прощение следовательно.","estimatedTime":"1 weeks"}'

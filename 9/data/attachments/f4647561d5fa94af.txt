@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjM0Ljc1MDc2OSIsInVzZXJfaWQiOiJmZTMyMDFhYi05NGQ2LTQxNmYtYTBkMi04M2M2MWQ3YjY3YmEifQ.d404S_dmylyD_xQmhEJB0D7dCcQdJBleAU-Mz-YDGOc' \
+ -H 'content-length: 481' \
+ -H 'content-type: application/json' \
+ -d '{"title":"","minScore":27,"maxScore":64,"description":"Приятель успокоиться поймать. Космос даль устройство второй.\nГрудь терапия близко счастье горький. Бак изображать темнеть виднеться домашний расстегнуть.","estimatedTime":"9 weeks","previewFileId":"9940665b-dea6-47fd-8ce1-f3003a1deb45","createdByUserId":"7d4dc372-17b3-4d78-946a-32dbdb653e37"}'

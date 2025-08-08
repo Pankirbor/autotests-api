@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjQ5LjQzMTQ3NCIsInVzZXJfaWQiOiIzZmI1OWMxOC1hMTk2LTQ3M2YtYjM5OC00ZmU4NDA0ZDJjOWUifQ.42Cu30zAK2qtbn-hsBJz7NuSYLwFEeh18UnfEl_Mv9g' \
+ -H 'content-length: 412' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Передо космос механический.","minScore":27,"maxScore":59,"description":"Голубчик протягивать второй ягода. Сомнительный теория счастье иной головной затянуться.","estimatedTime":"10 weeks","previewFileId":"3886f7a6-9607-4ab6-9afa-1ae887c27e6e","createdByUserId":"3fb59c18-a196-473f-b398-4fe8404d2c9e"}'

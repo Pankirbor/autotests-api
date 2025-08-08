@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjM4LjI1NTcwNiIsInVzZXJfaWQiOiI3YTZmOGY1OS1kNjdhLTQ2MzQtOGU4Yi03NThmZTM3NTNjMjcifQ.hHBlbLX6udScN9-NlrNHLsRpuk_Lgl5odIEGz-R5TqM' \
+ -H 'content-length: 397' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Премьера выражение пол монета каюта.","minScore":26,"maxScore":83,"description":"Домашний виднеться наслаждение прежний редактор посидеть. При лапа коммунизм помимо за ярко.","estimatedTime":"5 weeks","previewFileId":"e4f41e94-e1e8-4786-9cd8-bea6781052b7","createdByUserId":""}'

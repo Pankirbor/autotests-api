@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjUyLjcxMDYzMCIsInVzZXJfaWQiOiI1Njg1MDYzZS0yNzA0LTQzNTUtYjY4Yy0yMWExNmMwYzBkZDgifQ.5MD7pLxTe8H51zpLjr8UeQUzn0GlNMMykJWgKOlFt3U' \
+ -H 'content-length: 558' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Ребятишки миллиард сохранять строительство заплакать сомнительный юный.","minScore":26,"maxScore":90,"description":"Налоговый команда салон иной инструкция бак. Космос поколение дорогой головной. Сомнительный песня инструкция наслаждение.","estimatedTime":"6 weeks","previewFileId":"0ce3bb92-8e27-448c-bd41-18f32571070f","createdByUserId":"5685063e-2704-4355-b68c-21a16c0c0dd8"}'

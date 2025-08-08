@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjM2LjQ4NTg3OSIsInVzZXJfaWQiOiI5NmM5ODcxOC0xZjM4LTQ5Y2MtODkwMC03ZThkNGEyNDg5MjMifQ.TrmCp01FB9uDr5u71TMIwnTykXhfrhii3GLRuWlErxY' \
+ -H 'content-length: 480' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Социалистический научить передо аллея наслаждение.","minScore":26,"maxScore":58,"description":"Число чувство совет запеть очередной приятель. Спичка механический еврейский тута рабочий даль дружно.","estimatedTime":"7 weeks","previewFileId":"b64261c9-f3e3-4e5e-8a85-b0f386effc92","createdByUserId":"96c98718-1f38-49cc-8900-7e8d4a248923"}'

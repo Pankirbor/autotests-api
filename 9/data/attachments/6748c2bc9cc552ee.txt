@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjQzLjI2NTkxOCIsInVzZXJfaWQiOiIyYTA1YzAxOC1jZjMwLTRkZGEtYmM4NC0yYjZmZTg5YmE2YTEifQ.6dBCUIQqgvUaaCKf_f2LGM6fxTgf3_G0aTPzrwoVFQY' \
+ -H 'content-length: 668' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Полоска сходить полностью командующий банк совещание правление.","minScore":24,"maxScore":59,"description":"Степь оставить исполнять освобождение. Тревога четко потом лететь настать выраженный.\nОсвобождение уронить исполнять заработать. Висеть медицина упорно миг прелесть трубка. Палец кпсс около.","estimatedTime":"5 weeks","previewFileId":"647aa6a3-59bb-4da8-a2a4-4436be281f76","createdByUserId":"2a05c018-cf30-4dda-bc84-2b6fe89ba6a1"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjM0LjExOTY5NCIsInVzZXJfaWQiOiJjZTFjYTY0ZC1kOTFlLTQwOWEtOTU1Ni1hNWFkYmJiMTY5ODQifQ.x0HddEzvnnmCNAAuXHLFvunEtjGzilridYnr0Jr-Iro' \
+ -H 'content-length: 654' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Сверкающий неправда госпожа уточнить остановить вздрогнуть.","minScore":2,"maxScore":64,"description":"Куча подробность заведение неправда адвокат. Домашний более ложиться термин интернет. Полевой сходить банк эффект затянуться даль намерение уточнить.\nПодземный приятель перебивать песня.","estimatedTime":"4 weeks","previewFileId":"54fe920d-9a9e-438b-a1db-dddc23ced41f","createdByUserId":"ce1ca64d-d91e-409a-9556-a5adbbb16984"}'

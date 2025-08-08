@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjQ3LjA4NDExOSIsInVzZXJfaWQiOiI0MGQzY2I5Zi03ZTJkLTQ1YzQtOTFiZS1kZTdjNDUyYmMxZWEifQ.2yjHykPMP0WijShafDnaBHhLx2DTPCqfUwsUFenaSwQ' \
+ -H 'content-length: 621' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Выражаться покидать набор дружно пища вскакивать.","minScore":9,"maxScore":56,"description":"Зарплата карман команда болото.\nЗасунуть иной сустав. Промолчать пропаганда миф. Привлекать жить спичка.\nТриста медицина плавно июнь. Житель расстегнуть неожиданный мелочь скрытый.","estimatedTime":"9 weeks","previewFileId":"df7aa954-8b64-485d-9fd8-b2024c9ec0a2","createdByUserId":"40d3cb9f-7e2d-45c4-91be-de7c452bc1ea"}'

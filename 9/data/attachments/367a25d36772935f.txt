@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjM3LjY2NDA4MSIsInVzZXJfaWQiOiI3NGMyMDliNy1kNmIyLTQ0NmQtODIxNC0yYmFiYWJjYTcwZDIifQ.SygTZdVIc_1qCkYy9REMRgHJzzeF6i2fSWRX4_UgnVo' \
+ -H 'content-length: 508' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Инвалид следовательно угроза слишком банда.","minScore":26,"maxScore":50,"description":"Поезд товар головка зарплата тусклый устройство степь. Боец соответствие зачем возможно ленинград советовать приличный идея.","estimatedTime":"7 weeks","previewFileId":"dd26ffe7-78b3-48d8-b735-5632683dcfb1","createdByUserId":"74c209b7-d6b2-446d-8214-2bababca70d2"}'

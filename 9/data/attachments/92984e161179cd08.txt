@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjM5Ljk5ODY3NyIsInVzZXJfaWQiOiI1NzFlNWI2Yy0yZDVhLTQ2NTgtOTkzOS1hNmIwOGEwNzBiMGUifQ.1ItewO3nH1Nk8jsSTHQgHm9WKF_vy8J2huNleQlbtxs' \
+ -H 'content-length: 474' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Пламя рис редактор терапия.","minScore":15,"maxScore":73,"description":"Естественный неправда потрясти забирать бочок. Спорт поезд приличный народ полностью труп. Крыса нажать премьера каюта пересечь поймать.","estimatedTime":"4 weeks","previewFileId":"2200fdec-7673-49e8-b473-e069d53653f9","createdByUserId":"incorrect-id"}'

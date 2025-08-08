@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjQ4LjI1NTU2MCIsInVzZXJfaWQiOiI1NzVjMTcxNS0zMjdlLTRmNTMtODM4NS1iOGI2MjE0OWE2NGYifQ.UATahROApw7jkSWcBAjHkv2UtbZI2Mh7tXCSfakNsGA' \
+ -H 'content-length: 456' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Чувство результат покидать.","minScore":17,"maxScore":88,"description":"Важный спорт эпоха головной. Функция куча степь. Июнь князь лапа.\nКидать белье мера задержать задержать опасность.","estimatedTime":"8 weeks","previewFileId":"5375ea0e-b89e-45fa-bbe4-16ff8832df4d","createdByUserId":"575c1715-327e-4f53-8385-b8b62149a64f"}'

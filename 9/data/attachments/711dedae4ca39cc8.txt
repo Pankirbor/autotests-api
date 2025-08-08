@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjM5LjQxNTUzNyIsInVzZXJfaWQiOiJmMDk3Nzg0Yi0xM2Q3LTRhMzctODU2Zi04YjkwMDYyNzg2NDUifQ.AVRVcIeFpi6_es3pygKyqL1iNTXCeP3LJM9amvHHlJE' \
+ -H 'content-length: 583' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Сохранять адвокат ребятишки похороны казнь.","courseId":"8dc8d586-9501-4a88-92b9-f9bf73d922ac","maxScore":54,"minScore":30,"orderIndex":21,"description":"Дремать мальчишка витрина наслаждение расстегнуть хотеть. Наткнуться сверкающий коричневый торговля.\nПравый спичка правый. Интеллектуальный выраженный спасть рассуждение возбуждение жить.","estimatedTime":"3 weeks"}'

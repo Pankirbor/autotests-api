@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjQ1Ljg5Mzk0OCIsInVzZXJfaWQiOiJiN2I4NTNlMi1hODUwLTQ3MTMtYWIzMC05NDE1MzBkOTgxN2QifQ.Kh5x-EmO52EkS5IaiGGAtVIHk4oONv2d2hJEVQChTzQ' \
+ -H 'content-length: 505' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Коричневый издали изучить плясать.","minScore":25,"maxScore":66,"description":"Дьявол песня сомнительный низкий. Оборот посвятить столетие привлекать пространство промолчать. Выгнать механический мелочь трубка.","estimatedTime":"4 weeks","previewFileId":"cefc4d6f-5c03-4105-ab88-485498d06667","createdByUserId":"b7b853e2-a850-4713-ab30-941530d9817d"}'

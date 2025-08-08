@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjQ0LjQzOTAzNCIsInVzZXJfaWQiOiJjODA1NmJhNC01NGU0LTRmMTEtYjM4Ni01MGJkZDNjNjQ2MWUifQ.cjfKw5NZ5p9CW7IgSIlrisixVPhe9mRwfuV0e8-WcjE' \
+ -H 'content-length: 611' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Другой исполнять терапия нож поколение.","minScore":30,"maxScore":74,"description":"Угол недостаток падаль налево задержать совет пространство прощение. Изба точно растеряться ответить войти. Исследование медицина термин жестокий неожиданно товар уничтожение инвалид.","estimatedTime":"6 weeks","previewFileId":"4b526ba9-1729-46ab-8bb8-3c6102ececee","createdByUserId":"c8056ba4-54e4-4f11-b386-50bdd3c6461e"}'

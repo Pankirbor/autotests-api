@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/10f9dafa-f2c3-47a6-aab6-7b33a8462e3d' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjUwLjYwMjI4MyIsInVzZXJfaWQiOiIxYWYwNTZhZS01MmVjLTQ1MzMtOWFkYi0wZGFjNjI0MzZlOTMifQ.VyjqjPFTKpt_ggON2-E3uMceDKT41fyseWey3Fu763E' \
+ -H 'content-length: 614' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Медицина манера граница солнце поговорить число.","courseId":"deb97af6-f504-46d7-ad58-d90854c2dcc5","maxScore":99,"minScore":23,"orderIndex":63,"description":"Социалистический угроза металл недостаток некоторый естественный заработать. Разнообразный близко ботинок природа возмутиться банк. Серьезный мелькнуть приятель строительство.","estimatedTime":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}'

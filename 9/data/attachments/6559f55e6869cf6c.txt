@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDE0OjE0OjM5LjQxNTUzNyIsInVzZXJfaWQiOiJmMDk3Nzg0Yi0xM2Q3LTRhMzctODU2Zi04YjkwMDYyNzg2NDUifQ.AVRVcIeFpi6_es3pygKyqL1iNTXCeP3LJM9amvHHlJE' \
+ -H 'content-length: 524' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Вообще трясти выраженный дальний.","minScore":23,"maxScore":84,"description":"Госпожа кидать упорно пасть вариант. Рис цвет промолчать мусор виднеться. Естественный носок угроза торопливый художественный результат смелый.","estimatedTime":"6 weeks","previewFileId":"84d42d30-c4f9-480c-89f6-63ca53b952a9","createdByUserId":"f097784b-13d7-4a37-856f-8b9006278645"}'
