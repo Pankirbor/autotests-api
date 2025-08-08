@@ -42,7 +42,7 @@ def assert_upload_file_response(
     """
 
     expected_url = (
-        f"{settings.APP_INTERHAL_HOST}static/{request.directory}/{request.filename}"
+        f"{settings.HTTP_CLIENT.URL}static/{request.directory}/{request.filename}"
     )
     logger.info("Проверяем ответ сервера после загрузки файла")
     assert_equal(response.file.filename, request.filename, "filename")
@@ -121,17 +121,6 @@ def assert_create_file_with_empty_field_response(
         field (str): Имя поля, в котором должен быть пустой строковый параметр.
     """
 
-    # expected = ValidationErrorResponseSchema(
-    #     detail=[
-    #         ValidationErrorSchema(
-    #             type="string_too_short",
-    #             input="",
-    #             context={"min_length": 1},
-    #             message="String should have at least 1 character",
-    #             location=["body", field],
-    #         )
-    #     ]
-    # )
     expected = (
         err_builder.with_input("")
         .with_error(ErrorContext.STRING_TOO_SHORT, min_length=1)
@@ -172,22 +161,6 @@ def assert_get_file_with_incorrect_file_id_response(
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
 
-    # context_error_val = (
-    #     f"invalid character: expected an optional prefix of "
-    #     f"`urn:uuid:` followed by [0-9a-fA-F-], found `i` at 1"
-    # )
-    # msg = f"Input should be a valid UUID, {context_error_val}"
-    # expected = ValidationErrorResponseSchema(
-    #     details=[
-    #         ValidationErrorSchema(
-    #             type="uuid_parsing",
-    #             input="incorrect-file-id",
-    #             context={"error": context_error_val},
-    #             message=msg,
-    #             loc=["path", "file_id"],
-    #         )
-    #     ]
-    # )
     expected = (
         err_builder.with_input("incorrect-file-id")
         .with_error(ErrorContext.INVALID_UUID_CHAR, char="i", position=1)
