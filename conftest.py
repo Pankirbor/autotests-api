@@ -4,6 +4,5 @@ pytest_plugins = [
     "fixtures.exercises",
     "fixtures.files",
     "fixtures.users",
-    "fixtures.websocket",
     "fixtures.allure",
 ]
