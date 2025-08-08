@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjExLjM2ODEzNiIsInVzZXJfaWQiOiJkMzM4NzE4NC1kMWZiLTQ0MDItYmE4Yy1hMDNjMzJiNjE2YjgifQ.M4YL4_sZ5Bo32YB9e-V6gGNg7pH60JOoxop1CsUc8DQ' \
+ -H 'content-length: 232' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Анализ потом вскинуть появление успокоиться.","courseId":"4830f810-87dd-4f29-88e2-60078c7a12f2","maxScore":63,"minScore":18,"orderIndex":39,"description":"","estimatedTime":"7 weeks"}'

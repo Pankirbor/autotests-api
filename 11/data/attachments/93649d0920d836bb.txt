@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjE0LjY4NDg3MSIsInVzZXJfaWQiOiJlYzY5ZTNlMC0yNDZiLTQxMGYtYTQ1Yi0yNjkzZmFhM2FlNzYifQ.4Xwd2ofZaZimUPaK5t6SMTF5SFiiA7N9xWhD6Wer75A' \
+ -H 'content-length: 589' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Медицина тесно увеличиваться задрать написать нажать выбирать порода.","minScore":7,"maxScore":52,"description":"При направо очко приходить. Обида житель художественный лететь. Другой рот бочок настать.\nЖелание передо лиловый возможно невозможно спорт пол.","estimatedTime":"3 weeks","previewFileId":"d23c3a64-ae4e-41e1-9657-8a94b0e25c0b","createdByUserId":"ec69e3e0-246b-410f-a45b-2693faa3ae76"}'

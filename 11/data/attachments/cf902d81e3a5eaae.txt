@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjEzLjc4NDI3MSIsInVzZXJfaWQiOiJkM2QxZDlhMC0wYWFhLTQyYzgtYmRiZi1kNzJlMjkxMGE4MGIifQ.r-kgEcVQVM7ZNJ89tU-0IMdDND-KW_BQh_tNruZU_-s' \
+ -H 'content-length: 433' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Избегать упорно горький.","minScore":12,"maxScore":81,"description":"Намерение запретить ярко тюрьма разнообразный аж рассуждение. Конференция валюта мера невозможно сынок.","estimatedTime":"5 weeks","previewFileId":"5409723b-e3a4-43c6-b53f-2fb7dcaaf8e7","createdByUserId":"d3d1d9a0-0aaa-42c8-bdbf-d72e2910a80b"}'

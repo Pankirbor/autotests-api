@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjE4LjIxOTI3NiIsInVzZXJfaWQiOiJjZGYwMTI3Yi1lNTg4LTQ3MjYtYTQ1Yi0wZWQ1MmY4YjFkYmUifQ.oE7eVOL6Sl-SRgsu8YFOxYUw43SORWw18-WuueW5DIo' \
+ -H 'content-length: 552' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Изучить самостоятельно четыре ломать.","minScore":18,"maxScore":82,"description":"Очко встать потом тревога лететь выдержать.\nПередо настать картинка демократия миф славный вряд. Мусор мотоцикл еврейский поставить висеть назначить юный.","estimatedTime":"5 weeks","previewFileId":"16cd2dad-b42e-4c5c-b31a-5172df9c50f7","createdByUserId":"cdf0127b-e588-4726-a45b-0ed52f8b1dbe"}'

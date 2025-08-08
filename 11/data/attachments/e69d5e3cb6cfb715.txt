@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/b6baef16-0592-475b-9aa3-145e94ff90b7' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjE5LjY5NTY3NCIsInVzZXJfaWQiOiIxYjcwY2FlNC1jZWExLTQyZjItYjU3OS01ZDBmNWQwM2E5NGEifQ.sIFgMp4aU2pULc4pJfcldQ4qP8fhA6ufsmLbg-Nzx7k' \
+ -H 'content-length: 423' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Госпожа дрогнуть скрытый исполнять товар слишком освободить.","courseId":"df5804ae-577b-48b7-8bfd-a761641595c6","maxScore":10,"minScore":100,"orderIndex":20,"description":"Покинуть потом дорогой командование мрачно. Торопливый освобождение сходить дрогнуть.","estimatedTime":"1 weeks"}'

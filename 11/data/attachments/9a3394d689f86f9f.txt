@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjE3LjMxODMzNCIsInVzZXJfaWQiOiIzYThkMTNmMi1kZGE0LTQ3OTItOTM5YS03YWZhZTJjN2Y3MTkifQ.VqxYUAxVzEh93vThzRBKmzAnXbCBwZI9C9fXEyZVBtQ' \
+ -H 'content-length: 608' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Упор возбуждение идея горький горький неправда.","minScore":3,"maxScore":51,"description":"Ложиться штаб медицина место выбирать трубка.\nДеньги спорт потом. Наткнуться виднеться инвалид бетонный около банда инвалид. Факультет что уничтожение выражаться холодно цвет.","estimatedTime":"5 weeks","previewFileId":"82c4ff68-9f99-4d90-82cb-3034600eee1c","createdByUserId":"3a8d13f2-dda4-4792-939a-7afae2c7f719"}'

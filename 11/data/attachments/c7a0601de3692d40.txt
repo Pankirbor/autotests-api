@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjA2LjA1NzMzNyIsInVzZXJfaWQiOiIzMzEwYmEzOC1hMzE1LTRkODQtODI2ZC0zN2ZmNTk4ODM4YjAifQ.6Q6sDJcp0g3JOolE_41K3Udwt56HaTP5WxtxOI2MQ6w' \
+ -H 'content-length: 591' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Опасность заявление кидать прежде.","minScore":17,"maxScore":66,"description":"Наслаждение фонарик помимо задрать четко. Темнеть секунда природа невыносимый заявление затянуться невыносимый.\nПромолчать добиться головка тяжелый манера. Волк столетие издали.","estimatedTime":"9 weeks","previewFileId":"5161da48-a43a-4348-8e55-45eef1131826","createdByUserId":"3310ba38-a315-4d84-826d-37ff598838b0"}'

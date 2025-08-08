@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjE4LjIxOTI3NiIsInVzZXJfaWQiOiJjZGYwMTI3Yi1lNTg4LTQ3MjYtYTQ1Yi0wZWQ1MmY4YjFkYmUifQ.oE7eVOL6Sl-SRgsu8YFOxYUw43SORWw18-WuueW5DIo' \
+ -H 'content-length: 499' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Пробовать белье вскинуть медицина.","courseId":"697190d6-6715-4b0f-9aaf-d0f6703170b5","maxScore":0,"minScore":-10,"orderIndex":84,"description":"Затянуться пересечь вздрагивать. Манера бетонный пространство сынок тревога дьявол покинуть совещание. Нажать падаль роскошный встать порода легко спорт.","estimatedTime":"1 weeks"}'

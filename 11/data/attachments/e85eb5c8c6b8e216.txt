@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjE5LjY5NTY3NCIsInVzZXJfaWQiOiIxYjcwY2FlNC1jZWExLTQyZjItYjU3OS01ZDBmNWQwM2E5NGEifQ.sIFgMp4aU2pULc4pJfcldQ4qP8fhA6ufsmLbg-Nzx7k' \
+ -H 'content-length: 642' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Строительство теория разводить направо изменение район плавно.","minScore":13,"maxScore":53,"description":"Человечек исполнять отметить идея. Ныне рис одиннадцать освобождение. Лететь ломать изба прежде.\nГорький спичка пространство песенка расстегнуть. Неудобно грустный точно низкий.","estimatedTime":"9 weeks","previewFileId":"cd0881eb-ed81-4f42-98d8-90a175ed2d40","createdByUserId":"1b70cae4-cea1-42f2-b579-5d0f5d03a94a"}'

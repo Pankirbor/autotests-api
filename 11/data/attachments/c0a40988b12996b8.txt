@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjEzLjUxMTY3NiIsInVzZXJfaWQiOiI0NGViMWVhNi0zZTgxLTQ0ZmItYWY0ZS1hOTE0NzRmNzNlYzYifQ.sSmdsJzYYAiqhfg2OWIF3RbCKeLUFvYxtupc99EddRQ' \
+ -H 'content-length: 414' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Плод единый низкий невозможно домашний.","courseId":"58d34bc5-26ae-4efb-9045-745515ee25f4","maxScore":71,"minScore":27,"orderIndex":89,"description":"Запустить кожа ярко избегать. Упорно цепочка еврейский сходить демократия. Приятель магазин славный висеть.","estimatedTime":""}'

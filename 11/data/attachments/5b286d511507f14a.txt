@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjA4LjcxMjM1MCIsInVzZXJfaWQiOiJmYzc1Zjg0Yi03NjQ0LTRlYjgtOTA2Zi1jYTBiYzRjZTE4ZWYifQ.4ZQlPVwUGZQPTqxhDjGubRhKN38ujtCYtaFzENpUtZg' \
+ -H 'content-length: 484' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Посвятить недостаток умолять обида неожиданно.","minScore":15,"maxScore":97,"description":"При лететь крутой валюта применяться задрать хлеб. Пятеро изображать горький пища мотоцикл дьявол появление.","estimatedTime":"10 weeks","previewFileId":"5e864ca1-f253-482f-8b1b-6190b0b116e1","createdByUserId":"fc75f84b-7644-4eb8-906f-ca0bc4ce18ef"}'

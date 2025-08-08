@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/e1530f51-dc07-4881-8c55-57df070d5b87' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjE2LjEzOTQ1NSIsInVzZXJfaWQiOiJlZjllMjI3My1mYzY5LTRjOWEtYjMwNy01NmQ4MWIyNzAwNGYifQ.HWNQF8gGadop32aKVvjw-bEkc3fPLRKHW_KK6zAsLR4' \
+ -H 'content-length: 661' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","courseId":"0b64fbd3-fb37-4935-b845-76457360e69b","maxScore":65,"minScore":28,"orderIndex":50,"description":"Заложить упорно основание угроза спасть. Командующий интернет пропасть рота привлекать. Инструкция тяжелый прежний равнодушный достоинство.","estimatedTime":"2 weeks"}'

@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/e0a47d68-4b3d-4332-a036-f27c74e38be2' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjEzLjc4NDI3MSIsInVzZXJfaWQiOiJkM2QxZDlhMC0wYWFhLTQyYzgtYmRiZi1kNzJlMjkxMGE4MGIifQ.r-kgEcVQVM7ZNJ89tU-0IMdDND-KW_BQh_tNruZU_-s' \
+ -H 'content-length: 247' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Лететь советовать левый наслаждение мусор ребятишки.","courseId":"685025c0-d9cd-4785-976f-ddc3ae59c0dd","maxScore":54,"minScore":26,"orderIndex":82,"description":"","estimatedTime":"5 weeks"}'

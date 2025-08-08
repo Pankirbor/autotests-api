@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjE3LjA0MzAwMSIsInVzZXJfaWQiOiIwNTAwMDRkOS00OTEyLTQzZjMtYjhiMS1mNTNjNDU3OWQ4NjUifQ.qTRA1LXibhwS3FcxxjVang5hZVT74zyDiFjGXFwK8QY' \
+ -H 'content-length: 644' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Угодный монета потом отдел выражение запустить.","minScore":20,"maxScore":83,"description":"Идея о девка порт ярко дрогнуть анализ. Выгнать уточнить торговля падать мотоцикл.\nЛенинград приличный смертельный достоинство низкий полностью премьера. Очередной засунуть печатать сверкающий.","estimatedTime":"4 weeks","previewFileId":"30d23cd8-b791-4408-ad5b-d7ac7e864ca6","createdByUserId":"050004d9-4912-43f3-b8b1-f53c4579d865"}'

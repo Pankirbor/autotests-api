@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/courses/b3ddc2cf-ffaf-4496-9113-993e34d2da8c' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjA0LjMxNTYwMyIsInVzZXJfaWQiOiIyMDk2MjI3YS0yMjI5LTQ3MjktYjI4ZS05YjgzYzhjMDY2YTYifQ.-wAtoNH5tYm5BslRqDEZqrEXBJrKiuLWUdw95DJKZqI' \
+ -H 'content-length: 396' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Равнодушный посидеть рай нервно.","minScore":7,"maxScore":93,"description":"О изредка издали растеряться рота командующий. Медицина серьезный возникновение руководитель кпсс растеряться. Около да миллиард спичка.","estimatedTime":"2 weeks"}'

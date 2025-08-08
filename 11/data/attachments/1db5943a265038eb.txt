@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjAzLjcyMzExNiIsInVzZXJfaWQiOiJiYzQ5NDM5ZC01MzIyLTQ4MjYtYmVlMC1lNzYxZTY0NzU2ZmUifQ.PinfvSQOMaW1_zaQ152MmQQwIsSGVAZpxZ3Li8pPQYw' \
+ -H 'content-length: 524' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Беспомощный вздрагивать жидкий выразить приличный.","minScore":13,"maxScore":97,"description":"Природа покидать коллектив шлем радость советовать лететь. Заложить руководитель запретить мелькнуть разуметься. Космос легко страсть сохранять.","estimatedTime":"6 weeks","previewFileId":"","createdByUserId":"c1164b62-6873-4fc2-985b-68be55316c7d"}'

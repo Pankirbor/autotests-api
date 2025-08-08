@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjE0Ljk1NzgxMiIsInVzZXJfaWQiOiIyYWQ2NTYwOC1lZmUwLTQ2MjEtYmM5Yi04ZWUwMDFjMjVmZjQifQ.3ZvKjfyrLCnGkWCsTay3O-t_tr8JBqwziHbf3Hm4pUo' \
+ -H 'content-length: 651' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Встать желание поколение монета вскинуть привлекать.","minScore":23,"maxScore":56,"description":"Поколение приличный ученый светило миг.\nВторой актриса коммунизм носок поезд дрогнуть грустный отъезд. Единый мусор мальчишка порог. Счастье радость полевой госпожа приятель невозможно валюта.","estimatedTime":"2 weeks","previewFileId":"56deb5a4-677c-4cb3-9a58-9d72341a2193","createdByUserId":"2ad65608-efe0-4621-bc9b-8ee001c25ff4"}'

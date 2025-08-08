@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjEyLjU5MTE4MCIsInVzZXJfaWQiOiI0MDEyNTdmNi1kNDBjLTRmNmEtYTFjZS05ZWYwNzdjZmI5MDEifQ.OvvF3dwU2fH-s1LexYNBafNGj4PtX1dguHQ3jMkCyqA' \
+ -H 'content-length: 628' \
+ -H 'content-type: application/json' \
+ -d '{"title":"А командир шлем рис непривычный академик адвокат.","minScore":5,"maxScore":69,"description":"Наслаждение совет коробка пастух плавно. Ложиться конференция угол танцевать наслаждение головной.\nАктриса назначить одиннадцать. Валюта снимать белье выбирать сходить плавно горький.","estimatedTime":"3 weeks","previewFileId":"159f6321-3f4a-46d5-8fe0-af6f528da681","createdByUserId":"401257f6-d40c-4f6a-a1ce-9ef077cfb901"}'

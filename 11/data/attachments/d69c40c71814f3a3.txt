@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/c4cdcef1-b302-4145-9726-bd336f5b9dd8' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjE3LjA0MzAwMSIsInVzZXJfaWQiOiIwNTAwMDRkOS00OTEyLTQzZjMtYjhiMS1mNTNjNDU3OWQ4NjUifQ.qTRA1LXibhwS3FcxxjVang5hZVT74zyDiFjGXFwK8QY' \
+ -H 'content-length: 518' \
+ -H 'content-type: application/json' \
+ -d '{"title":"","courseId":"23879b28-700a-4ff1-aedd-8bf15125b1d9","maxScore":77,"minScore":28,"orderIndex":21,"description":"Вчера инфекция художественный возбуждение. Болото роскошный бабочка легко равнодушный. Банк сутки витрина торопливый назначить мусор.\nВажный изба идея куча сустав. Привлекать слишком грустный сынок.","estimatedTime":"8 weeks"}'

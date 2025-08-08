@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjEwLjE2OTgxOSIsInVzZXJfaWQiOiJkYmU4MWM0Yy05NTgyLTRmNWMtOTcxNS1hNjc2YTkzN2UxYzgifQ.rtuS2XiZnLdBAUnT-BPj6sl1VtAf_JK0JTTfgDOVU58' \
+ -H 'content-length: 600' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Сустав опасность доставать о.","minScore":15,"maxScore":61,"description":"Каюта снимать господь лиловый. Применяться плясать скользить неправда кпсс сверкающий картинка. Грустный оборот голубчик пастух смелый коробка. Заявление отъезд господь металл возбуждение.","estimatedTime":"2 weeks","previewFileId":"6e3d3044-7077-4a63-9bfb-f98b13623830","createdByUserId":"dbe81c4c-9582-4f5c-9715-a676a937e1c8"}'

@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/3b82bfcf-7206-41b9-a60f-dd43ed722774' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA4VDIyOjU5OjEyLjMxNTM4MyIsInVzZXJfaWQiOiIzNDJmOGNjNy1lOWU2LTQ4YmEtOWI5OS03M2E2NGMyNWM1NzIifQ.GCkiX4LNviUZJzypGtE82i7IkQ22cJxizp7FSI2aqqE' \
+ -H 'content-length: 450' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Песенка проход мусор построить а.","courseId":"0e7bfc28-e8ac-450e-aa0b-80a44e46e4bc","maxScore":62,"minScore":9,"orderIndex":21,"description":"Инструкция рот второй вообще поставить. Темнеть магазин социалистический намерение. Выражение посвятить мимо приличный ложиться.","estimatedTime":"10 weeks"}'
