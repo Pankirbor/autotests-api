@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/5f8ed55a-ca6d-4fa8-8867-db2288d8f4f6' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjIxLjkyNzAwNyIsInVzZXJfaWQiOiI4MmVmYWNkZC01ZjRkLTQ2YzgtOThmNC04MTAyM2NmYmYxZTgifQ.GIqdrGfMkPTVfEZgyFKapT-rKpXciPZi9urwjmqM7eU' \
+ -H 'content-length: 221' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Соответствие медицина бочок мальчишка.","courseId":"9a222ede-4312-4a2d-8cfe-28c97410f8b0","maxScore":91,"minScore":10,"orderIndex":82,"description":"","estimatedTime":"5 weeks"}'

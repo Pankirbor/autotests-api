@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjEyLjAwNTY2OCIsInVzZXJfaWQiOiI2OTgzZWY5OS1hZWQ1LTQ1NDUtOWI5Yi04ZGMwNDhjZWMxM2QifQ.doE_pDasaJEoxLbyvF0f1X8gws4Piur41q58PdwdOyY' \
+ -H 'content-length: 500' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Темнеть непривычный сомнительный налоговый ручей даль достоинство.","minScore":20,"maxScore":95,"description":"Механический инвалид точно сопровождаться счастье спорт. Запустить природа зато. Увеличиваться выбирать выраженный.","estimatedTime":"1 weeks","previewFileId":"","createdByUserId":"53fcaef8-208f-4187-8930-cbf9144e12a6"}'

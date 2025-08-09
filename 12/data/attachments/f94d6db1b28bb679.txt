@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjIwLjc0MDM1MSIsInVzZXJfaWQiOiJlMzJjNjUxNi1kZTEzLTQ4NDUtOTc5YS1iOThlY2FlZDBkYTIifQ.gX1xd7ZqaMCjA9rvHelxXDubN_cuBeArZHRgy0OCANM' \
+ -H 'content-length: 520' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Увеличиваться порядок рабочий встать командование.","minScore":25,"maxScore":89,"description":"Точно социалистический палата назначить спасть. Заработать изучить блин плясать разводить.\nКуча кожа необычный а ребятишки.","estimatedTime":"6 weeks","previewFileId":"74c1b864-a513-4e1b-a951-9c01fe7d9d5d","createdByUserId":"e32c6516-de13-4845-979a-b98ecaed0da2"}'

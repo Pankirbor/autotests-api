@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjEzLjc0MTcxNCIsInVzZXJfaWQiOiI3ZTgzNGQ3OS0yNTgyLTQ0NzEtOGNjYy1kYTQyOGFkZmM5NGUifQ.uoFyQ1io1_yfzzdx8z0b2yg0lYjinSImGXqVtqrCTrk' \
+ -H 'content-length: 568' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Умирать миллиард налево присесть вздрогнуть наступать полевой приятель.","minScore":2,"maxScore":54,"description":"Протягивать услать выразить легко вчера сбросить. Художественный космос присесть очутиться коричневый. Бак отъезд славный уничтожение висеть.","estimatedTime":"3 weeks","previewFileId":"incorrect-id","createdByUserId":"9cdca8f0-f00a-4402-983f-dcdbcf637ba7"}'

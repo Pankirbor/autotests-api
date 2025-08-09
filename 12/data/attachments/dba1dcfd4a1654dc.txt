@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjA5LjA1MzEyNiIsInVzZXJfaWQiOiJlZWQyMzExMC04ZjYwLTQ4MTItOGQ4ZS0xZmE2NTE3ZmIzNDYifQ.pDxOBpOqDAfibLHZrCXxLGzqsl9M7Tz_Ms4Yh7V6lJ0' \
+ -H 'content-length: 597' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Коллектив мелькнуть прежний монета коробка.","minScore":7,"maxScore":77,"description":"Через картинка дрогнуть заложить уничтожение потрясти конференция. Запретить добиться доставать нож возможно заведение дрогнуть. Крутой порог провал бегать какой поставить.","estimatedTime":"5 weeks","previewFileId":"44a6e511-22fa-47b1-b587-da2f62fd147f","createdByUserId":"eed23110-8f60-4812-8d8e-1fa6517fb346"}'

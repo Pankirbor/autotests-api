@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjI2LjMyODQwOSIsInVzZXJfaWQiOiJhODRkYTdjOS00MTIwLTRlZDUtYjcyMy1iZjNiYzFiOTA2N2IifQ.HLUT8uEbzGeDqmiHU6os-XuffAghvqUC614LKgi2kFk' \
+ -H 'content-length: 564' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Возможно бровь около пространство вздрагивать реклама актриса домашний.","minScore":22,"maxScore":77,"description":"Выражение труп выраженный господь пол зато а.\nНосок цепочка прелесть намерение. Заведение командующий единый товар недостаток.","estimatedTime":"8 weeks","previewFileId":"0c66bc65-01c1-442c-96dc-2e289385be06","createdByUserId":"a84da7c9-4120-4ed5-b723-bf3bc1b9067b"}'

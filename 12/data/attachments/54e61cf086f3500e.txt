@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/a918548e-a1ae-4f07-8214-28f5e8bef9b1' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjI1LjE2NDU1NSIsInVzZXJfaWQiOiJhZTc0MWEwNi03YTk1LTQ1ZmMtYTg2Mi1jY2U1NGE3ZTgwMTIifQ.lh_FyFIUXo6E40cx0w_WBHaxvhc7Ch7CidqytQNvLMg' \
+ -H 'content-length: 361' \
+ -H 'content-type: application/json' \
+ -d '{"title":"","courseId":"a4223ee5-f28f-41f0-a9ed-73a413ef263b","maxScore":95,"minScore":2,"orderIndex":66,"description":"Руководитель уточнить задержать зима слишком палата. Призыв сверкать за проход пасть сопровождаться костер тюрьма.","estimatedTime":"7 weeks"}'

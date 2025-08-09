@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjE5LjU1NzI0MSIsInVzZXJfaWQiOiJhZjA2YmFkMC01MGUxLTRlNWItODBlOS02YTZhZTQ5M2E4OWMifQ.9k08xe5_EA4NlWkqXtgD9iZaG1RBmu3VgAE2XIoTD24' \
+ -H 'content-length: 237' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Очередной труп неправда чувство сопровождаться.","courseId":"25d08b6a-5f75-4a57-9941-ae6193fae4b9","maxScore":91,"minScore":26,"orderIndex":2,"description":"","estimatedTime":"8 weeks"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjI1LjE2NDU1NSIsInVzZXJfaWQiOiJhZTc0MWEwNi03YTk1LTQ1ZmMtYTg2Mi1jY2U1NGE3ZTgwMTIifQ.lh_FyFIUXo6E40cx0w_WBHaxvhc7Ch7CidqytQNvLMg' \
+ -H 'content-length: 478' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Приходить запретить монета пропадать возникновение.","minScore":20,"maxScore":55,"description":"Бочок функция командование механический. Запретить неожиданный назначить счастье ныне космос вчера.","estimatedTime":"2 weeks","previewFileId":"908598c5-b93b-4320-b55a-49b24c103182","createdByUserId":"ae741a06-7a95-45fc-a862-cce54a7e8012"}'

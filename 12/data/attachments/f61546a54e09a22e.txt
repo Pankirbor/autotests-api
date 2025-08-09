@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjEzLjE2ODQ2NiIsInVzZXJfaWQiOiIyYzhmODViZi03YmRmLTQwOTgtODlmZi0xNmQzMWVjNDlmNDMifQ.bTuXF73kaPP7GsUGRkrsP78PQarZoz1xifhaV43IsxI' \
+ -H 'content-length: 560' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Дошлый пол торопливый вывести.","minScore":3,"maxScore":100,"description":"Магазин возбуждение скользить оставить волк народ помимо. Жить тюрьма обида карандаш коробка. Каюта светило более народ пространство славный. Голубчик зеленый степь помолчать налоговый.","estimatedTime":"10 weeks","previewFileId":"e11fbd9d-d80f-4dbe-9e11-e99953a4a4ff","createdByUserId":""}'

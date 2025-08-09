@@ -1,0 +1,31 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: GET на http://localhost:8001/api/v1/courses/b0fd505d-3eaa-4bd8-8059-371f8d110ace
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses/b0fd505d-3eaa-4bd8-8059-371f8d110ace
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 200
+INFO     COURSES_ASSERTIONS:courses.py:106 Проверяем ответ сервера на запрос курса
+INFO     COURSES_ASSERTIONS:courses.py:43 Проверяем соответсвие данных курса
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому b0fd505d-3eaa-4bd8-8059-371f8d110ace
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Неудобно материя факультет.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Страсть инструкция дрогнуть. Указанный смертельный руководитель мягкий бабочка достоинство холодно.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 4 weeks
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 59
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 22
+INFO     FILES_ASSERTIONS:files.py:85 Проверяем соответствие данных файла
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому d184efaa-a562-4320-aaac-11357f8c236a
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение filename соответствует ожидаемому aa1db883-3ce6-48db-bb27-c7fbd46d5f71.jpg
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение directory соответствует ожидаемому tests
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение url соответствует ожидаемому http://localhost:8001/static/tests/aa1db883-3ce6-48db-bb27-c7fbd46d5f71.jpg
+INFO     USERS_ASSERTIONS:users.py:47 Проверяем соответствие данных пользователя
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому d2eb2506-446b-448d-a7bb-c3a7cb3c610f
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение email соответствует ожидаемому andron_71@example.net
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение first_name соответствует ожидаемому Добромысл
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение last_name соответствует ожидаемому Романов
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение middle_name соответствует ожидаемому Мина
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

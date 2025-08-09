@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjEwLjI2MzY3MSIsInVzZXJfaWQiOiIyZGFiYTY3NS01ODQ5LTQzMzktYTUyMC05MDc3NjYxZjEwZjUifQ._U9Qnjeno3onamNXym2paH8It2_cP_w_qyLbJZaPn0c' \
+ -H 'content-length: 500' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Шлем князь задержать сынок проход освобождение вряд.","minScore":8,"maxScore":89,"description":"Тусклый банк роскошный. Правление научить назначить прелесть очутиться цепочка. Актриса легко намерение вывести.","estimatedTime":"2 weeks","previewFileId":"a8e55ec3-8ac8-4d11-bb99-2ade3e9bc918","createdByUserId":"2daba675-5849-4339-a520-9077661f10f5"}'

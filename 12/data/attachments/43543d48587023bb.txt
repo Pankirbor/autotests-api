@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/97fdbc39-1a75-4032-8202-46058dc7fe09' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjIwLjQ2NzYzMyIsInVzZXJfaWQiOiJjMjQ5OTZhMy1hMzk4LTQxYmUtYjMxZi1kMjk5YmI5NGQ3MmQifQ._LV03nwljEFbEGadF8HIOmZGxjx2ZvNLR7IGpXa4r1I' \
+ -H 'content-length: 363' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Сынок скрытый научить снимать выкинуть демократия.","courseId":"d2dbd53a-c726-48c1-a37f-776001a21908","maxScore":53,"minScore":28,"orderIndex":1,"description":"Аж соответствие недостаток возмутиться магазин дружно отражение.","estimatedTime":"8 weeks"}'

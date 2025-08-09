@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjE5LjI4NTY3NCIsInVzZXJfaWQiOiI2ZDFmMDdhOC1kOWI1LTQxNjAtOWY4My1hZTlmMDVhN2I1NDAifQ.L9zSNpEy9z7c_p40yZnLyDxkBF4MdYT8ugadiAuvb4A' \
+ -H 'content-length: 591' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Смертельный порядок отдел мимо.","minScore":14,"maxScore":90,"description":"Умирать полностью развитый поздравлять секунда рот господь выкинуть. Инструкция основание кпсс парень одиннадцать. Сомнительный лететь факультет дальний указанный ответить граница.","estimatedTime":"6 weeks","previewFileId":"bdf64b14-9a05-4374-966a-f419c1ed894e","createdByUserId":"6d1f07a8-d9b5-4160-9f83-ae9f05a7b540"}'

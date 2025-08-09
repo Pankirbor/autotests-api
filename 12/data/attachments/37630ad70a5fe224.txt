@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjE0LjMyMTYwMiIsInVzZXJfaWQiOiJhYjQxZTJlYy1mYjI0LTRjZmQtOTIwNi1mMTBhMjkyOTM5YmUifQ.pqMuFpnRcO_2O3FDCp8NCx2nJKLMCNgiLk5WovlDWO8' \
+ -H 'content-length: 639' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Понятный построить конференция что вскинуть лиловый.","minScore":15,"maxScore":53,"description":"Ставить легко через. Левый функция недостаток зеленый отдел поезд витрина секунда. Тесно беспомощный угроза.\nВыбирать о настать болото ленинград. Волк ведь тревога куча термин устройство.","estimatedTime":"7 weeks","previewFileId":"5293861c-5b9d-4d30-8fdf-1060da509875","createdByUserId":"ab41e2ec-fb24-4cfd-9206-f10a292939be"}'

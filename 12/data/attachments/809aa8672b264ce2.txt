@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjE4LjExMzY5NiIsInVzZXJfaWQiOiIzYzUwMDg0OS1mYzc4LTQxZjgtOWU2NS04OGJlNjRjMjU1NzUifQ.A4dhvT-7T498neq6nuffUIylCH6WVC9sjXhGYHU-YKI' \
+ -H 'content-length: 527' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Мгновение висеть экзамен витрина ручей миг торопливый аж.","minScore":27,"maxScore":98,"description":"Рис народ куча передо освобождение провал. Ремень около потянуться поставить наткнуться. Правый страсть потянуться порог.","estimatedTime":"10 weeks","previewFileId":"35092dbd-afcf-4e1e-855f-1641660e0613","createdByUserId":"3c500849-fc78-41f8-9e65-88be64c25575"}'

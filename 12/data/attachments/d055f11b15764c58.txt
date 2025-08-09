@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjI2LjYwMDAwNCIsInVzZXJfaWQiOiI5OTU4ZTU4Mi1lNTNlLTQ5ODQtYjdkNC03YzA3NDZkNzQ3YWIifQ.DwePFk59FReNZN8JCz78qk6YuHzZT3MEr-AcbzM1nbk' \
+ -H 'content-length: 586' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Социалистический инвалид вперед сынок способ.","minScore":26,"maxScore":93,"description":"Райком важный поговорить ручей. Спорт коричневый изучить слишком бабочка триста холодно. Мучительно танцевать растеряться функция.\nСтепь порода рис умирать настать.","estimatedTime":"3 weeks","previewFileId":"96f5b81f-f610-4462-a926-c1578ffc9b77","createdByUserId":"9958e582-e53e-4984-b7d4-7c0746d747ab"}'

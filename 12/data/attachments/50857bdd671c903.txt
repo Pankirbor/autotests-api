@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjE1Ljc4MDk1NSIsInVzZXJfaWQiOiIyMmZhMTQ5Zi05ZjRhLTQ5NmItOTgyNi03NmUwYjExMmRkZTgifQ.yezkBGtq7RzQasJyJQv7Wpw0jt4kIx8BXcJsSwAwBA0' \
+ -H 'content-length: 560' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Поколение радость исследование равнодушный костер.","minScore":5,"maxScore":55,"description":"Изредка миф запеть проход. Госпожа а район казнь идея.\nАнализ соответствие разводить песня. Смеяться растеряться спалить фонарик близко очередной.","estimatedTime":"9 weeks","previewFileId":"8ca7d7e5-ba83-459f-9f91-108c66c27988","createdByUserId":"22fa149f-9f4a-496b-9826-76e0b112dde8"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjE0LjkwNDk3MCIsInVzZXJfaWQiOiIwZWU5YjQ2YS01MTZjLTQ5NmYtYTZhNi0xNDNlYWI2NzZjZjYifQ.iUXCarU8gNN9gBvjwsF_-wFkKkVWcUU_KYg6X0lpmbQ' \
+ -H 'content-length: 531' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Банда выкинуть умирать применяться появление коричневый.","minScore":15,"maxScore":79,"description":"Построить заложить дрогнуть помолчать. Поезд лететь место сынок песня исполнять. Медицина назначить бок войти художественный демократия.","estimatedTime":"8 weeks","previewFileId":"fdbec762-08ee-479e-9617-213a232554eb","createdByUserId":"incorrect-id"}'

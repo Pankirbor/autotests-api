@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjIxLjkyNzAwNyIsInVzZXJfaWQiOiI4MmVmYWNkZC01ZjRkLTQ2YzgtOThmNC04MTAyM2NmYmYxZTgifQ.GIqdrGfMkPTVfEZgyFKapT-rKpXciPZi9urwjmqM7eU' \
+ -H 'content-length: 514' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Изредка а потом очередной около.","minScore":23,"maxScore":97,"description":"Банк тревога тревога господь багровый хотеть. Порог провал неправда головка коробка зеленый зато угол. Заложить конструкция господь решение.","estimatedTime":"8 weeks","previewFileId":"5495cff5-a71c-4fa8-8f13-67a9dfdfa8e8","createdByUserId":"82efacdd-5f4d-46c8-98f4-81023cfbf1e8"}'

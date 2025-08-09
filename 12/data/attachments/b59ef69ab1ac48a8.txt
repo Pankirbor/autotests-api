@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjA4LjQ2NTkwNyIsInVzZXJfaWQiOiIxOGQxODAwMi02YTdhLTRiZDgtYjk2NC1iMjg2MjQxMmQ5Y2QifQ.hdshm_pbSPRNL3RHjUISdCTu59ZBETUa6wNQV4i18nc' \
+ -H 'content-length: 534' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Неудобно невозможно изредка вообще сходить.","minScore":22,"maxScore":94,"description":"Мелькнуть падаль появление выражаться команда конференция правление. Решетка увеличиваться дорогой умирать деньги проход домашний видимо.","estimatedTime":"7 weeks","previewFileId":"3cdd8f88-219a-4559-b856-0f5cc8efd463","createdByUserId":"18d18002-6a7a-4bd8-b964-b2862412d9cd"}'

@@ -1,0 +1,38 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: GET на http://localhost:8001/api/v1/exercises?courseId=5a2a0a06-f9b8-441b-8d17-00a501dac578
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises?courseId=5a2a0a06-f9b8-441b-8d17-00a501dac578
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 200
+INFO     EXERCISES_ASSERTIONS:exercises.py:159 Проверяем ответ сервера на запрос списка упражнений
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому 5a2a0a06-f9b8-441b-8d17-00a501dac578
+INFO     BASE_ASSERTIONS:base.py:82 Проверяем, что длина exercises соответствует ожидаемой [ExerciseSchema(id='e0362f96-d271-4c62-aae2-78377c9ad3d9', title='Хлеб научить пробовать вариант посидеть табак гулять.', course_id='5a2a0a06-f9b8-441b-8d17-00a501dac578', max_score=84, min_score=11, order_index=82, description='Мусор доставать триста роса упор налево. Виднеться за достоинство торговля. Через поставить порог войти.', estimated_time='10 weeks'), ExerciseSchema(id='c97ebd79-6a2d-47e9-ab79-1987a099eed8', title='Блин ответить зарплата собеседник.', course_id='5a2a0a06-f9b8-441b-8d17-00a501dac578', max_score=92, min_score=9, order_index=99, description='Наслаждение темнеть медицина экзамен. Беспомощный казнь издали а витрина.\nЧетко выражение затянуться. Штаб кпсс плавно забирать левый налоговый.', estimated_time='2 weeks')]
+INFO     EXERCISES_ASSERTIONS:exercises.py:43 Проверяем соответсвие данных упражнения
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому e0362f96-d271-4c62-aae2-78377c9ad3d9
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Хлеб научить пробовать вариант посидеть табак гулять.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому 5a2a0a06-f9b8-441b-8d17-00a501dac578
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 84
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 11
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение order_index соответствует ожидаемому 82
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Мусор доставать триста роса упор налево. Виднеться за достоинство торговля. Через поставить порог войти.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 10 weeks
+INFO     EXERCISES_ASSERTIONS:exercises.py:43 Проверяем соответсвие данных упражнения
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому c97ebd79-6a2d-47e9-ab79-1987a099eed8
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Блин ответить зарплата собеседник.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому 5a2a0a06-f9b8-441b-8d17-00a501dac578
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 92
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 9
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение order_index соответствует ожидаемому 99
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Наслаждение темнеть медицина экзамен. Беспомощный казнь издали а витрина.
+Четко выражение затянуться. Штаб кпсс плавно забирать левый налоговый.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 2 weeks
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

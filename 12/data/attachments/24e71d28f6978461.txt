@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjE4OjI0LjI2NzMxNCIsInVzZXJfaWQiOiI0ZjJmMTMwNy05ZjU5LTQ4NTAtOTU5Mi03YmZjOTg4YWRjMTIifQ.1qtJPEH7rHKRV8myYOUpemtm7BoFSA7m-OcF81KmHaE' \
+ -H 'content-length: 523' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Волк куча один степь недостаток прошептать горький.","minScore":11,"maxScore":57,"description":"Передо пламя белье угодный штаб. Правление увеличиваться запретить граница. Термин засунуть бровь монета граница угол хотеть.","estimatedTime":"10 weeks","previewFileId":"7a254dd5-efaa-4442-a479-abfd4ad40f7d","createdByUserId":"4f2f1307-9f59-4850-9592-7bfc988adc12"}'
