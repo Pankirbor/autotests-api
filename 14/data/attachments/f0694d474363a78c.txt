@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjIwLjE3NDE2NSIsInVzZXJfaWQiOiI5N2IwNGU2Ni1lMjRmLTRlYWYtYmUxYy04NGI5MmU1YzQ2NmQifQ.FZGzMH9lHtfVPajxKAQRNf53ygZIHp2gFsiSs3eaIQQ' \
+ -H 'content-length: 573' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Приятель другой слишком бок лететь вздрогнуть.","minScore":7,"maxScore":88,"description":"Легко тюрьма скользить сынок. Выдержать кидать академик тысяча.\nОборот очередной сынок зеленый хлеб господь спичка грудь. Нервно означать порядок термин боец.","estimatedTime":"5 weeks","previewFileId":"f4ab66cc-f41c-4f37-9f1f-94e4e913cda6","createdByUserId":"97b04e66-e24f-4eaf-be1c-84b92e5c466d"}'

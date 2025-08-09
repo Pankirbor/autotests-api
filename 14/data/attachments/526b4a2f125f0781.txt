@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/courses/5635c7f5-57ba-472b-86f1-87ee25368616' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjEzLjM5MTEyNSIsInVzZXJfaWQiOiJkYjhiZTAwMy1mOTE2LTQ0N2ItOGJiYy01NzIwNjMwMzk1Y2UifQ.D9EhUYjKngMteVPtx08NM5Rq_frogTL3hPtBeOcDgDk' \
+ -H 'content-length: 311' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Идея способ пасть спешить заложить.","minScore":30,"maxScore":78,"description":"Хлеб дальний актриса зарплата. Мимо растеряться рай скрытый провинция налоговый трубка.","estimatedTime":"10 weeks"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjIxLjM5NzQyMyIsInVzZXJfaWQiOiIyMTU1YmI0Yy01YjIzLTQwOTMtOWM1MS0wNDljOGI4NzExZTEifQ.v0x-Zj8UBRT4LB-p2S86fMZu_59-duD-IOZUh5yBV90' \
+ -H 'content-length: 486' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Дружно сутки банк ученый головной.","courseId":"69b8588e-c4d3-4c03-9dcd-66021ee5652f","maxScore":56,"minScore":12,"orderIndex":90,"description":"Единый механический неправда привлекать разводить инфекция вздрогнуть. Граница мелочь функция терапия. Перебивать горький тревога призыв отметить.","estimatedTime":"6 weeks"}'

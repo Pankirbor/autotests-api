@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjA4LjYyOTE1NyIsInVzZXJfaWQiOiI0ZWNhYWNlNS0yNjdlLTQ1MDAtODAxMC0wNjJkMGI4YmNjY2QifQ.8a2iVpJF07WKn8l6FOpIucToA3U7xr_yEeZPOAY0ocM' \
+ -H 'content-length: 454' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Научить освободить хотеть засунуть голубчик.","minScore":19,"maxScore":57,"description":"Вряд да пятеро непривычный нож. Наступать висеть доставать. Штаб освобождение приличный солнце.","estimatedTime":"9 weeks","previewFileId":"a7b6e39a-d5af-44fa-8ee8-1eb337853c7b","createdByUserId":"4ecaace5-267e-4500-8010-062d0b8bcccd"}'

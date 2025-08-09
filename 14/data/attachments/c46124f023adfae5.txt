@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjE5LjU4NTIyMyIsInVzZXJfaWQiOiJhNDAyZmE4ZS02M2JjLTRiZTUtYTVlZi1lZGUzNTNiOTBmMGUifQ.hWB2zip6LP7dfapoIr2VX-F1k3Apv6eHS2C6N6RRod4' \
+ -H 'content-length: 518' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Сутки собеседник мера дружно хотеть.","minScore":23,"maxScore":51,"description":"Багровый расстройство табак юный ботинок выдержать бочок. Нож болото тюрьма валюта. Факультет пасть пропадать передо забирать через ягода.","estimatedTime":"4 weeks","previewFileId":"6476858a-993b-449c-870c-ef4c6fe3de56","createdByUserId":"a402fa8e-63bc-4be5-a5ef-ede353b90f0e"}'

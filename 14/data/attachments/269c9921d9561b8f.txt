@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjE0LjU3NTA3MSIsInVzZXJfaWQiOiIyMjliNWRiMy1kYmZlLTQ3NjUtODY2Mi1lYjc3NWQ4MDkzNzUifQ.vRwIRfA09lA-dgx1F-mJNVOlMzmfhrJs6eCafSZZmlA' \
+ -H 'content-length: 393' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Означать экзамен тревога народ.","courseId":"241048b1-4ead-4b91-a674-ad03896da5ee","maxScore":87,"minScore":9,"orderIndex":17,"description":"Процесс намерение ягода песенка ответить вздрагивать один. Обида вздрагивать изредка картинка совет.","estimatedTime":"8 weeks"}'

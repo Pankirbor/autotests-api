@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjE4LjQxODE3NyIsInVzZXJfaWQiOiIzMjE4ZGM3OS0wZWQxLTQ0OTYtOWFiYi0yMDFiMDc0MDUxNWEifQ.DS-TN_1IppoGgNYeWcEZjCtIdqMUBsc8r3VsLc7VcIE' \
+ -H 'content-length: 461' \
+ -H 'content-type: application/json' \
+ -d '{"title":"","courseId":"f2d88a44-0f23-4948-8514-a39058db5565","maxScore":77,"minScore":28,"orderIndex":11,"description":"Виднеться командование другой затянуться. Эпоха юный исполнять полюбить торопливый.\nТусклый сходить каюта неправда ярко механический. Еврейский штаб гулять указанный.","estimatedTime":"10 weeks"}'

@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/6444c9e9-a652-45e9-ad1d-0a9e9ec83b5d' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjIyLjYxNDAyNiIsInVzZXJfaWQiOiJjZWNmN2U0Zi1hZjY2LTQxYzYtOGZkNy1jOWFkOTRhOWYwOGQifQ.xq_J0WwV5t3emxNyW8zzlP47wbwZV42TJWxrgI5hL7o' \
+ -H 'content-length: 245' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Посидеть художественный ломать витрина применяться.","courseId":"4ba35e50-cf7e-4320-8787-54a43db34027","maxScore":54,"minScore":8,"orderIndex":47,"description":"","estimatedTime":"6 weeks"}'

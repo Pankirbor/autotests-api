@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjI2LjcxMDc3OCIsInVzZXJfaWQiOiI4MDViZmE1My02OGFkLTQyN2MtYWY5ZC1iODU1NTJlOTQ5ZjIifQ.qwd-Ygv0I2NYZ16RO5UCFrQADSUghsplotSDIe7kZJc' \
+ -H 'content-length: 494' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Упорно салон спасть труп спичка тюрьма сбросить.","courseId":"01db7fa8-4713-4006-86ce-8d32136cf395","maxScore":0,"minScore":-10,"orderIndex":51,"description":"Изменение освободить выражаться отражение куча выраженный. Миллиард избегать советовать. Самостоятельно очутиться неудобно спорт теория.","estimatedTime":"8 weeks"}'

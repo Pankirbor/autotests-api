@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/db46fb5c-2b09-41e3-bde9-125c038ea5c3' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjIxLjM5NzQyMyIsInVzZXJfaWQiOiIyMTU1YmI0Yy01YjIzLTQwOTMtOWM1MS0wNDljOGI4NzExZTEifQ.v0x-Zj8UBRT4LB-p2S86fMZu_59-duD-IOZUh5yBV90' \
+ -H 'content-length: 454' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Конструкция салон изменение дальний о появление.","courseId":"69b8588e-c4d3-4c03-9dcd-66021ee5652f","maxScore":61,"minScore":11,"orderIndex":11,"description":"Сохранять товар отъезд кидать. Горький встать пасть при совещание опасность. Монета около спорт появление заведение.","estimatedTime":"9 weeks"}'

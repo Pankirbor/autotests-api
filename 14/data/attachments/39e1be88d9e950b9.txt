@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjEzLjM5MTEyNSIsInVzZXJfaWQiOiJkYjhiZTAwMy1mOTE2LTQ0N2ItOGJiYy01NzIwNjMwMzk1Y2UifQ.D9EhUYjKngMteVPtx08NM5Rq_frogTL3hPtBeOcDgDk' \
+ -H 'content-length: 612' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Кидать заработать что печатать инвалид инструкция экзамен.","minScore":18,"maxScore":52,"description":"Провинция что освободить пасть дремать при. Кожа помолчать добиться счастье.\nЛенинград недостаток число оставить приятель. Возникновение волк ночь жестокий интернет.","estimatedTime":"4 weeks","previewFileId":"384fff39-e5f3-46fd-9e66-5d472f747cb2","createdByUserId":"db8be003-f916-447b-8bbc-5720630395ce"}'

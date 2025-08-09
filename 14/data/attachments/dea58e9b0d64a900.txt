@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjIwLjc1NTE4MyIsInVzZXJfaWQiOiIxNTZiMDBkMC03ZTk4LTQxYTktYmM5OS0yMWNmMmNjNjE1NGIifQ.Nw1UmWc4jIunRsIo8dVcoB6Svg641JeMQKBm4XRAJtA' \
+ -H 'content-length: 568' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Песенка похороны постоянный тесно.","minScore":23,"maxScore":53,"description":"Войти ярко прелесть экзамен. Миг зачем художественный трубка прощение роскошный.\nОснование космос одиннадцать эффект. Монета вздрагивать плавно конструкция покидать.","estimatedTime":"6 weeks","previewFileId":"80457f96-c1fe-450c-9d47-630a9ef19adc","createdByUserId":"156b00d0-7e98-41a9-bc99-21cf2cc6154b"}'

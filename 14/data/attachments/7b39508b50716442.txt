@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjEyLjQ2MTIxMiIsInVzZXJfaWQiOiI3MjJkM2IyNC0xZDhjLTRmMTYtOWFjOS03YTI1YzU1MzgwYjgifQ.otgRnGNC8fPFqT7xbh0x_veY1bJZ50k24fnXmOjdShs' \
+ -H 'content-length: 431' \
+ -H 'content-type: application/json' \
+ -d '{"title":"О выражаться зато.","minScore":28,"maxScore":80,"description":"Желание вариант поговорить висеть пропасть. Сбросить поймать горький отражение. Направо очутиться упор коробка советовать князь.","estimatedTime":"5 weeks","previewFileId":"","createdByUserId":"ecb5750b-25e6-4ca4-9fd6-6cd28b8dc111"}'

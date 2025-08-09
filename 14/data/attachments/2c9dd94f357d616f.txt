@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/4d203a3c-18e2-4769-b842-1e8517d7ddc8' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjI3Ljg3NTQ5NCIsInVzZXJfaWQiOiJkNDZkY2EwYS02ZTA1LTRiNGYtYTVkNC0xNzlkZDY0MDgxZDYifQ.rW6ujc5Y7zJ3kh30iemNS9Fj_HIhuzAKF_nchs5dTpA' \
+ -H 'content-length: 483' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Какой фонарик карман.","courseId":"6d5592d4-921e-41c9-b652-0742e087acf6","maxScore":10,"minScore":100,"orderIndex":6,"description":"Уронить мера картинка вперед спичка. Научить металл печатать ведь.\nНевыносимый стакан деловой радость палата прелесть виднеться. Понятный возбуждение умолять.","estimatedTime":"8 weeks"}'

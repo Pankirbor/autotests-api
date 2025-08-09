@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/1d63191e-6957-42bf-aef5-9adcb140f4d7' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjI0Ljk1MzY4NiIsInVzZXJfaWQiOiJjOTZmZGI3MS05NTA5LTQxNDUtYmI2OC00ZTZiZGU0ODBjMjAifQ.OyucExI-y6yoEvlcCChWUDY4zAnpZe2qIjg4GnfVpJI' \
+ -H 'content-length: 666' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","courseId":"bc21e9a7-f016-40f7-ab88-aafdce108f66","maxScore":98,"minScore":11,"orderIndex":100,"description":"Написать близко недостаток тесно похороны дрогнуть трубка правильный. Коричневый невыносимый какой добиться ныне. Соответствие дремать ручей.","estimatedTime":"10 weeks"}'

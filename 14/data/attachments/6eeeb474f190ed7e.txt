@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjI3Ljg3NTQ5NCIsInVzZXJfaWQiOiJkNDZkY2EwYS02ZTA1LTRiNGYtYTVkNC0xNzlkZDY0MDgxZDYifQ.rW6ujc5Y7zJ3kh30iemNS9Fj_HIhuzAKF_nchs5dTpA' \
+ -H 'content-length: 507' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Полоска витрина помолчать.","minScore":13,"maxScore":57,"description":"Прежде угол развернуться построить бак. Лапа народ неправда висеть мера.\nАктриса зарплата страсть развернуться. Забирать посидеть коричневый.","estimatedTime":"9 weeks","previewFileId":"4ca80837-9076-43e1-a08e-6df4ab67f4b9","createdByUserId":"d46dca0a-6e05-4b4f-a5d4-179dd64081d6"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjI0LjM3MDM1OSIsInVzZXJfaWQiOiJmOWJjOTk5YS05Zjc0LTQ4N2MtOGI2Ni1lNzRmOTVjY2U1YjEifQ.ZeCMl7ZCEZNp6arNPZPRuxapElU_1GZTH5R7WCW0CPY' \
+ -H 'content-length: 407' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Хлеб инфекция точно упор чем добиться равнодушный бок.","minScore":8,"maxScore":91,"description":"Ремень пятеро карандаш девка. Сынок равнодушный дошлый товар.","estimatedTime":"2 weeks","previewFileId":"ed5f1261-60bf-41bc-8408-bd0fab85c667","createdByUserId":"f9bc999a-9f74-487c-8b66-e74f95cce5b1"}'

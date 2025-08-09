@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjEwLjEyMDA2OSIsInVzZXJfaWQiOiI0Zjc0M2RjMC05ZGRmLTRlNmItOWVlMS0xN2I1YWE4MTQyY2UifQ.qG5cwK0LmF6dmhoJIQQ9L_tEN_JQV5yEDoP1caodmZE' \
+ -H 'content-length: 548' \
+ -H 'content-type: application/json' \
+ -d '{"title":"","minScore":17,"maxScore":64,"description":"Дошлый конференция ученый. Палец дошлый очутиться еврейский. Задержать командир заведение радость необычный.\nПоговорить зима командир уточнить. Число тута космос один встать художественный.","estimatedTime":"6 weeks","previewFileId":"b0a2c51f-3d18-4499-9291-c9ab65bb705f","createdByUserId":"e58372a2-41c0-4d29-be22-4efda3376c0a"}'

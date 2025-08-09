@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjIxLjk4NzU4MiIsInVzZXJfaWQiOiJlZGYxNjJkZi04ZGNiLTQ3NzAtYWFiNi02MDIzZWZkNzI5Y2MifQ.l5fuWV06FvVtliSFhqY3Nf8mV_Hf4ykmhilaxiAptDs' \
+ -H 'content-length: 563' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Сохранять важный падать предоставить пропасть изучить тута.","minScore":18,"maxScore":67,"description":"Упор рабочий близко уточнить. Пересечь карман спасть витрина проход палата. Горький парень пробовать возникновение терапия задрать передо.","estimatedTime":"1 weeks","previewFileId":"7948139d-43a1-4013-8394-e8412550b3bc","createdByUserId":"edf162df-8dcb-4770-aab6-6023efd729cc"}'

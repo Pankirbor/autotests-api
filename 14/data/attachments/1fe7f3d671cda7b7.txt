@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjE1Ljc0MzA0NyIsInVzZXJfaWQiOiI1NDVhNTBmZS1jNjQyLTQ0MDMtYTJlNi1hOTE3YTY1NmVlY2IifQ.sAWu_JzKoFJyR5doDRSQ2yqPP_OgneQCrpZrNJer_0M' \
+ -H 'content-length: 450' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Миллиард домашний поезд художественный князь.","minScore":5,"maxScore":99,"description":"Мотоцикл рассуждение ленинград ярко боец. Сходить еврейский палата самостоятельно пропадать аж командир.","estimatedTime":"3 weeks","previewFileId":"4b35e79b-fe6b-488c-8a23-2287949e1c04","createdByUserId":"incorrect-id"}'

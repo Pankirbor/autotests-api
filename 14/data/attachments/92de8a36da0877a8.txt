@@ -1,0 +1,37 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: GET на http://localhost:8001/api/v1/exercises?courseId=c696a2c3-b94e-44d1-b18b-415633019849
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises?courseId=c696a2c3-b94e-44d1-b18b-415633019849
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 200
+INFO     EXERCISES_ASSERTIONS:exercises.py:159 Проверяем ответ сервера на запрос списка упражнений
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому c696a2c3-b94e-44d1-b18b-415633019849
+INFO     BASE_ASSERTIONS:base.py:82 Проверяем, что длина exercises соответствует ожидаемой [ExerciseSchema(id='c8037ae8-dee1-495a-880b-9abffdd34fd5', title='Угол неожиданный запеть при пропаганда развитый.', course_id='c696a2c3-b94e-44d1-b18b-415633019849', max_score=95, min_score=12, order_index=48, description='Сутки миллиард триста очутиться. Столетие кожа район услать выкинуть функция желание. Славный триста сутки угроза шлем разнообразный хозяйка.', estimated_time='5 weeks'), ExerciseSchema(id='6d396698-1870-4e6d-9b51-070b68edf380', title='Карман вывести поздравлять аж.', course_id='c696a2c3-b94e-44d1-b18b-415633019849', max_score=69, min_score=28, order_index=64, description='За иной затянуться прежде степь крыса. Труп аж казнь решетка а руководитель дружно. Адвокат степь палка выдержать. Другой дурацкий посидеть зачем задрать помолчать.', estimated_time='7 weeks')]
+INFO     EXERCISES_ASSERTIONS:exercises.py:43 Проверяем соответсвие данных упражнения
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому c8037ae8-dee1-495a-880b-9abffdd34fd5
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Угол неожиданный запеть при пропаганда развитый.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому c696a2c3-b94e-44d1-b18b-415633019849
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 95
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 12
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение order_index соответствует ожидаемому 48
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Сутки миллиард триста очутиться. Столетие кожа район услать выкинуть функция желание. Славный триста сутки угроза шлем разнообразный хозяйка.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 5 weeks
+INFO     EXERCISES_ASSERTIONS:exercises.py:43 Проверяем соответсвие данных упражнения
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 6d396698-1870-4e6d-9b51-070b68edf380
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Карман вывести поздравлять аж.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому c696a2c3-b94e-44d1-b18b-415633019849
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 69
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 28
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение order_index соответствует ожидаемому 64
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому За иной затянуться прежде степь крыса. Труп аж казнь решетка а руководитель дружно. Адвокат степь палка выдержать. Другой дурацкий посидеть зачем задрать помолчать.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 7 weeks
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

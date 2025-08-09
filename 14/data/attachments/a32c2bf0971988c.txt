@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjE2LjAxNTg3NyIsInVzZXJfaWQiOiI3YWRjN2YwMi05NzhkLTQxMmMtOGIwMC04NThhY2ViMzBmODMifQ.hQkCMHUo8bVgiMdKAmBudtcbhXlvbKEckwQSNzRGSIc' \
+ -H 'content-length: 507' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Карман вывести поздравлять аж.","courseId":"c696a2c3-b94e-44d1-b18b-415633019849","maxScore":69,"minScore":28,"orderIndex":64,"description":"За иной затянуться прежде степь крыса. Труп аж казнь решетка а руководитель дружно. Адвокат степь палка выдержать. Другой дурацкий посидеть зачем задрать помолчать.","estimatedTime":"7 weeks"}'

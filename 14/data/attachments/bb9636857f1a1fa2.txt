@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjIwLjE3NDE2NSIsInVzZXJfaWQiOiI5N2IwNGU2Ni1lMjRmLTRlYWYtYmUxYy04NGI5MmU1YzQ2NmQifQ.FZGzMH9lHtfVPajxKAQRNf53ygZIHp2gFsiSs3eaIQQ' \
+ -H 'content-length: 476' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Граница кузнец да угроза.","courseId":"1ee45319-7ab2-4402-8468-61def7e27565","maxScore":54,"minScore":26,"orderIndex":28,"description":"Пол ручей некоторый провинция столетие выраженный мотоцикл. Упорно миф материя возбуждение вскинуть. Одиннадцать эффект налево миф написать роса более.","estimatedTime":"1 weeks"}'

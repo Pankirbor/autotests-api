@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjE2LjYzNjg3MCIsInVzZXJfaWQiOiIwZDExYTFhMS01MjBkLTQxNmYtYWQ3MC1hYmNiYzE0NTI3MDkifQ.vE0g4H1Q-cg3_cYL-SW55bgVAUUx9JFnrNt9TUWxmLo' \
+ -H 'content-length: 655' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","minScore":23,"maxScore":86,"description":"Природа направо выгнать факультет через избегать трясти. Ведь вытаскивать четко. Изучить блин легко спорт лететь.","estimatedTime":"6 weeks","previewFileId":"810be370-2e61-4abb-8515-5048cb8ba412","createdByUserId":"22c0ced6-7921-4b71-b1d3-0bad63525977"}'

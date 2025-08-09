@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjE0Ljg0Nzg0OCIsInVzZXJfaWQiOiIyNDQ2M2FlMy01NTkyLTQwZDYtYTBkZi02NWZlNzA0ZDliYWEifQ.6Xu82WDKQqClbCZCXy9ZLkJBaksIRYQRSGPUgXMKVjs' \
+ -H 'content-length: 575' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Команда чем порядок деньги растеряться металл возмутиться.","minScore":30,"maxScore":93,"description":"Витрина угроза адвокат процесс приятель. Мучительно изменение цель команда пастух доставать пламя.\nДрогнуть палка заработать витрина скользить кузнец стакан.","estimatedTime":"10 weeks","previewFileId":"incorrect-id","createdByUserId":"7211b7dd-d5cc-4e23-af72-f6bc0ef921fd"}'

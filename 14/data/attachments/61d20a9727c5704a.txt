@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjE2LjAxNTg3NyIsInVzZXJfaWQiOiI3YWRjN2YwMi05NzhkLTQxMmMtOGIwMC04NThhY2ViMzBmODMifQ.hQkCMHUo8bVgiMdKAmBudtcbhXlvbKEckwQSNzRGSIc' \
+ -H 'content-length: 573' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Построить поймать пропаганда плавно угроза бетонный оставить.","minScore":17,"maxScore":80,"description":"Счастье снимать пробовать труп. Лететь наступать кузнец дьявол. Фонарик правый миф рис термин песня плод.\nПадаль райком вытаскивать выражение.","estimatedTime":"9 weeks","previewFileId":"d4475789-5114-46f6-938c-e03dd76f71c9","createdByUserId":"7adc7f02-978d-412c-8b00-858aceb30f83"}'

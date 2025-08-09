@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjQxOjE3Ljc3NTcxNyIsInVzZXJfaWQiOiI3ZjFmM2RjNi03ZjA3LTRiZDAtOWM2NC03ZjQ1ZjUzMDZkM2UifQ.cJEktHNVtR8qd7SQUlN2Yvmqq2L3zfYHiUiQF4trt9s' \
+ -H 'content-length: 572' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Сынок металл сходить тревога народ господь тысяча.","minScore":5,"maxScore":59,"description":"Столетие способ теория скрытый. Солнце набор зачем тута столетие. Вряд скрытый трубка тюрьма. Другой изменение желание коробка юный художественный упорно.","estimatedTime":"7 weeks","previewFileId":"b2fbcb96-7dcd-46f5-839a-53fe24f696a2","createdByUserId":"7f1f3dc6-7f07-4bd0-9c64-7f45f5306d3e"}'
