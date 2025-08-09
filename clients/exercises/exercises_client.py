@@ -2,6 +2,7 @@ import allure
 from httpx import Response
 
 from clients.api_client import ApiClient
+from clients.api_coverage import tracker
 from clients.authentication.authentication_schema import AuthenticationUserSchema
 from clients.exercises.exercises_schema import (
     GetExercisesQuerySchema,
@@ -18,6 +19,7 @@ class ExercisesClient(ApiClient):
     """Клиент для взаимодействия с эндпоинтами API управления упражнениями."""
 
     @allure.step("Получаем список упражнений")
+    @tracker.track_coverage_httpx(APIRoutes.EXERCISES.base_url)
     def get_exercises_api(self, params: GetExercisesQuerySchema) -> Response:
         """Получает список упражнений с возможностью фильтрации.
 
@@ -32,6 +34,7 @@ class ExercisesClient(ApiClient):
         )
 
     @allure.step("Получаем информацию об упражнении")
+    @tracker.track_coverage_httpx(f"{APIRoutes.EXERCISES.base_url}/{{exercise_id}}")
     def get_exercise_api(self, exercise_id: str) -> Response:
         """Получает информацию о конкретном упражнении по его идентификатору.
 
@@ -44,6 +47,7 @@ class ExercisesClient(ApiClient):
         return self.get(APIRoutes.EXERCISES.with_id(exercise_id))
 
     @allure.step("Создаем упражнение")
+    @tracker.track_coverage_httpx(APIRoutes.EXERCISES.base_url)
     def create_exercise_api(self, request: CreateExerciseRequestSchema) -> Response:
         """Создает новое упражнение на сервере.
 
@@ -59,6 +63,7 @@ class ExercisesClient(ApiClient):
         )
 
     @allure.step("Обновляем упражнение")
+    @tracker.track_coverage_httpx(f"{APIRoutes.EXERCISES.base_url}/{{exercise_id}}")
     def update_exercise_api(
         self, exercise_id: str, request: UpdateExerciseRequestSchema
     ) -> Response:
@@ -78,6 +83,7 @@ class ExercisesClient(ApiClient):
         )
 
     @allure.step("Удаляем упражнение")
+    @tracker.track_coverage_httpx(f"{APIRoutes.EXERCISES.base_url}/{{exercise_id}}")
     def delete_exercise_api(self, exercise_id: str) -> Response:
         """Удаляет упражнение с сервера по его идентификатору.
 
