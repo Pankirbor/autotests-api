@@ -9,6 +9,7 @@ from clients.authentication.authentication_schema import (
     LoginResponseSchema,
     RefreshRequestSchema,
 )
+from clients.api_coverage import tracker
 from tools.routes.api_routes import APIRoutes
 
 
@@ -16,6 +17,7 @@ class AuthenticationClient(ApiClient):
     """Клиент для взаимодействия с эндпоинтами аутентификации API."""
 
     @allure.step("Проходим аутентификацию")
+    @tracker.track_coverage_httpx(f"{APIRoutes.AUTHENTICATION.base_url}/login")
     def login_api(self, request: LoginRequestSchema) -> Response:
         """Отправляет запрос на аутентификацию пользователя.
 
@@ -31,6 +33,7 @@ class AuthenticationClient(ApiClient):
         )
 
     @allure.step("Обновляем токен")
+    @tracker.track_coverage_httpx(f"{APIRoutes.AUTHENTICATION.base_url}/refresh")
     def refresh_api(self, request: RefreshRequestSchema) -> Response:
         """Обновляет токен доступа пользователя.
 
