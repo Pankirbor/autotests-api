@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjEyLjAwMTk2OSIsInVzZXJfaWQiOiI3NDRiOGFjNS0zZmRjLTRjMTctODQyNC0wNzg1ODMxODIyNjUifQ.k-iBCqy8ytrAXuCDnL7dLguQ-ak007JFDbJgdJQYDyU' \
+ -H 'content-length: 244' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Дрогнуть присесть решетка.","minScore":12,"maxScore":72,"description":"","estimatedTime":"8 weeks","previewFileId":"e28e7690-c020-407b-989c-14c5a5adffb7","createdByUserId":"9f9cb469-777a-4620-92d1-9ba7c924bdab"}'

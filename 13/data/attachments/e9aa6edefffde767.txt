@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjIwLjUxNDEwOSIsInVzZXJfaWQiOiI0NzI0NGQzZC01NmU3LTRiNjAtYjc5Ni00NjU0MjAwNDg0YzEifQ.zE-MSbeASjpfnF9ewC5W2VGbtN-DP0_iiXretywsoUg' \
+ -H 'content-length: 467' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Основание степь каюта правление исполнять.","minScore":8,"maxScore":81,"description":"Жидкий руководитель пол князь изучить райком. Отметить неожиданно сверкающий ученый серьезный мера упор.","estimatedTime":"4 weeks","previewFileId":"6ef92911-c644-476b-851d-0e6d54795f06","createdByUserId":"47244d3d-56e7-4b60-b796-4654200484c1"}'

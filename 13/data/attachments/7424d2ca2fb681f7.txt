@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjE3LjAwNzIyNSIsInVzZXJfaWQiOiIxZjE2N2Y5Ny0wNWZlLTQwMGYtOWI2MC1hN2MxMDg3NjI0ZTkifQ.CZMkOiGSXIdWYKMdKkBavmsgFcPHyE4UAoC55mjV3Bo' \
+ -H 'content-length: 486' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Покинуть пространство монета вскинуть коллектив.","courseId":"d6d88bd7-1699-4941-8568-f0926a244179","maxScore":75,"minScore":24,"orderIndex":78,"description":"Слишком витрина дальний виднеться. Недостаток правление выкинуть.\nНарод разуметься коммунизм идея. Плод похороны ярко пастух спичка.","estimatedTime":"6 weeks"}'

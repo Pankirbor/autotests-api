@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjEwLjI0OTczNiIsInVzZXJfaWQiOiJlYjFiMTU3ZC1lZjQzLTQ2MzAtYmVmNC0zNGNhNjJlN2IwMTgifQ.EzypuFBaOhfMJeQnZmrxlJxoJgnYSj1OnZawV7ztHio' \
+ -H 'content-length: 567' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Правильный выразить скользить тусклый магазин бок.","minScore":15,"maxScore":51,"description":"Спасть терапия забирать находить висеть присесть цель. Посидеть район приличный зачем полюбить нож рассуждение песня. Хлеб головной багровый угол бок.","estimatedTime":"1 weeks","previewFileId":"9b884059-1643-40c5-bad7-c95c582a1695","createdByUserId":"eb1b157d-ef43-4630-bef4-34ca62e7b018"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjEwLjgzMTQwNCIsInVzZXJfaWQiOiIzM2Y4OTBlMi1mNGI4LTRhOTgtOTVhNC02Y2U4YWQ1MWYyYWQifQ.z6nJv8tTxFIWUsDOLW_8GPJKXC6OL_u8iLYUYbwUMNg' \
+ -H 'content-length: 474' \
+ -H 'content-type: application/json' \
+ -d '{"title":"","minScore":23,"maxScore":71,"description":"Подземный постоянный мягкий дошлый носок встать иной. Выражаться скользить неожиданно запустить мягкий. Редактор порода еврейский столетие заявление.","estimatedTime":"2 weeks","previewFileId":"7bd7b2ff-33e7-4f6c-a32c-482465bd9323","createdByUserId":"9bac003b-854e-45ed-95c5-13f916645273"}'

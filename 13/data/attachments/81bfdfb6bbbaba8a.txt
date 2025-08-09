@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjE4LjQ1MTIwNSIsInVzZXJfaWQiOiJjNjk1ZTkwNC0yMWYwLTRhZmYtOTU5MC01ZThiYTk4MWEzNGQifQ.jrINOhP_i0InbItSNNdmjnLef7jGzAsuBq9tKq0njZM' \
+ -H 'content-length: 456' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Равнодушный пропадать успокоиться сынок материя.","courseId":"incorrect_course_id","maxScore":51,"minScore":30,"orderIndex":45,"description":"Полюбить совет направо сопровождаться роса. Премьера лететь зачем сутки единый школьный. Оставить уточнить сутки смертельный.","estimatedTime":"9 weeks"}'

@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/5dd8de32-7287-4e69-bdba-506521355501' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjI4LjgwMzY3MSIsInVzZXJfaWQiOiJlZjVkN2VmMy05Y2M1LTRjOWYtODc2ZC1iNzMyZWI1YWJhNmMifQ.8M9MfYFiC36U5ZxkpfjpDUkmrGYNhNUygi6RizluOi0' \
+ -H 'content-length: 379' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Опасность устройство собеседник.","courseId":"5d740361-43e5-4b0a-b3ac-f271bff5c730","maxScore":0,"minScore":-10,"orderIndex":50,"description":"Домашний блин выраженный видимо упорно дурацкий результат. Приходить поговорить запретить.","estimatedTime":"2 weeks"}'

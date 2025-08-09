@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjE5LjYxNDc5NiIsInVzZXJfaWQiOiJkYjdjMjJlZC0xNTkwLTQ2YmItYTEyMy1hOGYwZWVkMjk3MjQifQ.IokBxpsinorEto_zDd_tYGw0VnYFODLmRG18U4rgKA0' \
+ -H 'content-length: 514' \
+ -H 'content-type: application/json' \
+ -d '{"title":"","courseId":"292aebbc-542d-46ab-8c3f-b2de85d85dba","maxScore":72,"minScore":6,"orderIndex":32,"description":"Новый скрытый отметить. Смертельный появление пересечь.\nЖидкий банк карман карман покинуть. Угроза инструкция неправда поздравлять предоставить монета. Более аж торопливый налоговый носок граница.","estimatedTime":"4 weeks"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjEzLjE2MzIzMyIsInVzZXJfaWQiOiJmY2NmMTdlYS02Njc3LTQ1MzUtYTQ0NC1mMmRhYjA0NjQxNjUifQ.0Hjq7sFjhXZcTI1GV_SGos0koxzvPe2Qwic2EJmn1ek' \
+ -H 'content-length: 487' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Устройство секунда потянуться дремать задрать ныне понятный.","minScore":2,"maxScore":99,"description":"Прошептать бочок поставить вскакивать. Соответствие угодный адвокат скользить.\nВозбуждение девка экзамен очко кожа.","estimatedTime":"1 weeks","previewFileId":"","createdByUserId":"92dc591f-e830-4e8e-86e8-0e29c580bd60"}'

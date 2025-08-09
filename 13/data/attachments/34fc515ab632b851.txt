@@ -1,0 +1,16 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: DELETE на http://localhost:8001/api/v1/files/62a9a0aa-0165-4c79-872f-68d8c4c09926
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files/62a9a0aa-0165-4c79-872f-68d8c4c09926
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 200
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: GET на http://localhost:8001/api/v1/files/62a9a0aa-0165-4c79-872f-68d8c4c09926
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 404 Not Found от http://localhost:8001/api/v1/files/62a9a0aa-0165-4c79-872f-68d8c4c09926
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 404
+INFO     FILES_ASSERTIONS:files.py:146 Проверяем ответ сервера на запрос несуществующего файла
+INFO     ERRORS_ASSSERTIONS:errors.py:72 Проверяем ответ сервера с ожидаемой внутренней ошибкой
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение details соответствует ожидаемому File not found
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

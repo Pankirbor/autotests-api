@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjI3LjU5NjEzNSIsInVzZXJfaWQiOiI1MzEyNmM0Ny01NDU2LTRiNWMtOTVjYy0wZjcyZWE0MjhjZjIifQ.cQ3CJSyLgtC3YDto_y7tMfMohu0hspC8Rj8B5DFW0Y8' \
+ -H 'content-length: 565' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Идея прошептать ложиться вытаскивать доставать.","courseId":"e69c5b8f-b70e-4ee3-945c-90ac2301fccf","maxScore":0,"minScore":-10,"orderIndex":50,"description":"Освободить снимать появление добиться. Один решение бровь нервно трубка зеленый июнь труп.\nГоловной народ проход пламя. Сомнительный приятель упор куча оборот лететь подземный.","estimatedTime":"5 weeks"}'

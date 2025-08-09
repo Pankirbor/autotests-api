@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjIyLjg5MjQxMiIsInVzZXJfaWQiOiJkNjNmODQyZC1iNjU3LTRhZDEtOTJlYy1iZDk2NTZlYjI3NzMifQ.4N_igQaSdRRrOafOy-Yqrb0LBi4uLUJLYm4Zq5ORqHc' \
+ -H 'content-length: 517' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Пища издали видимо плясать протягивать подробность.","minScore":22,"maxScore":89,"description":"Рис болото грустный еврейский прежде о результат. Палец приятель эффект вскакивать растеряться. Лететь рай жестокий народ.","estimatedTime":"9 weeks","previewFileId":"4f773922-01af-4571-9477-e4097d3c1906","createdByUserId":"d63f842d-b657-4ad1-92ec-bd9656eb2773"}'

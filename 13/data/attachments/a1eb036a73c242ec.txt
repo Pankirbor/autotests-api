@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjE5LjYxNDc5NiIsInVzZXJfaWQiOiJkYjdjMjJlZC0xNTkwLTQ2YmItYTEyMy1hOGYwZWVkMjk3MjQifQ.IokBxpsinorEto_zDd_tYGw0VnYFODLmRG18U4rgKA0' \
+ -H 'content-length: 577' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Дошлый мелькнуть войти забирать коммунизм.","minScore":6,"maxScore":73,"description":"Слишком монета металл вздрогнуть вывести новый изба пропаганда. Неожиданно конференция приятель ремень. Мальчишка выражаться невыносимый теория собеседник вперед.","estimatedTime":"3 weeks","previewFileId":"cfafb6d1-f188-4441-a04c-af23835690f3","createdByUserId":"db7c22ed-1590-46bb-a123-a8f0eed29724"}'

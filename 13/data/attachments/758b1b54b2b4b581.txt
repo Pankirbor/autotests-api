@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjIzLjE2NTcxMiIsInVzZXJfaWQiOiJiYTZmZWU4YS00MjJlLTQwMGEtOTQwMS04MjFmMWJiMWM3NWQifQ.yORD2uBSNvB3tf2TovKw7ceJ69G3Kw8a2on4k5YsSr8' \
+ -H 'content-length: 552' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Висеть ныне рот цепочка.","minScore":5,"maxScore":63,"description":"Страсть мгновение кольцо степь ученый снимать. Мягкий пропадать помолчать госпожа. Возбуждение висеть покинуть космос передо растеряться.\nГоспожа космос ремень тревога.","estimatedTime":"2 weeks","previewFileId":"96181252-99d0-499f-9afa-bb653b2a0fe9","createdByUserId":"ba6fee8a-422e-400a-9401-821f1bb1c75d"}'

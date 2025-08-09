@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjE1LjU1NjY1MCIsInVzZXJfaWQiOiI4YWRlYmQ0ZS1jMzJiLTQ1OTYtOGU2Yi01ODQyZGVlMGExMDQifQ.SWZHzbTwdGTeSWrPHkZCVrKRoHM_LGbe000lRKM1X9I' \
+ -H 'content-length: 569' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Интернет нервно господь очередной.","minScore":18,"maxScore":79,"description":"Заложить фонарик выражаться спорт вскакивать космос. Нервно холодно вздрагивать смелый потянуться возникновение дрогнуть. Скользить исполнять ручей остановить бровь.","estimatedTime":"9 weeks","previewFileId":"79f1876d-af46-4bdd-a075-338e40c4ce58","createdByUserId":"8adebd4e-c32b-4596-8e6b-5842dee0a104"}'

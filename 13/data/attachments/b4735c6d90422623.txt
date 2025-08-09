@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjI4LjgwMzY3MSIsInVzZXJfaWQiOiJlZjVkN2VmMy05Y2M1LTRjOWYtODc2ZC1iNzMyZWI1YWJhNmMifQ.8M9MfYFiC36U5ZxkpfjpDUkmrGYNhNUygi6RizluOi0' \
+ -H 'content-length: 496' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Мальчишка вскинуть демократия песня увеличиваться.","minScore":27,"maxScore":77,"description":"Пропадать один нажать реклама приличный тревога. Что полностью предоставить решетка разуметься монета темнеть.","estimatedTime":"1 weeks","previewFileId":"535d4741-6799-4351-8b2f-ac531fc56678","createdByUserId":"ef5d7ef3-9cc5-4c9f-876d-b732eb5aba6c"}'

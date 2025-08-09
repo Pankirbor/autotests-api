@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjI3LjU5NjEzNSIsInVzZXJfaWQiOiI1MzEyNmM0Ny01NDU2LTRiNWMtOTVjYy0wZjcyZWE0MjhjZjIifQ.cQ3CJSyLgtC3YDto_y7tMfMohu0hspC8Rj8B5DFW0Y8' \
+ -H 'content-length: 610' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Очутиться зарплата каюта пропаганда хлеб.","minScore":13,"maxScore":77,"description":"Снимать призыв подробность функция выкинуть какой счастье. Мальчишка направо темнеть лететь мгновение солнце разуметься.\nУспокоиться сходить смеяться песенка. Иной сынок девка цель.","estimatedTime":"5 weeks","previewFileId":"a81a985f-9b40-45e2-8b25-da6688a1aaaa","createdByUserId":"53126c47-5456-4b5c-95cc-0f72ea428cf2"}'

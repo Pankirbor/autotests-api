@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjIwLjc4NTkzMSIsInVzZXJfaWQiOiI4ZWRiYjhmOC02MTE2LTQ5ZDktYWJhZi1kN2Q5NzBlZjA4MzIifQ.dbPuH-Krk_tdMG7EHdiT4Qzzmhur4bKea4xmDZqj0LI' \
+ -H 'content-length: 214' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Командование инструкция некоторый.","courseId":"43c26db8-62db-4f15-bf7c-6fc2964a8b8d","maxScore":63,"minScore":7,"orderIndex":70,"description":"","estimatedTime":"10 weeks"}'

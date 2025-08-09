@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjE3LjI4MDY2MiIsInVzZXJfaWQiOiIwMzIzZjY0MC1hN2VlLTQ1ODgtODRiNS1hYTA4MzIwZGY4NmYifQ.KgECzZ_ngU54ExWJP3ROhm4_PeOD-B6GmSczo_ezb5k' \
+ -H 'content-length: 777' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","minScore":27,"maxScore":81,"description":"Носок порядок постоянный сопровождаться зарплата коллектив тревога.\nАкадемик аллея мгновение ярко приятель покинуть естественный. Рис легко развернуться столетие витрина вчера.","estimatedTime":"7 weeks","previewFileId":"0f83a103-c1b8-4a60-908e-88feb6d04d7d","createdByUserId":"a705026c-00a1-4faa-8bfa-5524b01d0638"}'

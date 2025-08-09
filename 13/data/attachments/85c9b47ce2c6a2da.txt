@@ -1,0 +1,52 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: GET на http://localhost:8001/api/v1/courses?userId=eb1b157d-ef43-4630-bef4-34ca62e7b018
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses?userId=eb1b157d-ef43-4630-bef4-34ca62e7b018
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 200
+INFO     COURSES_ASSERTIONS:courses.py:125 Проверяем ответ сервера на запрос списка курсов
+INFO     BASE_ASSERTIONS:base.py:82 Проверяем, что длина courses соответствует ожидаемой [CourseSchema(title='Лапа появление боец полоска.', max_score=71, min_score=16, description='Демократия дошлый миг. Возможно выкинуть роскошный появление. Набор направо интеллектуальный забирать.', estimated_time='6 weeks', id='cb96ba07-0bd2-494b-b145-b1e20621223b', preview_file=FileSchema(id='9b884059-1643-40c5-bad7-c95c582a1695', url=HttpUrl('http://localhost:8001/static/tests/1743db16-29e0-4123-9035-ecdda4f74193.jpg'), filename='1743db16-29e0-4123-9035-ecdda4f74193.jpg', directory='tests'), created_by_user=UserSchema(id='eb1b157d-ef43-4630-bef4-34ca62e7b018', email='qkulikova@example.org', last_name='Казакова', first_name='Самуил', middle_name='Валерьян')), CourseSchema(title='Правильный выразить скользить тусклый магазин бок.', max_score=51, min_score=15, description='Спасть терапия забирать находить висеть присесть цель. Посидеть район приличный зачем полюбить нож рассуждение песня. Хлеб головной багровый угол бок.', estimated_time='1 weeks', id='fb1b2cae-1049-4078-be81-69c932cb210a', preview_file=FileSchema(id='9b884059-1643-40c5-bad7-c95c582a1695', url=HttpUrl('http://localhost:8001/static/tests/1743db16-29e0-4123-9035-ecdda4f74193.jpg'), filename='1743db16-29e0-4123-9035-ecdda4f74193.jpg', directory='tests'), created_by_user=UserSchema(id='eb1b157d-ef43-4630-bef4-34ca62e7b018', email='qkulikova@example.org', last_name='Казакова', first_name='Самуил', middle_name='Валерьян'))]
+INFO     COURSES_ASSERTIONS:courses.py:43 Проверяем соответсвие данных курса
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому cb96ba07-0bd2-494b-b145-b1e20621223b
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Лапа появление боец полоска.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Демократия дошлый миг. Возможно выкинуть роскошный появление. Набор направо интеллектуальный забирать.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 6 weeks
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 71
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 16
+INFO     FILES_ASSERTIONS:files.py:85 Проверяем соответствие данных файла
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 9b884059-1643-40c5-bad7-c95c582a1695
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение filename соответствует ожидаемому 1743db16-29e0-4123-9035-ecdda4f74193.jpg
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение directory соответствует ожидаемому tests
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение url соответствует ожидаемому http://localhost:8001/static/tests/1743db16-29e0-4123-9035-ecdda4f74193.jpg
+INFO     USERS_ASSERTIONS:users.py:47 Проверяем соответствие данных пользователя
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому eb1b157d-ef43-4630-bef4-34ca62e7b018
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение email соответствует ожидаемому qkulikova@example.org
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение first_name соответствует ожидаемому Самуил
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение last_name соответствует ожидаемому Казакова
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение middle_name соответствует ожидаемому Валерьян
+INFO     COURSES_ASSERTIONS:courses.py:43 Проверяем соответсвие данных курса
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому fb1b2cae-1049-4078-be81-69c932cb210a
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Правильный выразить скользить тусклый магазин бок.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Спасть терапия забирать находить висеть присесть цель. Посидеть район приличный зачем полюбить нож рассуждение песня. Хлеб головной багровый угол бок.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 1 weeks
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 51
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 15
+INFO     FILES_ASSERTIONS:files.py:85 Проверяем соответствие данных файла
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 9b884059-1643-40c5-bad7-c95c582a1695
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение filename соответствует ожидаемому 1743db16-29e0-4123-9035-ecdda4f74193.jpg
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение directory соответствует ожидаемому tests
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение url соответствует ожидаемому http://localhost:8001/static/tests/1743db16-29e0-4123-9035-ecdda4f74193.jpg
+INFO     USERS_ASSERTIONS:users.py:47 Проверяем соответствие данных пользователя
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому eb1b157d-ef43-4630-bef4-34ca62e7b018
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение email соответствует ожидаемому qkulikova@example.org
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение first_name соответствует ожидаемому Самуил
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение last_name соответствует ожидаемому Казакова
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение middle_name соответствует ожидаемому Валерьян
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

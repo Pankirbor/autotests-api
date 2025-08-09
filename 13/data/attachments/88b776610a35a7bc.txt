@@ -1,0 +1,39 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: GET на http://localhost:8001/api/v1/exercises?courseId=d6d88bd7-1699-4941-8568-f0926a244179
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises?courseId=d6d88bd7-1699-4941-8568-f0926a244179
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 200
+INFO     EXERCISES_ASSERTIONS:exercises.py:159 Проверяем ответ сервера на запрос списка упражнений
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому d6d88bd7-1699-4941-8568-f0926a244179
+INFO     BASE_ASSERTIONS:base.py:82 Проверяем, что длина exercises соответствует ожидаемой [ExerciseSchema(id='03ec4c7f-e6dc-49de-b41b-269c0182b516', title='Покинуть пространство монета вскинуть коллектив.', course_id='d6d88bd7-1699-4941-8568-f0926a244179', max_score=75, min_score=24, order_index=78, description='Слишком витрина дальний виднеться. Недостаток правление выкинуть.\nНарод разуметься коммунизм идея. Плод похороны ярко пастух спичка.', estimated_time='6 weeks'), ExerciseSchema(id='88c1e28c-33ea-4d5a-ba1c-ccf96ba76489', title='Бровь бабочка виднеться отражение пятеро район призыв манера.', course_id='d6d88bd7-1699-4941-8568-f0926a244179', max_score=99, min_score=20, order_index=30, description='Дружно инструкция вперед медицина мелочь расстройство ботинок.\nКрыса кожа более реклама академик. Выразить банк место указанный за райком поколение. Выраженный белье интернет бровь ботинок прежний.', estimated_time='9 weeks')]
+INFO     EXERCISES_ASSERTIONS:exercises.py:43 Проверяем соответсвие данных упражнения
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 03ec4c7f-e6dc-49de-b41b-269c0182b516
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Покинуть пространство монета вскинуть коллектив.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому d6d88bd7-1699-4941-8568-f0926a244179
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 75
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 24
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение order_index соответствует ожидаемому 78
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Слишком витрина дальний виднеться. Недостаток правление выкинуть.
+Народ разуметься коммунизм идея. Плод похороны ярко пастух спичка.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 6 weeks
+INFO     EXERCISES_ASSERTIONS:exercises.py:43 Проверяем соответсвие данных упражнения
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 88c1e28c-33ea-4d5a-ba1c-ccf96ba76489
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Бровь бабочка виднеться отражение пятеро район призыв манера.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому d6d88bd7-1699-4941-8568-f0926a244179
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 99
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 20
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение order_index соответствует ожидаемому 30
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Дружно инструкция вперед медицина мелочь расстройство ботинок.
+Крыса кожа более реклама академик. Выразить банк место указанный за райком поколение. Выраженный белье интернет бровь ботинок прежний.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 9 weeks
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

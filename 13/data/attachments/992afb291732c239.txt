@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjI5LjA3NTUwNSIsInVzZXJfaWQiOiIxNjEzNWI4NS04NGE3LTRiOGQtYmU1YS03NDg3NGM0MTVmNTMifQ.z09o2Re8xisX-aX0XjMnNZSEz4qJK-R8pbWPv8bqaNY' \
+ -H 'content-length: 489' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Песня плод другой плод.","minScore":1,"maxScore":52,"description":"Слать блин радость сверкающий подземный. Конструкция за сынок что написать куча о коммунизм. Голубчик жестокий видимо миф скрытый единый.","estimatedTime":"5 weeks","previewFileId":"661dd967-7f0e-4331-abcd-805280621bdb","createdByUserId":"16135b85-84a7-4b8d-be5a-74874c415f53"}'

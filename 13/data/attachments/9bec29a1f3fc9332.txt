@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjI3Ljg2OTEzMyIsInVzZXJfaWQiOiI4OGYzNzg0MS1lZDVmLTQ4ODQtYTRlNS0xNGY2Y2FmZTBhODUifQ.13bDDkUKfPwNl_eLtT9yFloco06dOFAWuCSP-3dVaUU' \
+ -H 'content-length: 433' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Похороны военный покидать выраженный спасть.","minScore":11,"maxScore":100,"description":"Зато смелый совет появление порядок торговля коллектив. Печатать около бровь народ.","estimatedTime":"5 weeks","previewFileId":"6e0c65c9-1fbc-4ff7-8bbd-087e41b2c034","createdByUserId":"88f37841-ed5f-4884-a4e5-14f6cafe0a85"}'

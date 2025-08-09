@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjI0LjMzODQ3NCIsInVzZXJfaWQiOiJiNGJkNDY2Yi1lYjdiLTRlN2EtOTgwNi1mNTZiYjUyNTlmMGIifQ.4JmJpNtW8_2ihn7Jf8nny-yIm59etQ1EMoRNLm9sA1w' \
+ -H 'content-length: 567' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Отражение заработать аж мусор песенка домашний мелькнуть.","minScore":15,"maxScore":61,"description":"Пламя невыносимый вперед славный каюта. Естественный построить сходить дальний дорогой голубчик. Другой слишком потянуться второй юный пятеро.","estimatedTime":"7 weeks","previewFileId":"ba944eb2-5a87-456b-a645-26945ddec7d4","createdByUserId":"b4bd466b-eb7b-4e7a-9806-f56bb5259f0b"}'

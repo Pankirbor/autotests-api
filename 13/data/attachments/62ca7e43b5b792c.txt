@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTA5VDEzOjMxOjE5LjM0MzQ0OSIsInVzZXJfaWQiOiJlMWZjYTg0OC1hYmY5LTRmNjctODc4Zi0wNzE5ZGU0MTlkZjAifQ.mGjPgNFFGCHB7kA9w7CDO8XYJ3sEVqmgN9Y3R8UMNm4' \
+ -H 'content-length: 596' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Секунда факультет оборот умирать деньги полоска реклама.","minScore":17,"maxScore":71,"description":"Термин мимо парень. Набор угол спасть тысяча исследование изба.\nПокинуть устройство нервно покидать. Аллея научить танцевать командование уточнить рота житель.","estimatedTime":"7 weeks","previewFileId":"d45ead46-4c08-452a-b90a-5ffa12513ff9","createdByUserId":"e1fca848-abf9-4f67-878f-0719de419df0"}'
