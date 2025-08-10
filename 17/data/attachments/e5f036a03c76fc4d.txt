@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/945ddcac-9b41-40d6-af4f-6b48dcd9cc31' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjUyOjM3LjkwMjAxMyIsInVzZXJfaWQiOiIwYTJlYjNiMS04NjQ0LTQzYTMtYTUzZi1iZDk5OGFlOWQxOTAifQ.lMUtJvtv1XEXB9hwSZpLv3J1svX1DZ6UVF1wle7cua0' \
+ -H 'content-length: 608' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Серьезный багровый прощение горький слишком деловой.","courseId":"5a0dd798-dcd6-4af5-88d1-84f14a4c8e23","maxScore":0,"minScore":-10,"orderIndex":16,"description":"Оборот сомнительный тревога житель сверкающий конференция идея расстегнуть. Сустав каюта смелый решетка печатать. Командующий куча снимать адвокат интеллектуальный точно избегать пространство.","estimatedTime":"7 weeks"}'

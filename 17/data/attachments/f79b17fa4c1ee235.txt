@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/cfb6eee2-37af-4737-9827-b30410633275' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjUyOjMwLjc0MDA2MyIsInVzZXJfaWQiOiJjYjQ2MmUwZC1jMDU3LTRmYjYtOWQ4Ni02OTU5NDU3Y2IyMjgifQ.5s3StIakPNFBwtJ7cSo05EhHKXJ3_Di9fj4krIO2e-I' \
+ -H 'content-length: 558' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Горький невозможно сбросить мрачно.","courseId":"94b6e023-34ef-4b6a-a97a-17f60f7e0a91","maxScore":71,"minScore":3,"orderIndex":70,"description":"Разводить граница блин. Миг остановить школьный магазин спешить прощение чувство слишком. Правление плод смертельный выраженный назначить вскинуть. Запустить смелый порода достоинство нож.","estimatedTime":""}'

@@ -1,0 +1,18 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 200
+INFO     COURSES_ASSERTIONS:courses.py:69 Проверяем ответ сервера на запрос создания курса
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Результат актриса ведь палец славный.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Провинция ярко ночь ленинград развитый мальчишка инвалид. Доставать даль развернуться скользить привлекать призыв. Вытаскивать возникновение достоинство выраженный покинуть темнеть отдел.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 68
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 9
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 6 weeks
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение preview_file_id соответствует ожидаемому 7b14f0a9-1060-4b1a-ac76-2e8507033f08
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение created_by_user_id соответствует ожидаемому ab7f9595-871c-4bf0-a526-9c304aae8c5a
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

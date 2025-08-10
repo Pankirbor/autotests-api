@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/3c1126ea-690f-4d1e-8042-d4793d096e89' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjUyOjMwLjQ2NzI4NCIsInVzZXJfaWQiOiJkOTBjZWVjMy1lMjdmLTQzZWUtYjE2ZC1hYTI1MmVmM2YzMGYifQ.Ct9kxxRDFI0wxlUGAzQvMfELhEavDASvDtklCgwKsWY' \
+ -H 'content-length: 520' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Пламя зачем рота достоинство мягкий вариант темнеть.","courseId":"0506643e-fe24-4c71-b678-ab5db8327e48","maxScore":54,"minScore":3,"orderIndex":20,"description":"Жидкий спичка приличный карман премьера карандаш приятель. Провинция упор одиннадцать что сравнение уронить болото. Нервно более дорогой рай висеть.","estimatedTime":"9 weeks"}'

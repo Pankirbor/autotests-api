@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjUyOjM2LjE0MjAwMSIsInVzZXJfaWQiOiJiNDc2MTFhMy03OTc0LTQ2OTYtYjNmZS1iNTUzYzQ2ZmY4ZjMifQ.HcYpNA_ceC0_mPdsc8M4m36092dXUTQQ22v1r0FLCFc' \
+ -H 'content-length: 517' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Механический место падать картинка непривычный мучительно.","minScore":30,"maxScore":78,"description":"Юный штаб космос рассуждение. Поставить блин рис мгновение. Костер ложиться беспомощный дыхание прощение ответить.","estimatedTime":"2 weeks","previewFileId":"1ca7f479-372b-4a59-9cdf-0dc59b9dff28","createdByUserId":"b47611a3-7974-4696-b3fe-b553c46ff8f3"}'

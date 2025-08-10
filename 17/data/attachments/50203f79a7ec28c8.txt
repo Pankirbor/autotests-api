@@ -1,0 +1,21 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 422 Unprocessable Entity от http://localhost:8001/api/v1/exercises
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 422
+INFO     EXERCISES_ASSERTIONS:exercises.py:297 Проверям ответ сервера после запроса на создание или обновление упражнения с некорректным score
+INFO     ERRORS_ASSSERTIONS:errors.py:51 Проверяем ответ сервера с ожидаемой валидационной ошибкой
+INFO     BASE_ASSERTIONS:base.py:82 Проверяем, что длина details соответствует ожидаемой [ValidationErrorSchema(type='value_error', input={'title': 'Услать ставить вскакивать деньги отражение мягкий остановить.', 'courseId': 'a9456daf-0aa1-4186-bfab-779786c8b9fc', 'maxScore': 10, 'minScore': 100, 'orderIndex': 98, 'description': 'Головной необычный серьезный термин коллектив полюбить постоянный торопливый. Тута наслаждение конструкция. Домашний неправда дальний аж.', 'estimatedTime': '6 weeks'}, context={'error': {}}, message='Value error, max score should not be less than min score', location=['body'])]
+INFO     ERRORS_ASSSERTIONS:errors.py:28 Проверяем данные ожидаемой валидационной ошибки
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение type соответствует ожидаемому value_error
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение message соответствует ожидаемому Value error, max score should not be less than min score
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение location соответствует ожидаемому ['body']
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение input соответствует ожидаемому {'title': 'Услать ставить вскакивать деньги отражение мягкий остановить.', 'courseId': 'a9456daf-0aa1-4186-bfab-779786c8b9fc', 'maxScore': 10, 'minScore': 100, 'orderIndex': 98, 'description': 'Головной необычный серьезный термин коллектив полюбить постоянный торопливый. Тута наслаждение конструкция. Домашний неправда дальний аж.', 'estimatedTime': '6 weeks'}
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение context соответствует ожидаемому {'error': {}}
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjUyOjI3LjE5NTE5NiIsInVzZXJfaWQiOiI5ODliZGUwNS00MTMyLTQwNjItYmNhOC1kNzU4ODBhMzg5N2UifQ.s-gTOj0kgqr4UeRi5tTpWQw8L_fL6Cmgq4p3yY6W9UY' \
+ -H 'content-length: 614' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Лапа металл механический новый естественный сбросить.","minScore":20,"maxScore":84,"description":"Табак засунуть вариант некоторый сохранять аллея. Налоговый поздравлять рис коллектив неправда. Командование сынок ребятишки дурацкий пересечь вскинуть выражаться тысяча.","estimatedTime":"7 weeks","previewFileId":"aafd8ff7-1f03-4c2c-94ee-c9a9a9a28cad","createdByUserId":"989bde05-4132-4062-bca8-d75880a3897e"}'

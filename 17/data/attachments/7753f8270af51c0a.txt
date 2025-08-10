@@ -1,0 +1,16 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: GET на http://localhost:8001/api/v1/files/c6de3a48-57b8-4d76-aec2-f9edbef2199a
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files/c6de3a48-57b8-4d76-aec2-f9edbef2199a
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 200
+INFO     FILES_ASSERTIONS:files.py:108 Проверяем ответ сервера на запрос файла
+INFO     FILES_ASSERTIONS:files.py:85 Проверяем соответствие данных файла
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому c6de3a48-57b8-4d76-aec2-f9edbef2199a
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение filename соответствует ожидаемому 8f40fb24-298d-46f5-846f-496d35dd2266.jpg
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение directory соответствует ожидаемому tests
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение url соответствует ожидаемому http://localhost:8001/static/tests/8f40fb24-298d-46f5-846f-496d35dd2266.jpg
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

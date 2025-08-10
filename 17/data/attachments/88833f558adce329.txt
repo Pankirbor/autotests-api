@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjUyOjIzLjMzMDgyNiIsInVzZXJfaWQiOiI5MmU2MmQzMi1mY2RjLTQzYmYtYWY1MC1lNzI2OWNiZjdiMmYifQ.MqIcvUauexwfz8mYdcCAvXDYhUKkMQK5fDOtwrSLm7E' \
+ -H 'content-length: 526' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Заплакать увеличиваться миф запустить ночь мотоцикл виднеться рис.","minScore":17,"maxScore":76,"description":"Жить умирать мимо социалистический ярко функция. Песенка коробка падаль развитый. Одиннадцать куча изменение приличный ярко.","estimatedTime":"7 weeks","previewFileId":"incorrect-id","createdByUserId":"dfc3d820-0006-40d0-b6e4-874b31045dda"}'

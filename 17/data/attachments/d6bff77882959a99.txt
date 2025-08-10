@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjUyOjMwLjQ2NzI4NCIsInVzZXJfaWQiOiJkOTBjZWVjMy1lMjdmLTQzZWUtYjE2ZC1hYTI1MmVmM2YzMGYifQ.Ct9kxxRDFI0wxlUGAzQvMfELhEavDASvDtklCgwKsWY' \
+ -H 'content-length: 561' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Дрогнуть тысяча решетка похороны рот.","minScore":25,"maxScore":99,"description":"Встать социалистический недостаток падать о. Сынок тусклый заведение слать развернуться команда находить. Пространство скользить а реклама райком эффект аллея.","estimatedTime":"2 weeks","previewFileId":"5b78b058-1820-4665-b6f4-ad4599d0468d","createdByUserId":"d90ceec3-e27f-43ee-b16d-aa252ef3f30f"}'

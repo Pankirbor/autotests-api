@@ -1,0 +1,25 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: GET на http://localhost:8001/api/v1/exercises/df5bca78-bf2c-4ed6-ac01-5e2853d87abb
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises/df5bca78-bf2c-4ed6-ac01-5e2853d87abb
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 200
+INFO     EXERCISES_ASSERTIONS:exercises.py:93 Проверяем ответ сервера на запрос получения упражнения
+INFO     EXERCISES_ASSERTIONS:exercises.py:43 Проверяем соответсвие данных упражнения
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому df5bca78-bf2c-4ed6-ac01-5e2853d87abb
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Висеть вперед наслаждение развитый провинция инвалид.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому 02efb52c-905b-4f4d-9d2b-6fd095c80633
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 68
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 29
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение order_index соответствует ожидаемому 98
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Падаль иной висеть добиться выкинуть неожиданный вывести вздрагивать. Светило дурацкий передо пропаганда. Какой мотоцикл рота оборот пробовать возмутиться горький.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 10 weeks
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjUyOjI0LjgwOTA5NSIsInVzZXJfaWQiOiIyMzAzZjE4Mi0yMWU2LTQ5NTctOTQxNi05MzAyMDA0ZWNiMDQifQ.x0Xb-LklHz4PDL6pJYXYlt4hWlhor8j5e8iN-5TLipw' \
+ -H 'content-length: 618' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Сверкающий расстегнуть коммунизм непривычный редактор.","minScore":13,"maxScore":93,"description":"Эффект карман приличный редактор заявление приятель коммунизм. Беспомощный запретить видимо тесно разнообразный. Ныне ребятишки запретить валюта сбросить новый провинция.","estimatedTime":"10 weeks","previewFileId":"da6ae798-5a83-4100-b288-7dc7228ae789","createdByUserId":"2303f182-21e6-4957-9416-9302004ecb04"}'

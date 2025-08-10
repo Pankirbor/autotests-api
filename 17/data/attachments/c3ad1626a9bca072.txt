@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjUyOjQwLjgzMzY4MyIsInVzZXJfaWQiOiJmMmJjNDMwNC1jNjIxLTQxMGQtYWVlNi0yM2E3NzkwODNhMjEifQ.Gkk9kkMXJjmYLw2pbRalaq16KsFkJxhXZxoiOflDtv0' \
+ -H 'content-length: 472' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Избегать выдержать висеть низкий.","courseId":"1aed228a-925a-4b93-9849-05a7893ec200","maxScore":77,"minScore":21,"orderIndex":63,"description":"Естественный поздравлять предоставить лететь скрытый. Куча важный сравнение. Потрясти ученый бабочка монета полевой.","estimatedTime":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}'

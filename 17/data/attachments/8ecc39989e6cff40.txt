@@ -1,0 +1,37 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: GET на http://localhost:8001/api/v1/exercises?courseId=26b85050-222d-4757-9437-09e57427d1d1
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises?courseId=26b85050-222d-4757-9437-09e57427d1d1
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 200
+INFO     EXERCISES_ASSERTIONS:exercises.py:159 Проверяем ответ сервера на запрос списка упражнений
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому 26b85050-222d-4757-9437-09e57427d1d1
+INFO     BASE_ASSERTIONS:base.py:82 Проверяем, что длина exercises соответствует ожидаемой [ExerciseSchema(id='1fa56b26-ca32-4c63-b333-9f81666efafa', title='Упор июнь вздрагивать прошептать.', course_id='26b85050-222d-4757-9437-09e57427d1d1', max_score=60, min_score=16, order_index=44, description='Нож житель социалистический. Тревога расстегнуть июнь нажать палата командующий функция. Сверкающий степь настать кидать светило советовать славный.', estimated_time='4 weeks'), ExerciseSchema(id='bd7c33e4-5d7b-4583-a733-2e9a23be6309', title='Рассуждение командование мучительно поговорить некоторый.', course_id='26b85050-222d-4757-9437-09e57427d1d1', max_score=62, min_score=14, order_index=8, description='Рай подробность пробовать войти мусор пропаганда костер.', estimated_time='8 weeks')]
+INFO     EXERCISES_ASSERTIONS:exercises.py:43 Проверяем соответсвие данных упражнения
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 1fa56b26-ca32-4c63-b333-9f81666efafa
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Упор июнь вздрагивать прошептать.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому 26b85050-222d-4757-9437-09e57427d1d1
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 60
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 16
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение order_index соответствует ожидаемому 44
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Нож житель социалистический. Тревога расстегнуть июнь нажать палата командующий функция. Сверкающий степь настать кидать светило советовать славный.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 4 weeks
+INFO     EXERCISES_ASSERTIONS:exercises.py:43 Проверяем соответсвие данных упражнения
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому bd7c33e4-5d7b-4583-a733-2e9a23be6309
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Рассуждение командование мучительно поговорить некоторый.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому 26b85050-222d-4757-9437-09e57427d1d1
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 62
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 14
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение order_index соответствует ожидаемому 8
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Рай подробность пробовать войти мусор пропаганда костер.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 8 weeks
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjUyOjM4LjQ4OTYwMyIsInVzZXJfaWQiOiI5YzVmYTA2ZC00MjRiLTQyMWQtOTljZS03OTY0NmMxZTBhNzMifQ.spjIQMajzaL319LXdX1v6XVmEFi7XI0oVDCEiBJ_K6g' \
+ -H 'content-length: 547' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Стакан за печатать потом четко оборот правление.","minScore":20,"maxScore":85,"description":"Возбуждение деньги уничтожение виднеться грудь. Монета падать товар оборот палата. Мрачно видимо приличный функция инвалид коммунизм горький.","estimatedTime":"4 weeks","previewFileId":"8716bf77-21e0-4e2c-9f54-ffed123705c7","createdByUserId":"9c5fa06d-424b-421d-99ce-79646c1e0a73"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjUyOjM2LjcyNjMzMSIsInVzZXJfaWQiOiI0M2VlZTEzOC00ZmI0LTQ4YzktYmVjZS03YzIzMmUzZmJkMWUifQ.-oOyPz6aBkh1Hnb-Fnt7lGoue3kiGSRlhbZ8r4aGaxM' \
+ -H 'content-length: 528' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Собеседник вздрагивать выражение вздрагивать.","minScore":17,"maxScore":70,"description":"Блин успокоиться мгновение бабочка устройство разуметься. Мгновение мрачно заплакать. Сопровождаться вскакивать недостаток научить.","estimatedTime":"1 weeks","previewFileId":"3deb9706-b781-4975-bacf-6eea526d4fc1","createdByUserId":"43eee138-4fb4-48c9-bece-7c232e3fbd1e"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjUyOjIxLjAwODE3NSIsInVzZXJfaWQiOiI3NDYyMzFlMy1hMWU0LTRmMjUtYjQ4NC03NjljZWJmMTQ3M2QifQ.H_tOGXKtZWdAuJIFu1aGcPv7nhubrnR8yVktEJgNx5o' \
+ -H 'content-length: 424' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Расстройство заработать назначить очко.","minScore":3,"maxScore":53,"description":"Передо провинция монета головка сверкать поставить. Гулять адвокат мгновение слишком миг помимо вперед.","estimatedTime":"8 weeks","previewFileId":"","createdByUserId":"6818af3e-f269-4d1d-9c96-085d907d768a"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjUyOjI4LjQxNzI0OSIsInVzZXJfaWQiOiJlYzA2YmYxNS1kYTg5LTRhOGItYTlkZC00MDk1N2Y0ZDg1YTQifQ.KFEvGOpccCX1Ft6EAs8hXgazyO5yhXp2KcRdG8RVOkM' \
+ -H 'content-length: 526' \
+ -H 'content-type: application/json' \
+ -d '{"title":"","minScore":28,"maxScore":70,"description":"Приятель карман бок теория тревога. Ломать единый проход. Идея вряд видимо понятный.\nВздрогнуть торговля ребятишки один. Прошептать белье банк заявление. Горький заведение пятеро.","estimatedTime":"9 weeks","previewFileId":"f8139122-d009-4517-b5e7-5aae5f073f4f","createdByUserId":"fc3efd1d-e9dd-4e0b-ae3b-ee4a267d6612"}'

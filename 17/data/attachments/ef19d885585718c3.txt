@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjUyOjM3LjMxMzYyOSIsInVzZXJfaWQiOiJhZDNjNTU2Yi1hZjI5LTRjYmUtODU2OS00NzdlMTEyZTQ4NzgifQ.-Hc3OnRhdDuEi2bA9IL0bJZtOYM4Ruz9-fNfV4WWn0I' \
+ -H 'content-length: 445' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Собеседник пламя хлеб новый ложиться.","minScore":17,"maxScore":60,"description":"Вариант палец ягода человечек научить. Сохранять пространство спалить аж куча появление покидать.","estimatedTime":"6 weeks","previewFileId":"3d772a1a-3833-4415-8953-44345640c7e5","createdByUserId":"ad3c556b-af29-4cbe-8569-477e112e4878"}'

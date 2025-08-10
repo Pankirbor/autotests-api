@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjUyOjI1LjM5NDU4MCIsInVzZXJfaWQiOiJhOTY5Yjk0Yi0wNWJiLTRkZjAtOWVmZS00ZWZkZjg0YmJmMDIifQ.yqaZdP-NYgG9rrfCUdCYITU19nY9Z9QIouMywSy2-88' \
+ -H 'content-length: 789' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","minScore":8,"maxScore":85,"description":"Одиннадцать единый поздравлять исследование премьера провал. Означать ленинград проход.\nШкольный рассуждение художественный монета. Эффект граница сохранять покидать призыв миф эпоха.","estimatedTime":"2 weeks","previewFileId":"06ee8bb8-7e93-4d01-ac16-83313c0c27fe","createdByUserId":"ce50ce11-aed3-4964-882a-b62cf4fb6432"}'

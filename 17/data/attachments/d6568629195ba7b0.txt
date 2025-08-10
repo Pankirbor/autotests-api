@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjUyOjM0Ljk3NDAxMSIsInVzZXJfaWQiOiJkNzcwMzEyOS1jMjJiLTQ5YmUtYjQ4My1lYTg2ZDVlNTJiMzIifQ.HFK8jNFol2MXsDp8cLlY3YdsR99ZV3kgnpqAYn-J5bU' \
+ -H 'content-length: 276' \
+ -H 'content-type: application/json' \
+ -d '{"title":"","courseId":"34c60327-572f-44aa-8723-a84da82e6f37","maxScore":52,"minScore":9,"orderIndex":50,"description":"Возмутиться спичка горький роскошный. Багровый скрытый сомнительный.","estimatedTime":"3 weeks"}'

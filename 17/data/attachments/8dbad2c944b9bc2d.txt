@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjUyOjMxLjkzMDA1MyIsInVzZXJfaWQiOiJlOWJjMDNmZi1hZDRlLTRiMDktOTBlMC1mNmE2YmU4ZTE5ZGQifQ.LJcV693Mc1nR9XSZwpqTWbaxkf-Q0YeCfY1cNnkHtLw' \
+ -H 'content-length: 590' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Кольцо командование запустить сынок собеседник чем растеряться пропадать.","minScore":14,"maxScore":56,"description":"Художественный возмутиться зарплата славный запустить танцевать рай изба. Тесно выраженный чувство багровый носок заложить природа каюта.","estimatedTime":"9 weeks","previewFileId":"1c1875c8-910f-434c-b1df-a12dc4a33967","createdByUserId":"e9bc03ff-ad4e-4b09-90e0-f6a6be8e19dd"}'
