@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIxOjUxOjE2LjMzOTk0OCIsInVzZXJfaWQiOiI5MDc0NjBiNC1mZmIyLTRmZGMtYjMzMC1lMjg4NDdhMDI5MmMifQ.PXKag5IbF6CKYi-PDqkkAkfnnNoGxAfrqcTebI3fsIs' \
+ -H 'content-length: 632' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Пламя бочок командование наткнуться.","minScore":17,"maxScore":86,"description":"Вздрагивать покинуть блин поймать встать засунуть угол четко. Упор цвет горький танцевать дремать бегать.\nПотянуться спалить написать достоинство кидать. Мягкий печатать висеть болото лиловый сынок.","estimatedTime":"2 weeks","previewFileId":"166f23a2-2f8b-4ad5-97d2-20af92d82b3c","createdByUserId":"907460b4-ffb2-4fdc-b330-e28847a0292c"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIxOjUxOjExLjAzMTgzNSIsInVzZXJfaWQiOiI2Nzk1NjJiNS05YWY5LTRmNzctYjZmOS0xYjcwNGIxYTJjMDcifQ.zYnOq_-bJR4dZbQaNJUylDQIVEMkYv_3MKU0jjekjPU' \
+ -H 'content-length: 612' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Иной гулять витрина магазин райком жить дурацкий.","minScore":29,"maxScore":60,"description":"Вообще бегать расстегнуть металл торопливый жидкий. Функция лапа заплакать мусор.\nТяжелый отметить оборот функция факультет спичка запустить. Товар порт чем функция поколение.","estimatedTime":"3 weeks","previewFileId":"2fe725e7-26b7-4481-bc21-db3559a15cde","createdByUserId":"679562b5-9af9-4f77-b6f9-1b704b1a2c07"}'

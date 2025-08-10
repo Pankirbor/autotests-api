@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIxOjUxOjA1LjY4NDgxMCIsInVzZXJfaWQiOiI3MmRhZDM4Yy0wZjVjLTRiMTEtYmFiZi0zNjIxMWZjNGIyMjIifQ.XDXChj4sh8L0dNYHKWpQiIauJ4O251s2b9ZnEsVfQIE' \
+ -H 'content-length: 465' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Решетка цепочка уничтожение успокоиться носок.","minScore":19,"maxScore":89,"description":"Господь материя манера жить. Выкинуть секунда покидать очко освобождение эпоха развернуться степь.","estimatedTime":"2 weeks","previewFileId":"d2ed1be8-7103-4450-9df3-e3bbae2ad943","createdByUserId":"72dad38c-0f5c-4b11-babf-36211fc4b222"}'

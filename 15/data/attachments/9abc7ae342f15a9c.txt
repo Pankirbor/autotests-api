@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIxOjUxOjA3LjQzNDUyNiIsInVzZXJfaWQiOiI3OWZjM2E0NS1mNjc1LTQ5MWQtOGFmMS0yZDE3MTZkMzA5YjkifQ.idDtkxbjIGr8sL-R71Boh5T2lWNtLHbcwzkuF06TRMU' \
+ -H 'content-length: 552' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Разводить хотеть болото около невыносимый тревога зима.","minScore":28,"maxScore":79,"description":"Прежде палец отдел гулять сбросить другой. Заплакать функция торопливый фонарик выражение левый. Коллектив рассуждение рассуждение мимо.","estimatedTime":"5 weeks","previewFileId":"06e8fd06-09c8-4848-a056-0cf2f1b44313","createdByUserId":"79fc3a45-f675-491d-8af1-2d1716d309b9"}'

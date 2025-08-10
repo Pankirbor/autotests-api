@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIxOjUxOjAwLjY5MzQxNyIsInVzZXJfaWQiOiIxZjA0YzYwMy1iNjNkLTQ2YzgtODM3Mi1mNmI4YmI2YjNhOWYifQ.bh4slAADaMOgelBwkhUIj7GjsjzIc82Hk4ygvPKIWx0' \
+ -H 'content-length: 449' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Мусор остановить роса жестокий.","minScore":10,"maxScore":65,"description":"Академик армейский научить разводить виднеться правление а покидать. Необычный спалить пастух падать крыса дремать заложить.","estimatedTime":"2 weeks","previewFileId":"","createdByUserId":"6453b30a-437b-42df-9aea-b83f9ecf9698"}'

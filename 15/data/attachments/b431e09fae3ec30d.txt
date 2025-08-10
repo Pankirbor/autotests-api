@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/12becef0-cb28-44b2-abb3-dd6d325b5bc4' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIxOjUxOjE4LjY3MTE2MSIsInVzZXJfaWQiOiJkY2U1YjFlZi1iNDU5LTRmZDgtYmM4OS1lYmM0MWJjYjI3ZTAifQ.D6t1UnnUr9aDJOpGGbsnUrDkSKIaZg5nbpasZx8UcCs' \
+ -H 'content-length: 457' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Смелый недостаток вскакивать актриса горький.","courseId":"8d1c6c30-6bd9-40d9-a9c3-fe5725c76a64","maxScore":0,"minScore":-10,"orderIndex":51,"description":"Торопливый угол подземный цепочка. Спорт холодно угол блин подробность. Заявление нажать кузнец приятель оставить какой.","estimatedTime":"3 weeks"}'

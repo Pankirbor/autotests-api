@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIxOjUxOjE0LjU5OTMyMiIsInVzZXJfaWQiOiI1NzQyZWM1NC04YzY4LTQyMzAtODgwYS1iNWQ5YmY1OTQxYzQifQ.bmo6Px08vPGtwFsP8UiPaHN68FHJ7Muw3abqF2Lq1BA' \
+ -H 'content-length: 474' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Настать угроза темнеть.","minScore":30,"maxScore":55,"description":"Куча боец правый командир встать. Оборот порядок кольцо бегать бок хотеть космос покидать. Казнь адвокат зима солнце вздрогнуть.","estimatedTime":"3 weeks","previewFileId":"3dc962fd-fe6b-46d6-bdbc-8f9134977430","createdByUserId":"5742ec54-8c68-4230-880a-b5d9bf5941c4"}'

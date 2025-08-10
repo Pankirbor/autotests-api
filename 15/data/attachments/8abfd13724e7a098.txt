@@ -1,0 +1,13 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 422 Unprocessable Entity от http://localhost:8001/api/v1/users
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 422
+INFO     USERS_ASSERTIONS:users.py:180 Проверям ответ сервера после запроса на создание или обновление пользователя со значением, превышающим максимальную длину поля.
+INFO     ERRORS_ASSSERTIONS:errors.py:51 Проверяем ответ сервера с ожидаемой валидационной ошибкой
+INFO     BASE_ASSERTIONS:base.py:82 Проверяем, что длина details соответствует ожидаемой [ValidationErrorSchema(type='value_error', input='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', context={'reason': 'An email address must have an @-sign.'}, message='value is not a valid email address: An email address must have an @-sign.', location=['body', 'email'])]
+INFO     ERRORS_ASSSERTIONS:errors.py:28 Проверяем данные ожидаемой валидационной ошибки
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение type соответствует ожидаемому value_error
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение message соответствует ожидаемому value is not a valid email address: An email address must have an @-sign.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение location соответствует ожидаемому ['body', 'email']
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение input соответствует ожидаемому aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение context соответствует ожидаемому {'reason': 'An email address must have an @-sign.'}
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

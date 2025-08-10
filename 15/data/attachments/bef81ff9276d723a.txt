@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIxOjUxOjE4LjY3MTE2MSIsInVzZXJfaWQiOiJkY2U1YjFlZi1iNDU5LTRmZDgtYmM4OS1lYmM0MWJjYjI3ZTAifQ.D6t1UnnUr9aDJOpGGbsnUrDkSKIaZg5nbpasZx8UcCs' \
+ -H 'content-length: 560' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Изображать заработать тревога передо.","minScore":2,"maxScore":77,"description":"Возмутиться остановить жестокий прошептать дьявол. Трясти сопровождаться вперед находить сынок выражаться. Сустав господь некоторый карандаш ведь способ юный.","estimatedTime":"6 weeks","previewFileId":"f0ac963a-5729-454c-ab55-f1949bac86a1","createdByUserId":"dce5b1ef-b459-4fd8-bc89-ebc41bcb27e0"}'

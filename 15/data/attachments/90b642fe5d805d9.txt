@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIxOjUxOjE2LjMzOTk0OCIsInVzZXJfaWQiOiI5MDc0NjBiNC1mZmIyLTRmZGMtYjMzMC1lMjg4NDdhMDI5MmMifQ.PXKag5IbF6CKYi-PDqkkAkfnnNoGxAfrqcTebI3fsIs' \
+ -H 'content-length: 425' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Смертельный школьный ложиться пропаганда степь.","courseId":"7f6e625f-a002-427a-888e-2d66ff8ea570","maxScore":0,"minScore":-10,"orderIndex":98,"description":"Ложиться валюта магазин опасность.\nРавнодушный выдержать устройство хотеть роскошный что выдержать.","estimatedTime":"3 weeks"}'

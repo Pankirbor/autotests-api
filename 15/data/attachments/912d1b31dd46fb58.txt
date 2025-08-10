@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIxOjUxOjEyLjgxNjc1NyIsInVzZXJfaWQiOiI5NTZhYWMwZi1iYWM1LTQ1YTItOWI1Zi0yMmU4ZjZjMDg5ZmMifQ.cl18ovQSk2iIA0zUeH7j-mfNiAw7mezxhCGwoXdF5ws' \
+ -H 'content-length: 433' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Радость упор чем правление чем район бочок.","minScore":2,"maxScore":76,"description":"Солнце пропаганда боец солнце секунда провинция. Исполнять рай при коммунизм школьный.","estimatedTime":"9 weeks","previewFileId":"149a5b29-f206-4a21-961b-1e41db4feab9","createdByUserId":"956aac0f-bac5-45a2-9b5f-22e8f6c089fc"}'

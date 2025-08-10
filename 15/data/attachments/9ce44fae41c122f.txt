@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIxOjUxOjA4LjA2OTY5MSIsInVzZXJfaWQiOiIxOThlNjU5MS1mNmNiLTRiZGUtYTc3MC1lMjAwMWVlZjNiZjEifQ.7cngG1Jfz3eL4oj5eydJPHYnhQOpqZRvl6jndbzgjrs' \
+ -H 'content-length: 563' \
+ -H 'content-type: application/json' \
+ -d '{"title":"","minScore":10,"maxScore":65,"description":"Хотеть мелочь мягкий. Гулять слишком затянуться жестокий демократия трубка. Выраженный космос затянуться смертельный интеллектуальный посвятить протягивать более. Спорт слишком скрытый разуметься.","estimatedTime":"1 weeks","previewFileId":"cf151023-c6b3-4483-929b-b5e428ecd258","createdByUserId":"0596fad3-03d1-4205-ac7e-e0219d64fcfe"}'

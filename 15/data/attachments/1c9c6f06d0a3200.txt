@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIxOjUxOjE3LjUwMzYwMSIsInVzZXJfaWQiOiI1NDg4OGRiNi05MGQ0LTQzNzgtOTZiYi0yNmVmMjdhNGI2MDgifQ.vk_LVkqG7Lo7echbPZA6LMMZRmCKp7i5Q2HaEEtHoyg' \
+ -H 'content-length: 380' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Запеть порог очередной угроза.","minScore":1,"maxScore":77,"description":"Скрытый очередной монета карман магазин. Выражаться сутки куча трясти.","estimatedTime":"7 weeks","previewFileId":"c288b6f8-a226-4c1e-8c3d-5c4f8c5f8f70","createdByUserId":"54888db6-90d4-4378-96bb-26ef27a4b608"}'

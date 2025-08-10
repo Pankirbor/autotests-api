@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/a1f80690-ba02-4ffb-a0e2-1e5d878dd84e' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIxOjUxOjIxLjU4MDYyMiIsInVzZXJfaWQiOiIzODE3NGViYi0zNGFlLTRhM2UtODBjYi1kMDVjZWIzODZkMjEifQ.gv6tRO_HTdUfwq9UEc0UUJXTD-iClyMi0xKj_iPCNyc' \
+ -H 'content-length: 316' \
+ -H 'content-type: application/json' \
+ -d '{"title":"","courseId":"6b3e7333-0882-42f0-b7b5-130a78e1ab0e","maxScore":99,"minScore":10,"orderIndex":47,"description":"Собеседник ленинград возмутиться багровый. Стакан академик налево другой похороны нервно.","estimatedTime":"3 weeks"}'

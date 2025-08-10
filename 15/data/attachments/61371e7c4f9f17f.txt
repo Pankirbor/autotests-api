@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIxOjUxOjAyLjEwMTAwMiIsInVzZXJfaWQiOiJiNjg4ZTVlYS03M2UxLTQ3YjgtYjc0ZS0zNDFhNDkyMDIzZDYifQ.pM4b-IF9UUuTBENnqG2iYi2pVkQN0iP7G99sKMrpDQU' \
+ -H 'content-length: 484' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Академик посидеть заработать спалить дьявол.","minScore":23,"maxScore":58,"description":"Терапия термин идея. Смертельный намерение непривычный мимо еврейский.\nКуча число холодно непривычный. Войти появление мера палка.","estimatedTime":"7 weeks","previewFileId":"23c7b1cb-e034-4cec-a489-70402bd96d36","createdByUserId":""}'

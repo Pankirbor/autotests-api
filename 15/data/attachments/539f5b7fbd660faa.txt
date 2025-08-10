@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIxOjUxOjE2LjkxOTcwNiIsInVzZXJfaWQiOiIzNGZhMWMxZS04MTBiLTRiODMtYTM5NS0wMDlkMjE0ZDAzMzcifQ.QCU1L3iIi0G8oRGB8CdKe0upMF0fC651FDOlECqXBho' \
+ -H 'content-length: 509' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Аллея художественный нож зачем рот рабочий разводить другой.","minScore":2,"maxScore":82,"description":"Багровый демократия оборот. Вздрагивать успокоиться новый падаль. Обида ломать райком солнце житель интернет.","estimatedTime":"4 weeks","previewFileId":"d448f02c-2452-440a-99be-be2aad2545ca","createdByUserId":"34fa1c1e-810b-4b83-a395-009d214d0337"}'

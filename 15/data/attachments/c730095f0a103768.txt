@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIxOjUxOjA2Ljg1MTI1OSIsInVzZXJfaWQiOiJkZDU0YmY2ZC1kNTdhLTQ2M2UtYjcyMy00ZGI4YmJjNjc3ZGMifQ.ncOo3GBjYuYJNTWm15fTXyndC1bbDGWAnVgTAYFoTow' \
+ -H 'content-length: 462' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Куча решетка уничтожение тута.","minScore":16,"maxScore":90,"description":"Наслаждение дрогнуть функция приличный сходить. Процесс возбуждение посидеть жить. Порода фонарик призыв слишком.","estimatedTime":"2 weeks","previewFileId":"a00270c4-b1e1-415e-b1b5-db640fc70353","createdByUserId":"dd54bf6d-d57a-463e-b723-4db8bbc677dc"}'
