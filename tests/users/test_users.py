@@ -29,8 +29,10 @@ from tools.assertions.users import (
     assert_create_user_response,
     assert_delete_user_with_incorrect_user_id_response,
     assert_get_user_response,
+    assert_get_user_with_incorrect_user_id_response,
     assert_not_found_user_response,
     assert_update_user_response,
+    assert_user,
 )
 from tools.console_output_formatter import print_dict
 from tools.fakers import fake
@@ -105,6 +107,69 @@ class TestUsers:
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
+    @allure.tag(AllureTag.GET_ENTITY)
+    @allure.story(AllureStory.GET_ENTITY)
+    @allure.sub_suite(AllureStory.GET_ENTITY)
+    @allure.severity(Severity.CRITICAL)
+    @allure.title("Get user by id")
+    def test_get_user_by_id(
+        self, private_users_client: PrivateUsersClient, function_user: UserFixture
+    ):
+        """
+        Тест получения информации о пользователе по url users/{user_id}.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+            function_user (UserFixture): Объект с данными созданного пользователя.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.OK.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        """
+        response = private_users_client.get_user_api(function_user.user_id)
+        response_data = UserResponseSchema.model_validate_json(response.text)
+
+        assert_status_code(response.status_code, HTTPStatus.OK)
+        assert_user(actual=response_data.user, expected=function_user.response.user)
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
+
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.CRITICAL)
+    @allure.title("Get a non-existent user")
+    def test_get_non_existent_user(self, private_users_client: PrivateUsersClient):
+        """
+        Тест получения информации о несуществующем пользователе.
+        """
+
+        response = private_users_client.get_user_api(user_id=fake.uuid4())
+        response_data = InternalErrorResponseSchema.model_validate_json(response.text)
+
+        assert_status_code(response.status_code, HTTPStatus.NOT_FOUND)
+        assert_not_found_user_response(actual=response_data)
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
+
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.CRITICAL)
+    @allure.title("Get user with invalid id")
+    def test_get_user_with_invalid_id(self, private_users_client: PrivateUsersClient):
+        """
+        Тест получения информации о пользователе с некорректным id.
+        """
+
+        response = private_users_client.get_user_api(user_id="incorrect-id")
+        response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
+
+        assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
+        assert_get_user_with_incorrect_user_id_response(actual=response_data)
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
+
     @allure.tag(AllureTag.UPDATE_ENTITY)
     @allure.story(AllureStory.UPDATE_ENTITY)
     @allure.sub_suite(AllureStory.UPDATE_ENTITY)
@@ -135,18 +200,22 @@ class TestUsers:
     @allure.severity(Severity.NORMAL)
     @allure.title("Delete user")
     def test_delete_user(
-        self, private_users_client: PrivateUsersClient, function_user: UserFixture
+        self,
+        private_users_client: PrivateUsersClient,
+        public_users_client: PublicUsersClient,
     ):
         """Тест удаления пользователя."""
-
-        delete_response = private_users_client.delete_user_api(function_user.user_id)
+        created_user = public_users_client.create_user(
+            request=CreateUserRequestSchema()
+        )
+        delete_response = private_users_client.delete_user_api(created_user.user.id)
         assert_status_code(delete_response.status_code, HTTPStatus.OK)
 
-        not_found_response = private_users_client.get_user_api(function_user.user_id)
+        not_found_response = private_users_client.get_user_api(created_user.user.id)
         not_found_response_data = InternalErrorResponseSchema.model_validate_json(
             not_found_response.text
         )
-        assert_status_code(not_found_response.status_code, HTTPStatus.UNAUTHORIZED)
+        assert_status_code(not_found_response.status_code, HTTPStatus.NOT_FOUND)
         assert_not_found_user_response(actual=not_found_response_data)
 
         validate_json_schema(

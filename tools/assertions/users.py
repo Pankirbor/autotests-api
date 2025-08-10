@@ -24,6 +24,32 @@ logger = get_logger("USERS_ASSERTIONS")
 err_builder = ValidationErrorBuilder()
 
 
+def assert_validation_error_for_invalid_id(
+    actual: ValidationErrorResponseSchema,
+    location: str,
+    input_value: str = "incorrect-id",
+) -> None:
+    """
+    Проверяет ошибку валидации для некорректного ID.
+
+    Args:
+        actual (ValidationErrorResponseSchema): Ответ сервера после запроса.
+        location (str): Место возникновения ошибки (например, "path", "query").
+        input_value (str): Некорректное значение ID (по умолчанию "incorrect-id").
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
+    expected = (
+        err_builder.with_input(input_value)
+        .with_error(ErrorContext.INVALID_UUID_CHAR, char="i", position=1)
+        .at_location(location, "user_id")
+        .build()
+    )
+    logger.info(f"Проверяем ошибку валидации для некорректного ID в {location}")
+    assert_validation_error_response(actual=actual, expected=expected)
+
+
 @allure.step("Проверяем ответ на запрос создания пользователя")
 def assert_create_user_response(
     request: CreateUserRequestSchema, response: UserResponseSchema
@@ -200,16 +226,26 @@ def assert_delete_user_with_incorrect_user_id_response(
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
 
-    expected = (
-        err_builder.with_input("incorrect-id")
-        .with_error(ErrorContext.INVALID_UUID_CHAR, char="i", position=1)
-        .at_location("path", "user_id")
-        .build()
-    )
     logger.info(
         "Проверяем ответ сервера на запрос удаления пользователя с некорректным id"
     )
-    assert_validation_error_response(actual=actual, expected=expected)
+    assert_validation_error_for_invalid_id(actual=actual, location="path")
+
+
+def assert_get_user_with_incorrect_user_id_response(
+    actual: ValidationErrorResponseSchema,
+) -> None:
+    """
+    Проверяет, что при запросе пользователя с некорректным id сервер возвращает ошибку.
+
+    Args:
+        actual (ValidationErrorResponseSchema): Ответ сервера после запроса.
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
+    logger.info("Проверяем ответ сервера на запрос пользователя с некорректным id")
+    assert_validation_error_for_invalid_id(actual=actual, location="path")
 
 
 @allure.step("Проверяем ответ сервера на запрос несуществующего пользователя")
@@ -224,6 +260,6 @@ def assert_not_found_user_response(actual: InternalErrorResponseSchema):
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
 
-    expected = InternalErrorResponseSchema(details="Invalid or expired token")
+    expected = InternalErrorResponseSchema(details="User not found")
     logger.info("Проверяем ответ сервера на запрос несуществующего пользователя")
     assert_internal_error_response(actual=actual, expected=expected)
