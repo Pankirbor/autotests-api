@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjUzLjc1MjA0MSIsInVzZXJfaWQiOiJmOTljYzMyMi0zYWUwLTQ0ZmItOTBlOS04NmQ0N2Y0ODg3OTIifQ.e6MEHicZmvbJ6CuBJOXdyQrfM_5qLGH9aa9dBd96n2c' \
+ -H 'content-length: 568' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Более ложиться дьявол чем.","minScore":23,"maxScore":60,"description":"Плясать инвалид решетка что чувство неожиданно солнце. Дорогой жидкий монета бабочка. Интеллектуальный степь коричневый. При засунуть налоговый сверкать прошептать заплакать.","estimatedTime":"3 weeks","previewFileId":"aedfffc8-9050-44f0-81bc-336949d1406c","createdByUserId":"f99cc322-3ae0-44fb-90e9-86d47f488792"}'

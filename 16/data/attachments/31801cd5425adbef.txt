@@ -1,0 +1,17 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: PATCH на http://localhost:8001/api/v1/users/b8e2bea4-83f0-4b9a-ba81-c50cc2c9e16a
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 422 Unprocessable Entity от http://localhost:8001/api/v1/users/b8e2bea4-83f0-4b9a-ba81-c50cc2c9e16a
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 422
+INFO     USERS_ASSERTIONS:users.py:164 Проверям ответ сервера после запроса на создание или обновление пользователя с пустым обязательным параметром.
+INFO     ERRORS_ASSSERTIONS:errors.py:51 Проверяем ответ сервера с ожидаемой валидационной ошибкой
+INFO     BASE_ASSERTIONS:base.py:82 Проверяем, что длина details соответствует ожидаемой [ValidationErrorSchema(type='string_too_short', input='', context={'min_length': 1}, message='String should have at least 1 character', location=['body', 'lastName'])]
+INFO     ERRORS_ASSSERTIONS:errors.py:28 Проверяем данные ожидаемой валидационной ошибки
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение type соответствует ожидаемому string_too_short
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение message соответствует ожидаемому String should have at least 1 character
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение location соответствует ожидаемому ['body', 'lastName']
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение input соответствует ожидаемому 
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение context соответствует ожидаемому {'min_length': 1}
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

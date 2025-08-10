@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjUyLjAwNDk5MyIsInVzZXJfaWQiOiI3N2M4N2JlMy1mZmE1LTRmNDgtYjM5My02MjYxODQ2YTA0MTIifQ.F-fosm4RGzEGkrvimhy0j0taP0yVF_DY2-euYOyivCs' \
+ -H 'content-length: 585' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Проход невозможно присесть разуметься.","minScore":9,"maxScore":95,"description":"Умирать правый запеть смелый пол зеленый. Рис непривычный экзамен мучительно падать металл остановить. Дружно банда ночь госпожа материя единый.\nСтолетие легко новый белье.","estimatedTime":"3 weeks","previewFileId":"fbb684a7-58a6-4429-8b98-42c8a0e5cd49","createdByUserId":"77c87be3-ffa5-4f48-b393-6261846a0412"}'

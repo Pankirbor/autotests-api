@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjQ3LjI3Njc0MiIsInVzZXJfaWQiOiIzNTE0NzU4OC1jMGI0LTQxMzYtYmEzYi05ZjI1NDdkMGVhNmIifQ.7pS3bG5BXYsQ8J38xLcTARQbogF37sb7cdC6ZoEpFkg' \
+ -H 'content-length: 538' \
+ -H 'content-type: application/json' \
+ -d '{"title":"За угодный изменение сходить.","minScore":15,"maxScore":57,"description":"Дрогнуть советовать оборот постоянный табак увеличиваться правление запустить. Дрогнуть материя лапа сынок заложить. Увеличиваться помолчать хлеб слишком.","estimatedTime":"2 weeks","previewFileId":"ff3e75c8-513d-4822-b746-fa371d49a5ea","createdByUserId":"35147588-c0b4-4136-ba3b-9f2547d0ea6b"}'

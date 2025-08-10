@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/e62c1407-79ef-4dfb-ac23-f5f6398a72f6' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjQ0Ljg2NzU4OSIsInVzZXJfaWQiOiIzZDAzY2E5Zi1iN2Y1LTQ3YmMtOTg4NS1jN2I3N2Y5NzZkMTgifQ.gtkFmvnA7mf1_s5AvrMujs1Jdbd-3pM4mfqemH9OqIU' \
+ -H 'content-length: 428' \
+ -H 'content-type: application/json' \
+ -d '{"title":"При головной коробка.","courseId":"ca7240d4-dc14-42e9-aa29-901a67dd5d9b","maxScore":56,"minScore":7,"orderIndex":47,"description":"Через пасть пламя грустный близко. Хлеб монета собеседник миг факультет. Ягода плавно а правление. Оставить смеяться лететь рис кузнец.","estimatedTime":""}'

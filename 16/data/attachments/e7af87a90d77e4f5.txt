@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjM5LjUzMDkxMSIsInVzZXJfaWQiOiJiMzhmZjA5MC0yMmQ1LTRhMjktYWMwNC1kNzAxOWY4ZTk5NTYifQ.GLBJc7TA-rJMeQQ-q9-dVyEZr1i3XwfMvrEvF23EYIo' \
+ -H 'content-length: 455' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Грустный присесть уточнить дальний.","minScore":7,"maxScore":93,"description":"Песня упор набор видимо. Инвалид оборот отдел советовать магазин основание. Триста естественный похороны.","estimatedTime":"1 weeks","previewFileId":"e9cb3353-18fd-4564-9197-808c217246cf","createdByUserId":"b38ff090-22d5-4a29-ac04-d7019f8e9956"}'

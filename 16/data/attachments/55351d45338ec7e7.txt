@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/courses/3fb8e068-5d77-4f5e-8531-a34cc21a8f4c' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjM4Ljk0NDU1NiIsInVzZXJfaWQiOiI3YzU4ZGI1Ni01YThkLTQ0ZTgtYmQ0Ni1iNDVkZTgyYjY0M2MifQ.YeOW6t5skYweN9WgJLSkqw8VHj7Q6yO2aSo2RdjBw5I' \
+ -H 'content-length: 514' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Мгновение разводить функция через отъезд.","minScore":10,"maxScore":94,"description":"Оборот сохранять магазин манера манера. Дружно материя изображать настать.\nБанк пропаганда провал налево солнце жить реклама засунуть. Народ основание фонарик. Мгновение функция спалить миг.","estimatedTime":"10 weeks"}'

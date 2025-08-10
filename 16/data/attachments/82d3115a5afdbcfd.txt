@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjMzLjk5MjE2MyIsInVzZXJfaWQiOiI4ZWI1OGIzZS03NTk1LTRiNWEtODk1MC1kZjg1YWNmMzNhZTMifQ.p44f_xVm5gYUnasgEM8MLsXC6vGESmT8KY9v5GdnDoU' \
+ -H 'content-length: 497' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Каюта казнь самостоятельно бок.","minScore":13,"maxScore":89,"description":"Неожиданно приходить миф манера степь дальний. Остановить протягивать о рассуждение тысяча хлеб монета. Жестокий мрачно приходить танцевать указанный.","estimatedTime":"4 weeks","previewFileId":"","createdByUserId":"c1b9b50b-5c03-4836-8500-35f967e82536"}'

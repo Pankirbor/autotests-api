@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjQ2LjA2NTYyOCIsInVzZXJfaWQiOiIwNzgyYzUwZC1lNzViLTQzMmUtOTBmOS1kNTBkODg2MmJlYjAifQ.fDYfhmQ__SgGU9edQms7ldzUlZJKy11dKZmp5mo6nnQ' \
+ -H 'content-length: 663' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Ведь мягкий слишком мрачно посвятить эффект очередной.","minScore":18,"maxScore":87,"description":"Космос растеряться низкий вздрагивать магазин ученый.\nНарод прощение неправда другой фонарик находить исполнять. Оставить необычный экзамен аж. Дрогнуть очутиться снимать невозможно мимо бетонный.","estimatedTime":"5 weeks","previewFileId":"8106c988-edd2-463e-a97a-c8c04e6b8975","createdByUserId":"0782c50d-e75b-432e-90f9-d50d8862beb0"}'

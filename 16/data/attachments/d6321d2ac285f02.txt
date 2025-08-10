@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjUwLjgzODMzNyIsInVzZXJfaWQiOiIyM2NhOTBkNy00YTc3LTQ2ZmEtYTQ1OS1iMDZiZmRiYmI4NTEifQ.VOjwMGVmFxMaaLmAkuDQdGwO_nFUT5E4_uurU7mzWDU' \
+ -H 'content-length: 562' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Какой спичка провинция задрать наткнуться интеллектуальный госпожа.","minScore":5,"maxScore":58,"description":"Бак добиться видимо уточнить. Госпожа магазин нажать художественный кпсс монета рот. Уронить соответствие пища посидеть прощение.","estimatedTime":"10 weeks","previewFileId":"b9716aeb-c7bf-4f41-bf01-89f319768b99","createdByUserId":"23ca90d7-4a77-46fa-a459-b06bfdbbb851"}'

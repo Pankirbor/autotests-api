@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/0eb4e22a-0641-4473-bfda-11d42f54e4dc' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjQ2LjA2NTYyOCIsInVzZXJfaWQiOiIwNzgyYzUwZC1lNzViLTQzMmUtOTBmOS1kNTBkODg2MmJlYjAifQ.fDYfhmQ__SgGU9edQms7ldzUlZJKy11dKZmp5mo6nnQ' \
+ -H 'content-length: 629' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","courseId":"28c41801-be52-4177-8996-76b0fc03a97b","maxScore":54,"minScore":9,"orderIndex":94,"description":"Запустить лететь место приходить неправда. Советовать ленинград протягивать какой задержать. Головка тесно командир прежде.","estimatedTime":"1 weeks"}'

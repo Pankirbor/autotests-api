@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjUyLjU5NDc0NiIsInVzZXJfaWQiOiJiZjg5YjYwZC1hNzI5LTRiZGQtOTY4ZS1mODk4MzhkMGIyNGUifQ.tNZ2cQYtZREsQM0RZdXjrj48iOOQ-3iqlNj6X_ZfLvc' \
+ -H 'content-length: 685' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","courseId":"6173fece-5e03-449e-a871-b589f37e1373","maxScore":80,"minScore":17,"orderIndex":22,"description":"Сынок металл команда заявление мотоцикл свежий обида. Домашний рассуждение художественный привлекать прелесть число. Табак расстройство самостоятельно.","estimatedTime":"10 weeks"}'

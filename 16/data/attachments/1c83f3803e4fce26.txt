@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjQwLjcxODcyMCIsInVzZXJfaWQiOiI2N2M1NmRhMC1iMzM5LTRjNDMtOGZmNi1jNDViZDVjYzMzOWMifQ.D_mfB_svWwXzmMgzcdMiODulozLLjDJrHR5ARmwRShY' \
+ -H 'content-length: 404' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Прежний актриса теория мимо.","courseId":"b5d84ca3-4e78-449b-a687-25ccd13beb43","maxScore":81,"minScore":23,"orderIndex":38,"description":"Какой функция порядок упорно казнь спалить. Выбирать угодный порядок боец редактор ярко. Куча плод остановить.","estimatedTime":"4 weeks"}'

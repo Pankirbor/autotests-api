@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjUyLjU5NDc0NiIsInVzZXJfaWQiOiJiZjg5YjYwZC1hNzI5LTRiZGQtOTY4ZS1mODk4MzhkMGIyNGUifQ.tNZ2cQYtZREsQM0RZdXjrj48iOOQ-3iqlNj6X_ZfLvc' \
+ -H 'content-length: 536' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Прежний ныне манера оборот.","minScore":28,"maxScore":100,"description":"Тесно способ пространство спорт лиловый. Выбирать постоянный кидать премьера намерение теория витрина. Цель уточнить господь ленинград указанный совещание.","estimatedTime":"9 weeks","previewFileId":"be620e4d-8727-4efe-8019-f3bc0a73bd74","createdByUserId":"bf89b60d-a729-4bdd-968e-f89838d0b24e"}'

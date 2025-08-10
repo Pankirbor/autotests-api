@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjM2LjMwMjExNSIsInVzZXJfaWQiOiI0NjcxM2UzOC1kMGUxLTRhNzUtYmJjNS05OTZhOTI0YzhkYzIifQ.5Y3kUTv16T905blPyLZ-J0iDcqirxP5ViFblmgFtAWI' \
+ -H 'content-length: 546' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Налоговый о неправда увеличиваться бегать граница.","minScore":21,"maxScore":100,"description":"Славный падаль около бочок ботинок. Разуметься граница костер посвятить выразить. Роса спалить тесно сынок. Функция инструкция вариант хозяйка радость.","estimatedTime":"8 weeks","previewFileId":"incorrect-id","createdByUserId":"04a6dba3-bdea-4169-9be4-3997871233ec"}'

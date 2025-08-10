@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjM1LjEyNDU2NSIsInVzZXJfaWQiOiJiNzAyM2IzNS1iMmZhLTRlZTUtOTZjNy1mNTg2NDIwMGI3ZWMifQ.NvptL1vxKTQtaCxzn9uiEAQVXPuLRi_ghoZrMwwBO-Q' \
+ -H 'content-length: 613' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Снимать применяться цвет багровый штаб кожа.","minScore":9,"maxScore":80,"description":"Дьявол сохранять хлеб трясти да господь. Плясать плод степь господь цвет перебивать зачем. Рабочий юный видимо академик лапа. Мгновение изменение опасность правление неудобно важный.","estimatedTime":"5 weeks","previewFileId":"a66e8a13-d71b-4bb6-88fb-f34173c8fea6","createdByUserId":"b7023b35-b2fa-4ee5-96c7-f5864200b7ec"}'

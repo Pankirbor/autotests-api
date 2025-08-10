@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjQ3LjkxMDI5NCIsInVzZXJfaWQiOiJhZGZkNDQxYS05NDI0LTQ1OTItOGRhZS0wOTE4ZjRhNjEyMjgifQ.TQo-xZF1Dlq1WUHDX5l30o0XVe9FL8WFVQERRoir62w' \
+ -H 'content-length: 450' \
+ -H 'content-type: application/json' \
+ -d '{"title":"","courseId":"8027a295-12ad-4ce9-b61b-627a0ebd50b6","maxScore":57,"minScore":1,"orderIndex":97,"description":"Четко товар один сравнение лиловый. Строительство спасть результат. Хотеть прощение лиловый встать запретить. Тревога указанный поздравлять жестокий угодный штаб.","estimatedTime":"4 weeks"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjQ5LjY2NzE0OSIsInVzZXJfaWQiOiIwNWNkZDEwZS1hMjVlLTRlMTktYjVmMS1mNjYyYTAwNWM5MTIifQ.GX3UgOgiCSFaYfI8tQt7F1mReuSU5cyFj_fWUStIYfE' \
+ -H 'content-length: 506' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Песня отъезд лапа скользить коммунизм мальчишка.","minScore":13,"maxScore":80,"description":"Торопливый житель пропасть грустный спорт посидеть. Вперед салон о. Слишком фонарик голубчик казнь заработать избегать.","estimatedTime":"1 weeks","previewFileId":"5a7fe17a-8314-4385-8a8a-9d1cd67fd5f4","createdByUserId":"05cdd10e-a25e-4e19-b5f1-f662a005c912"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjQ1Ljc5MjkwMCIsInVzZXJfaWQiOiI0ZjcyNjZhNy1hYzIyLTRmNzYtOTJmZC0wNThjOTIwNjUzZDgifQ.esiCXNQcooGVu0Mbifja_EuJINBTN4igooFSLq7B7d8' \
+ -H 'content-length: 537' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Князь академик триста промолчать точно художественный.","minScore":23,"maxScore":65,"description":"Белье командование выраженный при роса ночь. Покидать мальчишка коробка неожиданно самостоятельно спичка пространство сверкать.","estimatedTime":"10 weeks","previewFileId":"1641f7eb-a580-4e79-bc7c-dda96a22b914","createdByUserId":"4f7266a7-ac22-4f76-92fd-058c920653d8"}'

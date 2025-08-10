@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjQ0LjU5NDc2OSIsInVzZXJfaWQiOiI5MDc2ODk2MS0wMjYxLTQ4NTMtOTM4ZS03YTRhNmI0M2FkOGQifQ.iXVoJS8KhIDlSsg-x1by86898RM5_hX1NiirqPz1AoE' \
+ -H 'content-length: 303' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Секунда вскинуть эпоха ягода подземный монета.","courseId":"36636f5d-818a-4451-8af5-a64528995d23","maxScore":72,"minScore":14,"orderIndex":20,"description":"Увеличиваться вообще около отметить.","estimatedTime":"8 weeks"}'

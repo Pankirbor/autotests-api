@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEwVDIzOjA5OjQxLjkzNTE0NSIsInVzZXJfaWQiOiI4ZGNkOTZkOS02MjA5LTQ4NzYtYjljNS02ZmRmMjNiY2ZjMWMifQ.0-Z7gMYnxXFe6cs_tO6iJAw3_DUKyHzFjtmbPzl5kA0' \
+ -H 'content-length: 595' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Функция покидать валюта возникновение коричневый точно.","courseId":"8b31af8a-566d-45b6-9f14-d000088d917e","maxScore":74,"minScore":24,"orderIndex":61,"description":"Миф правление применяться спалить мелькнуть. Запустить указанный полюбить бровь через. Советовать упор витрина издали порода князь место. Коробка светило ломать очко сбросить бетонный.","estimatedTime":"6 weeks"}'
