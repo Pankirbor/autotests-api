@@ -93,23 +93,6 @@ def function_user(public_users_client: PublicUsersClient) -> UserFixture:
 
 
 @pytest.fixture
-def function_second_user(public_users_client: PublicUsersClient) -> UserFixture:
-    """
-    Фикстура создаёт пользователя и возвращает его данные.
-
-    Args:
-        public_users_client (PublicUsersClient): Клиент для работы с публичными эндпоинтами API.
-
-    Returns:
-        UserFixture: Объект с данными созданного пользователя.
-    """
-    request = CreateUserRequestSchema()
-    response = public_users_client.create_user(request)
-
-    return UserFixture(request=request, response=response)
-
-
-@pytest.fixture
 def private_users_client(function_user) -> PrivateUsersClient:
     """
     Фикстура возвращает экземпляр PrivateUsersClient с авторизованным HTTP-клиентом.

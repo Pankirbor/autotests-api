@@ -19,6 +19,7 @@ from tools.allure.tags import AllureTag
 from tools.assertions.base import assert_status_code
 from tools.assertions.files import (
     assert_create_file_with_empty_field_response,
+    assert_delete_file_with_incorrect_file_id_response,
     assert_file_is_accessible,
     assert_file_not_found_response,
     assert_get_file_with_incorrect_file_id_response,
@@ -176,5 +177,34 @@ class TestFiles:
 
         assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
         assert_get_file_with_incorrect_file_id_response(response_data)
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
+
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.NORMAL)
+    @allure.title("Delete file with invalid id")
+    def test_delete_user_with_invalid_id(
+        self,
+        files_client: FilesClient,
+    ):
+        """
+        Тест удаления пользователя с некорректным id.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        """
+
+        response = files_client.delete_file_api(file_id="incorrect-id")
+        response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
+
+        assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
+        assert_delete_file_with_incorrect_file_id_response(actual=response_data)
 
         validate_json_schema(response.json(), response_data.model_json_schema())

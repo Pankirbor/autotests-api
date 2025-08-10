@@ -66,6 +66,7 @@ class TestUsers:
 
         Raises:
             AssertionError: Если статус код ответа не равен HTTPStatus.OK.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
             ValidationError: Если данные ответа не соответствуют схеме.
         """
 
@@ -97,6 +98,7 @@ class TestUsers:
 
         Raises:
             AssertionError: Если статус код ответа не равен HTTPStatus.OK.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
             ValidationError: Если данные ответа не соответствуют схеме.
         """
         response = private_users_client.get_user_me_api()
@@ -124,6 +126,7 @@ class TestUsers:
 
         Raises:
             AssertionError: Если статус код ответа не равен HTTPStatus.OK.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
             ValidationError: Если данные ответа не соответствуют схеме.
         """
         response = private_users_client.get_user_api(function_user.user_id)
@@ -142,6 +145,14 @@ class TestUsers:
     def test_get_non_existent_user(self, private_users_client: PrivateUsersClient):
         """
         Тест получения информации о несуществующем пользователе.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.NOT_FOUND.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
         """
 
         response = private_users_client.get_user_api(user_id=fake.uuid4())
@@ -160,6 +171,14 @@ class TestUsers:
     def test_get_user_with_invalid_id(self, private_users_client: PrivateUsersClient):
         """
         Тест получения информации о пользователе с некорректным id.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
         """
 
         response = private_users_client.get_user_api(user_id="incorrect-id")
@@ -182,6 +201,15 @@ class TestUsers:
     ):
         """
         Тест обновления информации о пользователе.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+            function_user (UserFixture): Объект с данными созданного пользователя.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.OK.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
         """
         request = UpdateUserRequestSchema()
         response = private_users_client.update_user_api(
@@ -204,7 +232,18 @@ class TestUsers:
         private_users_client: PrivateUsersClient,
         public_users_client: PublicUsersClient,
     ):
-        """Тест удаления пользователя."""
+        """
+        Тест удаления пользователя.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+            public_users_client (PublicUsersClient): Клиент для работы с публичными users эндпоинтами API.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.OK.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            AssertError: Если данные ответа не соответствуют ожидаемым.
+        """
         created_user = public_users_client.create_user(
             request=CreateUserRequestSchema()
         )
@@ -230,7 +269,17 @@ class TestUsers:
     def test_delete_user_with_invalid_id(
         self, private_users_client: PrivateUsersClient
     ):
-        """Тест удаления пользователя с некорректным id."""
+        """
+        Тест удаления пользователя с некорректным id.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        """
 
         response = private_users_client.delete_user_api(user_id="incorrect-id")
         response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
@@ -253,7 +302,18 @@ class TestUsers:
         public_users_client: PublicUsersClient,
         field_name: str,
     ):
-        """Тест создания пользователя с пустым обязательным полем."""
+        """
+        Тест создания пользователя с пустым обязательным полем.
+
+        Args:
+            public_users_client (PublicUsersClient): Клиент для работы с публичными users эндпоинтами API.
+            field_name (str): Имя поля, которое будет содержать пустое значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        """
 
         request = CreateUserRequestSchema()
         setattr(request, field_name, "")
@@ -282,7 +342,19 @@ class TestUsers:
         function_user: UserFixture,
         field_name: str,
     ):
-        """Тест обновления пользователя с пустым обязательным полем."""
+        """
+        Тест обновления пользователя с пустым обязательным полем.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+            function_user (UserFixture): Объект с данными созданного пользователя.
+            field_name (str): Имя поля, которое будет содержать пустое значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        """
 
         request = UpdateUserRequestSchema()
         setattr(request, field_name, "")
@@ -313,7 +385,18 @@ class TestUsers:
         public_users_client: PublicUsersClient,
         field_name: str,
     ):
-        """Тест создания пользователя со значением, превышающим максимальную длину поля."""
+        """
+        Тест создания пользователя со значением, превышающим максимальную длину поля.
+
+        Args:
+            public_users_client (PublicUsersClient): Клиент для работы с публичными users эндпоинтами API.
+            field_name (str): Имя поля, которое будет содержать слишком длинное значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        """
 
         too_long_string = "a" * (MAX_LENGTH_FIELDS.get(field_name) + 1)
         request = CreateUserRequestSchema()
@@ -346,7 +429,19 @@ class TestUsers:
         function_user: UserFixture,
         field_name: str,
     ):
-        """Тест обновления пользователя со значением, превышающим максимальную длину поля."""
+        """
+        Тест обновления пользователя со значением, превышающим максимальную длину поля.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+            function_user (UserFixture): Объект с данными созданного пользователя.
+            field_name (str): Имя поля, которое будет содержать слишком длинное значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        """
 
         too_long_string = "a" * (MAX_LENGTH_FIELDS.get(field_name) + 1)
         request = UpdateUserRequestSchema()

@@ -169,3 +169,27 @@ def assert_get_file_with_incorrect_file_id_response(
     )
     logger.info("Проверяем ответ сервера на запрос файла с некорректным id")
     assert_validation_error_response(actual, expected)
+
+
+@allure.step("Проверяем ответ сервера на запрос удаления файла с некорректным id")
+def assert_delete_file_with_incorrect_file_id_response(
+    actual: ValidationErrorResponseSchema,
+):
+    """
+    Проверяет, что при удалении несуществующего файла сервер возвращает ошибку.
+
+    Args:
+        actual (ValidationErrorResponseSchema): Ответ сервера после запроса файла.
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
+
+    expected = (
+        err_builder.with_input("incorrect-id")
+        .with_error(ErrorContext.INVALID_UUID_CHAR, char="i", position=1)
+        .at_location("path", "file_id")
+        .build()
+    )
+    logger.info("Проверяем ответ сервера на запрос удаления файла с некорректным id")
+    assert_validation_error_response(actual, expected)
