@@ -5,6 +5,12 @@ from typing import Any
 class ErrorContext(Enum):
     """Унифицированное хранилище шаблонов для всех типов ошибок."""
 
+    INVALID_EMAIL = {
+        "type": "value_error",
+        "msg_template": "value is not a valid email address: {details}",
+        "context_template": {"reason": "An email address must have an {reason}."},
+        "is_email": True,
+    }
     STRING_TOO_SHORT = {
         "type": "string_too_short",
         "msg_template": "String should have at least {min_length} character",
@@ -80,7 +86,8 @@ class ErrorContext(Enum):
 
         if self.value.get("is_uuid"):
             msg = self.value["msg_template"].format(details=formatted_ctx["error"])
-
+        elif self.value.get("is_email"):
+            msg = self.value["msg_template"].format(details=formatted_ctx["reason"])
         else:
             msg = self.value["msg_template"].format(**kwargs)
 
