@@ -3,11 +3,14 @@ from typing import Any
 import allure
 
 from clients.errors_schema import ValidationErrorSchema, ValidationErrorResponseSchema
+from tools.assertions.api_error_constants import ErrorContext
 from tools.assertions.base import assert_equal, assert_length
+from tools.assertions.error_builder import ValidationErrorBuilder
 from tools.logger import get_logger
 
 
 logger = get_logger("ERRORS_ASSSERTIONS")
+err_builder = ValidationErrorBuilder()
 
 
 @allure.step("Проверяем данные ожидаемой валидационной ошибки")
@@ -71,3 +74,80 @@ def assert_internal_error_response(actual: Any, expected: Any) -> None:
 
     logger.info("Проверяем ответ сервера с ожидаемой внутренней ошибкой")
     assert_equal(actual.details, expected.details, "details"),
+
+
+def assert_validation_error_for_invalid_id(
+    actual: ValidationErrorResponseSchema,
+    location: list[str],
+    input_value: str = "incorrect-id",
+) -> None:
+    """
+    Проверяет ошибку валидации для некорректного ID.
+
+    Args:
+        actual (ValidationErrorResponseSchema): Ответ сервера после запроса.
+        location (str): Место возникновения ошибки (например, "path", "query").
+        input_value (str): Некорректное значение ID (по умолчанию "incorrect-id").
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
+    expected = (
+        err_builder.with_input(input_value)
+        .with_error(ErrorContext.INVALID_UUID_CHAR, char="i", position=1)
+        .at_location(*location)
+        .build()
+    )
+    logger.info(f"Проверяем ошибку валидации для некорректного ID в {location}")
+    assert_validation_error_response(actual=actual, expected=expected)
+
+
+def assert_validation_error_for_empty_field(
+    actual: ValidationErrorResponseSchema,
+    field_name: str,
+) -> None:
+    if field_name == "course_id":
+        err_params = {"err_context": ErrorContext.INVALID_UUID_LENGTH, "length": 0}
+
+    elif field_name == "email":
+        err_params = {"err_context": ErrorContext.INVALID_EMAIL, "reason": "@-sign"}
+
+    else:
+        err_params = {"err_context": ErrorContext.STRING_TOO_SHORT, "min_length": 1}
+
+    expected = (
+        err_builder.with_input("")
+        .with_error(**err_params)
+        .at_location("body", field_name)
+        .build()
+    )
+    logger.info(
+        f"Проверям ошибку валидации для отсутствующего значения в поле {field_name}"
+    )
+    assert_validation_error_response(actual=actual, expected=expected)
+
+
+def assert_validation_error_for_too_long_field(
+    actual: ValidationErrorResponseSchema,
+    location: str,
+    input_value: str,
+    max_length: int,
+) -> None:
+    if location == "email":
+        error_params = {"err_context": ErrorContext.INVALID_EMAIL, "reason": "@-sign"}
+    else:
+        error_params = {
+            "err_context": ErrorContext.STRING_TOO_LONG,
+            "max_length": max_length,
+        }
+
+    expected = (
+        err_builder.with_input(input_value)
+        .with_error(**error_params)
+        .at_location("body", location)
+        .build()
+    )
+    logger.info(
+        f"Проверям ошибку валидации для значения, превышающего максимальную длину поля {location}"
+    )
+    assert_validation_error_response(actual, expected)

@@ -1,7 +1,15 @@
 import allure
 
 from clients.authentication.authentication_schema import LoginResponseSchema
+from clients.errors_schema import (
+    InternalErrorResponseSchema,
+    ValidationErrorResponseSchema,
+)
 from tools.assertions.base import assert_equal, assert_is_true
+from tools.assertions.errors import (
+    assert_internal_error_response,
+    assert_validation_error_for_empty_field,
+)
 from tools.logger import get_logger
 
 logger = get_logger("AUTHENTICATION_ASSERTIONS")
@@ -23,3 +31,20 @@ def assert_login_response(response: LoginResponseSchema) -> None:
     assert_equal(response.token.token_type, "bearer", name="token_type")
     assert_is_true(response.token.access_token, "access_token")
     assert_is_true(response.token.refresh_token, "refresh_token")
+
+
+@allure.step("Проверяем ответ сервера после обновления токена с невалидным токеном")
+def assert_refresh_token_with_incorrect_token_response(
+    actual: InternalErrorResponseSchema,
+) -> None:
+    logger.info("Проверяем ответ сервера после обновления токена с невалидным токеном")
+    expected = InternalErrorResponseSchema(details="Invalid or expired refresh token")
+    assert_internal_error_response(actual=actual, expected=expected)
+
+
+@allure.step("Проверяем ответ сервера на запрос аутентификации с некорректным email")
+def assert_login_with_incorrect_email_response(
+    actual: ValidationErrorResponseSchema,
+) -> None:
+    logger.info("Проверяем ответ сервера на запрос аутентификации с некорректным email")
+    assert_validation_error_for_empty_field(actual=actual, field_name="email")

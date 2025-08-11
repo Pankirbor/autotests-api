@@ -19,6 +19,7 @@ from tools.assertions.api_error_constants import ErrorContext
 from tools.assertions.error_builder import ValidationErrorBuilder
 from tools.assertions.errors import (
     assert_internal_error_response,
+    assert_validation_error_for_invalid_id,
     assert_validation_error_response,
 )
 from tools.logger import get_logger
@@ -298,3 +299,42 @@ def assert_create_or_update_exercise_with_incorrect_score_response(
         "Проверям ответ сервера после запроса на создание или обновление упражнения с некорректным score"
     )
     assert_validation_error_response(actual=actual, expected=expected)
+
+
+@allure.step("Проверяем ответ сервера на запрос упражнения с некорректным id")
+def assert_get_exercise_with_incorrect_exercise_id_response(
+    actual: ValidationErrorResponseSchema,
+):
+    """
+    Проверяет, что при запросе упражнения с некорректным id сервер возвращает ошибку.
+
+    Args:
+        actual (ValidationErrorResponseSchema): Ответ сервера после запроса.
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
+    logger.info("Проверяем ответ сервера на запрос упражнения с некорректным id")
+    assert_validation_error_for_invalid_id(
+        actual=actual, location=["path", "exercise_id"]
+    )
+
+
+@allure.step("Проверяем ответ сервера на запрос удаления упражнения с некорректным id")
+def assert_delete_exercise_with_incorrect_exercise_id_response(
+    actual: ValidationErrorResponseSchema,
+):
+    """
+    Проверяет, что при удалении упражнения с некорректным id сервер возвращает ошибку.
+
+    Args:
+        actual (ValidationErrorResponseSchema): Ответ сервера после запроса.
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
+    logger.info(
+        "Проверяем ответ сервера на запрос удаления упражнения с некорректным id"
+    )
+    assert_validation_error_for_invalid_id(
+        actual=actual, location=["path", "exercise_id"]
+    )

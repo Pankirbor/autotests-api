@@ -15,39 +15,15 @@ from tools.assertions.base import assert_equal
 from tools.assertions.api_error_constants import ErrorContext
 from tools.assertions.errors import (
     assert_internal_error_response,
+    assert_validation_error_for_empty_field,
+    assert_validation_error_for_invalid_id,
+    assert_validation_error_for_too_long_field,
     assert_validation_error_response,
 )
 from tools.assertions.error_builder import ValidationErrorBuilder
 from tools.logger import get_logger
 
 logger = get_logger("USERS_ASSERTIONS")
-err_builder = ValidationErrorBuilder()
-
-
-def assert_validation_error_for_invalid_id(
-    actual: ValidationErrorResponseSchema,
-    location: str,
-    input_value: str = "incorrect-id",
-) -> None:
-    """
-    Проверяет ошибку валидации для некорректного ID.
-
-    Args:
-        actual (ValidationErrorResponseSchema): Ответ сервера после запроса.
-        location (str): Место возникновения ошибки (например, "path", "query").
-        input_value (str): Некорректное значение ID (по умолчанию "incorrect-id").
-
-    Raises:
-        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
-    """
-    expected = (
-        err_builder.with_input(input_value)
-        .with_error(ErrorContext.INVALID_UUID_CHAR, char="i", position=1)
-        .at_location(location, "user_id")
-        .build()
-    )
-    logger.info(f"Проверяем ошибку валидации для некорректного ID в {location}")
-    assert_validation_error_response(actual=actual, expected=expected)
 
 
 @allure.step("Проверяем ответ на запрос создания пользователя")
@@ -150,22 +126,26 @@ def assert_create_or_update_user_with_empty_required_field_response(
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
-    if field_name == "email":
-        error_params = {"err_context": ErrorContext.INVALID_EMAIL, "reason": "@-sign"}
-    else:
-        error_params = {"err_context": ErrorContext.STRING_TOO_SHORT, "min_length": 1}
+    # if field_name == "email":
+    #     error_params = {"err_context": ErrorContext.INVALID_EMAIL, "reason": "@-sign"}
+    # else:
+    #     error_params = {"err_context": ErrorContext.STRING_TOO_SHORT, "min_length": 1}
 
-    expected = (
-        err_builder.with_input("")
-        .with_error(**error_params)
-        .at_location("body", FIELD_NAME_MAPPING.get(field_name))
-        .build()
-    )
+    # expected = (
+    #     err_builder.with_input("")
+    #     .with_error(**error_params)
+    #     .at_location("body", FIELD_NAME_MAPPING.get(field_name))
+    #     .build()
+    # )
     logger.info(
         f"Проверям ответ сервера после запроса на создание "
         f"или обновление пользователя с пустым обязательным параметром."
     )
-    assert_validation_error_response(actual, expected)
+    assert_validation_error_for_empty_field(
+        actual=actual,
+        field_name=FIELD_NAME_MAPPING.get(field_name),
+    )
+    # assert_validation_error_response(actual, expected)
 
 
 @allure.step(
@@ -189,25 +169,31 @@ def assert_create_or_update_user_with_too_long_field_response(
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
-    if field_name == "email":
-        error_params = {"err_context": ErrorContext.INVALID_EMAIL, "reason": "@-sign"}
-    else:
-        error_params = {
-            "err_context": ErrorContext.STRING_TOO_LONG,
-            "max_length": MAX_LENGTH_FIELDS.get(field_name),
-        }
+    # if field_name == "email":
+    #     error_params = {"err_context": ErrorContext.INVALID_EMAIL, "reason": "@-sign"}
+    # else:
+    #     error_params = {
+    #         "err_context": ErrorContext.STRING_TOO_LONG,
+    #         "max_length": MAX_LENGTH_FIELDS.get(field_name),
+    #     }
 
-    expected = (
-        err_builder.with_input(input_val)
-        .with_error(**error_params)
-        .at_location("body", FIELD_NAME_MAPPING.get(field_name))
-        .build()
-    )
+    # expected = (
+    #     err_builder.with_input(input_val)
+    #     .with_error(**error_params)
+    #     .at_location("body", FIELD_NAME_MAPPING.get(field_name))
+    #     .build()
+    # )
     logger.info(
         f"Проверям ответ сервера после запроса на создание "
         f"или обновление пользователя со значением, превышающим максимальную длину поля."
     )
-    assert_validation_error_response(actual, expected)
+    assert_validation_error_for_too_long_field(
+        actual=actual,
+        input_value=input_val,
+        location=FIELD_NAME_MAPPING.get(field_name),
+        max_length=MAX_LENGTH_FIELDS.get(field_name),
+    )
+    # assert_validation_error_response(actual, expected)
 
 
 @allure.step(
@@ -229,7 +215,7 @@ def assert_delete_user_with_incorrect_user_id_response(
     logger.info(
         "Проверяем ответ сервера на запрос удаления пользователя с некорректным id"
     )
-    assert_validation_error_for_invalid_id(actual=actual, location="path")
+    assert_validation_error_for_invalid_id(actual=actual, location=["path", "user_id"])
 
 
 def assert_get_user_with_incorrect_user_id_response(
@@ -245,7 +231,7 @@ def assert_get_user_with_incorrect_user_id_response(
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
     logger.info("Проверяем ответ сервера на запрос пользователя с некорректным id")
-    assert_validation_error_for_invalid_id(actual=actual, location="path")
+    assert_validation_error_for_invalid_id(actual=actual, location=["path", "user_id"])
 
 
 @allure.step("Проверяем ответ сервера на запрос несуществующего пользователя")

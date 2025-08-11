@@ -30,12 +30,16 @@ from tools.assertions.exercises import (
     assert_create_or_update_exercise_with_empty_required_string_field_response,
     assert_create_or_update_exercise_with_incorrect_score_response,
     assert_create_or_update_exercise_with_too_long_string_field_response,
+    assert_delete_exercise_with_incorrect_exercise_id_response,
     assert_get_exercise_response,
+    assert_get_exercise_with_incorrect_exercise_id_response,
     assert_get_exercises_response,
     assert_not_found_exercise_response,
     assert_update_exercise_response,
 )
 from tools.assertions.schema import validate_json_schema
+from tools.console_output_formatter import print_dict
+from tools.fakers import fake
 
 
 @pytest.mark.regression
@@ -373,5 +377,72 @@ class TestExercises:
         assert_create_or_update_exercise_with_incorrect_score_response(
             response_data, request
         )
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
+
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.NORMAL)
+    @allure.title("Get exercise with incorrect exercise id")
+    def test_get_exercise_with_incorrect_exercise_id(
+        self, exercises_client: ExercisesClient
+    ):
+        """
+        Тест получения упражнения с некорректным id.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+        """
+        response = exercises_client.get_exercise_api("incorrect-id")
+        response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
+
+        assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
+        assert_get_exercise_with_incorrect_exercise_id_response(actual=response_data)
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
+
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.NORMAL)
+    @allure.title("Delete exercise with incorrect exercise id")
+    def test_delete_exercise_with_incorrect_exercise_id(
+        self, exercises_client: ExercisesClient
+    ):
+        """
+        Тест удаления упражнения с некорректным id.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+        """
+
+        response = exercises_client.delete_exercise_api("incorrect-id")
+        response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
+
+        assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
+        assert_delete_exercise_with_incorrect_exercise_id_response(actual=response_data)
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
+
+    @pytest.mark.xfail(reason="В разработке")
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.NORMAL)
+    @allure.title("Delete exercise with non-existent exercise id")
+    def test_delete_exercise_with_non_existent_exercise_id(
+        self, exercises_client: ExercisesClient
+    ):
+        """
+        Тест удаления упражнения с несуществующим id.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+        """
+        response = exercises_client.delete_exercise_api(exercise_id=fake.uuid4())
+        response_data = InternalErrorResponseSchema.model_validate_json(response.text)
+        assert_status_code(response.status_code, HTTPStatus.NOT_FOUND)
+        assert_not_found_exercise_response(actual=response_data)
 
         validate_json_schema(response.json(), response_data.model_json_schema())

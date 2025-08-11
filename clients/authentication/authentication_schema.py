@@ -41,6 +41,8 @@ class RefreshRequestSchema(BaseModel):
         refresh_token (str): Refresh-токен для обновления доступа.
     """
 
+    model_config = ConfigDict(populate_by_name=True)
+
     refresh_token: str = Field(alias="refreshToken", default_factory=fake.sentence)
 
 
