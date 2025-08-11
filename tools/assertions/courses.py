@@ -17,6 +17,7 @@ from tools.assertions.error_builder import ValidationErrorBuilder
 from tools.assertions.base import assert_equal, assert_length
 from tools.assertions.errors import (
     assert_internal_error_response,
+    assert_validation_error_for_invalid_id,
     assert_validation_error_response,
 )
 from tools.assertions.files import assert_file
@@ -264,3 +265,23 @@ def assert_create_or_update_course_with_too_long_title_response(
         "Проверяем ответ сервера на запрос создания курса с слишком длинным title"
     )
     assert_validation_error_response(actual, expected)
+
+
+@allure.step("Проверяем ответ сервера на запрос курсов с несуществующим user_id")
+def assert_get_courses_with_non_existent_id_response(
+    actual: GetCoursesResponseSchema,
+):
+    expected = GetCoursesResponseSchema(courses=[])
+    assert_get_courses_response(expected_response=expected, response=actual)
+
+
+def assert_get_courses_with_incorrect_id_response(
+    actual: ValidationErrorResponseSchema,
+):
+    assert_validation_error_for_invalid_id(actual=actual, location=["query", "userId"])
+
+
+def assert_get_course_with_incorrect_id_response(actual: ValidationErrorResponseSchema):
+    assert_validation_error_for_invalid_id(
+        actual=actual, location=["path", "course_id"]
+    )

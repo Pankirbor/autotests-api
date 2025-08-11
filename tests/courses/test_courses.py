@@ -30,12 +30,16 @@ from tools.assertions.courses import (
     assert_create_course_with_empty_field_response,
     assert_create_course_with_incorrect_field_id_response,
     assert_create_or_update_course_with_too_long_title_response,
+    assert_get_course_with_incorrect_id_response,
     assert_get_courses_response,
+    assert_get_courses_with_incorrect_id_response,
+    assert_get_courses_with_non_existent_id_response,
     assert_not_found_course_response,
     assert_update_course_response,
     assert_get_course_response,
 )
 from tools.assertions.schema import validate_json_schema
+from tools.fakers import fake
 
 
 @pytest.mark.regression
@@ -290,5 +294,75 @@ class TestCourses:
         assert_create_or_update_course_with_too_long_title_response(
             response_data, too_long_string
         )
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
+
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.NORMAL)
+    @allure.title("Get course with non-existent id")
+    def test_get_course_with_non_existent_id(self, courses_client: CoursesClient):
+        response = courses_client.get_course_api(course_id=fake.uuid4())
+        response_data = InternalErrorResponseSchema.model_validate_json(response.text)
+        assert_status_code(response.status_code, HTTPStatus.NOT_FOUND)
+        assert_not_found_course_response(response_data)
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
+
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.NORMAL)
+    @allure.title("Delete course with non-existent id")
+    def test_delete_course_with_non_existent_id(self, courses_client: CoursesClient):
+        response = courses_client.delete_course_api(course_id=fake.uuid4())
+        response_data = InternalErrorResponseSchema.model_validate_json(response.text)
+        assert_status_code(response.status_code, HTTPStatus.NOT_FOUND)
+        assert_not_found_course_response(response_data)
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
+
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.NORMAL)
+    @allure.title("Get courses with non-existent user_id")
+    def test_get_courses_with_non_existent_id(self, courses_client: CoursesClient):
+        request = GetCoursesQuerySchema(user_id=fake.uuid4())
+        response = courses_client.get_courses_api(request)
+        response_data = GetCoursesResponseSchema.model_validate_json(response.text)
+
+        assert_status_code(response.status_code, HTTPStatus.OK)
+        assert_get_courses_with_non_existent_id_response(response_data)
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
+
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.NORMAL)
+    @allure.title("Get courses with incorrect user_id")
+    def test_get_courses_with_incorrect_id(self, courses_client: CoursesClient):
+        request = GetCoursesQuerySchema(user_id="incorrect-id")
+        response = courses_client.get_courses_api(request)
+        response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
+
+        assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
+        assert_get_courses_with_incorrect_id_response(response_data)
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
+
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.NORMAL)
+    @allure.title("Get course with incorrect user_id")
+    def test_get_course_with_incorrect_id(self, courses_client: CoursesClient):
+        response = courses_client.get_course_api(course_id="incorrect-id")
+        response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
+
+        assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
+        assert_get_course_with_incorrect_id_response(response_data)
 
         validate_json_schema(response.json(), response_data.model_json_schema())
