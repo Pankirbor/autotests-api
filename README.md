@@ -1,9 +1,32 @@
 # EduPlatform Test Framework
-[![CI][ci-badge]][ci-url] [![Python][py-badge]][py-url] [![Coverage][cov-badge]][cov-url]
+[![CI][ci-badge]][ci-url] 
+[![Python][py-badge]][py-url] 
+[![Allure Report][allure-report-badge]][allure-report-url]
+[![Coverage][cov-badge]][cov-url]
+[![Pytest][pytest-badge]][pytest-url] 
+[![Allure][allure-badge]][allure-url] 
+[![HTTPX][httpx-badge]][httpx-url]
+[![Swagger Coverage][swagger-badge]][swagger-url]
+[![Pydantic][pydantic-badge]][pydantic-url]
 
+[pydantic-badge]: https://img.shields.io/badge/Pydantic-2.11.7-0C4B33?logo=pydantic
+[pydantic-url]: https://pypi.org/project/pydantic/
 [ci-badge]: https://github.com/Pankirbor/autotests-api/actions/workflows/tests.yml/badge.svg
 [ci-url]: https://github.com/Pankirbor/autotests-api/actions
 [py-badge]: https://img.shields.io/badge/Python-3.11%2B-blue?logo=python
+[py-url]: https://www.python.org/
+[pytest-badge]: https://img.shields.io/badge/Pytest-8.4.1-0A9EDC?logo=pytest&logoColor=white
+[pytest-url]: https://pypi.org/project/pytest/
+[allure-badge]: https://img.shields.io/badge/allure--pytest-2.15.0-red
+[allure-url]: https://pypi.org/project/allure-pytest/
+[httpx-badge]: https://img.shields.io/badge/HTTPX-0.28.1-orange
+[httpx-url]: https://www.python-httpx.org/
+[cov-badge]: https://img.shields.io/badge/Coverage-100%25-green
+[cov-url]: https://github.com/Pankirbor/autotests-api/actions/runs/16917304835/artifacts/3747771941
+[allure-report-badge]: https://img.shields.io/badge/Allure_Report-Latest-blueviolet?logo=allure
+[allure-report-url]: https://pankirbor.github.io/autotests-api/
+[swagger-badge]: https://img.shields.io/badge/Swagger_Coverage-0.27.0-ff69b4?logo=swagger
+[swagger-url]: https://pypi.org/project/swagger-coverage-tool/
 
 ## 📌 Технологии
 
