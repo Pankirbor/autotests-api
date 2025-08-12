@@ -34,7 +34,6 @@ from tools.assertions.users import (
     assert_update_user_response,
     assert_user,
 )
-from tools.console_output_formatter import print_dict
 from tools.fakers import fake
 
 
@@ -53,7 +52,7 @@ class TestUsers:
     @allure.story(AllureStory.CREATE_ENTITY)
     @allure.sub_suite(AllureStory.CREATE_ENTITY)
     @allure.severity(Severity.BLOCKER)
-    @allure.title("Create user")
+    @allure.title("Создание пользователя")
     def test_create_user(
         self,
         public_users_client: PublicUsersClient,
@@ -83,7 +82,7 @@ class TestUsers:
     @allure.story(AllureStory.GET_ENTITY)
     @allure.sub_suite(AllureStory.GET_ENTITY)
     @allure.severity(Severity.CRITICAL)
-    @allure.title("Get user me")
+    @allure.title("Получение информации о текущем пользователе")
     def test_get_user_me(
         self,
         private_users_client: PrivateUsersClient,
@@ -113,7 +112,7 @@ class TestUsers:
     @allure.story(AllureStory.GET_ENTITY)
     @allure.sub_suite(AllureStory.GET_ENTITY)
     @allure.severity(Severity.CRITICAL)
-    @allure.title("Get user by id")
+    @allure.title("Получение информации о пользователе по id")
     def test_get_user_by_id(
         self, private_users_client: PrivateUsersClient, function_user: UserFixture
     ):
@@ -141,7 +140,7 @@ class TestUsers:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.CRITICAL)
-    @allure.title("Get a non-existent user")
+    @allure.title("Получение информации о пользователе по несуществующему id")
     def test_get_non_existent_user(self, private_users_client: PrivateUsersClient):
         """
         Тест получения информации о несуществующем пользователе.
@@ -167,7 +166,7 @@ class TestUsers:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.CRITICAL)
-    @allure.title("Get user with invalid id")
+    @allure.title("Получение информации о пользователе по некорректному id")
     def test_get_user_with_invalid_id(self, private_users_client: PrivateUsersClient):
         """
         Тест получения информации о пользователе с некорректным id.
@@ -193,7 +192,7 @@ class TestUsers:
     @allure.story(AllureStory.UPDATE_ENTITY)
     @allure.sub_suite(AllureStory.UPDATE_ENTITY)
     @allure.severity(Severity.CRITICAL)
-    @allure.title("Update user")
+    @allure.title("Обновление информации о пользователе")
     def test_update_user(
         self,
         private_users_client: PrivateUsersClient,
@@ -226,7 +225,7 @@ class TestUsers:
     @allure.story(AllureStory.DELETE_ENTITY)
     @allure.sub_suite(AllureStory.DELETE_ENTITY)
     @allure.severity(Severity.NORMAL)
-    @allure.title("Delete user")
+    @allure.title("Удаление пользователя")
     def test_delete_user(
         self,
         private_users_client: PrivateUsersClient,
@@ -265,7 +264,7 @@ class TestUsers:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.NORMAL)
-    @allure.title("Delete user with invalid id")
+    @allure.title("Удаление пользователя по некорректному user_id")
     def test_delete_user_with_invalid_id(
         self, private_users_client: PrivateUsersClient
     ):
@@ -296,7 +295,6 @@ class TestUsers:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.CRITICAL)
-    @allure.title("Create user with empty required string fields")
     def test_create_user_with_empty_required_string_fields(
         self,
         public_users_client: PublicUsersClient,
@@ -318,7 +316,9 @@ class TestUsers:
         request = CreateUserRequestSchema()
         setattr(request, field_name, "")
 
-        allure.dynamic.title(f"Attempt create user with empty {field_name} field")
+        allure.dynamic.title(
+            f"Создание пользователя с пустым обязательным полем {field_name}"
+        )
         response = public_users_client.create_user_api(request)
         response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
         assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
@@ -335,7 +335,6 @@ class TestUsers:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.CRITICAL)
-    @allure.title("Update user with empty required string fields")
     def test_update_user_with_empty_required_string_fields(
         self,
         private_users_client: PrivateUsersClient,
@@ -359,7 +358,9 @@ class TestUsers:
         request = UpdateUserRequestSchema()
         setattr(request, field_name, "")
 
-        allure.dynamic.title(f"Attempt update user with empty {field_name} field")
+        allure.dynamic.title(
+            f"Обновление пользователя с пустым обязательным полем {field_name}"
+        )
         response = private_users_client.update_user_api(
             request=request, user_id=function_user.user_id
         )
@@ -379,7 +380,6 @@ class TestUsers:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.CRITICAL)
-    @allure.title("Create user with too long string fields")
     def test_create_user_with_too_long_string_fields(
         self,
         public_users_client: PublicUsersClient,
@@ -398,13 +398,14 @@ class TestUsers:
             ValidationError: Если данные ответа не соответствуют схеме.
         """
 
+        allure.dynamic.title(
+            f"Создание пользователя с {field_name} превышающим максимальную длину поля"
+        )
+
         too_long_string = "a" * (MAX_LENGTH_FIELDS.get(field_name) + 1)
         request = CreateUserRequestSchema()
         setattr(request, field_name, too_long_string)
 
-        allure.dynamic.title(
-            f"Attempt create user with to long value in {field_name} field"
-        )
         response = public_users_client.create_user_api(request=request)
         response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
 
@@ -422,7 +423,6 @@ class TestUsers:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.CRITICAL)
-    @allure.title("Update user with too long string fields")
     def test_update_user_with_too_long_string_fields(
         self,
         private_users_client: PrivateUsersClient,
@@ -442,14 +442,14 @@ class TestUsers:
             AssertionError: Если данные ответа не соответствуют ожидаемым.
             ValidationError: Если данные ответа не соответствуют схеме.
         """
+        allure.dynamic.title(
+            f"Обновление пользователя с {field_name} превышающим максимальную длину поля"
+        )
 
         too_long_string = "a" * (MAX_LENGTH_FIELDS.get(field_name) + 1)
         request = UpdateUserRequestSchema()
         setattr(request, field_name, too_long_string)
 
-        allure.dynamic.title(
-            f"Attempt update user with to long value in {field_name} field"
-        )
         response = private_users_client.update_user_api(
             request=request, user_id=function_user.user_id
         )

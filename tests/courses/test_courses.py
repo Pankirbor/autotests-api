@@ -30,6 +30,7 @@ from tools.assertions.courses import (
     assert_create_course_with_empty_field_response,
     assert_create_course_with_incorrect_field_id_response,
     assert_create_or_update_course_with_too_long_title_response,
+    assert_delete_course_with_incorrect_id_response,
     assert_get_course_with_incorrect_id_response,
     assert_get_courses_response,
     assert_get_courses_with_incorrect_id_response,
@@ -55,7 +56,7 @@ class TestCourses:
     @allure.story(AllureStory.GET_ENTITIES)
     @allure.sub_suite(AllureStory.GET_ENTITIES)
     @allure.severity(Severity.BLOCKER)
-    @allure.title("Get courses")
+    @allure.title("Получение списка курсов")
     def test_get_courses(
         self, function_courses_list: CoursesListFixture, courses_client: CoursesClient
     ):
@@ -80,7 +81,7 @@ class TestCourses:
     @allure.story(AllureStory.CREATE_ENTITY)
     @allure.sub_suite(AllureStory.CREATE_ENTITY)
     @allure.severity(Severity.BLOCKER)
-    @allure.title("Create course")
+    @allure.title("Создание курса")
     def test_create_course(
         self,
         courses_client: CoursesClient,
@@ -112,7 +113,7 @@ class TestCourses:
     @allure.story(AllureStory.GET_ENTITY)
     @allure.sub_suite(AllureStory.GET_ENTITY)
     @allure.severity(Severity.BLOCKER)
-    @allure.title("Get course")
+    @allure.title("Получение курса по id")
     def test_get_course(
         self, function_course: CourseFixture, courses_client: CoursesClient
     ):
@@ -135,7 +136,7 @@ class TestCourses:
     @allure.story(AllureStory.UPDATE_ENTITY)
     @allure.sub_suite(AllureStory.UPDATE_ENTITY)
     @allure.severity(Severity.CRITICAL)
-    @allure.title("Update course")
+    @allure.title("Обновление курса")
     def test_update_course(
         self, function_course: CourseFixture, courses_client: CoursesClient
     ):
@@ -161,7 +162,7 @@ class TestCourses:
     @allure.story(AllureStory.DELETE_ENTITY)
     @allure.sub_suite(AllureStory.DELETE_ENTITY)
     @allure.severity(Severity.CRITICAL)
-    @allure.title("Delete course")
+    @allure.title("Удаление курса")
     def test_delete_course(
         self, function_course: CourseFixture, courses_client: CoursesClient
     ):
@@ -191,7 +192,6 @@ class TestCourses:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.BLOCKER)
-    @allure.title("Create course with empty required field")
     def test_create_course_with_empty_required_field(
         self, courses_client: CoursesClient, field_name: str
     ):
@@ -203,7 +203,7 @@ class TestCourses:
             field_name (str): Имя поля, которое будет пустым в запросе.
         """
 
-        allure.dynamic.title(f"Attempt to create course with empty {field_name} field")
+        allure.dynamic.title(f"Попытка создать курс с пустым {field_name} полем")
         request = CreateCourseRequestSchema()
         setattr(request, field_name, "")
 
@@ -222,7 +222,6 @@ class TestCourses:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.CRITICAL)
-    @allure.title("Create course with invalid id field")
     def test_create_course_with_invalid_id_field(
         self, courses_client: CoursesClient, field_name: str
     ):
@@ -235,9 +234,7 @@ class TestCourses:
             некорректное значение в запросе.
         """
 
-        allure.dynamic.title(
-            f"Attempt to create course with invalid {field_name} field"
-        )
+        allure.dynamic.title(f"Попытка создать курс с некорректным {field_name} полем")
         request = CreateCourseRequestSchema()
         setattr(request, field_name, "incorrect-id")
         response = courses_client.create_course_api(request)
@@ -252,7 +249,7 @@ class TestCourses:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.NORMAL)
-    @allure.title("Create course with too long title")
+    @allure.title("Создание курса с названием превышающим максимально допустимую длину")
     def test_create_course_with_too_long_title(self, courses_client: CoursesClient):
         """
         Тест создания курса с слишком длинным названием.
@@ -277,7 +274,9 @@ class TestCourses:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.NORMAL)
-    @allure.title("Update course with too long title")
+    @allure.title(
+        "Обновление курса с названием превышающим максимально допустимую длину"
+    )
     def test_update_course_with_too_long_title(
         self, courses_client: CoursesClient, function_course: CourseFixture
     ):
@@ -305,7 +304,7 @@ class TestCourses:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.NORMAL)
-    @allure.title("Get course with non-existent id")
+    @allure.title("Получение несуществующего курса")
     def test_get_course_with_non_existent_id(self, courses_client: CoursesClient):
         response = courses_client.get_course_api(course_id=fake.uuid4())
         response_data = InternalErrorResponseSchema.model_validate_json(response.text)
@@ -318,7 +317,7 @@ class TestCourses:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.NORMAL)
-    @allure.title("Delete course with non-existent id")
+    @allure.title("Удаление несуществующего курса")
     def test_delete_course_with_non_existent_id(self, courses_client: CoursesClient):
         response = courses_client.delete_course_api(course_id=fake.uuid4())
         response_data = InternalErrorResponseSchema.model_validate_json(response.text)
@@ -331,7 +330,21 @@ class TestCourses:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.NORMAL)
-    @allure.title("Get courses with non-existent user_id")
+    @allure.title("Удаление курса по некорректному идентификатору")
+    def test_delete_course_with_incorrect_id(self, courses_client: CoursesClient):
+        response = courses_client.delete_course_api(course_id="incorrect-id")
+        response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
+
+        assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
+        assert_delete_course_with_incorrect_id_response(actual=response_data)
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
+
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.severity(Severity.NORMAL)
+    @allure.title("Получение курсов по несуществующему user_id")
     def test_get_courses_with_non_existent_id(self, courses_client: CoursesClient):
         request = GetCoursesQuerySchema(user_id=fake.uuid4())
         response = courses_client.get_courses_api(request)
@@ -346,7 +359,7 @@ class TestCourses:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.NORMAL)
-    @allure.title("Get courses with incorrect user_id")
+    @allure.title("Получение курсов по некорректному user_id")
     def test_get_courses_with_incorrect_id(self, courses_client: CoursesClient):
         request = GetCoursesQuerySchema(user_id="incorrect-id")
         response = courses_client.get_courses_api(request)
@@ -361,7 +374,7 @@ class TestCourses:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.NORMAL)
-    @allure.title("Get course with incorrect user_id")
+    @allure.title("Получение курса по некорректному идентификатору")
     def test_get_course_with_incorrect_id(self, courses_client: CoursesClient):
         response = courses_client.get_course_api(course_id="incorrect-id")
         response_data = ValidationErrorResponseSchema.model_validate_json(response.text)

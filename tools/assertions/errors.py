@@ -76,6 +76,9 @@ def assert_internal_error_response(actual: Any, expected: Any) -> None:
     assert_equal(actual.details, expected.details, "details"),
 
 
+@allure.step(
+    "Проверяем ответ сервера с ожидаемой валидационной ошибкой с некорректным id"
+)
 def assert_validation_error_for_invalid_id(
     actual: ValidationErrorResponseSchema,
     location: list[str],
@@ -98,10 +101,14 @@ def assert_validation_error_for_invalid_id(
         .at_location(*location)
         .build()
     )
-    logger.info(f"Проверяем ошибку валидации для некорректного ID в {location}")
+    logger.info(f"Проверяем ошибку валидации для некорректного ID в '{location}'")
     assert_validation_error_response(actual=actual, expected=expected)
 
 
+@allure.step(
+    f"Проверяем ответ сервера с ожидаемой валидационной ошибкой"
+    f" для некорректного значения в поле 'email'"
+)
 def assert_validation_error_for_invalid_email(
     actual: ValidationErrorResponseSchema,
     input_value: str = "",
@@ -113,10 +120,17 @@ def assert_validation_error_for_invalid_email(
         .at_location("body", "email")
         .build()
     )
-    logger.info(f"Проверям ошибку валидации для отсутствующего значения в поле email")
+    logger.info(
+        f"Проверяем ответ сервера с ожидаемой валидационной ошибкой"
+        f" для некорректного значения в поле 'email'"
+    )
     assert_validation_error_response(actual=actual, expected=expected)
 
 
+@allure.step(
+    f"Проверяем ответ сервера с ожидаемой валидационной ошибкой"
+    f" на пустое обязательное поле c id {{field_name}} в теле запроса"
+)
 def assert_validation_error_for_empty_id_field(
     actual: ValidationErrorResponseSchema,
     field_name: str,
@@ -129,11 +143,15 @@ def assert_validation_error_for_empty_id_field(
         .build()
     )
     logger.info(
-        f"Проверям ошибку валидации для отсутствующего значения в поле {field_name}"
+        f"Проверям ошибку валидации для отсутствующего значения в поле '{field_name}'"
     )
     assert_validation_error_response(actual=actual, expected=expected)
 
 
+@allure.step(
+    f"Проверяем ответ сервера с ожидаемой валидационной ошибкой"
+    f" на пустое обязательное стоковое поле {{field_name}} в теле запроса"
+)
 def assert_validation_error_for_empty_string_field(
     actual: ValidationErrorResponseSchema,
     field_name: str,
@@ -147,11 +165,15 @@ def assert_validation_error_for_empty_string_field(
         .build()
     )
     logger.info(
-        f"Проверям ошибку валидации для отсутствующего значения в поле {field_name}"
+        f"Проверям ошибку валидации для отсутствующего значения в поле '{field_name}'"
     )
     assert_validation_error_response(actual=actual, expected=expected)
 
 
+@allure.step(
+    f"Проверяем ответ сервера с ожидаемой валидационной ошибкой"
+    f" для значения, превышающего максимальную длину поля {{location}} в теле запроса"
+)
 def assert_validation_error_for_too_long_field(
     actual: ValidationErrorResponseSchema,
     location: str,
@@ -170,6 +192,7 @@ def assert_validation_error_for_too_long_field(
         .build()
     )
     logger.info(
-        f"Проверям ошибку валидации для значения, превышающего максимальную длину поля {location}"
+        f"Проверям ошибку валидации для значения,"
+        f" превышающего максимальную длину поля '{location}'"
     )
     assert_validation_error_response(actual, expected)

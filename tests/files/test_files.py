@@ -42,7 +42,7 @@ class TestFiles:
     @allure.story(AllureStory.CREATE_ENTITY)
     @allure.sub_suite(AllureStory.CREATE_ENTITY)
     @allure.severity(Severity.CRITICAL)
-    @allure.title("Upload file")
+    @allure.title("Загрузка файла")
     def test_upload_file(self, files_client: FilesClient):
         """
         Тест проверяет, что при загрузке файла на сервер,
@@ -70,7 +70,7 @@ class TestFiles:
     @allure.story(AllureStory.GET_ENTITY)
     @allure.sub_suite(AllureStory.GET_ENTITY)
     @allure.severity(Severity.CRITICAL)
-    @allure.title("Get file")
+    @allure.title("Получение файла")
     def test_get_file(self, files_client: FilesClient, function_file: FileFixture):
         """
         Тест проверяет, что при запросе файла по его идентификатору,
@@ -97,7 +97,6 @@ class TestFiles:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.CRITICAL)
-    @allure.title("Upload file with missing request field")
     def test_upload_file_with_missing_request_field(
         self, field_name: str, files_client: FilesClient
     ):
@@ -112,7 +111,7 @@ class TestFiles:
         Raises:
             AssertionError: Если данные в ответе не совпадают с ожидаемыми.
         """
-        allure.dynamic.title(f"Upload file with missing request field: {field_name}")
+        allure.dynamic.title(f"Загрузка файла с пустым полем {field_name} в запросе")
         request = UploadFileRequestSchema(
             upload_file=settings.TEST_DATA.IMAGE_JPEG_FILE
         )
@@ -128,7 +127,7 @@ class TestFiles:
     @allure.story(AllureStory.DELETE_ENTITY)
     @allure.sub_suite(AllureStory.DELETE_ENTITY)
     @allure.severity(Severity.NORMAL)
-    @allure.title("Delete file")
+    @allure.title("Удаление файла")
     def test_delete_file(self, files_client: FilesClient, function_file: FileFixture):
         """
         Тест проверяет, что при удалении файла,
@@ -160,7 +159,7 @@ class TestFiles:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.CRITICAL)
-    @allure.title("Get file with incorrect file id")
+    @allure.title("Получение файла по некорректному file_id")
     def test_get_file_with_incorrect_file_id(self, files_client: FilesClient):
         """
         Тест проверяет, что при запросе несуществующего файла,
@@ -184,7 +183,7 @@ class TestFiles:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.NORMAL)
-    @allure.title("Delete file with invalid id")
+    @allure.title("Удаление несуществующего файла")
     def test_delete_user_with_invalid_id(
         self,
         files_client: FilesClient,

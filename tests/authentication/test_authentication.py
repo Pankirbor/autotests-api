@@ -27,7 +27,6 @@ from tools.assertions.authentication import (
 )
 from tools.assertions.base import assert_status_code
 from tools.assertions.schema import validate_json_schema
-from tools.console_output_formatter import print_dict
 
 
 @pytest.mark.authentication
@@ -43,7 +42,7 @@ class TestAuthentication:
     @allure.story(AllureStory.LOGIN)
     @allure.sub_suite(AllureStory.LOGIN)
     @allure.severity(Severity.BLOCKER)
-    @allure.title("Login with correct email and password")
+    @allure.title("Аутентификация пользователя")
     def test_login(
         self,
         function_user: UserFixture,
@@ -75,7 +74,7 @@ class TestAuthentication:
     @allure.story(AllureStory.LOGIN)
     @allure.sub_suite(AllureStory.LOGIN)
     @allure.severity(Severity.BLOCKER)
-    @allure.title("Refresh token with correct token")
+    @allure.title("Обновление токена")
     def test_refresh_token(
         self,
         function_user: UserFixture,
@@ -103,7 +102,7 @@ class TestAuthentication:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.BLOCKER)
-    @allure.title("Refresh token with incorrect token")
+    @allure.title("Обновление токена с некорректным refresh token")
     def test_refresh_token_with_incorrect_token(
         self, authentication_client: AuthenticationClient
     ):
@@ -131,7 +130,7 @@ class TestAuthentication:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.BLOCKER)
-    @allure.title("Login with incorrect email")
+    @allure.title("Аутентификация с некорректным email")
     def test_login_with_incorrect_email(
         self, authentication_client: AuthenticationClient
     ):

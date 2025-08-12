@@ -168,6 +168,52 @@ def assert_get_exercises_response(
 
 
 @allure.step(
+    "Проверяем ответ сервера на запрос списка упражнений с некорректным id курса"
+)
+def assert_get_exercises_with_incorrect_course_id_response(
+    actual: ValidationErrorResponseSchema,
+):
+    """
+    Проверяет, что при запросе списка упражнений с некорректным id курса сервер возвращает ошибку.
+
+    Args:
+        actual (ValidationErrorResponseSchema): Ответ сервера после запроса списка упражнений.
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
+
+    logger.info(
+        "Проверяем ответ сервера на запрос списка упражнений с некорректным id курса"
+    )
+    assert_validation_error_for_invalid_id(
+        actual=actual, location=["query", "courseId"]
+    )
+
+
+@allure.step(
+    "Проверяем ответ сервера на запрос списка упражнений с несуществующим id курса"
+)
+def assert_get_exercises_with_non_existent_course_id_response(
+    actual: GetExercisesResponseSchema,
+):
+    """
+    Проверяет, что при запросе списка упражнений с несуществующим id курса сервер возвращает пустой список упражнений.
+
+    Args:
+        actual (GetExercisesResponseSchema): Ответ сервера после запроса списка упражнений.
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
+
+    logger.info(
+        "Проверяем ответ сервера на запрос списка упражнений с несуществующим id курса"
+    )
+    assert_length(actual.exercises, [], "exercises")
+
+
+@allure.step(
     "Проверяем ответ сервера на запрос создания упражнения с некорректным id курса"
 )
 def assert_create_exercise_with_invalid_course_id_response(

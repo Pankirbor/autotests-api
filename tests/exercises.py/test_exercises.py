@@ -34,11 +34,12 @@ from tools.assertions.exercises import (
     assert_get_exercise_response,
     assert_get_exercise_with_incorrect_exercise_id_response,
     assert_get_exercises_response,
+    assert_get_exercises_with_incorrect_course_id_response,
+    assert_get_exercises_with_non_existent_course_id_response,
     assert_not_found_exercise_response,
     assert_update_exercise_response,
 )
 from tools.assertions.schema import validate_json_schema
-from tools.console_output_formatter import print_dict
 from tools.fakers import fake
 
 
@@ -55,11 +56,18 @@ class TestExercises:
     @allure.story(AllureStory.CREATE_ENTITY)
     @allure.sub_suite(AllureStory.CREATE_ENTITY)
     @allure.severity(Severity.BLOCKER)
-    @allure.title("Create exercise")
+    @allure.title("Создание упражнения")
     def test_create_exercise(
         self, exercises_client: ExercisesClient, function_course: CourseFixture
     ):
-        """Тест создания упражнения."""
+        """
+        Тест создания упражнения.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            function_course (CourseFixture): Фикстура с данными курса.
+
+        """
 
         request = CreateExerciseRequestSchema(course_id=function_course.course_id)
         response = exercises_client.create_exercise_api(request)
@@ -74,11 +82,17 @@ class TestExercises:
     @allure.severity(Severity.BLOCKER)
     @allure.story(AllureStory.GET_ENTITY)
     @allure.sub_suite(AllureStory.GET_ENTITY)
-    @allure.title("Get exercise")
+    @allure.title("Получение упражнения")
     def test_get_exercise(
         self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture
     ):
-        """Тест получения информации об упражнении."""
+        """
+        Тест получения информации об упражнении.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            function_exercise (ExerciseFixture): Фикстура с данными упражнения.
+        """
 
         response = exercises_client.get_exercise_api(function_exercise.exercise_id)
         response_data = ExerciseResponseSchema.model_validate_json(response.text)
@@ -94,11 +108,17 @@ class TestExercises:
     @allure.severity(Severity.CRITICAL)
     @allure.story(AllureStory.UPDATE_ENTITY)
     @allure.sub_suite(AllureStory.UPDATE_ENTITY)
-    @allure.title("Update exercise")
+    @allure.title("Обновление упражнения")
     def test_update_exercise(
         self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture
     ):
-        """Тест обновления информации об упражнении."""
+        """
+        Тест обновления информации об упражнении.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            function_exercise (ExerciseFixture): Фикстура с данными упражнения.
+        """
 
         request = UpdateExerciseRequestSchema(
             course_id=function_exercise.response.exercise.course_id
@@ -121,11 +141,17 @@ class TestExercises:
     @allure.severity(Severity.CRITICAL)
     @allure.story(AllureStory.DELETE_ENTITY)
     @allure.sub_suite(AllureStory.DELETE_ENTITY)
-    @allure.title("Delete exercise")
+    @allure.title("Удаление упражнения")
     def test_delete_exercise(
         self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture
     ):
-        """Тест удаления упражнения."""
+        """
+        Тест удаления упражнения.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            function_exercise (ExerciseFixture): Фикстура с данными упражнения.
+        """
 
         delete_response = exercises_client.delete_exercise_api(
             exercise_id=function_exercise.exercise_id
@@ -148,14 +174,21 @@ class TestExercises:
     @allure.severity(Severity.BLOCKER)
     @allure.story(AllureStory.GET_ENTITIES)
     @allure.sub_suite(AllureStory.GET_ENTITIES)
-    @allure.title("Get exercises")
+    @allure.title("Получение списка упражнений")
     def test_get_exercises(
         self,
         exercises_client: ExercisesClient,
         function_course: CourseFixture,
         function_exercises: ExercisesListFixture,
     ):
-        """Тест для проверки получения списка упражнений."""
+        """
+        Тест для проверки получения списка упражнений.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            function_course (CourseFixture): Фикстура с данными курса.
+            function_exercises (ExercisesListFixture): Фикстура с данными упражнений.
+        """
 
         request = GetExercisesQuerySchema(course_id=function_course.course_id)
         response = exercises_client.get_exercises_api(request)
@@ -175,11 +208,60 @@ class TestExercises:
     @allure.severity(Severity.BLOCKER)
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
-    @allure.title("Create exercise with invalid course_id")
+    @allure.title("Получение списка упражнений по некорректному course_id")
+    def test_get_exercises_with_incorrect_course_id(
+        self, exercises_client: ExercisesClient
+    ):
+        """
+        Тест получения упражнений с некорректным course_id.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+        """
+        request = GetExercisesQuerySchema(course_id="incorrect-id")
+        response = exercises_client.get_exercises_api(request)
+        response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
+
+        assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
+        assert_get_exercises_with_incorrect_course_id_response(actual=response_data)
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
+
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.severity(Severity.BLOCKER)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.title("Получение упражнений по несуществующему course_id")
+    def test_get_exercises_with_non_existent_course_id(
+        self, exercises_client: ExercisesClient
+    ):
+        """
+        Тест получения упражнений с не существующим course_id.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+        """
+        request = GetExercisesQuerySchema(course_id=fake.uuid4())
+        response = exercises_client.get_exercises_api(request)
+        response_data = GetExercisesResponseSchema.model_validate_json(response.text)
+        assert_get_exercises_with_non_existent_course_id_response(actual=response_data)
+
+        validate_json_schema(response.json(), response_data.model_json_schema())
+
+    @allure.tag(AllureTag.VALIDATE_ENTITY)
+    @allure.severity(Severity.BLOCKER)
+    @allure.story(AllureStory.VALIDATE_ENTITY)
+    @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
+    @allure.title("Получение упражнения по некорректному идентификатору")
     def test_create_exercise_with_invalid_course_id(
         self, exercises_client: ExercisesClient
     ):
-        """Тест создания упражнения с некоррктным course_id."""
+        """
+        Тест создания упражнения с некоррктным course_id.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+        """
 
         request = CreateExerciseRequestSchema(course_id="incorrect-id")
         response = exercises_client.create_exercise_api(request)
@@ -197,7 +279,7 @@ class TestExercises:
     @allure.severity(Severity.BLOCKER)
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
-    @allure.title("Create exercise with empty required string fields")
+    @allure.title("Создание упражнения с пустым обязательным полем")
     def test_create_exercise_with_empty_required_string_fields(
         self,
         exercises_client: ExercisesClient,
@@ -206,6 +288,11 @@ class TestExercises:
     ):
         """
         Тест создания упражнения с пустым обязательным полем.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            field_name (str): Имя поля, которое будет пустым в запросе.
+            function_course (CourseFixture): Фикстура с данными курса.
         """
         allure.dynamic.title(f"Attempt create exercise with empty {field_name} field")
         request = CreateExerciseRequestSchema(course_id=function_course.course_id)
@@ -225,17 +312,23 @@ class TestExercises:
     @allure.severity(Severity.NORMAL)
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
-    @allure.title("Create exercise with too long string fields")
     def test_create_exercise_with_too_long_string_fields(
         self,
         exercises_client: ExercisesClient,
         field_name: str,
         function_course: CourseFixture,
     ):
-        """Тест создания упражнения с слишком длинным строковым полем."""
+        """
+        Тест создания упражнения с слишком длинным строковым полем.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            field_name (str): Имя поля, которое будет содержать слишком длинное значение в запросе.
+            function_course (CourseFixture): Фикстура с данными курса.
+        """
 
         allure.dynamic.title(
-            f"Attempt create exercise with to long value in {field_name} field"
+            f"Создание упражнения с слишком длинным значением в {field_name} поле"
         )
         to_long_string = "a" * (MAX_LENGTH_FIELDS.get(field_name) + 1)
         request = CreateExerciseRequestSchema(course_id=function_course.course_id)
@@ -255,16 +348,24 @@ class TestExercises:
     @allure.severity(Severity.BLOCKER)
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
-    @allure.title("Update exercise with empty required string fields")
     def test_update_exercise_with_empty_required_string_fields(
         self,
         exercises_client: ExercisesClient,
         field_name: str,
         function_course: CourseFixture,
     ):
-        """Тест обновления упражнения с пустым обязательным полем."""
+        """
+        Тест обновления упражнения с пустым обязательным полем.
 
-        allure.dynamic.title(f"Attempt update exercise with empty {field_name} field")
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            field_name (str): Имя поля, которое будет пустым в запросе.
+            function_course (CourseFixture): Фикстура с данными курса.
+        """
+
+        allure.dynamic.title(
+            f"Обновление упражнения с пустым обязательным полем {field_name}"
+        )
         request = UpdateExerciseRequestSchema()
         setattr(request, field_name, "")
         response = exercises_client.update_exercise_api(
@@ -284,17 +385,23 @@ class TestExercises:
     @allure.severity(Severity.NORMAL)
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
-    @allure.title("Update exercise with too long string fields")
     def test_update_exercise_with_too_long_string_fields(
         self,
         exercises_client: ExercisesClient,
         field_name: str,
         function_course: CourseFixture,
     ):
-        """Тест обновления упражнения с слишком длинным строковым полем."""
+        """
+        Тест обновления упражнения с слишком длинным строковым полем.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            field_name (str): Имя поля, которое будет содержать слишком длинное значение в запросе.
+            function_course (CourseFixture): Фикстура с данными курса.
+        """
 
         allure.dynamic.title(
-            f"Attempt update exercise with to long value in {field_name} field"
+            f"Обновление упражнения со слишком длинным значением в поле {field_name}"
         )
         to_long_string = "a" * (MAX_LENGTH_FIELDS.get(field_name) + 1)
         request = UpdateExerciseRequestSchema()
@@ -322,7 +429,6 @@ class TestExercises:
     @allure.severity(Severity.NORMAL)
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
-    @allure.title("Create exercise with incorrect score")
     def test_create_exercise_with_incorrect_score(
         self,
         exercises_client: ExercisesClient,
@@ -330,8 +436,19 @@ class TestExercises:
         max_score: int,
         function_course: CourseFixture,
     ):
-        """Тест создания упражнения с некорректными значениями min_score и max_score."""
+        """
+        Тест создания упражнения с некорректными значениями min_score и max_score.
 
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            min_score (int): Минимальное значение для min_score.
+            max_score (int): Максимальное значение для max_score.
+            function_course (CourseFixture): Фикстура с данными курса.
+        """
+        allure.dynamic.title(
+            f"Создание упражнения с некорректными значениями"
+            f" min_score и max_score: {min_score} - {max_score}"
+        )
         request = CreateExerciseRequestSchema(course_id=function_course.course_id)
         setattr(request, "min_score", min_score)
         setattr(request, "max_score", max_score)
@@ -355,7 +472,6 @@ class TestExercises:
     @allure.severity(Severity.NORMAL)
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
-    @allure.title("Update exercise with incorrect score")
     def test_update_exercise_with_incorrect_score(
         self,
         exercises_client: ExercisesClient,
@@ -363,7 +479,19 @@ class TestExercises:
         max_score: int,
         function_course: CourseFixture,
     ):
-        """Тест обновления упражнения с некорректными значениями min_score и max_score."""
+        """
+        Тест обновления упражнения с некорректными значениями min_score и max_score.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            min_score (int): Минимальное значение для min_score.
+            max_score (int): Максимальное значение для max_score.
+            function_course (CourseFixture): Фикстура с данными курса.
+        """
+        allure.dynamic.title(
+            f"Обновление упражнения с некорректными значениями"
+            f" min_score и max_score: {min_score} - {max_score}"
+        )
 
         request = UpdateExerciseRequestSchema()
         setattr(request, "min_score", min_score)
@@ -384,7 +512,7 @@ class TestExercises:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.NORMAL)
-    @allure.title("Get exercise with incorrect exercise id")
+    @allure.title("Получение упражнения с некорректным exercise_id")
     def test_get_exercise_with_incorrect_exercise_id(
         self, exercises_client: ExercisesClient
     ):
@@ -406,7 +534,7 @@ class TestExercises:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.NORMAL)
-    @allure.title("Delete exercise with incorrect exercise id")
+    @allure.title("Удаление упражнения с некорректным exercise_id")
     def test_delete_exercise_with_incorrect_exercise_id(
         self, exercises_client: ExercisesClient
     ):
@@ -430,7 +558,7 @@ class TestExercises:
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
     @allure.severity(Severity.NORMAL)
-    @allure.title("Delete exercise with non-existent exercise id")
+    @allure.title("Удаление упражнения с несуществующим exercise_id")
     def test_delete_exercise_with_non_existent_exercise_id(
         self, exercises_client: ExercisesClient
     ):

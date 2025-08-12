@@ -189,7 +189,7 @@ def assert_create_course_with_empty_field_response(
     """
 
     logger.info(
-        "Проверяем ответ сервера на запрос курса с пустым обязательным параметром"
+        "Проверяем ответ сервера на запрос создания курса с пустым обязательным параметром"
     )
     if field_name in ["title", "description"]:
         assert_validation_error_for_empty_string_field(
@@ -224,7 +224,9 @@ def assert_create_course_with_incorrect_field_id_response(
     assert_validation_error_for_invalid_id(actual=actual, location=["body", field_name])
 
 
-@allure.step("Проверяем ответ сервера на запрос создания курса с слишком длинным title")
+@allure.step(
+    "Проверяем ответ сервера на запрос создания или обновления курса со слишком длинным title"
+)
 def assert_create_or_update_course_with_too_long_title_response(
     actual: ValidationErrorResponseSchema,
     input_value: str,
@@ -241,7 +243,7 @@ def assert_create_or_update_course_with_too_long_title_response(
     """
 
     logger.info(
-        "Проверяем ответ сервера на запрос создания курса с слишком длинным title"
+        "Проверяем ответ сервера на запрос создания или обновления курса со слишком длинным 'title'"
     )
     assert_validation_error_for_too_long_field(
         actual=actual,
@@ -265,6 +267,7 @@ def assert_get_courses_with_non_existent_id_response(
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
     expected = GetCoursesResponseSchema(courses=[])
+    logger.info("Проверяем ответ сервера на запрос курсов с несуществующим 'user_id'")
     assert_get_courses_response(expected_response=expected, response=actual)
 
 
@@ -281,6 +284,7 @@ def assert_get_courses_with_incorrect_id_response(
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
+    logger.info("Проверяем ответ сервера на запрос курсов с некорректным 'user_id'")
     assert_validation_error_for_invalid_id(actual=actual, location=["query", "userId"])
 
 
@@ -295,6 +299,26 @@ def assert_get_course_with_incorrect_id_response(actual: ValidationErrorResponse
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
+    logger.info("Проверяем ответ сервера на запрос курса с некорректным id")
+    assert_validation_error_for_invalid_id(
+        actual=actual, location=["path", "course_id"]
+    )
+
+
+@allure.step("Проверяем ответ сервера на запрос удаления курса с некорректным id")
+def assert_delete_course_with_incorrect_id_response(
+    actual: ValidationErrorResponseSchema,
+):
+    """
+    Проверяет, что при запросе удаления курса с некорректным id сервер возвращает ошибку.
+
+    Args:
+        actual (ValidationErrorResponseSchema): Ответ сервера после запроса курса.
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
+    logger.info("Проверяем ответ сервера на запрос удаления курса с некорректным id")
     assert_validation_error_for_invalid_id(
         actual=actual, location=["path", "course_id"]
     )
