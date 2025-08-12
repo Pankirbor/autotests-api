@@ -279,7 +279,6 @@ class TestExercises:
     @allure.severity(Severity.BLOCKER)
     @allure.story(AllureStory.VALIDATE_ENTITY)
     @allure.sub_suite(AllureStory.VALIDATE_ENTITY)
-    @allure.title("Создание упражнения с пустым обязательным полем")
     def test_create_exercise_with_empty_required_string_fields(
         self,
         exercises_client: ExercisesClient,
@@ -294,7 +293,9 @@ class TestExercises:
             field_name (str): Имя поля, которое будет пустым в запросе.
             function_course (CourseFixture): Фикстура с данными курса.
         """
-        allure.dynamic.title(f"Attempt create exercise with empty {field_name} field")
+        allure.dynamic.title(
+            f"Попытка создать упражнение с пустым обязательным полем {field_name}"
+        )
         request = CreateExerciseRequestSchema(course_id=function_course.course_id)
         setattr(request, field_name, "")
         response = exercises_client.create_exercise_api(request)
@@ -447,7 +448,7 @@ class TestExercises:
         """
         allure.dynamic.title(
             f"Создание упражнения с некорректными значениями"
-            f" min_score и max_score: {min_score} - {max_score}"
+            f" {min_score=} - {max_score=}"
         )
         request = CreateExerciseRequestSchema(course_id=function_course.course_id)
         setattr(request, "min_score", min_score)
@@ -490,7 +491,7 @@ class TestExercises:
         """
         allure.dynamic.title(
             f"Обновление упражнения с некорректными значениями"
-            f" min_score и max_score: {min_score} - {max_score}"
+            f" {min_score=} - {max_score=}"
         )
 
         request = UpdateExerciseRequestSchema()
