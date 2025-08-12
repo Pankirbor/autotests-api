@@ -135,7 +135,6 @@ dmypy.json
 trash.py
 
 # allure
-allure-results
 allure-report
 allure-results
 
