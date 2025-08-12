@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE4OjUwOjAwLjk0NTYxNCIsInVzZXJfaWQiOiJlMDIzNDk0MS1hMjRlLTQ5ZjctYjZhYS05ODY4YzZkYzNkMzYifQ.PmmAWMCOM06Uwhp4zsvZQ_fcC7jH1IkKVLmoS34yW0g' \
+ -H 'content-length: 477' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Бровь райком лапа премьера.","minScore":28,"maxScore":89,"description":"Армейский редактор протягивать смеяться каюта вперед плавно. Хозяйка коммунизм набор художественный. За протягивать умолять.","estimatedTime":"7 weeks","previewFileId":"0b530e13-3023-4778-bcc0-cc3ff5e0f479","createdByUserId":"e0234941-a24e-49f7-b6aa-9868c6dc3d36"}'

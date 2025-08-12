@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE4OjQ5OjU1LjY0NTQ2NyIsInVzZXJfaWQiOiI5Y2VlOGE1Ni0zOTU2LTRmNGUtOTFmMC0xODA1NzBiMTFhZjMifQ.X2R3WdlbiXqQw8rooddqdgy-heiSNW-URJuDcreAWJg' \
+ -H 'content-length: 492' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Дружно чувство прощение посвятить легко прелесть пропадать пропаганда.","courseId":"3e9e137c-fa37-4443-8e70-9b5d41edb286","maxScore":96,"minScore":13,"orderIndex":49,"description":"Совет карандаш видимо сомнительный умолять отражение ложиться. Потянуться миллиард ремень художественный пятеро.","estimatedTime":"7 weeks"}'

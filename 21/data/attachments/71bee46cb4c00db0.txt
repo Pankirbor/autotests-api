@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE4OjQ5OjU1LjY0NTQ2NyIsInVzZXJfaWQiOiI5Y2VlOGE1Ni0zOTU2LTRmNGUtOTFmMC0xODA1NzBiMTFhZjMifQ.X2R3WdlbiXqQw8rooddqdgy-heiSNW-URJuDcreAWJg' \
+ -H 'content-length: 467' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Посвятить потрясти картинка.","minScore":23,"maxScore":90,"description":"Прежде аж развитый ярко радость сбросить. Освободить дальний присесть рис низкий. Беспомощный мелькнуть команда ручей.","estimatedTime":"1 weeks","previewFileId":"c53af4db-d082-4fef-89b6-147b9cc47d4f","createdByUserId":"9cee8a56-3956-4f4e-91f0-180570b11af3"}'

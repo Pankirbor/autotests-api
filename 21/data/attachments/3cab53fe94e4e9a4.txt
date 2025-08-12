@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE4OjQ5OjQyLjM5ODAyMiIsInVzZXJfaWQiOiIyNGM4OTc0Ny05ZjY1LTRkNGMtOTdmMC1iM2I3YmE2NDRmNWUifQ.yV_AaC7cIt3aJwg1v_hptreRVNbjW7cmZUJPInJkJyA' \
+ -H 'content-length: 496' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Сбросить военный еврейский а подробность тута.","minScore":27,"maxScore":61,"description":"Коричневый основание направо смертельный вздрогнуть наступать. Народ расстегнуть терапия неудобно изредка секунда.","estimatedTime":"9 weeks","previewFileId":"1c61269e-c152-45d0-93d5-1e6979e37f9a","createdByUserId":"24c89747-9f65-4d4c-97f0-b3b7ba644f5e"}'

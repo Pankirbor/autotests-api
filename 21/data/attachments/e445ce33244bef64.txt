@@ -1,0 +1,10 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/authentication/refresh' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'content-length: 218' \
+ -H 'content-type: application/json' \
+ -d '{"refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTEwLTExVDE4OjE5OjM4LjI4NTYwMiIsInVzZXJfaWQiOiJhZWFiNWE2MC1hZDM3LTQxN2MtYWRkYy00MGU2NDY3NGIxYjcifQ.NBltGglMEM9J2jW4IF2EKzJM6eJbO-Yhrhdr8pm1ckg"}'

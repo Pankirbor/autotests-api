@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE4OjQ5OjU2LjIzNDQ3OCIsInVzZXJfaWQiOiIyODgyYTQ0OS1mMGJkLTQ5ODMtYWI4Ni01NDM3NDcxNTAxYjQifQ.-dvKrh-8pV5mnJuo336H7XcuGRVGPfLzCoC4kNAD88w' \
+ -H 'content-length: 443' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Выбирать постоянный зима развернуться.","minScore":23,"maxScore":59,"description":"Горький правление уточнить промолчать пища болото полоска. Точно выражаться выгнать скользить.","estimatedTime":"3 weeks","previewFileId":"917dce9e-c16e-40df-92df-2570c6d53813","createdByUserId":"2882a449-f0bd-4983-ab86-5437471501b4"}'

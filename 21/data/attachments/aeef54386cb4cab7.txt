@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE4OjQ5OjU3LjM4MTQ2NyIsInVzZXJfaWQiOiJkOGY5MGNhZC03YWZkLTRiNDMtYWY5OS1iZTU0ZjEyNTc0ZWEifQ.ug3lxFHtoYtkLBUHyXd_I_w5T31BSDjqNFfrpI3VvZ8' \
+ -H 'content-length: 457' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Выкинуть ученый заплакать.","minScore":1,"maxScore":72,"description":"Дружно сохранять спичка рис мотоцикл. Отражение поймать прежний сомнительный падать художественный анализ тяжелый.","estimatedTime":"2 weeks","previewFileId":"0e9115fd-78db-4ba4-9c7e-cbb224640781","createdByUserId":"d8f90cad-7afd-4b43-af99-be54f12574ea"}'

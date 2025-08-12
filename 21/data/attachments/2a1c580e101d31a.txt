@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE4OjQ5OjU5Ljc1OTM5MSIsInVzZXJfaWQiOiJkNGQyZDRkMi0zYzlhLTQ5YzktYWE5NC0wNjI0OTA2MmZmYWEifQ.6Lc3Amm0U1RShkyzbmpo4B9b5-Dbi4qj_NYXqPdnANE' \
+ -H 'content-length: 522' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Палец жестокий недостаток очередной порода полевой горький.","minScore":20,"maxScore":73,"description":"Термин мрачно пространство прелесть. Шлем налево развитый четко горький жестокий. Коробка что правление возмутиться.","estimatedTime":"4 weeks","previewFileId":"79df7ac2-9a5e-4594-8233-4cb8114e475e","createdByUserId":"d4d2d4d2-3c9a-49c9-aa94-06249062ffaa"}'

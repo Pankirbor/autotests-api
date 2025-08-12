@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE4OjQ5OjUzLjIyOTM0NCIsInVzZXJfaWQiOiIyNGVkZDBmYS05MzllLTQxYzEtYjBlYi1iYjE5MjMwZmIyODkifQ.xE2oqQ4ADJEHq1iuR4XeZmMBOI16lu9JKKu4GOfFsVg' \
+ -H 'content-length: 534' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Понятный место товар передо прощение выдержать низкий.","minScore":9,"maxScore":86,"description":"Свежий мрачно князь головной деловой волк. Боец ярко рота мимо растеряться устройство хотеть. Полюбить мимо указанный пропаганда.","estimatedTime":"2 weeks","previewFileId":"7d67524f-d183-446d-a962-0775b9b26892","createdByUserId":"24edd0fa-939e-41c1-b0eb-bb19230fb289"}'

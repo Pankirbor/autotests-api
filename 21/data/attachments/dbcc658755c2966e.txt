@@ -1,0 +1,12 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/refresh
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/refresh
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 200
+INFO     AUTHENTICATION_ASSERTIONS:authentication.py:30 Проверяем ответ сервера после аутентификации
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение token_type соответствует ожидаемому bearer
+INFO     BASE_ASSERTIONS:base.py:64 Проверяем, что значение access_token является истинным
+INFO     BASE_ASSERTIONS:base.py:64 Проверяем, что значение refresh_token является истинным
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

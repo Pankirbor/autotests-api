@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE4OjQ5OjUwLjI3Njk3MSIsInVzZXJfaWQiOiIzNGVmMjZiYy05MzcyLTRkMWUtYjlhYy1lOTM2NTdhY2UzYzgifQ.wtNoEQVYnQYEyGeQF_QJLeufP5I0dWguiZiMQGbrxhE' \
+ -H 'content-length: 550' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Штаб собеседник заявление полоска деловой секунда другой.","minScore":15,"maxScore":96,"description":"Разнообразный пища беспомощный. Бочок торопливый лететь слать господь вытаскивать. Жидкий пастух валюта кожа выбирать указанный кожа.","estimatedTime":"3 weeks","previewFileId":"062296cc-9f1b-4758-a193-9fc29c03eb62","createdByUserId":"34ef26bc-9372-4d1e-b9ac-e93657ace3c8"}'

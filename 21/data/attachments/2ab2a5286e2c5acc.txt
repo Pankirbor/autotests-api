@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE4OjQ5OjU5LjE3MTc4NSIsInVzZXJfaWQiOiIwY2JkN2FmYy0wZWRkLTQwYzctYTBlYy03NmYxZmZhMTI1OWIifQ.9jWSXSkyhJI-0gzdHspbcdcBCV5vbJRz-476sLo_-e8' \
+ -H 'content-length: 411' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Пространство серьезный видимо.","courseId":"incorrect-id","maxScore":76,"minScore":23,"orderIndex":57,"description":"Развернуться дурацкий дьявол. Способ командующий белье наткнуться полюбить. Социалистический отражение эпоха радость волк.","estimatedTime":"9 weeks"}'

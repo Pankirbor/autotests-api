@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE4OjQ5OjQzLjg2MjQzNiIsInVzZXJfaWQiOiI5NGVkMDA4MC0wMGI4LTQ2NjgtODQ3My00ZDllMzg0YmNmNmIifQ.YFqvJ-lYtdyo2dN16O9D4RVJhfNdMWSQ58gAHLk4TDs' \
+ -H 'content-length: 624' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Да устройство кузнец призыв умирать ведь космос.","minScore":24,"maxScore":95,"description":"Решетка хотеть господь парень снимать угроза самостоятельно. Рис смертельный естественный поколение провинция. Отъезд приятель слишком голубчик. Эффект аллея кузнец дыхание интернет.","estimatedTime":"4 weeks","previewFileId":"cd4b0ac5-3b44-45fc-9986-ba58fbd03fb7","createdByUserId":"94ed0080-00b8-4668-8473-4d9e384bcf6b"}'

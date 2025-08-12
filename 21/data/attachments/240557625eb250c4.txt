@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE4OjQ5OjUxLjQ2MTI4MyIsInVzZXJfaWQiOiJkMjhkYzliMS01ZTI1LTQ0NzUtOWQxNS1iZWRjMWE5MzA2NWIifQ.LeAgnjhGnPcwuTxsyNgOSPk3-r_YiKi7A5Zvt3stYzM' \
+ -H 'content-length: 634' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Заложить мальчишка боец виднеться вообще спорт.","minScore":30,"maxScore":96,"description":"Инструкция освобождение космос ложиться полоска тревога уничтожение. Пропаганда прощение способ выражение дремать пастух пламя. Понятный тута прежний собеседник отдел дурацкий выраженный.","estimatedTime":"3 weeks","previewFileId":"ae726444-8e3a-4728-9d01-39f9d6b90054","createdByUserId":"d28dc9b1-5e25-4475-9d15-bedc1a93065b"}'

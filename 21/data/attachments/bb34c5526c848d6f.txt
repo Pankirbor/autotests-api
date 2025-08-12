@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE4OjQ5OjUyLjA0MjQ1OSIsInVzZXJfaWQiOiJhZDhlOWFmNS01M2Y1LTRkNDQtYjM3Ny00OGYwMGI4NGYxMTgifQ.cpkzw8p0QGx1EL8HLm741bHz0Bg301irXEUGOAEFYQI' \
+ -H 'content-length: 479' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Кпсс успокоиться головка функция художественный задрать.","minScore":27,"maxScore":67,"description":"Заложить место возбуждение место зачем. Полностью прошептать сынок заявление услать о смеяться.","estimatedTime":"10 weeks","previewFileId":"1a437cf7-fe31-44d6-9728-6cf0dd4c7aa3","createdByUserId":"ad8e9af5-53f5-4d44-b377-48f00b84f118"}'

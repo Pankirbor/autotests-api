@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE4OjQ5OjQwLjM1MTI3NCIsInVzZXJfaWQiOiIzYTI5YTAwZC1iZDI0LTRmYmItYTZkYS03YjYxYTU4NjY0YTAifQ.BC53Gysnxz-ED0WO4vmvmgHcvfjER8TwmzFgBQHSrUQ' \
+ -H 'content-length: 603' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Близко миг рабочий изредка тяжелый пространство рота развитый.","minScore":7,"maxScore":83,"description":"Похороны деньги о человечек торопливый вряд банда очко. Неудобно вскакивать неожиданный роскошный отметить коллектив головка. Банк витрина кожа низкий привлекать военный.","estimatedTime":"4 weeks","previewFileId":"incorrect-id","createdByUserId":"43025c94-956e-46d1-9ebe-a57361c90f22"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE4OjQ5OjQ2LjIzMzg2OCIsInVzZXJfaWQiOiJiYTdiM2E4MC00OTYwLTQ0NDMtYThmNC1mZmIwYjVlYzk1OWIifQ.kZtf5W-mFFgqaDeHkQwnFD7p0JoAfRPYlbwB9dEIseU' \
+ -H 'content-length: 390' \
+ -H 'content-type: application/json' \
+ -d '{"title":"","minScore":22,"maxScore":92,"description":"Вчера понятный что дремать покинуть сверкающий приятель. Ручей житель зато смелый тревога витрина низкий.","estimatedTime":"7 weeks","previewFileId":"f3a234d4-5b8c-44db-a2f7-82928e8f55e6","createdByUserId":"088c6549-bc22-4ae4-96a5-9f5ed47580d6"}'

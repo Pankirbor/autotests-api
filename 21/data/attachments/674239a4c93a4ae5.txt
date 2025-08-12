@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE4OjQ5OjQyLjY2OTM4OCIsInVzZXJfaWQiOiJkYjY2ZTZiNy05NTg2LTQ5OWUtOWUzZC0zMTAzOWYwYWE3OGYifQ.NYD4Ps3ONbsjB4jXtbqM6bZzUoMtIYNiDxRFj_YTmbI' \
+ -H 'content-length: 514' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","minScore":15,"maxScore":86,"description":"Возмутиться при развитый вздрогнуть.","estimatedTime":"6 weeks","previewFileId":"d8657e08-fd1c-4623-a69d-bac2b380f684","createdByUserId":"f2eb4b2b-0fed-448d-a40f-de77ff6c7445"}'

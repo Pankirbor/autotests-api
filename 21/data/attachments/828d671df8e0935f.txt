@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE4OjQ5OjUzLjgxMjQ3NSIsInVzZXJfaWQiOiIzNjFjMTkyNS0yNzc3LTRlZTItYjJiZC0zZjVkN2E4OTI3NDIifQ.H6pvwTJWEiwsxXyIl1RUBv9LtlUswqsATVVrinrnWFQ' \
+ -H 'content-length: 533' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Совет советовать господь райком вряд сравнение кольцо развернуться.","minScore":9,"maxScore":53,"description":"Руководитель расстегнуть избегать бровь команда художественный космос расстройство. Потянуться заплакать роса да.","estimatedTime":"2 weeks","previewFileId":"60ae5d2c-8c5d-4aeb-8065-6e6160454166","createdByUserId":"361c1925-2777-4ee2-b2bd-3f5d7a892742"}'
