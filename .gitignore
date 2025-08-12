@@ -137,6 +137,7 @@ trash.py
 # allure
 allure-results
 allure-report
+allure-results
 
 # coverage
 coverage.html
