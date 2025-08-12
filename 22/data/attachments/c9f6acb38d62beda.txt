@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/15bc0080-7041-4632-8c3c-1455cffbef48' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIzOjA3LjA0ODY2OSIsInVzZXJfaWQiOiI1NmVlMWRhYi04ZGEwLTQ3YmEtYjAxMS0wNTJmYWNlN2Y3MjUifQ.PrnB1NWQMBm2QOemxzPubfRYVlcV9pMzfvWJ7EQkQHo' \
+ -H 'content-length: 205' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Выбирать крыса дремать металл.","courseId":"cb63575b-bcf3-4fc6-970d-7e9d74b42343","maxScore":87,"minScore":26,"orderIndex":52,"description":"","estimatedTime":"6 weeks"}'

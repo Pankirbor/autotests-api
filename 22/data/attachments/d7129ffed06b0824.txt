@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/5694e46f-3f31-442a-9e94-d44aaffa6d08' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIzOjAwLjgyNzU0MSIsInVzZXJfaWQiOiIyZjIwOTVmYy1hNGY1LTRiODgtOTcyNy1jZTgyNjM2OTNlM2IifQ.2tjNNZ0cVbkJzEUaX3ywLJIGi27bwCWyGjnzHIrAhOc' \
+ -H 'content-length: 504' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Низкий командование пробовать жить.","courseId":"4b5d75fb-1ff8-4fc2-8510-7fe83fa09100","maxScore":99,"minScore":12,"orderIndex":74,"description":"Бак развитый левый. Применяться при голубчик забирать лететь. Кузнец построить лапа лететь тяжелый.\nМелочь угодный зима. Мера прежде научить самостоятельно.","estimatedTime":"9 weeks"}'

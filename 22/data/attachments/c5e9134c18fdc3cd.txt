@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/courses/60c2f37f-2f44-40c6-b9a4-0b3d3d494124' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIyOjUxLjg1NzQxMiIsInVzZXJfaWQiOiI4Y2MwY2Y2ZC04ZjQ4LTRkNDQtYmEzNi1jODk0ZThkYzY3MjcifQ.LL_Fo8chWwjj5bpRQaHAOJd-71hZmy-KeoVz2VEFfFA' \
+ -H 'content-length: 584' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","minScore":10,"maxScore":63,"description":"Прежде сравнение мотоцикл успокоиться. Коммунизм лететь заявление выражаться плод упор. Ярко другой означать применяться горький ярко.","estimatedTime":"9 weeks"}'

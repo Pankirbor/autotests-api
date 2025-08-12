@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIzOjAwLjgyNzU0MSIsInVzZXJfaWQiOiIyZjIwOTVmYy1hNGY1LTRiODgtOTcyNy1jZTgyNjM2OTNlM2IifQ.2tjNNZ0cVbkJzEUaX3ywLJIGi27bwCWyGjnzHIrAhOc' \
+ -H 'content-length: 550' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Основание развернуться намерение наткнуться хлеб намерение.","minScore":25,"maxScore":79,"description":"Валюта мучительно слишком провал страсть. Кожа засунуть невыносимый грустный парень советовать покинуть правый. Да низкий рай иной.","estimatedTime":"3 weeks","previewFileId":"d6f2bbe5-6b19-461f-92cd-2408cc9c359e","createdByUserId":"2f2095fc-a4f5-4b88-9727-ce8263693e3b"}'

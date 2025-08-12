@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIyOjU5LjkxMjQwMiIsInVzZXJfaWQiOiI5YzNhNmFlZC03OGY4LTRhNDAtOTJhNC1kZTFjY2YyYTYyNWEifQ.w6--fV9J-L-lWKbCudmQczwxfMM-6ReM9fIZb5DvSn0' \
+ -H 'content-length: 600' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Лапа при триста помолчать выгнать крыса.","minScore":20,"maxScore":68,"description":"Тысяча сынок тревога солнце коричневый адвокат. Пасть уронить оборот ход вздрогнуть.\nСутки факультет миф близко тесно слишком человечек. Дрогнуть подземный сохранять заработать.","estimatedTime":"10 weeks","previewFileId":"667ef611-4871-49a9-89e8-d50300e75462","createdByUserId":"9c3a6aed-78f8-4a40-92a4-de1ccf2a625a"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIzOjAzLjIwMDMyNCIsInVzZXJfaWQiOiJhODcyMDBiMC1iZmU5LTRmZWQtOTA2NS03NmZmMmEzMzcwOGYifQ.2NiVObtrVVurqoxA0m8LtW6aS1jYOWF-DIm_UOaFfJc' \
+ -H 'content-length: 510' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Печатать сверкать спичка ставить коммунизм мрачно.","courseId":"6e46bffc-759b-4971-a818-8fb07a80f6ae","maxScore":94,"minScore":4,"orderIndex":100,"description":"Вчера отметить тюрьма пробовать сынок.\nПересечь выдержать головной блин жидкий спорт. Парень запретить человечек некоторый народ полностью миг.","estimatedTime":"6 weeks"}'

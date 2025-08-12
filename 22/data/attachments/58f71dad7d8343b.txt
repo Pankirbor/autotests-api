@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIzOjAyLjAxNzAyMiIsInVzZXJfaWQiOiJiOGI5ZjQxOS00ZWM3LTQ0MjYtOTc1NC1mODNhZWViYjAyZjYifQ.afYc6B3C09q7OAIE9rr9V8dV4_i9a8TuFHYDibj24Gw' \
+ -H 'content-length: 475' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Мучительно редактор порт решение выгнать человечек да юный.","minScore":27,"maxScore":91,"description":"Освободить нож трясти построить через. Господь уронить расстегнуть уточнить житель витрина.","estimatedTime":"1 weeks","previewFileId":"1fc8a88f-2ebd-4623-bce7-c06ea3d71e16","createdByUserId":"b8b9f419-4ec7-4426-9754-f83aeebb02f6"}'

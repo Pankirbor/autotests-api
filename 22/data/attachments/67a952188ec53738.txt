@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIyOjQ3LjczMjc2OSIsInVzZXJfaWQiOiIyYTQzMWI1MS04YTRjLTQxMTgtOTdkOS1jMTgzYTU1YjIwYWEifQ.xU-JiqQ2dolET94IlNrxP836zuHUKW6mZc0dreVLEkw' \
+ -H 'content-length: 553' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Песенка коммунизм четко.","minScore":11,"maxScore":100,"description":"Дорогой рота провал устройство. Затянуться висеть девка.\nСмелый прощение носок механический около естественный. Порог отражение трубка пересечь иной умирать факультет.","estimatedTime":"5 weeks","previewFileId":"ba1dc8e0-651a-4776-bdae-39c3dffda8f1","createdByUserId":"2a431b51-8a4c-4118-97d9-c183a55b20aa"}'

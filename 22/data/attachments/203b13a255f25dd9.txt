@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIyOjQ2LjU3NDE2NyIsInVzZXJfaWQiOiJlMGFiNGVkZC04YjE2LTQyNjEtOWI3OS0xNzIyZWU2ZGZkZjgifQ.cMTjdRbxZi0VQ4rjDRj-EOTiu9W_m8mDKXeXxSqMybA' \
+ -H 'content-length: 401' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Инвалид вообще плясать инфекция.","minScore":10,"maxScore":74,"description":"Тута пересечь поговорить выдержать инструкция эпоха. Цепочка слишком сопровождаться процесс иной.","estimatedTime":"2 weeks","previewFileId":"","createdByUserId":"4216f066-9cab-42b7-8729-c173ea94e55a"}'

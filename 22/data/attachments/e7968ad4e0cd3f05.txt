@@ -1,0 +1,8 @@
+curl -X 'GET' \
+ 'http://localhost:8001/api/v1/courses/incorrect-id' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIyOjU3LjMyNDAxOSIsInVzZXJfaWQiOiJhYWZjYjM2OS01ODQ0LTQ0NDUtOTE3YS0zY2M5OGIzMzljOTkifQ.N1pQ9va-I3XiYoiWQEfNVgnSy1kOmMY2b3EhJU86GcY'

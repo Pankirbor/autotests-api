@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/7c20ce7c-cca0-49aa-a980-aed58239e0e9' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIzOjA5LjQ0NDYxOSIsInVzZXJfaWQiOiJhMzIwYjFmZi1hOGFmLTRlZmMtYWI4ZC1mZjVmNWJkNDdhYTIifQ.GUpuBXFI3F97oII11zZu7TG4dbZa7CK_ForRhYPNj50' \
+ -H 'content-length: 613' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","courseId":"a9ef7a56-033a-47e2-b9f4-c5731569410c","maxScore":81,"minScore":7,"orderIndex":23,"description":"Дрогнуть горький дошлый тревога мальчишка привлекать медицина наткнуться. Выбирать сходить эффект нажать покидать.","estimatedTime":"1 weeks"}'

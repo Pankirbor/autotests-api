@@ -1,0 +1,39 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: GET на http://localhost:8001/api/v1/exercises?courseId=6e46bffc-759b-4971-a818-8fb07a80f6ae
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises?courseId=6e46bffc-759b-4971-a818-8fb07a80f6ae
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 200
+INFO     EXERCISES_ASSERTIONS:exercises.py:163 Проверяем ответ сервера на запрос списка упражнений
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому 6e46bffc-759b-4971-a818-8fb07a80f6ae
+INFO     BASE_ASSERTIONS:base.py:82 Проверяем, что длина exercises соответствует ожидаемой [ExerciseSchema(id='5b937ec3-8388-477f-8cb6-db3f1e3355ea', title='Холодно строительство похороны развитый.', course_id='6e46bffc-759b-4971-a818-8fb07a80f6ae', max_score=53, min_score=24, order_index=83, description='Печатать витрина разнообразный кузнец совет руководитель. Военный дыхание реклама встать. Адвокат бегать рассуждение спешить горький боец.\nПорядок жить издали пробовать дьявол освободить.', estimated_time='4 weeks'), ExerciseSchema(id='5fd43851-ffcc-44d9-b987-38f11b67f8e8', title='Печатать сверкать спичка ставить коммунизм мрачно.', course_id='6e46bffc-759b-4971-a818-8fb07a80f6ae', max_score=94, min_score=4, order_index=100, description='Вчера отметить тюрьма пробовать сынок.\nПересечь выдержать головной блин жидкий спорт. Парень запретить человечек некоторый народ полностью миг.', estimated_time='6 weeks')]
+INFO     EXERCISES_ASSERTIONS:exercises.py:47 Проверяем соответсвие данных упражнения
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 5b937ec3-8388-477f-8cb6-db3f1e3355ea
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Холодно строительство похороны развитый.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому 6e46bffc-759b-4971-a818-8fb07a80f6ae
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 53
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 24
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение order_index соответствует ожидаемому 83
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Печатать витрина разнообразный кузнец совет руководитель. Военный дыхание реклама встать. Адвокат бегать рассуждение спешить горький боец.
+Порядок жить издали пробовать дьявол освободить.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 4 weeks
+INFO     EXERCISES_ASSERTIONS:exercises.py:47 Проверяем соответсвие данных упражнения
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 5fd43851-ffcc-44d9-b987-38f11b67f8e8
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Печатать сверкать спичка ставить коммунизм мрачно.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому 6e46bffc-759b-4971-a818-8fb07a80f6ae
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 94
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 4
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение order_index соответствует ожидаемому 100
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Вчера отметить тюрьма пробовать сынок.
+Пересечь выдержать головной блин жидкий спорт. Парень запретить человечек некоторый народ полностью миг.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 6 weeks
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

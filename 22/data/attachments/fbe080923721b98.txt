@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIyOjU5LjYzODMwNiIsInVzZXJfaWQiOiIzZjZiN2MwNy0xOWZmLTQxMTQtYTNmZi0yMjQ0NGI4Yjc1ZDEifQ.aShlgeCYwJ0HoWJ96raesUu5KwROzBeLnJE6q31QD0o' \
+ -H 'content-length: 591' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Заработать бровь кузнец манера ботинок налево естественный войти.","minScore":15,"maxScore":56,"description":"Низкий способ издали бегать демократия. Чувство дьявол пропадать выкинуть развернуться господь встать нажать. Командир совещание палата эффект нож.","estimatedTime":"7 weeks","previewFileId":"cc9d9c97-e3d6-4c8e-bd47-fbb11d4a56bd","createdByUserId":"3f6b7c07-19ff-4114-a3ff-22444b8b75d1"}'

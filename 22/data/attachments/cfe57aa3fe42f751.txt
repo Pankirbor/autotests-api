@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIzOjA4LjgxMjIwMiIsInVzZXJfaWQiOiIxY2QwMTZmOS04ZGRhLTQwZTgtYjBiMS0xZDJjMGUzMzAzYjcifQ.hSOR9XD-Bdn5gfZuHhMGz8Deq14GDYwYlrJkFp27PEw' \
+ -H 'content-length: 555' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Ленинград наслаждение бетонный ставить.","minScore":26,"maxScore":94,"description":"Теория мотоцикл доставать господь бак четко соответствие. Миллиард новый правление уничтожение расстегнуть заложить.\nПересечь пятеро вперед беспомощный.","estimatedTime":"4 weeks","previewFileId":"56370f03-b789-4bc4-ac05-6573719ecab8","createdByUserId":"1cd016f9-8dda-40e8-b0b1-1d2c0e3303b7"}'

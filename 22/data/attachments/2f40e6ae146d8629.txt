@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIzOjA1Ljg4MDM2MCIsInVzZXJfaWQiOiJhN2ZlYzI0NC05MTRhLTQzZjItYmJiYy0wNDUxODcwOGU3MjUifQ.S0-lKkrHvgVSiUXq8mwnk64vI9aFuy-5PqT4uE7nHmc' \
+ -H 'content-length: 486' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Освободить заложить собеседник понятный.","minScore":5,"maxScore":70,"description":"Степь нервно еврейский ребятишки. Юный лететь головной интернет материя. Наступать угроза правильный дорогой нажать.","estimatedTime":"5 weeks","previewFileId":"0c0fe9b6-2963-40fa-b776-c7c7bd74847a","createdByUserId":"a7fec244-914a-43f2-bbbc-04518708e725"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIyOjU4LjQ2MjY1MCIsInVzZXJfaWQiOiI0OGMzYTU5OC02MzZhLTQ1YWUtOGI3NS02ZmU2OGM0NTliOGYifQ.-G116MxS9bAJc9CGtRPXYuT-LmO2S2E2BdOAY0Dhjpc' \
+ -H 'content-length: 611' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Плод приятель карандаш вскакивать тута.","minScore":30,"maxScore":98,"description":"Хлеб эпоха заведение бегать монета голубчик мягкий. Отметить мелочь единый какой цель горький спешить темнеть.\nЦепочка оставить оборот иной пасть. Инструкция сынок пасть июнь запустить.","estimatedTime":"5 weeks","previewFileId":"4b4522cf-8207-4690-bf43-df9dea04ae4f","createdByUserId":"48c3a598-636a-45ae-8b75-6fe68c459b8f"}'

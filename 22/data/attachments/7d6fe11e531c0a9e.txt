@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIyOjUzLjg4Nzc5NSIsInVzZXJfaWQiOiJhMjYxMTc1ZS02YmRhLTQzYzAtYTFmZi1lMDg5OTAyZjNkYjAifQ.RogtorQV3zWgnlmO8fZ6c8mVGymTn5upP890HfAIgCU' \
+ -H 'content-length: 446' \
+ -H 'content-type: application/json' \
+ -d '{"title":"","minScore":13,"maxScore":89,"description":"Тысяча уронить экзамен. Полностью монета роскошный пересечь число развернуться промолчать низкий. Развернуться виднеться товар прежде.","estimatedTime":"3 weeks","previewFileId":"36b6eb97-c9d8-4102-93a3-cd6e7950653e","createdByUserId":"c27f8bf8-505b-4d1e-97c3-0875a98e39e2"}'

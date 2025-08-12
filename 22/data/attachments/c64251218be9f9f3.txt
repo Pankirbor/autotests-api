@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIyOjUxLjI3MjI0OCIsInVzZXJfaWQiOiJlNDE1YzlhMC05OGQxLTQzMWYtOWNkMC0wN2JhMGYwNDBhY2IifQ.LmQVi_M0o6MOJax2McrNpn8Jm98BtHEFpXERYPDSxew' \
+ -H 'content-length: 565' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Вытаскивать сопровождаться тысяча заложить июнь горький.","minScore":17,"maxScore":98,"description":"Миф оставить отметить грудь болото сверкающий. Вперед трясти левый способ засунуть район процесс. Разводить художественный хлеб покидать июнь.","estimatedTime":"6 weeks","previewFileId":"276b8035-9643-4737-a09b-0c3e02298d7f","createdByUserId":"e415c9a0-98d1-431f-9cd0-07ba0f040acb"}'

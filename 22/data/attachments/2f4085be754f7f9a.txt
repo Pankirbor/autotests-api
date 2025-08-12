@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIyOjUwLjY4NDgwMiIsInVzZXJfaWQiOiIzMjExZDZlZi0xZTE0LTQ2ZjAtOGFjMC0zMmVlMjg1NTNiYTcifQ.gpdgm9cn5A-VpYLs-EfIcztWcf0C4cL0TytQPj0eVXc' \
+ -H 'content-length: 767' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","minScore":23,"maxScore":56,"description":"Мелькнуть чувство освобождение мелькнуть заведение господь висеть вздрогнуть. Прежний конференция нож изучить ученый зато. Выгнать ставить проход вперед зарплата премьера.","estimatedTime":"10 weeks","previewFileId":"9f390036-3fd9-4050-a31a-94bb07fc6d89","createdByUserId":"36238ac8-b385-4944-8657-2315799653ae"}'

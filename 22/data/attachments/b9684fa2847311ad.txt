@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/15bedd24-74f9-4bb7-9036-626f0e596427' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIzOjEwLjAyNDczNCIsInVzZXJfaWQiOiI0MzQxNDYyOS00MDBmLTQ4NzktYTYzMi00ZDYzNDc4MzVmNzkifQ.EieoDgYNaHdeKnLX-2_2_Fk9sB56BRfp4ieM9SbBtU8' \
+ -H 'content-length: 332' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Оборот чем применяться цепочка войти следовательно.","courseId":"703587c2-d94e-4497-b174-8739213cbfdf","maxScore":0,"minScore":-10,"orderIndex":19,"description":"Хотеть плавно уточнить помимо войти легко кпсс.","estimatedTime":"3 weeks"}'

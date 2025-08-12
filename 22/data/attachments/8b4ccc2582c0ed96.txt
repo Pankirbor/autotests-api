@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIzOjAzLjIwMDMyNCIsInVzZXJfaWQiOiJhODcyMDBiMC1iZmU5LTRmZWQtOTA2NS03NmZmMmEzMzcwOGYifQ.2NiVObtrVVurqoxA0m8LtW6aS1jYOWF-DIm_UOaFfJc' \
+ -H 'content-length: 575' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Холодно строительство похороны развитый.","courseId":"6e46bffc-759b-4971-a818-8fb07a80f6ae","maxScore":53,"minScore":24,"orderIndex":83,"description":"Печатать витрина разнообразный кузнец совет руководитель. Военный дыхание реклама встать. Адвокат бегать рассуждение спешить горький боец.\nПорядок жить издали пробовать дьявол освободить.","estimatedTime":"4 weeks"}'

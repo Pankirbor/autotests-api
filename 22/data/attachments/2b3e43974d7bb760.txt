@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIzOjA4LjIxNTE2NSIsInVzZXJfaWQiOiI1OWU4ODVmYy1lNzc2LTQwZDMtYjYyYy1lNmUxZmQ5NmRiODYifQ.WKjFr0JQOBwkdjoOrt7CoNjja7q75kqA800kswYVjdw' \
+ -H 'content-length: 569' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Картинка господь космос коричневый обида запеть поздравлять нажать.","minScore":17,"maxScore":64,"description":"Монета пастух число смелый головка. Нервно иной народ житель секунда.\nШкольный тусклый настать. Неправда передо житель сустав секунда.","estimatedTime":"3 weeks","previewFileId":"cdc111c2-6e80-4c31-bf24-f86a40ba64e4","createdByUserId":"59e885fc-e776-40d3-b62c-e6e1fd96db86"}'

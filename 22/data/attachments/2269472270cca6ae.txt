@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIzOjAzLjQ3NDU0NiIsInVzZXJfaWQiOiJlNWNlZGY1Yy1hMjFlLTQ5NTAtOTM3OC03NWZiZjI0NjViZGQifQ.FJ8fyFC5LuSp3KPvkOPxsh9p9em-TU-ikZz2GC6SR-o' \
+ -H 'content-length: 688' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Термин торопливый функция смертельный изучить отражение карман сынок.","minScore":28,"maxScore":93,"description":"Издали ныне пробовать вытаскивать. Функция жестокий сохранять промолчать. Поколение помимо основание важный разуметься число. Нервно пересечь поймать услать.\nИзучить доставать перебивать прежде.","estimatedTime":"8 weeks","previewFileId":"10ded451-80a2-4a51-b241-558164c87b63","createdByUserId":"e5cedf5c-a21e-4950-9378-75fbf2465bdd"}'

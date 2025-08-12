@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIzOjA5LjQ0NDYxOSIsInVzZXJfaWQiOiJhMzIwYjFmZi1hOGFmLTRlZmMtYWI4ZC1mZjVmNWJkNDdhYTIifQ.GUpuBXFI3F97oII11zZu7TG4dbZa7CK_ForRhYPNj50' \
+ -H 'content-length: 507' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Находить приятель еврейский точно бригада пятеро покидать находить.","minScore":9,"maxScore":74,"description":"Затянуться эпоха правильный степь тюрьма мальчишка миф вскакивать. Оборот посвятить привлекать пища.","estimatedTime":"8 weeks","previewFileId":"f43e5b07-0f36-4d8d-a9be-40b81d81a6e1","createdByUserId":"a320b1ff-a8af-4efc-ab8d-ff5f5bd47aa2"}'

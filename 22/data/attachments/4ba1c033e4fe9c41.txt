@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIyOjU4LjczNDA2NiIsInVzZXJfaWQiOiI1MjllZmJiMC04ZWUzLTQ1ZTUtYTZmYS1hZTY3OWEzZWU4YmMifQ.KiBkWhf2CuwZh-ZMdJrPh8YC-CGaMAZM1PABHgYvU3E' \
+ -H 'content-length: 534' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Монета пища уничтожение выраженный механический.","minScore":11,"maxScore":50,"description":"Лиловый художественный изба слать дошлый рота. Головка даль хотеть витрина блин нож песня премьера. Способ смеяться мелькнуть прежний.","estimatedTime":"1 weeks","previewFileId":"e309fa44-ad91-4473-a858-c2e101e609c7","createdByUserId":"529efbb0-8ee3-45e5-a6fa-ae679a3ee8bc"}'

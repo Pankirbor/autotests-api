@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/3d58ad3d-abe4-485c-a7ff-41ae17013dec' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIzOjA4LjgxMjIwMiIsInVzZXJfaWQiOiIxY2QwMTZmOS04ZGRhLTQwZTgtYjBiMS0xZDJjMGUzMzAzYjcifQ.hSOR9XD-Bdn5gfZuHhMGz8Deq14GDYwYlrJkFp27PEw' \
+ -H 'content-length: 526' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Издали возмутиться научить актриса приходить функция изба.","courseId":"94143de9-c854-4bd3-b1a9-d606382c7bd6","maxScore":10,"minScore":100,"orderIndex":16,"description":"Ремень выбирать хозяйка место достоинство научить. Хозяйка каюта постоянный неожиданно. Сбросить куча растеряться болото налево число ложиться.","estimatedTime":"7 weeks"}'

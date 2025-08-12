@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIzOjA2LjQ2NzcwNyIsInVzZXJfaWQiOiJkMmE2Mjg2Yy1jMmMwLTQzY2YtOTFkYi05NzBjMWU4NWY3NjQifQ.acr4NQW4isG1w_p0EYzZnz1AH64DYa-Vjf56j0fNikM' \
+ -H 'content-length: 641' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Пересечь тута выражаться инвалид бетонный даль функция.","minScore":4,"maxScore":80,"description":"Дурацкий мотоцикл дальний заработать порода присесть наслаждение. Болото роса пятеро развернуться легко войти.\nГорький порода вскинуть мимо. Тута число естественный вывести собеседник.","estimatedTime":"3 weeks","previewFileId":"2521e1ae-6832-4dee-bf52-d4992c9fae95","createdByUserId":"d2a6286c-c2c0-43cf-91db-970c1e85f764"}'

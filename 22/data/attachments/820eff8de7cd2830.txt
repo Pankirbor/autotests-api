@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/3e4839af-9253-4e0a-9c2e-ec317c70698e' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIzOjA4LjIxNTE2NSIsInVzZXJfaWQiOiI1OWU4ODVmYy1lNzc2LTQwZDMtYjYyYy1lNmUxZmQ5NmRiODYifQ.WKjFr0JQOBwkdjoOrt7CoNjja7q75kqA800kswYVjdw' \
+ -H 'content-length: 396' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Художественный находить изредка иной обида крыса.","courseId":"0d3d0870-5676-40f1-9d78-f5c8cc1f067d","maxScore":67,"minScore":20,"orderIndex":3,"description":"Зеленый палец через потрясти рота прелесть поймать. Функция о ныне что юный плод функция.","estimatedTime":""}'

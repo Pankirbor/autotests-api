@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjIyOjQ4Ljk0MjM5OCIsInVzZXJfaWQiOiIxMDg1ZWI4My04Y2Y3LTQ5ZjMtYjA0ZC1mMGJiYzdiOWQ1YmMifQ.9W9yVZ2mqyR-mHzHGNQ3ZsXT9gs7AehF7LeCVliuI9M' \
+ -H 'content-length: 608' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Прошептать пропаганда монета налево мусор.","minScore":4,"maxScore":75,"description":"Команда трясти палец хлеб оборот. Остановить нож сутки цель.\nВыдержать ход кидать наткнуться. Полоска свежий материя приятель висеть. Настать район уронить витрина вариант выкинуть.","estimatedTime":"6 weeks","previewFileId":"84778c16-7f59-4b27-a589-2fcac837a778","createdByUserId":"1085eb83-8cf7-49f3-b04d-f0bbc7b9d5bc"}'
