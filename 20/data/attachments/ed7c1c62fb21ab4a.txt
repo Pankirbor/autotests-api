@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjM4LjI0OTkwMCIsInVzZXJfaWQiOiJmZTFkNWM2MC1hNjY3LTQyYmMtOGIwNC03MGFjZjk1ODk5Y2MifQ.HtDnmPAa7Dldb_-JQBMnwM8jDUB-PIM7zduIiq5WKho' \
+ -H 'content-length: 458' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Кольцо инвалид манера неправда поймать совещание подробность.","minScore":20,"maxScore":85,"description":"Ответить выкинуть указанный ответить инфекция. Выражение порт деньги подземный.","estimatedTime":"1 weeks","previewFileId":"03e9c774-6dc0-4762-9898-2bcb1633502e","createdByUserId":"fe1d5c60-a667-42bc-8b04-70acf95899cc"}'

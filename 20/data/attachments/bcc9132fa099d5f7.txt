@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/175820de-17e5-47c6-bc43-03555425a3f7' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjM1LjU2Mzc4NiIsInVzZXJfaWQiOiIwOWM2ZjkxNy0xNWJiLTQ5NzQtODY4MC1jZTM2NTI3ZjM1NWUifQ.1tClnv1dKx0z5AkEUyrtgkOQMpwmqiQG0olZwco5xL8' \
+ -H 'content-length: 473' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Выразить дыхание выраженный мрачно разводить спорт.","courseId":"084c09b7-7df6-4b89-be63-a983542fa0ee","maxScore":96,"minScore":4,"orderIndex":88,"description":"Освобождение правление плясать монета оставить тесно смертельный. Передо изучить основание.\nЭкзамен угроза функция трубка.","estimatedTime":"5 weeks"}'

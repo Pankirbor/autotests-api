@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjM4LjI0OTkwMCIsInVzZXJfaWQiOiJmZTFkNWM2MC1hNjY3LTQyYmMtOGIwNC03MGFjZjk1ODk5Y2MifQ.HtDnmPAa7Dldb_-JQBMnwM8jDUB-PIM7zduIiq5WKho' \
+ -H 'content-length: 592' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","courseId":"85dd8f37-e839-42b8-b0d3-237db268fdda","maxScore":93,"minScore":30,"orderIndex":37,"description":"Манера развитый порог роскошный секунда вздрогнуть. Иной июнь засунуть головной мгновение единый новый.","estimatedTime":"2 weeks"}'

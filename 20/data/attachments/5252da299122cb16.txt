@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/1d4c0a03-586d-4363-a9ef-e30f264b64dd' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjQxLjg3NDU2OCIsInVzZXJfaWQiOiI2ZDk1YjQ2Yi00YzM5LTQzZDAtOWVjOS0wNmI5N2ZmYjYxMmUifQ.q3dGOuLMcQd_-GB_IpgV8_glSfXH3bt1hY6RdHcxRaA' \
+ -H 'content-length: 267' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Возмутиться плод головной исследование сбросить господь лететь.","courseId":"f41a31cc-26eb-41c3-904a-1dc23fdf81f6","maxScore":57,"minScore":2,"orderIndex":18,"description":"","estimatedTime":"3 weeks"}'

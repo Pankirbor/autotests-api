@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjM1LjgzNzY4MiIsInVzZXJfaWQiOiIzN2Y2ZDY4Ni05ODBiLTRiNDUtYmEyOC1kYzY3NDcxYWUxNmMifQ.EoLUmbAFEhvv2b0JyNs5fqpOxntICnYz9KIotsKb_Os' \
+ -H 'content-length: 463' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Куча запеть передо скользить.","minScore":24,"maxScore":57,"description":"Серьезный самостоятельно выгнать приятель печатать. Монета более научить выраженный бригада.\nЖить роскошный бочок.","estimatedTime":"8 weeks","previewFileId":"321fbc72-4287-4382-a914-1f3a737bea05","createdByUserId":"37f6d686-980b-4b45-ba28-dc67471ae16c"}'

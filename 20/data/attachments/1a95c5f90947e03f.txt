@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjQxLjI5MTg0NyIsInVzZXJfaWQiOiJjZmQ5NTUyNy1jYWIzLTQxMDMtOTE0NS1mZDI2MWE5NmQyMTMifQ.5xIauEyMv8U_bYxw8JUjqHxSV0vv6kuJzP4Hx5-ZvvA' \
+ -H 'content-length: 491' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Ответить процесс конструкция цвет ответить.","minScore":17,"maxScore":50,"description":"Грустный темнеть настать покидать идея ночь. Манера князь вряд князь порядок солнце. Очутиться мгновение недостаток.","estimatedTime":"6 weeks","previewFileId":"66127314-9f8f-410e-87d0-bf9b0378502e","createdByUserId":"cfd95527-cab3-4103-9145-fd261a96d213"}'

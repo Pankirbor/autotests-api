@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjI3LjA5NjgyMiIsInVzZXJfaWQiOiJkYmFkNGEzZC05NWYxLTRhMmMtOGQ3NC0yYzdlOTg3MGM5NDYifQ.Qm1D0fC1-6UzOK8A5sxBsBuPmpYBVbAfaus5maX8S2k' \
+ -H 'content-length: 515' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Парень спичка труп покидать доставать художественный командование.","minScore":17,"maxScore":99,"description":"Каюта встать каюта издали космос. Помолчать космос полностью. Совет соответствие дошлый цвет аж прелесть.","estimatedTime":"10 weeks","previewFileId":"269450d7-9ecb-4e6c-9af6-4a0cf2818861","createdByUserId":"dbad4a3d-95f1-4a2c-8d74-2c7e9870c946"}'

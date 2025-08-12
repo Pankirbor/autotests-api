@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjIxLjA4MTgzMyIsInVzZXJfaWQiOiJjYWEzY2JkZC04MDA3LTQxZGYtOWU5Zi1mN2QxMGQ1YjdmMmQifQ.tBWk0ujK3Xp7FdUR2MliULlRb2kCBlf01HQ6HY3NRZc' \
+ -H 'content-length: 411' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Дыхание число зачем костер.","minScore":20,"maxScore":50,"description":"Даль мальчишка выдержать счастье угроза. Применяться ход построить. Рай встать горький роса тяжелый добиться.","estimatedTime":"6 weeks","previewFileId":"","createdByUserId":"b91f477a-1ff0-439c-b379-4410c7e3b4db"}'

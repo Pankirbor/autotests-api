@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjM1LjgzNzY4MiIsInVzZXJfaWQiOiIzN2Y2ZDY4Ni05ODBiLTRiNDUtYmEyOC1kYzY3NDcxYWUxNmMifQ.EoLUmbAFEhvv2b0JyNs5fqpOxntICnYz9KIotsKb_Os' \
+ -H 'content-length: 408' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Нож висеть промолчать магазин господь.","courseId":"","maxScore":95,"minScore":10,"orderIndex":34,"description":"Предоставить танцевать дружно неудобно. Печатать изба заложить смертельный. Палата умирать терапия изба неправда проход.","estimatedTime":"3 weeks"}'

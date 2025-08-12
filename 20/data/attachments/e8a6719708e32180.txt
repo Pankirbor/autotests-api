@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjI1Ljg4MTM1MyIsInVzZXJfaWQiOiJjZTdhOWM2MC1mN2ZhLTQ4Y2MtYjFmMC00Zjc0NDE4NjM4NWUifQ.MjbIVSL0uRJcOny68vmZ_QxkQ-Eu6nDwvMGt4U0ykno' \
+ -H 'content-length: 554' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Актриса оборот изменение куча прошептать потом вздрогнуть.","minScore":21,"maxScore":62,"description":"Решетка трясти выражение заплакать задрать помимо серьезный. Очередной песня крыса спичка болото академик. Неудобно выдержать светило.","estimatedTime":"3 weeks","previewFileId":"f3900fde-6dce-43e4-94e6-f79f0ff78b35","createdByUserId":"ce7a9c60-f7fa-48cc-b1f0-4f744186385e"}'

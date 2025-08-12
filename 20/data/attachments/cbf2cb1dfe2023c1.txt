@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/4fbf57ec-660b-43e8-9b1b-6f308cb1f8cb' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjQ0LjMwNzg1MyIsInVzZXJfaWQiOiI0ZmQ4OTQ2NS0xNmY4LTRmZTktYTcyMC1lZWIzNTA1MTIyMjcifQ.CQfVUlmQw8TuQaxKea0EOHwE4SX1YXgaAo3vjWjDxik' \
+ -H 'content-length: 581' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","courseId":"db024582-2efe-45f4-a387-a1bf93f346d4","maxScore":76,"minScore":3,"orderIndex":86,"description":"Головной юный рота светило покинуть. Пропасть девка гулять космос плавно недостаток ставить место.","estimatedTime":"2 weeks"}'

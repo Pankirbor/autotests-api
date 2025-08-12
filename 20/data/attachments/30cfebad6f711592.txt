@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjQzLjY3MzU2MCIsInVzZXJfaWQiOiIxMjFkYmU0OS1mMDY0LTQwMWUtYmQwMC1iZTU1N2YyMTFhZDkifQ.nIscfFn1j5QkNNlttACv_u1lCgyRItdSW1eRpM_BLmU' \
+ -H 'content-length: 408' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Легко трясти господь падать карман даль порт.","minScore":27,"maxScore":73,"description":"Палец вряд нервно.\nЧетко мера изображать. Адвокат пересечь перебивать.","estimatedTime":"1 weeks","previewFileId":"909fc308-9a3e-4cda-a2a5-ffcee33f6545","createdByUserId":"121dbe49-f064-401e-bd00-be557f211ad9"}'

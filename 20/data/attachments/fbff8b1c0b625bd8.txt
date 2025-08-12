@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/courses/f9c0c7d1-6f7e-4e0f-bb32-6cdffd45a364' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjI2LjQ2NTYyOSIsInVzZXJfaWQiOiJiMTc1MjQxMC02OTgwLTQyMjgtYjc0Yy1kMDY0ZDUzM2VhYTUifQ.UrcKG5yNVyCB183epluPiobO14uklb70WNGtCLJpr7g' \
+ -H 'content-length: 570' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","minScore":15,"maxScore":72,"description":"Космос падаль что волк выгнать тревога. Покинуть секунда покинуть четыре фонарик точно четко. Блин академик функция банда князь.","estimatedTime":"4 weeks"}'

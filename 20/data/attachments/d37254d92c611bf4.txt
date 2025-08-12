@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/users/d126bd55-3a0a-42ca-b663-e16ee0d732a8' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjU5LjIyMTgxMSIsInVzZXJfaWQiOiJkMTI2YmQ1NS0zYTBhLTQyY2EtYjY2My1lMTZlZTBkNzMyYTgifQ.M8qQRYvHCevMkFHfghxxPLtVcawlC3VlD4G78q9l-uo' \
+ -H 'content-length: 346' \
+ -H 'content-type: application/json' \
+ -d '{"email":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","lastName":"Соболев","firstName":"Назар","middleName":"Гаврила"}'

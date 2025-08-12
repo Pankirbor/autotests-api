@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjE5LjY3MDc5NiIsInVzZXJfaWQiOiIzNzE1MTUzOS05OTNlLTQ1N2UtYTc5Ni1kODU4NWZiNjAzMDQifQ.IvcdR7_BgNxVLMEOz1lEdFAsNG8djGLKPZ28Tn86rfg' \
+ -H 'content-length: 321' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Выбирать правление пропаганда применяться анализ господь помолчать.","minScore":6,"maxScore":70,"description":"","estimatedTime":"5 weeks","previewFileId":"122532df-fbcb-47fd-bd5a-70cb3501ef2d","createdByUserId":"99458632-18b2-443f-8e02-46ca4fdb71d1"}'

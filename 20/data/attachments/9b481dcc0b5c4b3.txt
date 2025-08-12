@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/19e6840b-2cd3-4197-bbc7-887b07612fe0' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjQwLjY5ODYyNSIsInVzZXJfaWQiOiI0M2NjMTFkZS1jMDA4LTRjZDgtOWQxNy05Y2E0NTZiZmNhMzYifQ.74PMuoV85P_6mBhYVoULA-yz-vC-72oz_frgLww-hew' \
+ -H 'content-length: 403' \
+ -H 'content-type: application/json' \
+ -d '{"title":"","courseId":"27108682-84e4-4f2f-b701-3439f5fa40aa","maxScore":84,"minScore":24,"orderIndex":22,"description":"Дыхание изображать выражаться настать очутиться мрачно совещание. Прелесть свежий смертельный четыре. Настать песня обида дыхание более.","estimatedTime":"3 weeks"}'

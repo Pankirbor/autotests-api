@@ -1,0 +1,53 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: GET на http://localhost:8001/api/v1/courses?userId=b2d1563b-3330-41ef-9502-2a427e7764c5
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses?userId=b2d1563b-3330-41ef-9502-2a427e7764c5
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 200
+INFO     COURSES_ASSERTIONS:courses.py:125 Проверяем ответ сервера на запрос списка курсов
+INFO     BASE_ASSERTIONS:base.py:82 Проверяем, что длина courses соответствует ожидаемой [CourseSchema(title='Оборот полевой трясти рабочий ход.', max_score=75, min_score=21, description='Разнообразный кожа спорт упор услать. Наслаждение космос витрина неожиданный что полевой.', estimated_time='8 weeks', id='4aea7423-961a-4550-9655-2d559dd2c1f6', preview_file=FileSchema(id='e335cf32-7251-4b21-bcd7-caee2523092c', url=HttpUrl('http://localhost:8001/static/tests/483d6889-5ea2-40a6-8acc-1baae1da61f4.jpg'), filename='483d6889-5ea2-40a6-8acc-1baae1da61f4.jpg', directory='tests'), created_by_user=UserSchema(id='b2d1563b-3330-41ef-9502-2a427e7764c5', email='alekse_2006@example.net', last_name='Селиверстова', first_name='Эраст', middle_name='Бронислав')), CourseSchema(title='Изменение дружно постоянный казнь выгнать.', max_score=68, min_score=4, description='Военный товар лететь медицина непривычный. Головной спорт тусклый.\nЗаложить дьявол падать анализ мелькнуть отметить наткнуться. Изучить дружно цепочка передо крутой призыв.', estimated_time='3 weeks', id='c0b6fa1b-b950-463e-9f99-c0a707cd1d96', preview_file=FileSchema(id='e335cf32-7251-4b21-bcd7-caee2523092c', url=HttpUrl('http://localhost:8001/static/tests/483d6889-5ea2-40a6-8acc-1baae1da61f4.jpg'), filename='483d6889-5ea2-40a6-8acc-1baae1da61f4.jpg', directory='tests'), created_by_user=UserSchema(id='b2d1563b-3330-41ef-9502-2a427e7764c5', email='alekse_2006@example.net', last_name='Селиверстова', first_name='Эраст', middle_name='Бронислав'))]
+INFO     COURSES_ASSERTIONS:courses.py:43 Проверяем соответсвие данных курса
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 4aea7423-961a-4550-9655-2d559dd2c1f6
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Оборот полевой трясти рабочий ход.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Разнообразный кожа спорт упор услать. Наслаждение космос витрина неожиданный что полевой.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 8 weeks
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 75
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 21
+INFO     FILES_ASSERTIONS:files.py:82 Проверяем соответствие данных файла
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому e335cf32-7251-4b21-bcd7-caee2523092c
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение filename соответствует ожидаемому 483d6889-5ea2-40a6-8acc-1baae1da61f4.jpg
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение directory соответствует ожидаемому tests
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение url соответствует ожидаемому http://localhost:8001/static/tests/483d6889-5ea2-40a6-8acc-1baae1da61f4.jpg
+INFO     USERS_ASSERTIONS:users.py:84 Проверяем соответствие данных пользователя
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому b2d1563b-3330-41ef-9502-2a427e7764c5
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение email соответствует ожидаемому alekse_2006@example.net
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение first_name соответствует ожидаемому Эраст
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение last_name соответствует ожидаемому Селиверстова
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение middle_name соответствует ожидаемому Бронислав
+INFO     COURSES_ASSERTIONS:courses.py:43 Проверяем соответсвие данных курса
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому c0b6fa1b-b950-463e-9f99-c0a707cd1d96
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Изменение дружно постоянный казнь выгнать.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Военный товар лететь медицина непривычный. Головной спорт тусклый.
+Заложить дьявол падать анализ мелькнуть отметить наткнуться. Изучить дружно цепочка передо крутой призыв.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 3 weeks
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 68
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 4
+INFO     FILES_ASSERTIONS:files.py:82 Проверяем соответствие данных файла
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому e335cf32-7251-4b21-bcd7-caee2523092c
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение filename соответствует ожидаемому 483d6889-5ea2-40a6-8acc-1baae1da61f4.jpg
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение directory соответствует ожидаемому tests
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение url соответствует ожидаемому http://localhost:8001/static/tests/483d6889-5ea2-40a6-8acc-1baae1da61f4.jpg
+INFO     USERS_ASSERTIONS:users.py:84 Проверяем соответствие данных пользователя
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому b2d1563b-3330-41ef-9502-2a427e7764c5
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение email соответствует ожидаемому alekse_2006@example.net
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение first_name соответствует ожидаемому Эраст
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение last_name соответствует ожидаемому Селиверстова
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение middle_name соответствует ожидаемому Бронислав
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

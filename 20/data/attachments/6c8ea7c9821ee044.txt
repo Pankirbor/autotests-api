@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjIyLjkyMDU2NCIsInVzZXJfaWQiOiI5NjFkN2YzMS1mMDM4LTRiYjgtYWFiNy0xNzJkNGZhYTViYzgifQ.U3pqbiSrH2a-wNSe5kCAoIlnvAWeHE9y3-OPWGDbdVk' \
+ -H 'content-length: 591' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Неожиданный проход посидеть бригада неожиданно.","minScore":27,"maxScore":54,"description":"Головной перебивать домашний очутиться головка ярко четыре. Набор хлеб коллектив смеяться неожиданный совещание тюрьма. Устройство боец изредка волк картинка порог мимо адвокат.","estimatedTime":"10 weeks","previewFileId":"incorrect-id","createdByUserId":"f886b05d-0619-4fa0-9bbf-7bcda64e245c"}'

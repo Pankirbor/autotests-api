@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjQxLjI5MTg0NyIsInVzZXJfaWQiOiJjZmQ5NTUyNy1jYWIzLTQxMDMtOTE0NS1mZDI2MWE5NmQyMTMifQ.5xIauEyMv8U_bYxw8JUjqHxSV0vv6kuJzP4Hx5-ZvvA' \
+ -H 'content-length: 381' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Белье прелесть поезд.","courseId":"350ac2c0-10c1-4426-8f45-10e7a4b9aca7","maxScore":10,"minScore":100,"orderIndex":97,"description":"Опасность выбирать спалить порог. Тесно приятель металл прежний изучить. Предоставить военный голубчик.","estimatedTime":"2 weeks"}'

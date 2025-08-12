@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjMzLjE1NjUxNiIsInVzZXJfaWQiOiJiYjM4ODg2Ny1lZWQ5LTQ2ODEtODA2Yy04NTYxYjVhYWU5ZjIifQ.fPz5zX8Cv8TJLi0_7FA8k_4wngQsqdX_YStm-NEzuCY' \
+ -H 'content-length: 667' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Конференция еврейский манера болото помолчать спалить.","minScore":28,"maxScore":58,"description":"Поздравлять сынок кидать пламя заведение встать термин нажать. Солнце возможно монета бак.\nЛететь тяжелый плод единый торопливый отметить слать. Палка возбуждение радость смертельный сопровождаться.","estimatedTime":"9 weeks","previewFileId":"fb681efd-acc5-4135-9cdd-7b0ff9782ebb","createdByUserId":"bb388867-eed9-4681-806c-8561b5aae9f2"}'

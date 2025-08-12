@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDExOjQ3OjIzLjUwNjkwOSIsInVzZXJfaWQiOiI1ZjhkZjYzYy1mZWVmLTQxYTEtYTU3OS05NmUwM2VhNWYzZDIifQ.QSV65o0q_X6-hiPzqbFe2KbpoGRkTjYFYC1WkdkkXNY' \
+ -H 'content-length: 547' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Мягкий ломать июнь другой.","minScore":18,"maxScore":71,"description":"Деловой банк выразить. Возмутиться потом инструкция указанный.\nУмирать пересечь командир. Спасть зато беспомощный ручей пространство мера. Направо доставать ягода.","estimatedTime":"2 weeks","previewFileId":"9e26d553-8e3d-4665-a93f-b7215270da2b","createdByUserId":"5f8df63c-feef-41a1-a579-96e03ea5f3d2"}'
