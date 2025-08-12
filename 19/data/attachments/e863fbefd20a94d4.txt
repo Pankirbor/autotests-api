@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM1OjA4LjM1MDQxOSIsInVzZXJfaWQiOiI5ZmNjYzY3NS1lNmM1LTQyMjYtYTM5My04OTkyMDhkODA4ZmQifQ.zUj9XP2SHsBFJRgmF-RZ3gDfttiHmeE8ZfIi2yOj4JQ' \
+ -H 'content-length: 588' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Монета поговорить степь салон место еврейский.","minScore":4,"maxScore":99,"description":"Монета торопливый бригада жить мера умолять непривычный. Сопровождаться еврейский командующий самостоятельно набор. Горький девка пространство экзамен упор дыхание.","estimatedTime":"2 weeks","previewFileId":"18840833-0747-4a63-a6ec-d83ec4e9372e","createdByUserId":"9fccc675-e6c5-4226-a393-899208d808fd"}'

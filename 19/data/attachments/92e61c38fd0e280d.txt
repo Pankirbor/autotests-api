@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM0OjU4LjIwNjI1NSIsInVzZXJfaWQiOiJiZTQ5MDEyYy05YTU4LTQ2NTEtOWE1ZS05OWM3ZjZkODYwZjQifQ.2m1I3ZD-HJu_2PQem21yybkOYa8Gb_3yP-ZNzpTLvjE' \
+ -H 'content-length: 447' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Мера войти коммунизм неудобно.","minScore":20,"maxScore":93,"description":"Беспомощный ход невозможно заплакать опасность заложить единый. Аллея развернуться аллея инструкция. Растеряться да о.","estimatedTime":"9 weeks","previewFileId":"incorrect-id","createdByUserId":"19f1f432-c3ea-4568-bfd4-fe55a79c45fa"}'

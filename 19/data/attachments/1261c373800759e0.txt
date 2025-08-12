@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM1OjA3LjIwOTQxNiIsInVzZXJfaWQiOiI2YWZkYjM1My0zOWU4LTQ4MjAtOTFmZi0zY2UwMzliODZiNDEifQ.U43Jai4R6VUPnOfw8JMRe13hRmewtO-a6GhZc8dpq6U' \
+ -H 'content-length: 608' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Место способ за выраженный советовать развернуться пол понятный.","courseId":"incorrect-id","maxScore":50,"minScore":23,"orderIndex":99,"description":"Командир коммунизм армейский слишком поймать да. Князь означать устройство холодно рис район конструкция некоторый. Самостоятельно войти инфекция коммунизм анализ выраженный постоянный граница.","estimatedTime":"10 weeks"}'

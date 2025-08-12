@@ -1,0 +1,52 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: GET на http://localhost:8001/api/v1/courses?userId=1777a7be-feb5-42b6-8f28-dae21c20fc2e
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses?userId=1777a7be-feb5-42b6-8f28-dae21c20fc2e
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 200
+INFO     COURSES_ASSERTIONS:courses.py:125 Проверяем ответ сервера на запрос списка курсов
+INFO     BASE_ASSERTIONS:base.py:82 Проверяем, что длина courses соответствует ожидаемой [CourseSchema(title='Ручей спасть инфекция спалить.', max_score=92, min_score=28, description='Печатать факультет слишком князь теория низкий коричневый. Князь правление указанный вывести рассуждение.', estimated_time='5 weeks', id='377b5dab-1807-476f-a152-ddb548a22320', preview_file=FileSchema(id='0cbe4fe3-9c57-4f33-9509-4ea32d581105', url=HttpUrl('http://localhost:8001/static/tests/5cf3d512-2ec3-4a2b-ade4-455029bd9ab5.jpg'), filename='5cf3d512-2ec3-4a2b-ade4-455029bd9ab5.jpg', directory='tests'), created_by_user=UserSchema(id='1777a7be-feb5-42b6-8f28-dae21c20fc2e', email='prokofi45@example.com', last_name='Королева', first_name='Кондратий', middle_name='Валерий')), CourseSchema(title='Полоска эпоха написать сбросить даль.', max_score=76, min_score=10, description='Дремать задержать ярко спасть очередной. Соответствие чем цепочка какой свежий госпожа число. Ягода слать мелочь дошлый результат способ пропаганда.', estimated_time='8 weeks', id='57a9db40-7a94-4d5b-a68c-a08ad974fbbf', preview_file=FileSchema(id='0cbe4fe3-9c57-4f33-9509-4ea32d581105', url=HttpUrl('http://localhost:8001/static/tests/5cf3d512-2ec3-4a2b-ade4-455029bd9ab5.jpg'), filename='5cf3d512-2ec3-4a2b-ade4-455029bd9ab5.jpg', directory='tests'), created_by_user=UserSchema(id='1777a7be-feb5-42b6-8f28-dae21c20fc2e', email='prokofi45@example.com', last_name='Королева', first_name='Кондратий', middle_name='Валерий'))]
+INFO     COURSES_ASSERTIONS:courses.py:43 Проверяем соответсвие данных курса
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 377b5dab-1807-476f-a152-ddb548a22320
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Ручей спасть инфекция спалить.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Печатать факультет слишком князь теория низкий коричневый. Князь правление указанный вывести рассуждение.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 5 weeks
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 92
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 28
+INFO     FILES_ASSERTIONS:files.py:82 Проверяем соответствие данных файла
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 0cbe4fe3-9c57-4f33-9509-4ea32d581105
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение filename соответствует ожидаемому 5cf3d512-2ec3-4a2b-ade4-455029bd9ab5.jpg
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение directory соответствует ожидаемому tests
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение url соответствует ожидаемому http://localhost:8001/static/tests/5cf3d512-2ec3-4a2b-ade4-455029bd9ab5.jpg
+INFO     USERS_ASSERTIONS:users.py:84 Проверяем соответствие данных пользователя
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 1777a7be-feb5-42b6-8f28-dae21c20fc2e
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение email соответствует ожидаемому prokofi45@example.com
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение first_name соответствует ожидаемому Кондратий
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение last_name соответствует ожидаемому Королева
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение middle_name соответствует ожидаемому Валерий
+INFO     COURSES_ASSERTIONS:courses.py:43 Проверяем соответсвие данных курса
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 57a9db40-7a94-4d5b-a68c-a08ad974fbbf
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Полоска эпоха написать сбросить даль.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Дремать задержать ярко спасть очередной. Соответствие чем цепочка какой свежий госпожа число. Ягода слать мелочь дошлый результат способ пропаганда.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 8 weeks
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 76
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 10
+INFO     FILES_ASSERTIONS:files.py:82 Проверяем соответствие данных файла
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 0cbe4fe3-9c57-4f33-9509-4ea32d581105
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение filename соответствует ожидаемому 5cf3d512-2ec3-4a2b-ade4-455029bd9ab5.jpg
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение directory соответствует ожидаемому tests
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение url соответствует ожидаемому http://localhost:8001/static/tests/5cf3d512-2ec3-4a2b-ade4-455029bd9ab5.jpg
+INFO     USERS_ASSERTIONS:users.py:84 Проверяем соответствие данных пользователя
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 1777a7be-feb5-42b6-8f28-dae21c20fc2e
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение email соответствует ожидаемому prokofi45@example.com
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение first_name соответствует ожидаемому Кондратий
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение last_name соответствует ожидаемому Королева
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение middle_name соответствует ожидаемому Валерий
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

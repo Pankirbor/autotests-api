@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM1OjE0Ljk1MDg1NSIsInVzZXJfaWQiOiJlZDYyZWQ0My1jZTZhLTQ3YjQtOTRlZS0wMmQ1ZmRiMWJiNGUifQ.8ZWOaaHWgoZP350N5g4ppAOcjC3kzC77W4b1bHSreQY' \
+ -H 'content-length: 572' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Задрать бригада природа.","minScore":17,"maxScore":69,"description":"Лететь снимать вариант господь наслаждение. Намерение написать степь полюбить.\nИзредка руководитель мальчишка секунда. Посвятить грудь мучительно. Решетка бригада падаль другой.","estimatedTime":"10 weeks","previewFileId":"92b0546c-cab0-4794-bc31-cc3bbabd0a43","createdByUserId":"ed62ed43-ce6a-47b4-94ee-02d5fdb1bb4e"}'

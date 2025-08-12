@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM1OjE2LjExNDgxOCIsInVzZXJfaWQiOiI2YTMwMTA4Yi0wMDBiLTQ4ZTctOTczMy1lZTVmMGMwM2ZmMmUifQ.wNSkAi7S2OHvgTS9ghPTYr8An2Zo8jsgYsSY4V0xJW0' \
+ -H 'content-length: 548' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Граница свежий пропасть механический парень настать остановить.","minScore":3,"maxScore":58,"description":"Висеть ягода сынок бетонный висеть выражение. Столетие рай жидкий вздрогнуть. Скользить естественный руководитель горький чем.","estimatedTime":"4 weeks","previewFileId":"7e643fb8-1d6f-4ccb-8b2f-b782cc935499","createdByUserId":"6a30108b-000b-48e7-9733-ee5f0c03ff2e"}'

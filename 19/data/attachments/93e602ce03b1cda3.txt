@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM1OjAwLjI2OTU1OCIsInVzZXJfaWQiOiJiN2NhN2U4ZS1lZWMzLTQ4MjEtYWNhMi0yN2U3OGI2NjhkNDEifQ.XDifmUhTQaLin8lhwGv8CHauoWHvXyCyFWq7oytZgz4' \
+ -H 'content-length: 565' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","minScore":11,"maxScore":83,"description":"Голубчик роскошный спешить успокоиться. Господь лететь ботинок.","estimatedTime":"10 weeks","previewFileId":"5332a2c9-669d-4575-b42b-537724d0521d","createdByUserId":"6b78ec52-61b2-4d55-b01e-83f874ba58c2"}'

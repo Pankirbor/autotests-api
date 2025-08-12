@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM1OjEwLjcyNDI2MSIsInVzZXJfaWQiOiJlZDZmNGFhMC1hOGI4LTRjODYtYjUwMC1iZGY4Y2RlN2QyODIifQ.2LZmTHQVHsCsHbnc9JGis_ekObF9TMW3QiUGByPaNT8' \
+ -H 'content-length: 538' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Грудь крыса сынок шлем возникновение.","minScore":16,"maxScore":76,"description":"Крутой ягода увеличиваться мимо эффект неудобно полоска. Порода спорт очутиться протягивать. Дальний через добиться построить что багровый желание.","estimatedTime":"7 weeks","previewFileId":"e2563653-b6b3-48f2-ab84-c4bcaa9726be","createdByUserId":"ed6f4aa0-a8b8-4c86-b500-bdf8cde7d282"}'

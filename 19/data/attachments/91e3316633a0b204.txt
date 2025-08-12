@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/courses/6b21cc66-7306-4e67-8113-075b00949611' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM1OjAwLjg2MzM4MSIsInVzZXJfaWQiOiI1YmU2NWZlZS02ODZmLTQxZWMtYjczNC1kZTU5YWVkYWY4NTAifQ.dEyYJzUaRZ7PJVSZo_IgVMBZ0OdmUpcGB1B92pSKV2A' \
+ -H 'content-length: 507' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Цепочка нервно подробность приятель похороны пробовать.","minScore":15,"maxScore":51,"description":"Возмутиться космос добиться новый. Основание термин висеть анализ. Палец смелый скрытый налево секунда проход снимать. Вообще протягивать основание медицина салон столетие.","estimatedTime":"2 weeks"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM1OjExLjkxNjE1OSIsInVzZXJfaWQiOiI4ZDUwN2FmOC1iMzczLTQ0NzItOTdkMS1jMmJlZGMyMTcwZjIifQ.6goW5WqxF2UmteqyROfaIds_DfzlgV6uSJbpWc01URI' \
+ -H 'content-length: 516' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Смертельный полевой командующий.","courseId":"4c3eb4e2-deb6-493f-9672-0835c1a10fb3","maxScore":71,"minScore":23,"orderIndex":2,"description":"Дурацкий изба правление инфекция хлеб сходить роскошный. Аж недостаток идея отметить правильный число. Сопровождаться отъезд командующий печатать сынок монета пересечь.","estimatedTime":""}'

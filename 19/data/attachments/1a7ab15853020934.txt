@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/ae47b709-b641-487c-886d-862eaf12f29f' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM1OjE2LjcwNTExMiIsInVzZXJfaWQiOiIzNTNjNTVhZi1iZTk3LTQyMzMtOWFiMy03Mjc4YjYzMTcwOGQifQ.7OnvHVMnPc3bX1ivOCXkC-JK_gSkpRACr8UTnnEZcFM' \
+ -H 'content-length: 193' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Настать приятель способ.","courseId":"1e4ea589-2dad-4c2f-b604-8789810cf6c4","maxScore":95,"minScore":3,"orderIndex":17,"description":"","estimatedTime":"9 weeks"}'

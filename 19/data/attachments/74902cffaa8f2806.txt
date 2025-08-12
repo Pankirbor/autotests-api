@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM1OjE5LjY2MDQ5MiIsInVzZXJfaWQiOiI3YjNiMTFiNC0yMmY3LTRlYTEtOGQ5ZS1jM2Q5YWVlMzliZjMifQ.k6S5Ft4jOHlXUgeLmoO3H1tvInLBXK976QcS_pjPZZo' \
+ -H 'content-length: 419' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Намерение человечек адвокат.","minScore":22,"maxScore":76,"description":"Блин растеряться левый изменение ставить бок. Расстройство слать монета кожа новый потрясти.","estimatedTime":"3 weeks","previewFileId":"3fbbd43f-9c34-43c9-86db-1bd2e7c1ff13","createdByUserId":"7b3b11b4-22f7-4ea1-8d9e-c3d9aee39bf3"}'

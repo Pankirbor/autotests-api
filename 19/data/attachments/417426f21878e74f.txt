@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM1OjE3Ljg3NzQ2NyIsInVzZXJfaWQiOiIzODUyMWUwYS0xZWMxLTQ5ZGQtOTlhNy1lN2U4MTcwMjdjNDEifQ.ijZku0xTUQAb6piKR55j-2KSrPPn3w8gSeac5_2OXaA' \
+ -H 'content-length: 653' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Головной научить очко мимо палец выбирать интернет.","minScore":9,"maxScore":61,"description":"Коллектив казнь неправда издали через. Полоска умолять металл более материя полевой редактор.\nСкользить скрытый человечек ведь витрина нажать тута. Разнообразный хотеть доставать кузнец понятный.","estimatedTime":"7 weeks","previewFileId":"1d25d012-6b32-4c5b-b6b8-300b871528da","createdByUserId":"38521e0a-1ec1-49dd-99a7-e7e817027c41"}'

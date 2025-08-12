@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM1OjA4LjA3NzY3NyIsInVzZXJfaWQiOiI0NjA3Nzk4OC0zZTQxLTQ2ODItOWQ0NC00MDAxMTQzZWYzZTIifQ.kyRo_USw0kK2L-t5jmZ3NOPybl3g4yE4yTtcz9D4iOc' \
+ -H 'content-length: 584' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Команда способ выкинуть направо дьявол.","minScore":26,"maxScore":80,"description":"Пища избегать тута плод привлекать зато тревога. Вытаскивать термин сутки реклама развитый дальний ведь. Какой ручей умирать мальчишка. Что направо карман коммунизм казнь.","estimatedTime":"6 weeks","previewFileId":"fe4abbd0-6ec2-443d-afa1-900b7b769822","createdByUserId":"46077988-3e41-4682-9d44-4001143ef3e2"}'

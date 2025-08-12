@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM0OjU4LjQ3OTE0NSIsInVzZXJfaWQiOiI5ZmRmYjExOC0yZmIzLTRjZjUtOTQzMi1mMjk3NDExYzMwY2MifQ.oEwv9B312HzS1f-7ztVgw30W204rOsxbB7Isanlc6s4' \
+ -H 'content-length: 650' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Возникновение конференция иной трубка порт помимо зато.","minScore":24,"maxScore":65,"description":"Теория решение а идея. Художественный число посидеть гулять болото пасть бочок построить.\nМотоцикл дорогой освободить спалить. Кидать оборот находить господь пропаганда танцевать потрясти.","estimatedTime":"10 weeks","previewFileId":"f6734828-9625-469c-98ed-d69be7a7ef2b","createdByUserId":"9fdfb118-2fb3-4cf5-9432-f297411c30cc"}'

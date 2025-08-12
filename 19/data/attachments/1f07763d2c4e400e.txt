@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM1OjAxLjQ1MTQ1OCIsInVzZXJfaWQiOiIxYWY1Y2QzNy1kZWM4LTRhOWYtYmViZS1mMWNlYzQyYzM3MDMifQ.y8Qw6qjD-96SfYFNRnB5nrbS2R2QgXQ9fwmkS9wUHbw' \
+ -H 'content-length: 569' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Похороны снимать лапа порог столетие.","minScore":9,"maxScore":70,"description":"Идея армейский вперед славный лететь фонарик да идея. Ремень новый около ученый народ.\nИнтеллектуальный пища а спалить. Успокоиться опасность дошлый хлеб поговорить.","estimatedTime":"6 weeks","previewFileId":"899c1c81-5075-4cc9-ab33-73dcd5fed5ed","createdByUserId":"1af5cd37-dec8-4a9f-bebe-f1cec42c3703"}'

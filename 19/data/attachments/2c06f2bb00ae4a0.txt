@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM1OjEwLjQ1MTk2NyIsInVzZXJfaWQiOiI2YTZjZDFiOS1kYWUzLTRhNzQtOTUxMS01ZTVlNjQzNzIwYTUifQ.0qiECUNFNPsRN75Zhc-mXjR95wB1Hgk2ubN3NQw1xNM' \
+ -H 'content-length: 670' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Мотоцикл освободить бок вскинуть спешить возмутиться исполнять.","minScore":4,"maxScore":53,"description":"Командование присесть понятный голубчик порог. Штаб триста художественный дальний слишком. Холодно приятель сбросить набор.\nСкрытый народ отражение юный провал. Сутки солнце плод через мелочь.","estimatedTime":"8 weeks","previewFileId":"e19cfe95-17f7-4b96-80e1-b8030ec8c744","createdByUserId":"6a6cd1b9-dae3-4a74-9511-5e5e643720a5"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM1OjEyLjgzODAyOCIsInVzZXJfaWQiOiI4NGRjYmIzZC01ZDZjLTQzYmMtYjdiYi1jYjBlNzg2YzkwNWUifQ.cjQgfhLZVcNOicj9egA5Nh_X9wxihi_pLqCsWca9b-g' \
+ -H 'content-length: 560' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Отдел цвет четыре актриса.","minScore":15,"maxScore":57,"description":"Полевой вывести слишком товар висеть наслаждение прощение освобождение. Медицина солнце равнодушный угодный заведение близко. Призыв вообще монета куча идея блин скрытый.","estimatedTime":"9 weeks","previewFileId":"65a7e043-3ec8-4415-b178-788661b2f23c","createdByUserId":"84dcbb3d-5d6c-43bc-b7bb-cb0e786c905e"}'

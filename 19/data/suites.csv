@@ -1,0 +1,706 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"
+        Тест создания курса с пустым обязательным полем.
+
+        Args:
+            courses_client (CoursesClient): Клиент для работы с курсами.
+            field_name (str): Имя поля, которое будет пустым в запросе.
+        ","17","Попытка создать курс с пустым preview_file_id полем","LMS service","Tue Aug 12 10:04:56 GMT 2025","passed","Tue Aug 12 10:04:56 GMT 2025","Validate entity","Courses","",""
+"","562","Обновление токена","LMS service","Tue Aug 12 10:04:55 GMT 2025","passed","Tue Aug 12 10:04:55 GMT 2025","Login","Authentication","",""
+"
+        Тест получения информации об упражнении.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            function_exercise (ExerciseFixture): Фикстура с данными упражнения.
+        ","25","Получение упражнения","LMS service","Tue Aug 12 10:05:09 GMT 2025","passed","Tue Aug 12 10:05:09 GMT 2025","Get entity","Exercises","",""
+"
+        Тест обновления упражнения с слишком длинным строковым полем.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            field_name (str): Имя поля, которое будет содержать слишком длинное значение в запросе.
+            function_course (CourseFixture): Фикстура с данными курса.
+        ","14","Обновление упражнения со слишком длинным значением в поле title","LMS service","Tue Aug 12 10:05:19 GMT 2025","passed","Tue Aug 12 10:05:19 GMT 2025","Validate entity","Exercises","",""
+"","263","Получение курсов по несуществующему user_id","LMS service","Tue Aug 12 10:05:04 GMT 2025","passed","Tue Aug 12 10:05:04 GMT 2025","Validate entity","Courses","",""
+"
+        Тест обновления упражнения с слишком длинным строковым полем.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            field_name (str): Имя поля, которое будет содержать слишком длинное значение в запросе.
+            function_course (CourseFixture): Фикстура с данными курса.
+        ","16","Обновление упражнения со слишком длинным значением в поле estimated_time","LMS service","Tue Aug 12 10:05:15 GMT 2025","passed","Tue Aug 12 10:05:15 GMT 2025","Validate entity","Exercises","",""
+"
+        Тест удаления курса.
+
+        Args:
+            function_course (CourseFixture): Фикстура с данными курса.
+            courses_client (CoursesClient): Клиент для работы с курсами.
+        ","298","Удаление курса","LMS service","Tue Aug 12 10:05:02 GMT 2025","passed","Tue Aug 12 10:05:02 GMT 2025","Delete entity","Courses","",""
+"
+        Тест создания пользователя со значением, превышающим максимальную длину поля.
+
+        Args:
+            public_users_client (PublicUsersClient): Клиент для работы с публичными users эндпоинтами API.
+            field_name (str): Имя поля, которое будет содержать слишком длинное значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","13","Создание пользователя с last_name превышающим максимальную длину поля","LMS service","Tue Aug 12 10:05:33 GMT 2025","passed","Tue Aug 12 10:05:33 GMT 2025","Validate entity","Users","",""
+"
+        Тест удаления пользователя с некорректным id.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","261","Удаление несуществующего файла","LMS service","Tue Aug 12 10:05:26 GMT 2025","passed","Tue Aug 12 10:05:26 GMT 2025","Validate entity","Files","",""
+"
+        Тест проверяет, что при запросе файла по его идентификатору,
+        в ответе сервера возвращается информация о файле.
+
+        Args:
+            files_client (FilesClient): HTTP-клиент для взаимодействия с сервером.
+            function_file (FileFixture): Объект с данными загруженного файла.
+
+        Raises:
+            AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+        ","13","Получение файла","LMS service","Tue Aug 12 10:05:20 GMT 2025","passed","Tue Aug 12 10:05:20 GMT 2025","Get entity","Files","",""
+"
+        Тест проверяет, что при отправке запроса с пустым полем в request,
+        в ответе сервера возвращается ошибка валидации.
+
+        Args:
+            field_name (str): Имя поля, которое будет пустым в запросе.
+            files_client (FilesClient): HTTP-клиент для взаимодействия с сервером.
+
+        Raises:
+            AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+        ","265","Загрузка файла с пустым полем filename в запросе","LMS service","Tue Aug 12 10:05:21 GMT 2025","passed","Tue Aug 12 10:05:21 GMT 2025","Validate entity","Files","",""
+"
+        Тест создания упражнения с пустым обязательным полем.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            field_name (str): Имя поля, которое будет пустым в запросе.
+            function_course (CourseFixture): Фикстура с данными курса.
+        ","13","Attempt create exercise with empty estimated_time field","LMS service","Tue Aug 12 10:05:11 GMT 2025","passed","Tue Aug 12 10:05:11 GMT 2025","Validate entity","Exercises","",""
+"
+        Тест обновления пользователя со значением, превышающим максимальную длину поля.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+            function_user (UserFixture): Объект с данными созданного пользователя.
+            field_name (str): Имя поля, которое будет содержать слишком длинное значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","16","Обновление пользователя с middle_name превышающим максимальную длину поля","LMS service","Tue Aug 12 10:05:35 GMT 2025","passed","Tue Aug 12 10:05:35 GMT 2025","Validate entity","Users","",""
+"
+        Тест создания пользователя с пустым обязательным полем.
+
+        Args:
+            public_users_client (PublicUsersClient): Клиент для работы с публичными users эндпоинтами API.
+            field_name (str): Имя поля, которое будет содержать пустое значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","280","Создание пользователя с пустым обязательным полем middle_name","LMS service","Tue Aug 12 10:05:29 GMT 2025","passed","Tue Aug 12 10:05:29 GMT 2025","Validate entity","Users","",""
+"","14","Удаление несуществующего курса","LMS service","Tue Aug 12 10:05:03 GMT 2025","passed","Tue Aug 12 10:05:03 GMT 2025","Validate entity","Courses","",""
+"
+        Тест создания курса.
+
+        Args:
+            courses_client (CoursesClient): Клиент для работы с курсами.
+            function_user (UserFixture): Фикстура с данными пользователя.
+            function_file (FileFixture): Фикстура с данными файла.
+        ","304","Создание курса","LMS service","Tue Aug 12 10:04:58 GMT 2025","passed","Tue Aug 12 10:04:58 GMT 2025","Create entity","Courses","",""
+"
+        Тест получения информации о несуществующем пользователе.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.NOT_FOUND.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","258","Получение информации о пользователе по несуществующему id","LMS service","Tue Aug 12 10:05:28 GMT 2025","passed","Tue Aug 12 10:05:29 GMT 2025","Validate entity","Users","",""
+"
+        Тест получения информации о пользователе по url users/{user_id}.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+            function_user (UserFixture): Объект с данными созданного пользователя.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.OK.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","254","Получение информации о пользователе по id","LMS service","Tue Aug 12 10:05:27 GMT 2025","passed","Tue Aug 12 10:05:28 GMT 2025","Get entity","Users","",""
+"
+        Тест проверяет, что при запросе несуществующего файла,
+        в ответе сервера возвращается ошибка.
+
+        Args:
+            files_client (FilesClient): HTTP-клиент для взаимодействия с сервером.
+
+        Raises:
+            AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+        ","261","Получение файла по некорректному file_id","LMS service","Tue Aug 12 10:05:24 GMT 2025","passed","Tue Aug 12 10:05:25 GMT 2025","Validate entity","Files","",""
+"
+        Тест получения упражнений с некорректным course_id.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+        ","263","Получение списка упражнений по некорректному course_id","LMS service","Tue Aug 12 10:05:14 GMT 2025","passed","Tue Aug 12 10:05:14 GMT 2025","Validate entity","Exercises","",""
+"
+        Тест создания пользователя со значением, превышающим максимальную длину поля.
+
+        Args:
+            public_users_client (PublicUsersClient): Клиент для работы с публичными users эндпоинтами API.
+            field_name (str): Имя поля, которое будет содержать слишком длинное значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","264","Создание пользователя с email превышающим максимальную длину поля","LMS service","Tue Aug 12 10:05:32 GMT 2025","passed","Tue Aug 12 10:05:33 GMT 2025","Validate entity","Users","",""
+"
+        Тест создания пользователя со значением, превышающим максимальную длину поля.
+
+        Args:
+            public_users_client (PublicUsersClient): Клиент для работы с публичными users эндпоинтами API.
+            field_name (str): Имя поля, которое будет содержать слишком длинное значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","12","Создание пользователя с first_name превышающим максимальную длину поля","LMS service","Tue Aug 12 10:05:33 GMT 2025","passed","Tue Aug 12 10:05:33 GMT 2025","Validate entity","Users","",""
+"
+        Тест получения курсов.
+
+        Args:
+            function_courses_list (CoursesListFixture): Фикстура с данными списка курсов.
+            courses_client (CoursesClient): Клиент для работы с курсами.
+        ","35","Получение списка курсов","LMS service","Tue Aug 12 10:04:57 GMT 2025","passed","Tue Aug 12 10:04:57 GMT 2025","Get entities","Courses","",""
+"
+        Тест обновления курса с слишком длинным названием.
+
+        Args:
+            courses_client (CoursesClient): Клиент для работы с курсами.
+            function_course (CourseFixture): Фикстура с данными курса.
+        ","15","Обновление курса с названием превышающим максимально допустимую длину","LMS service","Tue Aug 12 10:05:01 GMT 2025","passed","Tue Aug 12 10:05:01 GMT 2025","Validate entity","Courses","",""
+"
+        Тест создания пользователя с пустым обязательным полем.
+
+        Args:
+            public_users_client (PublicUsersClient): Клиент для работы с публичными users эндпоинтами API.
+            field_name (str): Имя поля, которое будет содержать пустое значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","250","Создание пользователя с пустым обязательным полем last_name","LMS service","Tue Aug 12 10:05:29 GMT 2025","passed","Tue Aug 12 10:05:29 GMT 2025","Validate entity","Users","",""
+"
+        Тест создания упражнения с слишком длинным строковым полем.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            field_name (str): Имя поля, которое будет содержать слишком длинное значение в запросе.
+            function_course (CourseFixture): Фикстура с данными курса.
+        ","281","Создание упражнения с слишком длинным значением в estimated_time поле","LMS service","Tue Aug 12 10:05:14 GMT 2025","passed","Tue Aug 12 10:05:14 GMT 2025","Validate entity","Exercises","",""
+"
+        Тест получения упражнений с не существующим course_id.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+        ","17","Получение упражнений по несуществующему course_id","LMS service","Tue Aug 12 10:05:06 GMT 2025","passed","Tue Aug 12 10:05:06 GMT 2025","Validate entity","Exercises","",""
+"","11","Получение несуществующего курса","LMS service","Tue Aug 12 10:05:02 GMT 2025","passed","Tue Aug 12 10:05:02 GMT 2025","Validate entity","Courses","",""
+"
+        Тест создания курса с пустым обязательным полем.
+
+        Args:
+            courses_client (CoursesClient): Клиент для работы с курсами.
+            field_name (str): Имя поля, которое будет пустым в запросе.
+        ","260","Попытка создать курс с пустым title полем","LMS service","Tue Aug 12 10:05:03 GMT 2025","passed","Tue Aug 12 10:05:03 GMT 2025","Validate entity","Courses","",""
+"
+        Тест создания упражнения с некорректными значениями min_score и max_score.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            min_score (int): Минимальное значение для min_score.
+            max_score (int): Максимальное значение для max_score.
+            function_course (CourseFixture): Фикстура с данными курса.
+        ","18","Создание упражнения с некорректными значениями min_score и max_score: 100 - 10","LMS service","Tue Aug 12 10:05:16 GMT 2025","passed","Tue Aug 12 10:05:16 GMT 2025","Validate entity","Exercises","",""
+"
+        Тест обновления упражнения с пустым обязательным полем.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            field_name (str): Имя поля, которое будет пустым в запросе.
+            function_course (CourseFixture): Фикстура с данными курса.
+        ","14","Обновление упражнения с пустым обязательным полем description","LMS service","Tue Aug 12 10:05:17 GMT 2025","passed","Tue Aug 12 10:05:17 GMT 2025","Validate entity","Exercises","",""
+"
+        Тест обновления пользователя со значением, превышающим максимальную длину поля.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+            function_user (UserFixture): Объект с данными созданного пользователя.
+            field_name (str): Имя поля, которое будет содержать слишком длинное значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","261","Обновление пользователя с email превышающим максимальную длину поля","LMS service","Tue Aug 12 10:05:34 GMT 2025","passed","Tue Aug 12 10:05:34 GMT 2025","Validate entity","Users","",""
+"
+        Тест удаления упражнения с несуществующим id.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+        ","252","Удаление упражнения с несуществующим exercise_id","LMS service","Tue Aug 12 10:05:23 GMT 2025","skipped","Tue Aug 12 10:05:23 GMT 2025","Validate entity","Exercises","",""
+"
+        Тест обновления пользователя с пустым обязательным полем.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+            function_user (UserFixture): Объект с данными созданного пользователя.
+            field_name (str): Имя поля, которое будет содержать пустое значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","263","Обновление пользователя с пустым обязательным полем email","LMS service","Tue Aug 12 10:05:30 GMT 2025","passed","Tue Aug 12 10:05:31 GMT 2025","Validate entity","Users","",""
+"
+        Тест обновления упражнения с пустым обязательным полем.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            field_name (str): Имя поля, которое будет пустым в запросе.
+            function_course (CourseFixture): Фикстура с данными курса.
+        ","13","Обновление упражнения с пустым обязательным полем estimated_time","LMS service","Tue Aug 12 10:05:18 GMT 2025","passed","Tue Aug 12 10:05:18 GMT 2025","Validate entity","Exercises","",""
+"
+        Тест проверки обновления токена с некорректным токеном.
+
+        Args:
+            authentication_client (AuthenticationClient): Клиент для работы с аутентификацией.
+
+        Raises:
+            AssertionError: Если статус ответа не 422 UNPROCESSABLE_ENTITY или данные ответа не соответствуют ожиданиям.
+            ValidationError: Если данные ответа не соответствуют схеме ValidationErrorResponseSchema.
+        ","271","Обновление токена с некорректным refresh token","LMS service","Tue Aug 12 10:04:55 GMT 2025","passed","Tue Aug 12 10:04:56 GMT 2025","Validate entity","Authentication","",""
+"
+        Тест обновления пользователя со значением, превышающим максимальную длину поля.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+            function_user (UserFixture): Объект с данными созданного пользователя.
+            field_name (str): Имя поля, которое будет содержать слишком длинное значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","255","Обновление пользователя с last_name превышающим максимальную длину поля","LMS service","Tue Aug 12 10:05:35 GMT 2025","passed","Tue Aug 12 10:05:35 GMT 2025","Validate entity","Users","",""
+"
+        Тест получения информации о пользователе с некорректным id.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","19","Получение информации о пользователе по некорректному id","LMS service","Tue Aug 12 10:05:28 GMT 2025","passed","Tue Aug 12 10:05:28 GMT 2025","Validate entity","Users","",""
+"
+        Тест удаления упражнения.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            function_exercise (ExerciseFixture): Фикстура с данными упражнения.
+        ","24","Удаление упражнения","LMS service","Tue Aug 12 10:05:11 GMT 2025","passed","Tue Aug 12 10:05:11 GMT 2025","Delete entity","Exercises","",""
+"
+        Тест получения упражнения с некорректным id.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+        ","264","Получение упражнения с некорректным exercise_id","LMS service","Tue Aug 12 10:05:20 GMT 2025","passed","Tue Aug 12 10:05:21 GMT 2025","Validate entity","Exercises","",""
+"
+        Тест получения курса.
+
+        Args:
+            function_course (CourseFixture): Фикстура с данными курса.
+            courses_client (CoursesClient): Клиент для работы с курсами.
+        ","27","Получение курса по id","LMS service","Tue Aug 12 10:04:59 GMT 2025","passed","Tue Aug 12 10:05:00 GMT 2025","Get entity","Courses","",""
+"
+        Тест создания упражнения с некоррктным course_id.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+        ","16","Получение упражнения по некорректному идентификатору","LMS service","Tue Aug 12 10:05:07 GMT 2025","passed","Tue Aug 12 10:05:07 GMT 2025","Validate entity","Exercises","",""
+"
+        Тест обновления пользователя с пустым обязательным полем.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+            function_user (UserFixture): Объект с данными созданного пользователя.
+            field_name (str): Имя поля, которое будет содержать пустое значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","16","Обновление пользователя с пустым обязательным полем middle_name","LMS service","Tue Aug 12 10:05:33 GMT 2025","passed","Tue Aug 12 10:05:33 GMT 2025","Validate entity","Users","",""
+"
+        Тест обновления упражнения с пустым обязательным полем.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            field_name (str): Имя поля, которое будет пустым в запросе.
+            function_course (CourseFixture): Фикстура с данными курса.
+        ","16","Обновление упражнения с пустым обязательным полем title","LMS service","Tue Aug 12 10:05:15 GMT 2025","passed","Tue Aug 12 10:05:15 GMT 2025","Validate entity","Exercises","",""
+"
+        Тест удаления пользователя с некорректным id.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","266","Удаление пользователя по некорректному user_id","LMS service","Tue Aug 12 10:05:31 GMT 2025","passed","Tue Aug 12 10:05:31 GMT 2025","Validate entity","Users","",""
+"
+        Тест создания курса с некорректным идентификатором.
+
+        Args:
+            courses_client (CoursesClient): Клиент для работы с курсами.
+            field_name (str): Имя поля, которое будет содержать
+            некорректное значение в запросе.
+        ","257","Попытка создать курс с некорректным created_by_user_id полем","LMS service","Tue Aug 12 10:04:59 GMT 2025","passed","Tue Aug 12 10:04:59 GMT 2025","Validate entity","Courses","",""
+"
+        Тест обновления упражнения с некорректными значениями min_score и max_score.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            min_score (int): Минимальное значение для min_score.
+            max_score (int): Максимальное значение для max_score.
+            function_course (CourseFixture): Фикстура с данными курса.
+        ","8","Обновление упражнения с некорректными значениями min_score и max_score: -10 - 0","LMS service","Tue Aug 12 10:05:19 GMT 2025","skipped","Tue Aug 12 10:05:19 GMT 2025","Validate entity","Exercises","",""
+"
+        Тест проверяет, что при удалении файла,
+        он удаляется из хранилища и не может быть получен по его идентификатору.
+
+        Args:
+            files_client (FilesClient): HTTP-клиент для взаимодействия с сервером.
+            function_file (FileFixture): Объект с данными загруженного файла.
+
+        Raises:
+            AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+        ","19","Удаление файла","LMS service","Tue Aug 12 10:05:24 GMT 2025","passed","Tue Aug 12 10:05:24 GMT 2025","Delete entity","Files","",""
+"
+        Тест создания пользователя с пустым обязательным полем.
+
+        Args:
+            public_users_client (PublicUsersClient): Клиент для работы с публичными users эндпоинтами API.
+            field_name (str): Имя поля, которое будет содержать пустое значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","12","Создание пользователя с пустым обязательным полем first_name","LMS service","Tue Aug 12 10:05:29 GMT 2025","passed","Tue Aug 12 10:05:29 GMT 2025","Validate entity","Users","",""
+"
+        Тест обновления информации об упражнении.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            function_exercise (ExerciseFixture): Фикстура с данными упражнения.
+        ","24","Обновление упражнения","LMS service","Tue Aug 12 10:05:10 GMT 2025","passed","Tue Aug 12 10:05:10 GMT 2025","Update entity","Exercises","",""
+"Тест создания пользователя.
+
+        Args:
+            public_users_client (PublicUsersClient): Клиент для работы с публичными users эндпоинтами API.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.OK.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","533","Создание пользователя","LMS service","Tue Aug 12 10:05:24 GMT 2025","passed","Tue Aug 12 10:05:25 GMT 2025","Create entity","Users","",""
+"
+        Тест удаления пользователя.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+            public_users_client (PublicUsersClient): Клиент для работы с публичными users эндпоинтами API.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.OK.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            AssertError: Если данные ответа не соответствуют ожидаемым.
+        ","570","Удаление пользователя","LMS service","Tue Aug 12 10:05:29 GMT 2025","passed","Tue Aug 12 10:05:30 GMT 2025","Delete entity","Users","",""
+"
+        Тест для проверки получения списка упражнений.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            function_course (CourseFixture): Фикстура с данными курса.
+            function_exercises (ExercisesListFixture): Фикстура с данными упражнений.
+        ","25","Получение списка упражнений","LMS service","Tue Aug 12 10:05:13 GMT 2025","passed","Tue Aug 12 10:05:13 GMT 2025","Get entities","Exercises","",""
+"
+        Тест проверяет, что при загрузке файла на сервер,
+        в ответе сервера возвращается информация о файле.
+
+        Args:
+            files_client (FilesClient): HTTP-клиент для взаимодействия с сервером.
+
+        Raises:
+            AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+        ","263","Загрузка файла","LMS service","Tue Aug 12 10:05:24 GMT 2025","passed","Tue Aug 12 10:05:24 GMT 2025","Create entity","Files","",""
+"
+        Тест создания курса с слишком длинным названием.
+
+        Args:
+            courses_client (CoursesClient): Клиент для работы с курсами.
+        ","276","Создание курса с названием превышающим максимально допустимую длину","LMS service","Tue Aug 12 10:05:00 GMT 2025","passed","Tue Aug 12 10:05:00 GMT 2025","Validate entity","Courses","",""
+"
+        Тест получения информации о пользователе по url users/me.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+            function_user (UserFixture): Объект с данными созданного пользователя.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.OK.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","13","Получение информации о текущем пользователе","LMS service","Tue Aug 12 10:05:26 GMT 2025","passed","Tue Aug 12 10:05:26 GMT 2025","Get entity","Users","",""
+"","261","Получение курсов по некорректному user_id","LMS service","Tue Aug 12 10:05:05 GMT 2025","passed","Tue Aug 12 10:05:06 GMT 2025","Validate entity","Courses","",""
+"
+        Тест создания упражнения с пустым обязательным полем.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            field_name (str): Имя поля, которое будет пустым в запросе.
+            function_course (CourseFixture): Фикстура с данными курса.
+        ","14","Attempt create exercise with empty description field","LMS service","Tue Aug 12 10:05:09 GMT 2025","passed","Tue Aug 12 10:05:09 GMT 2025","Validate entity","Exercises","",""
+"
+        Тест создания упражнения с пустым обязательным полем.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            field_name (str): Имя поля, которое будет пустым в запросе.
+            function_course (CourseFixture): Фикстура с данными курса.
+        ","15","Attempt create exercise with empty title field","LMS service","Tue Aug 12 10:05:08 GMT 2025","passed","Tue Aug 12 10:05:08 GMT 2025","Validate entity","Exercises","",""
+"
+        Тест обновления пользователя с пустым обязательным полем.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+            function_user (UserFixture): Объект с данными созданного пользователя.
+            field_name (str): Имя поля, которое будет содержать пустое значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","259","Обновление пользователя с пустым обязательным полем last_name","LMS service","Tue Aug 12 10:05:32 GMT 2025","passed","Tue Aug 12 10:05:32 GMT 2025","Validate entity","Users","",""
+"
+        Тест обновления пользователя со значением, превышающим максимальную длину поля.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+            function_user (UserFixture): Объект с данными созданного пользователя.
+            field_name (str): Имя поля, которое будет содержать слишком длинное значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","20","Обновление пользователя с first_name превышающим максимальную длину поля","LMS service","Tue Aug 12 10:05:34 GMT 2025","passed","Tue Aug 12 10:05:34 GMT 2025","Validate entity","Users","",""
+"Тест создания пользователя.
+
+        Args:
+            public_users_client (PublicUsersClient): Клиент для работы с публичными users эндпоинтами API.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.OK.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","296","Создание пользователя","LMS service","Tue Aug 12 10:05:26 GMT 2025","passed","Tue Aug 12 10:05:26 GMT 2025","Create entity","Users","",""
+"
+        Тест создания пользователя со значением, превышающим максимальную длину поля.
+
+        Args:
+            public_users_client (PublicUsersClient): Клиент для работы с публичными users эндпоинтами API.
+            field_name (str): Имя поля, которое будет содержать слишком длинное значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","11","Создание пользователя с middle_name превышающим максимальную длину поля","LMS service","Tue Aug 12 10:05:33 GMT 2025","passed","Tue Aug 12 10:05:33 GMT 2025","Validate entity","Users","",""
+"
+        Тест обновления курса.
+
+        Args:
+            function_course (CourseFixture): Фикстура с данными курса.
+            courses_client (CoursesClient): Клиент для работы с курсами.
+        ","33","Обновление курса","LMS service","Tue Aug 12 10:05:01 GMT 2025","passed","Tue Aug 12 10:05:01 GMT 2025","Update entity","Courses","",""
+"
+        Тест создания упражнения.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            function_course (CourseFixture): Фикстура с данными курса.
+
+        ","25","Создание упражнения","LMS service","Tue Aug 12 10:05:08 GMT 2025","passed","Tue Aug 12 10:05:08 GMT 2025","Create entity","Exercises","",""
+"
+        Тест создания курса с некорректным идентификатором.
+
+        Args:
+            courses_client (CoursesClient): Клиент для работы с курсами.
+            field_name (str): Имя поля, которое будет содержать
+            некорректное значение в запросе.
+        ","254","Попытка создать курс с некорректным preview_file_id полем","LMS service","Tue Aug 12 10:04:58 GMT 2025","passed","Tue Aug 12 10:04:58 GMT 2025","Validate entity","Courses","",""
+"","19","Удаление курса по некорректному идентификатору","LMS service","Tue Aug 12 10:05:04 GMT 2025","passed","Tue Aug 12 10:05:04 GMT 2025","Validate entity","Courses","",""
+"
+        Тест создания курса с пустым обязательным полем.
+
+        Args:
+            courses_client (CoursesClient): Клиент для работы с курсами.
+            field_name (str): Имя поля, которое будет пустым в запросе.
+        ","17","Попытка создать курс с пустым created_by_user_id полем","LMS service","Tue Aug 12 10:04:57 GMT 2025","passed","Tue Aug 12 10:04:57 GMT 2025","Validate entity","Courses","",""
+"
+        Тест обновления информации о пользователе.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+            function_user (UserFixture): Объект с данными созданного пользователя.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.OK.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","27","Обновление информации о пользователе","LMS service","Tue Aug 12 10:05:29 GMT 2025","passed","Tue Aug 12 10:05:29 GMT 2025","Update entity","Users","",""
+"
+        Тест создания курса с пустым обязательным полем.
+
+        Args:
+            courses_client (CoursesClient): Клиент для работы с курсами.
+            field_name (str): Имя поля, которое будет пустым в запросе.
+        ","267","Попытка создать курс с пустым description полем","LMS service","Tue Aug 12 10:04:54 GMT 2025","passed","Tue Aug 12 10:04:55 GMT 2025","Validate entity","Courses","",""
+"
+        Тест создания упражнения с пустым обязательным полем.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            field_name (str): Имя поля, которое будет пустым в запросе.
+            function_course (CourseFixture): Фикстура с данными курса.
+        ","13","Attempt create exercise with empty course_id field","LMS service","Tue Aug 12 10:05:10 GMT 2025","passed","Tue Aug 12 10:05:10 GMT 2025","Validate entity","Exercises","",""
+"
+        Тест обновления пользователя с пустым обязательным полем.
+
+        Args:
+            private_users_client (PrivateUsersClient): Клиент для работы с закрытыми users эндпоинтами API.
+            function_user (UserFixture): Объект с данными созданного пользователя.
+            field_name (str): Имя поля, которое будет содержать пустое значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","267","Обновление пользователя с пустым обязательным полем first_name","LMS service","Tue Aug 12 10:05:31 GMT 2025","passed","Tue Aug 12 10:05:32 GMT 2025","Validate entity","Users","",""
+"","262","Получение курса по некорректному идентификатору","LMS service","Tue Aug 12 10:05:06 GMT 2025","passed","Tue Aug 12 10:05:07 GMT 2025","Validate entity","Courses","",""
+"
+        Тест проверки аутентификации пользователя.
+
+        Args:
+            function_user (UserFixture): Пользователь для аутентификации.
+            authentication_client (AuthenticationClient): Клиент для работы с аутентификацией.
+
+        Raises:
+            AssertionError: Если статус ответа не 200 OK или данные ответа не соответствуют ожиданиям.
+            ValidationError: Если данные ответа не соответствуют схеме LoginResponseSchema.
+        ","286","Аутентификация пользователя","LMS service","Tue Aug 12 10:04:54 GMT 2025","passed","Tue Aug 12 10:04:54 GMT 2025","Login","Authentication","",""
+"
+        Тест создания упражнения с слишком длинным строковым полем.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            field_name (str): Имя поля, которое будет содержать слишком длинное значение в запросе.
+            function_course (CourseFixture): Фикстура с данными курса.
+        ","13","Создание упражнения с слишком длинным значением в title поле","LMS service","Tue Aug 12 10:05:13 GMT 2025","passed","Tue Aug 12 10:05:13 GMT 2025","Validate entity","Exercises","",""
+"
+        Тест создания упражнения с некорректными значениями min_score и max_score.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            min_score (int): Минимальное значение для min_score.
+            max_score (int): Максимальное значение для max_score.
+            function_course (CourseFixture): Фикстура с данными курса.
+        ","14","Создание упражнения с некорректными значениями min_score и max_score: -10 - 0","LMS service","Tue Aug 12 10:05:17 GMT 2025","skipped","Tue Aug 12 10:05:17 GMT 2025","Validate entity","Exercises","",""
+"
+        Тест обновления упражнения с некорректными значениями min_score и max_score.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+            min_score (int): Минимальное значение для min_score.
+            max_score (int): Максимальное значение для max_score.
+            function_course (CourseFixture): Фикстура с данными курса.
+        ","14","Обновление упражнения с некорректными значениями min_score и max_score: 100 - 10","LMS service","Tue Aug 12 10:05:18 GMT 2025","passed","Tue Aug 12 10:05:18 GMT 2025","Validate entity","Exercises","",""
+"Тест создания пользователя.
+
+        Args:
+            public_users_client (PublicUsersClient): Клиент для работы с публичными users эндпоинтами API.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.OK.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","286","Создание пользователя","LMS service","Tue Aug 12 10:05:25 GMT 2025","passed","Tue Aug 12 10:05:25 GMT 2025","Create entity","Users","",""
+"
+        Тест удаления упражнения с некорректным id.
+
+        Args:
+            exercises_client (ExercisesClient): Клиент для работы с упражнениями.
+        ","264","Удаление упражнения с некорректным exercise_id","LMS service","Tue Aug 12 10:05:22 GMT 2025","passed","Tue Aug 12 10:05:22 GMT 2025","Validate entity","Exercises","",""
+"","12","Аутентификация с некорректным email","LMS service","Tue Aug 12 10:04:56 GMT 2025","passed","Tue Aug 12 10:04:56 GMT 2025","Validate entity","Authentication","",""
+"
+        Тест создания пользователя с пустым обязательным полем.
+
+        Args:
+            public_users_client (PublicUsersClient): Клиент для работы с публичными users эндпоинтами API.
+            field_name (str): Имя поля, которое будет содержать пустое значение в запросе.
+
+        Raises:
+            AssertionError: Если статус код ответа не равен HTTPStatus.UNPROCESSABLE_ENTITY.
+            AssertionError: Если данные ответа не соответствуют ожидаемым.
+            ValidationError: Если данные ответа не соответствуют схеме.
+        ","13","Создание пользователя с пустым обязательным полем email","LMS service","Tue Aug 12 10:05:29 GMT 2025","passed","Tue Aug 12 10:05:29 GMT 2025","Validate entity","Users","",""
+"
+        Тест проверяет, что при отправке запроса с пустым полем в request,
+        в ответе сервера возвращается ошибка валидации.
+
+        Args:
+            field_name (str): Имя поля, которое будет пустым в запросе.
+            files_client (FilesClient): HTTP-клиент для взаимодействия с сервером.
+
+        Raises:
+            AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+        ","268","Загрузка файла с пустым полем directory в запросе","LMS service","Tue Aug 12 10:05:22 GMT 2025","passed","Tue Aug 12 10:05:22 GMT 2025","Validate entity","Files","",""

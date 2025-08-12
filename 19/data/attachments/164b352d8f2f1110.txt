@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM0OjU5LjEwNDUxMyIsInVzZXJfaWQiOiJlMGY3MTRjNy04MmFhLTQyNmMtOWJmOS1jMDYyZWE5MGU2NjgifQ.foVVR-Ij-yjMxB6UYmbMbIHVtUGgW-NC1B5P8oLJF8M' \
+ -H 'content-length: 571' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Даль прощение художественный тесно пропадать багровый.","minScore":19,"maxScore":58,"description":"Применяться изменение редактор поговорить кпсс деньги. Командующий развитый услать экзамен. Выгнать рот низкий встать отъезд. Юный означать сбросить инструкция.","estimatedTime":"4 weeks","previewFileId":"1232edc7-3770-4bc0-b086-99a20d22c119","createdByUserId":"incorrect-id"}'

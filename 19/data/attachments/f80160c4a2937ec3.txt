@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/356e0c5b-c38f-4592-bcdd-4c641254a1aa' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM1OjE5LjA2NzkwMyIsInVzZXJfaWQiOiIxZTU2ZThmOC0xMDBkLTRlMTQtYWU3Ni0wYjgzMTk5ODhiYmUifQ.kiXsIrB7avf3Bj0XrEbOGFTXgHK7jafzgGI8REXqDlE' \
+ -H 'content-length: 635' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","courseId":"7d123e45-d454-46eb-9eb2-1db4d63f1b9d","maxScore":90,"minScore":26,"orderIndex":39,"description":"Более смеяться солнце житель миллиард счастье вскинуть. Лиловый устройство парень. Порода кидать вздрагивать помимо коммунизм.","estimatedTime":"4 weeks"}'

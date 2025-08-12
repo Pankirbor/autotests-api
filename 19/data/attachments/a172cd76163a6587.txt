@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDEwOjM1OjA5LjUzMTk2NSIsInVzZXJfaWQiOiIzNjg1Y2Y4My00MzhiLTQ0MDUtOTIwZi04NzJiODYwZWRmOWEifQ.Yg220Pszan5gFv8hPTkWOoCO8q4-Zdec68_Avq1CDGs' \
+ -H 'content-length: 628' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Табак дрогнуть командующий оборот поезд левый.","minScore":10,"maxScore":78,"description":"Точно спешить интернет светило. Совещание карман ломать песенка ход покидать карман.\nВариант пробовать крыса коробка расстегнуть изучить дремать. Материя потянуться висеть плавно карман.","estimatedTime":"6 weeks","previewFileId":"b3db10c0-245e-4974-a227-f76c72d51549","createdByUserId":"3685cf83-438b-4405-920f-872b860edf9a"}'
