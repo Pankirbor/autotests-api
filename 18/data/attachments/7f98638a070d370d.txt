@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjQxLjEzOTE5MiIsInVzZXJfaWQiOiJmMTJhMjZhMS04YTM0LTQzNmYtYTBjNi0xYzMxMDc2ZjAyMTAifQ.S0FQmuzhwfLBVzGIW-L2D7Fkfmy_F8wjEKZSLnFiJ4E' \
+ -H 'content-length: 464' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Выражаться карман покидать жестокий.","minScore":24,"maxScore":79,"description":"Успокоиться очко близко сутки жестокий.\nПрежний эффект бочок парень печатать поставить. Мучительно дрогнуть беспомощный.","estimatedTime":"6 weeks","previewFileId":"incorrect-id","createdByUserId":"2c5d5702-f0fd-4c98-8b8a-4881589ec6f3"}'

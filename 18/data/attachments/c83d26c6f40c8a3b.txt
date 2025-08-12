@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjQ0LjY0MzM4MCIsInVzZXJfaWQiOiI0MmRkMGM2OC04NWRjLTRjMjEtYjE0OS1mMTk1ZWQ2ZTcyNjMifQ.AFBZWYpBTEvYWyXt8uKl_GjK7d0ya93T-ACsE3oFSMI' \
+ -H 'content-length: 500' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Какой через пол изменение академик освободить направо.","minScore":30,"maxScore":57,"description":"Бригада волк потянуться забирать приятель. Решение правый возможно. Достоинство беспомощный функция миллиард.","estimatedTime":"4 weeks","previewFileId":"b4cadb73-27ea-49a4-8acc-78040390da8d","createdByUserId":"42dd0c68-85dc-4c21-b149-f195ed6e7263"}'

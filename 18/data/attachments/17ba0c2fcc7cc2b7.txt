@@ -1,0 +1,22 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 422 Unprocessable Entity от http://localhost:8001/api/v1/exercises
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 422
+INFO     EXERCISES_ASSERTIONS:exercises.py:211 Проверям ответ сервера после запроса на создание или обновление упражнения с пустым обязательным параметром
+INFO     ERRORS_ASSSERTIONS:errors.py:149 Проверям ошибку валидации для отсутствующего значения в поле description
+INFO     ERRORS_ASSSERTIONS:errors.py:54 Проверяем ответ сервера с ожидаемой валидационной ошибкой
+INFO     BASE_ASSERTIONS:base.py:82 Проверяем, что длина details соответствует ожидаемой [ValidationErrorSchema(type='string_too_short', input='', context={'min_length': 1}, message='String should have at least 1 character', location=['body', 'description'])]
+INFO     ERRORS_ASSSERTIONS:errors.py:31 Проверяем данные ожидаемой валидационной ошибки
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение type соответствует ожидаемому string_too_short
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение message соответствует ожидаемому String should have at least 1 character
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение location соответствует ожидаемому ['body', 'description']
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение input соответствует ожидаемому 
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение context соответствует ожидаемому {'min_length': 1}
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

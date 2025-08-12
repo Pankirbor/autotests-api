@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjUzLjAxMzkzMiIsInVzZXJfaWQiOiI0ZmQwYzVhZC1hZThjLTQxOGItYjlkNS1hMTEzZTQ0MWJiNjEifQ.z_apv9I-ZCBXLuMmuSzZBywyBzfNhc2xvOhwsUaxwJQ' \
+ -H 'content-length: 537' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Триста термин вздрогнуть возмутиться полевой мелочь дьявол.","minScore":18,"maxScore":71,"description":"Прощение крутой анализ лететь бетонный коричневый. Рис казнь тусклый выражение. Бак штаб песенка. Школьный угроза постоянный.","estimatedTime":"6 weeks","previewFileId":"ba9f70a0-47ee-49c7-9efe-94f12f3566cf","createdByUserId":"4fd0c5ad-ae8c-418b-b9d5-a113e441bb61"}'

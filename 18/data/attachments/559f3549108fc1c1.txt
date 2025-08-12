@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/courses/e367f516-93a1-45b7-bc78-7301b550b76b' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjQyLjg5ODUwNiIsInVzZXJfaWQiOiJmZGMzNDIzYy1hM2M4LTQ4NmItOThlNS0xZTNkNjJiODZjYjIifQ.hoAGRoGLO9QJvOU9JIx-rMqxBBW6TndGEpdaqc3ujYY' \
+ -H 'content-length: 485' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Фонарик изучить уточнить полевой иной важный.","minScore":27,"maxScore":95,"description":"Сынок мелькнуть отражение набор освобождение спорт. Присесть господь господь пламя. Мера белье академик.\nРешетка свежий очко растеряться. Валюта изменение покидать солнце.","estimatedTime":"9 weeks"}'

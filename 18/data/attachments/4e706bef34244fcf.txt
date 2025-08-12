@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjM5LjA0MjE0OCIsInVzZXJfaWQiOiIzNmU1MjQ2MC0wM2IxLTRiNmQtODJhYy04OWUxZGI4NGJmNDQifQ.llDN7Jy-_7o-Uh-ec0Y-QPV7seRLrbsZANlPGahZLrM' \
+ -H 'content-length: 572' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Около снимать четыре сустав ломать стакан.","minScore":19,"maxScore":51,"description":"Умирать сустав а растеряться наступать мучительно порядок. Вообще человечек фонарик. Рабочий одиннадцать строительство ложиться. Видимо призыв заложить манера пространство металл.","estimatedTime":"3 weeks","previewFileId":"","createdByUserId":"d6befe9a-75d3-4d00-af5c-698a2cfe9e3a"}'

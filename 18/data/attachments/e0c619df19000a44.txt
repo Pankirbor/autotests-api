@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/29b44d1d-684c-4d50-8804-41d992e78da4' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjEwOjAwLjAyMTEyMyIsInVzZXJfaWQiOiIxMDIyZjhhYi02ZTQyLTRhNWEtYjk1Mi03MDczZTRmMTRlOWMifQ.NRWpSdcnF9zFei6vNCFzpvM1uO4i_qrXbc6ERfD_NfA' \
+ -H 'content-length: 471' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Необычный полоска анализ тысяча народ коммунизм.","courseId":"8f1dc8ea-c915-4861-9424-a5de9cae61b8","maxScore":89,"minScore":25,"orderIndex":43,"description":"Художественный оборот да ягода невозможно дошлый порог. Юный грудь человечек совещание хотеть правый.","estimatedTime":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}'

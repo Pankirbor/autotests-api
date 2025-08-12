@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/1f40615b-1fce-4a61-8b14-5b15ac533e4e' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjEwOjAwLjI5MjA1OSIsInVzZXJfaWQiOiI0NmVkZGQ5Yi1iMTI5LTQ1MzktYTFlNC00M2I1M2YxYjUwZTEifQ.dLLAIZduv6qGBHCBuCSrawuyNsQPE1Qq11B64klWOLM' \
+ -H 'content-length: 472' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Решетка механический вытаскивать сынок.","courseId":"28fdd083-2d11-4903-8d2f-621d5a41b88b","maxScore":0,"minScore":-10,"orderIndex":64,"description":"Жестокий банк коммунизм деньги. Полевой премьера господь возбуждение. Сходить устройство угроза. Видимо левый поговорить висеть эпоха.","estimatedTime":"5 weeks"}'

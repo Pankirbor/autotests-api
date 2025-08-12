@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjQzLjQ4ODM0OCIsInVzZXJfaWQiOiI3MThjZGYwMi01ODljLTQyZTAtYmVlZi1lZjg5ZmI1MjhjZDMifQ.cGgDKhUfMvVp-cdqYIRWEpuO6rH_3uMoka4trLepRYM' \
+ -H 'content-length: 804' \
+ -H 'content-type: application/json' \
+ -d '{"title":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","minScore":22,"maxScore":82,"description":"Грустный дошлый выгнать термин лиловый покинуть оборот. Недостаток кузнец сустав шлем равнодушный да дурацкий.\nКидать магазин поколение спалить. Угроза нервно промолчать жидкий упор серьезный.","estimatedTime":"2 weeks","previewFileId":"c7b3f264-7154-4673-b561-f711fc3c9d39","createdByUserId":"71f9ace8-d763-4d39-b73f-8b4a51d4fd3b"}'

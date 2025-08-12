@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjQyLjg5ODUwNiIsInVzZXJfaWQiOiJmZGMzNDIzYy1hM2M4LTQ4NmItOThlNS0xZTNkNjJiODZjYjIifQ.hoAGRoGLO9QJvOU9JIx-rMqxBBW6TndGEpdaqc3ujYY' \
+ -H 'content-length: 578' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Серьезный деловой торговля.","minScore":29,"maxScore":76,"description":"Пол тута висеть угодный миллиард точно. Изба изредка правление цель разнообразный посвятить боец написать. Второй кольцо космос вряд результат.\nДьявол задержать пятеро упор мусор.","estimatedTime":"1 weeks","previewFileId":"92feaa77-530c-42dc-bf22-7fcaf7d89118","createdByUserId":"fdc3423c-a3c8-486b-98e5-1e3d62b86cb2"}'

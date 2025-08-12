@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjUyLjQyMzE5MSIsInVzZXJfaWQiOiIyZjc0NWNmNC04MmJiLTQyMmUtOTJlNi0xZTBiZTQ0YjY5ZDcifQ.Q8rIFzBnXOdGZYyBBZXUjlfGJxDBSyXxg2739LSMex0' \
+ -H 'content-length: 496' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Командующий разуметься поставить манера ночь секунда смеяться.","courseId":"79f3ce27-6b38-4a69-bb6f-9f0713435bed","maxScore":54,"minScore":14,"orderIndex":26,"description":"Помолчать рис приличный правый дошлый парень. Исследование мера сынок бригада. Район услать тревога светило терапия тревога.","estimatedTime":"4 weeks"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjQ5Ljk2OTY0MCIsInVzZXJfaWQiOiI1NGFhZWU5Mi0yOTUzLTQzYjUtODE4NC1hMjhmZjhmMTEzYmEifQ.MnVTylN2jwtBvi1T9W8n6H5ereFgib0MGnxqQM4UACU' \
+ -H 'content-length: 451' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Расстегнуть сынок коробка падаль нервно.","courseId":"d08fcc6b-c57f-4eb2-b910-34dc4d4c0382","maxScore":96,"minScore":7,"orderIndex":51,"description":"Мимо упор собеседник похороны домашний. Пропадать вскакивать правление. Строительство тусклый иной наткнуться провал очко.","estimatedTime":"3 weeks"}'

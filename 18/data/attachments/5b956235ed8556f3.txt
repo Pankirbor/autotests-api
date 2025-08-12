@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjU2LjM1NDc5OSIsInVzZXJfaWQiOiIxODRhNzg3Mi02MmQyLTQzYTQtOTZjOC03MDMyZTE4ZjUzYjkifQ.9Y47JW-hRwyiFkwL4pMWiYKpDMohF-_jf1TW-5j9zkk' \
+ -H 'content-length: 468' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Дружно горький банк лиловый житель крутой забирать.","courseId":"9f4b101c-5a25-40fa-a2c6-a3597f007809","maxScore":10,"minScore":100,"orderIndex":20,"description":"Актриса термин порог висеть приятель темнеть тысяча расстегнуть.\nМелькнуть пасть появление интернет невозможно свежий.","estimatedTime":"10 weeks"}'

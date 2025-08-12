@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjUxLjc3OTIxNCIsInVzZXJfaWQiOiIxYjhhN2MyZC1mZjE4LTRkNzctOTJiMC02NGNjOTAxODAxNTYifQ.SQtm9SNdhjlOo7GUUwnzYezek5Rin9e4wFkvH9dEaDY' \
+ -H 'content-length: 562' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Бригада очутиться расстройство еврейский спорт.","courseId":"fd8bb8f7-eb2e-48af-ad5f-65adb0f38f73","maxScore":68,"minScore":19,"orderIndex":92,"description":"Поговорить вообще разуметься реклама вариант покидать деньги снимать. Предоставить реклама лиловый перебивать бак приятель багровый. Штаб князь хозяйка дальний фонарик дрогнуть.","estimatedTime":""}'

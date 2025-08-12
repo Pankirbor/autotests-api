@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjU3LjgxODI1NyIsInVzZXJfaWQiOiJhN2Q0MjZhZC0zNThkLTRmZjctODQ5OC1hMGY1ZTk4ZDU2OTMifQ.OFU4SBcFZmUmcEl4xAjmzcO5sSHTfY6tcrgIny4yjlg' \
+ -H 'content-length: 565' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Танцевать изба инструкция мелькнуть приятель.","minScore":1,"maxScore":55,"description":"Выгнать пасть выгнать близко товар. Бровь чем поставить низкий ночь неудобно.\nНалево новый домашний войти похороны. Какой а термин запустить счастье точно.","estimatedTime":"3 weeks","previewFileId":"0b77ba8a-1d9b-4892-83fc-1004edf49583","createdByUserId":"a7d426ad-358d-4ff7-8498-a0f5e98d5693"}'

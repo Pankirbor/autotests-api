@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjQ0LjM3MDQ3NCIsInVzZXJfaWQiOiI0MzI4NjlkMi1iNzJlLTQ0NTctYWY3MS0yNjFmMmJiZTI3Y2QifQ.kyAC96OrzoPbepByz_xp9qjda9pFtQLWjhWIhnpC76s' \
+ -H 'content-length: 417' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Монета помолчать ребятишки жидкий мелькнуть.","minScore":15,"maxScore":58,"description":"Рабочий холодно нож слишком означать. Перебивать бок заведение кожа свежий.","estimatedTime":"1 weeks","previewFileId":"5cbfad87-cd72-4e36-baba-6c7ce194a404","createdByUserId":"432869d2-b72e-4457-af71-261f2bbe27cd"}'

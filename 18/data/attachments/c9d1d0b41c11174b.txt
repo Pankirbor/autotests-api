@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjEwOjAwLjAyMTEyMyIsInVzZXJfaWQiOiIxMDIyZjhhYi02ZTQyLTRhNWEtYjk1Mi03MDczZTRmMTRlOWMifQ.NRWpSdcnF9zFei6vNCFzpvM1uO4i_qrXbc6ERfD_NfA' \
+ -H 'content-length: 489' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Коробка сопровождаться равнодушный бегать а достоинство покинуть.","minScore":1,"maxScore":65,"description":"Термин хотеть эффект четко возбуждение светило запретить. Назначить палец решетка указанный.","estimatedTime":"9 weeks","previewFileId":"3324d8b5-f3b6-462a-ae8a-f9f78f2f2471","createdByUserId":"1022f8ab-6e42-4a5a-b952-7073e4f14e9c"}'

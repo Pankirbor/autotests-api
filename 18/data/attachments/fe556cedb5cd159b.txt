@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjM4LjE0MTU0NyIsInVzZXJfaWQiOiIzM2Q5OWFjNC1mYThlLTRlN2YtYTIwNC1kMzQ2YjFiNGU0ZjIifQ.i98T3gXWdR2LVf-2gHaL0k4zj8zhXCSqn4FIP2IJRbA' \
+ -H 'content-length: 268' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Художественный дошлый фонарик сбросить.","minScore":5,"maxScore":88,"description":"","estimatedTime":"5 weeks","previewFileId":"cedc4d1e-c499-49af-95de-33d2a5815f5a","createdByUserId":"5ef2ed07-a94a-4dd6-a96f-780a68985c20"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjU1LjEzMzc4MSIsInVzZXJfaWQiOiIzZDJkYTgxYi0yOWVkLTRhOTgtYTFjMS0zMDI3NzRmNTEwMzUifQ.Xp13JcycseJRDRYFSP3x3yKP-j6crrAbYpr8wm0K6lM' \
+ -H 'content-length: 668' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Собеседник следовательно функция мгновение народ подробность.","minScore":28,"maxScore":97,"description":"Холодно услать оставить находить полюбить. Дрогнуть возникновение человечек. Аллея освободить ход ягода оставить блин да.\nЗеленый ответить второй юный. Очутиться деловой витрина дьявол палата.","estimatedTime":"1 weeks","previewFileId":"0d5bcf6a-cf13-4b4e-9155-602dc429d992","createdByUserId":"3d2da81b-29ed-4a98-a1c1-302774f51035"}'

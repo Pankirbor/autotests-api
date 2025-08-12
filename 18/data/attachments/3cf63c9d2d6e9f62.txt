@@ -1,0 +1,38 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: GET на http://localhost:8001/api/v1/exercises?courseId=b6e57b58-4a02-4e47-964f-8265040d8dc1
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/exercises?courseId=b6e57b58-4a02-4e47-964f-8265040d8dc1
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 200
+INFO     EXERCISES_ASSERTIONS:exercises.py:163 Проверяем ответ сервера на запрос списка упражнений
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому b6e57b58-4a02-4e47-964f-8265040d8dc1
+INFO     BASE_ASSERTIONS:base.py:82 Проверяем, что длина exercises соответствует ожидаемой [ExerciseSchema(id='8faf5647-7997-473a-ab08-104b369d6371', title='Разуметься советовать поймать увеличиваться мгновение наслаждение.', course_id='b6e57b58-4a02-4e47-964f-8265040d8dc1', max_score=90, min_score=24, order_index=7, description='Недостаток мрачно пасть. Некоторый рай порядок.\nРуководитель природа заведение инвалид. Падать потрясти порядок. Тесно привлекать доставать сверкать.', estimated_time='6 weeks'), ExerciseSchema(id='acc60030-4d8a-42a7-aefa-b7b40e046c02', title='Парень актриса болото столетие достоинство увеличиваться за.', course_id='b6e57b58-4a02-4e47-964f-8265040d8dc1', max_score=85, min_score=23, order_index=54, description='Песенка посидеть отъезд дошлый очутиться. Самостоятельно за какой мягкий носок слишком господь.', estimated_time='10 weeks')]
+INFO     EXERCISES_ASSERTIONS:exercises.py:47 Проверяем соответсвие данных упражнения
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 8faf5647-7997-473a-ab08-104b369d6371
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Разуметься советовать поймать увеличиваться мгновение наслаждение.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому b6e57b58-4a02-4e47-964f-8265040d8dc1
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 90
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 24
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение order_index соответствует ожидаемому 7
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Недостаток мрачно пасть. Некоторый рай порядок.
+Руководитель природа заведение инвалид. Падать потрясти порядок. Тесно привлекать доставать сверкать.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 6 weeks
+INFO     EXERCISES_ASSERTIONS:exercises.py:47 Проверяем соответсвие данных упражнения
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому acc60030-4d8a-42a7-aefa-b7b40e046c02
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Парень актриса болото столетие достоинство увеличиваться за.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение course_id соответствует ожидаемому b6e57b58-4a02-4e47-964f-8265040d8dc1
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 85
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 23
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение order_index соответствует ожидаемому 54
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Песенка посидеть отъезд дошлый очутиться. Самостоятельно за какой мягкий носок слишком господь.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 10 weeks
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjU0LjIzMjYwMiIsInVzZXJfaWQiOiIwZTc3NTg4Yi0yMGRmLTQwYTItYjkwNy1hNjJkNDdmZGU0MWMifQ.x7-mLPRXyvxwQjjAzBasPcoyhPMkahweSvxwRf31QKo' \
+ -H 'content-length: 443' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Счастье чувство сынок багровый сустав ребятишки.","minScore":19,"maxScore":64,"description":"Избегать магазин необычный горький. Спасть счастье беспомощный палец слать идея кпсс.","estimatedTime":"8 weeks","previewFileId":"87b0c3b3-4537-41cd-bef1-721d19de0c43","createdByUserId":"0e77588b-20df-40a2-b907-a62d47fde41c"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjU1LjEzMzc4MSIsInVzZXJfaWQiOiIzZDJkYTgxYi0yOWVkLTRhOTgtYTFjMS0zMDI3NzRmNTEwMzUifQ.Xp13JcycseJRDRYFSP3x3yKP-j6crrAbYpr8wm0K6lM' \
+ -H 'content-length: 440' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Парень актриса болото столетие достоинство увеличиваться за.","courseId":"b6e57b58-4a02-4e47-964f-8265040d8dc1","maxScore":85,"minScore":23,"orderIndex":54,"description":"Песенка посидеть отъезд дошлый очутиться. Самостоятельно за какой мягкий носок слишком господь.","estimatedTime":"10 weeks"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjQxLjcyODY0MiIsInVzZXJfaWQiOiJjNTZjMjAwZi1hYWQxLTRjN2MtYTQ5Yi04OTk3NmEwMTc5YzgifQ.df6VCj7av73F8oZd9nXVVTsDql8vRwHNmeTDIeRWJo0' \
+ -H 'content-length: 522' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Изучить вздрагивать тревога ребятишки бетонный поймать совет реклама.","minScore":4,"maxScore":56,"description":"Карандаш а коммунизм смеяться отражение штаб. Сверкающий бак достоинство медицина выраженный тяжелый шлем.","estimatedTime":"7 weeks","previewFileId":"720b869a-d87d-40eb-9148-bef7c12915c1","createdByUserId":"c56c200f-aad1-4c7c-a49b-89976a0179c8"}'

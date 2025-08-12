@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjU2LjYyOTUzNSIsInVzZXJfaWQiOiIyNWY0ZTA2OS05NzNlLTQ0MGUtODY5ZS01MzFlOTI3Y2UxYmMifQ.O7Hdpjsrm-m86kevoCGSd1eR0TH5nHGVhwOVDCsvEsk' \
+ -H 'content-length: 500' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Выразить медицина построить сынок.","minScore":22,"maxScore":91,"description":"Аж соответствие помимо следовательно. Дыхание мусор забирать граница. Эпоха порог торопливый правление заявление коричневый плод.","estimatedTime":"5 weeks","previewFileId":"20b3eb1f-49c4-4096-a681-b8c0df2f0fb0","createdByUserId":"25f4e069-973e-440e-869e-531e927ce1bc"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjUzLjY1MTYwMCIsInVzZXJfaWQiOiJkMTk0NTFkZS04YTg5LTQzMzktODNiZS1mZTU5OGJmYzU0ZTEifQ.T34O0La5JzQ_MwxsljttYGCXnAfVe8mzV-OcqFTS-n0' \
+ -H 'content-length: 554' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Избегать около бегать багровый четко кузнец.","minScore":3,"maxScore":59,"description":"Полевой достоинство мимо деньги приходить терапия порядок. Спешить выкинуть крыса.\nНаучить аж о аллея аллея затянуться. Жидкий ставить гулять спешить.","estimatedTime":"3 weeks","previewFileId":"cb176117-044c-4846-94ec-85abf3fe9158","createdByUserId":"d19451de-8a89-4339-83be-fe598bfc54e1"}'

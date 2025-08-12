@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjUxLjE5NzA2NyIsInVzZXJfaWQiOiJlOTQ4NGQwYS1iNmNiLTQzMzYtODFlZS1iMWU0MzkwNTlmMDAifQ.ofR-42sN7Wa2RZbyM8LbThvdtFCzeTyybLo7onGfs6c' \
+ -H 'content-length: 437' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Выраженный господь тюрьма армейский райком призыв.","courseId":"8bf71fd3-695d-4a19-9cae-f56460fa4a37","maxScore":76,"minScore":3,"orderIndex":11,"description":"Князь идея разводить а остановить командующий аллея. Ягода провал легко при. Кожа еврейский даль засунуть.","estimatedTime":"5 weeks"}'

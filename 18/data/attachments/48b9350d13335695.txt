@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjU2LjM1NDc5OSIsInVzZXJfaWQiOiIxODRhNzg3Mi02MmQyLTQzYTQtOTZjOC03MDMyZTE4ZjUzYjkifQ.9Y47JW-hRwyiFkwL4pMWiYKpDMohF-_jf1TW-5j9zkk' \
+ -H 'content-length: 532' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Прежний точно зима поймать способ отъезд приятель.","minScore":5,"maxScore":63,"description":"Боец совет смеяться смертельный неправда хлеб перебивать салон. Вряд снимать дошлый юный вздрагивать термин. Оборот цепочка полевой.","estimatedTime":"5 weeks","previewFileId":"04d54762-070c-4937-897c-520aba720df2","createdByUserId":"184a7872-62d2-43a4-96c8-7032e18f53b9"}'

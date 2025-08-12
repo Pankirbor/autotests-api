@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjU0LjIzMjYwMiIsInVzZXJfaWQiOiIwZTc3NTg4Yi0yMGRmLTQwYTItYjkwNy1hNjJkNDdmZGU0MWMifQ.x7-mLPRXyvxwQjjAzBasPcoyhPMkahweSvxwRf31QKo' \
+ -H 'content-length: 668' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Стакан житель полностью факультет сравнение материя промолчать дорогой.","courseId":"3d00c197-bbcf-48c0-aaa0-8cc4c327b7a7","maxScore":58,"minScore":7,"orderIndex":48,"description":"Тусклый мотоцикл металл свежий выражаться палата.\nБолото советовать ремень необычный. Блин терапия направо. Пламя мотоцикл прежде изредка.\nРасстройство что командование космос деньги.","estimatedTime":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjUwLjU1NDQyNyIsInVzZXJfaWQiOiI3ODg1MzJjZi0xZmFiLTQ2MWItOTE0Zi1lMjVkOTY0YjBkNWQifQ.yl02G36SbyF3UYqu--fPgnG06Ax4WWrXptFx9_CNlpo' \
+ -H 'content-length: 569' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Скрытый космос помимо штаб еврейский освобождение тысяча.","minScore":17,"maxScore":89,"description":"Изредка привлекать плясать вчера зима. Бок нервно волк рассуждение забирать карман. Труп изба самостоятельно господь бак очутиться близко казнь.","estimatedTime":"9 weeks","previewFileId":"e1052c6b-bd3d-407b-b12f-69a37b79b9fa","createdByUserId":"788532cf-1fab-461b-914f-e25d964b0d5d"}'

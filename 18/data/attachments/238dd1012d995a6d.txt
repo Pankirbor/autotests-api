@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDA4OjA5OjQ4LjE0NTcxMSIsInVzZXJfaWQiOiJlZDY4ZmQ0OS1kYjYxLTQ4OGEtYTlmYy01OWYzNmQ4MzYxODcifQ.UZRG2Jb4La-DVkGCINkkwUY7Ls0XUyPTpm2ANZRVGWg' \
+ -H 'content-length: 393' \
+ -H 'content-type: application/json' \
+ -d '{"title":"","courseId":"733704ed-3f35-4db5-852e-386ec5ae4c85","maxScore":85,"minScore":17,"orderIndex":14,"description":"Премьера зарплата цель виднеться ручей порядок. Тысяча степь запустить запретить. Очередной помимо бригада тяжелый правление пламя.","estimatedTime":"5 weeks"}'
