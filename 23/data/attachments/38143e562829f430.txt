@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM5OjE0Ljg2MjUyMyIsInVzZXJfaWQiOiI3ZDZmNTRhMC1lNTAwLTQyNjMtODRiMy04YzE1ZDgxYTM3OTUifQ.U5-B3jcYUWnUNbfGt0IheKt6yKDP-Gjw8PHTSWt6V0g' \
+ -H 'content-length: 472' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Социалистический поезд плавно гулять.","minScore":7,"maxScore":53,"description":"Зато сынок горький рот актриса лапа. Выгнать куча тюрьма непривычный.\nЕврейский плод отъезд горький возбуждение.","estimatedTime":"6 weeks","previewFileId":"692c8e08-68f7-4dea-8fcb-fb885fef274b","createdByUserId":"7d6f54a0-e500-4263-84b3-8c15d81a3795"}'

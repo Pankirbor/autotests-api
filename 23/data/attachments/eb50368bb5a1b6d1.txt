@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM5OjExLjg2NzYwNSIsInVzZXJfaWQiOiJkYTEzNjM0ZS1kZTAwLTQzN2YtOWNmZS04N2MzOTI3MTYyOWYifQ._QtTDZ7MqUYSvez4HISxcnasK-6pVLfjy2HyOxL-sts' \
+ -H 'content-length: 547' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Изба монета умолять картинка смелый равнодушный выраженный.","courseId":"2ff72972-043f-4f5e-a15f-511f30aa1ff3","maxScore":91,"minScore":7,"orderIndex":26,"description":"Призыв второй адвокат очередной торговля носок идея. Цвет роса анализ выраженный. Крутой забирать означать хлеб очко прежний правый.","estimatedTime":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}'

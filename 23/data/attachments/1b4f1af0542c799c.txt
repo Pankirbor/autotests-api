@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM5OjA4LjIzMjg1MSIsInVzZXJfaWQiOiI2MTlhMjM3ZS1iZjg4LTQ2MTItODZkYi1jMWNiNzFjZmE1N2EifQ.dnqeFOEhLAkKP5Tjp5Pu-zvOogdZ47DnIvqbuW-tjks' \
+ -H 'content-length: 618' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Лететь угроза граница премьера господь около труп.","minScore":12,"maxScore":90,"description":"Проход спешить выбирать поймать что вчера тревога. Металл изучить второй девка четко вряд. Встать войти оставить легко.\nПадаль неудобно товар. Князь дорогой экзамен монета провал.","estimatedTime":"1 weeks","previewFileId":"84d9cda7-0dca-4f72-a5e2-30fb46415878","createdByUserId":"619a237e-bf88-4612-86db-c1cb71cfa57a"}'

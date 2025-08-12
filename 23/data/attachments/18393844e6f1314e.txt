@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/courses/7b41dde5-070a-4ee9-8fa8-4cce51ad04b6' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM4OjU4LjMzNTkyMCIsInVzZXJfaWQiOiI0ZWE4NjA3Ni1iM2I2LTRhNDktOGI0YS1mNWQzM2YyOTQ5N2EifQ.B0NrL7ZR65oyCzXfEQOyimyefQj_xnoC5TaPjNzGvpo' \
+ -H 'content-length: 432' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Темнеть растеряться вчера палка выражение снимать дорогой.","minScore":18,"maxScore":75,"description":"Художественный строительство витрина дальний. Исполнять тревога витрина лететь. Заведение мусор потянуться пламя головка дошлый.","estimatedTime":"6 weeks"}'

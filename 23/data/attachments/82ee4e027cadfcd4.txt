@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM4OjU2LjAwNTMzOSIsInVzZXJfaWQiOiIxYTZlODZhNC05MGE3LTRkYzQtYmI4YS00NjY2ZjRkOTU0YjkifQ.Id8lnXxGYseAn2fdam7oAcGNP1qo7KerlZKi-djr1ZE' \
+ -H 'content-length: 458' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Мгновение фонарик тюрьма намерение низкий кпсс.","minScore":9,"maxScore":71,"description":"Точно тута степь важный единый боец кольцо. Рассуждение четыре мотоцикл устройство инструкция.","estimatedTime":"10 weeks","previewFileId":"682ace2d-24bc-42f6-9ee2-679f43d9fd7b","createdByUserId":"1a6e86a4-90a7-4dc4-bb8a-4666f4d954b9"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM5OjAwLjk5MzU0MiIsInVzZXJfaWQiOiI0NTk0YjRkOC0wY2RiLTQ2OGYtOWFhMC1kMDIzNWZjMDgxZDEifQ.DGAsI_fBi9Nbv1gtN6MCuYaSGBjHm8PdEg-JsrzpnPA' \
+ -H 'content-length: 310' \
+ -H 'content-type: application/json' \
+ -d '{"title":"","minScore":4,"maxScore":66,"description":"Мимо кольцо изредка пол число. Мусор скользить порода дурацкий.","estimatedTime":"2 weeks","previewFileId":"22c2817f-71a7-488c-84b0-3efb5dc80ff1","createdByUserId":"a9f959e1-86ca-435f-ad74-518539170f07"}'

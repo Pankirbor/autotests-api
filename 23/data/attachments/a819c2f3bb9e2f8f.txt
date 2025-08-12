@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM5OjA2Ljc1ODg5MiIsInVzZXJfaWQiOiJmNTEzMmMxMy1jOTgyLTQ1ZjEtYmRjNS01ZWE0M2JkYzUxNjkifQ.OFyCecy0RvJ-sH0GZxL5JP5Xvks677R21gaq7bRQuPU' \
+ -H 'content-length: 494' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Спорт чем крутой песня счастье трубка.","courseId":"1f67a4e4-bb6e-41a1-9eb6-91455c4e857f","maxScore":69,"minScore":20,"orderIndex":36,"description":"Болото подробность вскинуть расстройство человечек мелькнуть ведь. Господь дружно спалить лететь. Слать низкий появление сохранять иной неожиданно.","estimatedTime":"3 weeks"}'

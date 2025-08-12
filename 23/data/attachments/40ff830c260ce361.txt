@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM5OjA1Ljg1NzI3OCIsInVzZXJfaWQiOiIwZDMzMjVkMy0xMjA0LTQ0ZTQtOTdjOS05ZjhkMjdkZTU5OWUifQ.DCEXlNZWKw7IX6QR30HsxMIa6j7MbyRjd-Fsd_Rg-RM' \
+ -H 'content-length: 582' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Смертельный находить ручей выражение намерение отдел плавно.","minScore":1,"maxScore":79,"description":"Посвятить вскакивать тяжелый кидать банда кидать. Академик необычный полюбить адвокат болото избегать. Болото голубчик куча исполнять предоставить.","estimatedTime":"7 weeks","previewFileId":"f220b61c-0a15-418c-9932-bd4560d6b5ee","createdByUserId":"0d3325d3-1204-44e4-97c9-9f8d27de599e"}'

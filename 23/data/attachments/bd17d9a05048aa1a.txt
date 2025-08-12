@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM5OjE0LjI3NzYzMyIsInVzZXJfaWQiOiI2NmM5MDZmYy02MjAxLTRmODYtYTdlOS0xNWRjMmZmMjE0ZmEifQ.moL_hdAFEgrCfmN1i53DhlXJhY5EswTwP21J0D-qhqU' \
+ -H 'content-length: 448' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Пропадать волк новый ломать направо ярко гулять.","minScore":1,"maxScore":67,"description":"Вскинуть монета услать трубка успокоиться висеть. За экзамен хлеб реклама команда спичка.","estimatedTime":"8 weeks","previewFileId":"bb062f24-a491-4c4d-be8e-8a9217029901","createdByUserId":"66c906fc-6201-4f86-a7e9-15dc2ff214fa"}'

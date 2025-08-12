@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/b1d0c6a2-39a1-46b4-b140-841d5d259624' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM5OjE2LjA0MzYwNyIsInVzZXJfaWQiOiJmOTRhNWE4MS0zZDkwLTQyMjItYTg5OS02Nzk3N2IyOWZhYzcifQ.qJOrcun3OyFhd2qV6tBBmj_G9tYmiek0oDsDswyZVQc' \
+ -H 'content-length: 549' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Посвятить ход тесно налоговый мальчишка палец.","courseId":"82e94633-c8e0-4bb7-9f81-ce96605f2fb7","maxScore":10,"minScore":100,"orderIndex":20,"description":"Кпсс невозможно монета салон присесть увеличиваться.\nУслать исполнять поговорить выраженный. Скрытый набор правильный цвет. Сомнительный дьявол бабочка госпожа второй.","estimatedTime":"9 weeks"}'

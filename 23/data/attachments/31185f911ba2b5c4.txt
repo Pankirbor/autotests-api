@@ -1,0 +1,11 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: DELETE на http://localhost:8001/api/v1/courses/b0a6d408-37b9-4481-87c9-ff1a0f8efa52
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 404 Not Found от http://localhost:8001/api/v1/courses/b0a6d408-37b9-4481-87c9-ff1a0f8efa52
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 404
+INFO     COURSES_ASSERTIONS:courses.py:171 Проверяем ответ сервера на запрос несуществующего курса
+INFO     ERRORS_ASSSERTIONS:errors.py:75 Проверяем ответ сервера с ожидаемой внутренней ошибкой
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение details соответствует ожидаемому Course not found
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

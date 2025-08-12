@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM4OjU1LjQyODY4NyIsInVzZXJfaWQiOiI4MThlYjJlZS1hNzdjLTRhNmItYWM5MS1kYjVmN2MxNGVhYmUifQ.TKKuU1FA4wRyd13v0heAVg1Rlkeed4Ht74vD3c4wOfo' \
+ -H 'content-length: 428' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Бетонный ручей выбирать.","minScore":29,"maxScore":98,"description":"Космос запустить похороны запеть изменение. Направо передо даль правый проход расстройство освобождение смеяться.","estimatedTime":"9 weeks","previewFileId":"incorrect-id","createdByUserId":"1531f132-655d-45dc-a781-0e67799e0d3b"}'

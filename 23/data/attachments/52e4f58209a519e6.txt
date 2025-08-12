@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM5OjEwLjM1MDEyNCIsInVzZXJfaWQiOiI2NjBhODU5OC0xNGE2LTQzNDItYWRjOS1mMGQ2M2YwZTRkY2YifQ.Ckx_FcVNH9S9WSood9WxrSou7zxtcdhdsVII-lWYpXg' \
+ -H 'content-length: 566' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Сбросить вытаскивать результат сутки пересечь спичка крыса.","minScore":16,"maxScore":59,"description":"Очко успокоиться армейский сустав поговорить поставить. Чем бровь заплакать танцевать. Ярко дальний степь развернуться намерение опасность.","estimatedTime":"2 weeks","previewFileId":"b0a79453-e558-41bc-8b9d-38b88bde6bbd","createdByUserId":"660a8598-14a6-4342-adc9-f0d63f0e4dcf"}'

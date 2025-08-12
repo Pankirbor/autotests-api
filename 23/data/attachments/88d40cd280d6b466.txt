@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/79cdc0d8-4f03-43f0-a4c9-eeb48dd76f66' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM5OjA3Ljk1ODI0MyIsInVzZXJfaWQiOiI5MjUxNjY5Yy1mZjg0LTRjNWMtOWNkYy1hZTMzZTIzNGJjMjcifQ.ONhwziLYE0TfuTVQBw7RdZAWvLHGHM31Lt5G7fW2oZw' \
+ -H 'content-length: 400' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Грудь инструкция приятель виднеться граница второй.","courseId":"76465226-d4e7-4cac-8f23-c3c30153824c","maxScore":57,"minScore":21,"orderIndex":96,"description":"Князь цвет смеяться увеличиваться разуметься добиться. О пропаганда исполнять изба.","estimatedTime":"5 weeks"}'

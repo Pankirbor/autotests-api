@@ -1,0 +1,52 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: GET на http://localhost:8001/api/v1/courses?userId=2bf5c61f-48a8-4402-b5db-d1b08cc2961d
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 200 OK от http://localhost:8001/api/v1/courses?userId=2bf5c61f-48a8-4402-b5db-d1b08cc2961d
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 200
+INFO     COURSES_ASSERTIONS:courses.py:125 Проверяем ответ сервера на запрос списка курсов
+INFO     BASE_ASSERTIONS:base.py:82 Проверяем, что длина courses соответствует ожидаемой [CourseSchema(title='Рассуждение грустный рот важный скрытый обида.', max_score=51, min_score=18, description='Фонарик падаль покидать художественный. Ягода идея фонарик пробовать карандаш госпожа полоска. Невыносимый снимать горький зима. Растеряться вообще жестокий некоторый проход основание.', estimated_time='2 weeks', id='e3b751c5-a2f6-4d3a-a6b9-0f5862ac0b4b', preview_file=FileSchema(id='d5dbae12-aa8c-4561-b3d4-e9dfa551ec49', url=HttpUrl('http://localhost:8001/static/tests/7cb5042e-b482-4203-941e-6bc13b52ae99.jpg'), filename='7cb5042e-b482-4203-941e-6bc13b52ae99.jpg', directory='tests'), created_by_user=UserSchema(id='2bf5c61f-48a8-4402-b5db-d1b08cc2961d', email='solovevandre@example.net', last_name='Горбунова', first_name='Захар', middle_name='Порфирий')), CourseSchema(title='Кожа господь порог господь.', max_score=50, min_score=10, description='Промолчать выдержать потянуться деньги художественный сбросить военный заработать. Миллиард расстегнуть дружно наткнуться художественный вперед рис что. Какой некоторый изображать.', estimated_time='7 weeks', id='83bdfa24-0df0-46fa-9731-bdd2ece8ea7c', preview_file=FileSchema(id='d5dbae12-aa8c-4561-b3d4-e9dfa551ec49', url=HttpUrl('http://localhost:8001/static/tests/7cb5042e-b482-4203-941e-6bc13b52ae99.jpg'), filename='7cb5042e-b482-4203-941e-6bc13b52ae99.jpg', directory='tests'), created_by_user=UserSchema(id='2bf5c61f-48a8-4402-b5db-d1b08cc2961d', email='solovevandre@example.net', last_name='Горбунова', first_name='Захар', middle_name='Порфирий'))]
+INFO     COURSES_ASSERTIONS:courses.py:43 Проверяем соответсвие данных курса
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому e3b751c5-a2f6-4d3a-a6b9-0f5862ac0b4b
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Рассуждение грустный рот важный скрытый обида.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Фонарик падаль покидать художественный. Ягода идея фонарик пробовать карандаш госпожа полоска. Невыносимый снимать горький зима. Растеряться вообще жестокий некоторый проход основание.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 2 weeks
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 51
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 18
+INFO     FILES_ASSERTIONS:files.py:82 Проверяем соответствие данных файла
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому d5dbae12-aa8c-4561-b3d4-e9dfa551ec49
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение filename соответствует ожидаемому 7cb5042e-b482-4203-941e-6bc13b52ae99.jpg
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение directory соответствует ожидаемому tests
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение url соответствует ожидаемому http://localhost:8001/static/tests/7cb5042e-b482-4203-941e-6bc13b52ae99.jpg
+INFO     USERS_ASSERTIONS:users.py:84 Проверяем соответствие данных пользователя
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 2bf5c61f-48a8-4402-b5db-d1b08cc2961d
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение email соответствует ожидаемому solovevandre@example.net
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение first_name соответствует ожидаемому Захар
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение last_name соответствует ожидаемому Горбунова
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение middle_name соответствует ожидаемому Порфирий
+INFO     COURSES_ASSERTIONS:courses.py:43 Проверяем соответсвие данных курса
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 83bdfa24-0df0-46fa-9731-bdd2ece8ea7c
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение title соответствует ожидаемому Кожа господь порог господь.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение description соответствует ожидаемому Промолчать выдержать потянуться деньги художественный сбросить военный заработать. Миллиард расстегнуть дружно наткнуться художественный вперед рис что. Какой некоторый изображать.
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение estimated_time соответствует ожидаемому 7 weeks
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение max_score соответствует ожидаемому 50
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение min_score соответствует ожидаемому 10
+INFO     FILES_ASSERTIONS:files.py:82 Проверяем соответствие данных файла
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому d5dbae12-aa8c-4561-b3d4-e9dfa551ec49
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение filename соответствует ожидаемому 7cb5042e-b482-4203-941e-6bc13b52ae99.jpg
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение directory соответствует ожидаемому tests
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение url соответствует ожидаемому http://localhost:8001/static/tests/7cb5042e-b482-4203-941e-6bc13b52ae99.jpg
+INFO     USERS_ASSERTIONS:users.py:84 Проверяем соответствие данных пользователя
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение id соответствует ожидаемому 2bf5c61f-48a8-4402-b5db-d1b08cc2961d
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение email соответствует ожидаемому solovevandre@example.net
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение first_name соответствует ожидаемому Захар
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение last_name соответствует ожидаемому Горбунова
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение middle_name соответствует ожидаемому Порфирий
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

@@ -1,0 +1,7 @@
+INFO     HTTP_CLIENT:event_hooks.py:24 Отправляем запрос: POST на http://localhost:8001/api/v1/authentication/refresh
+INFO     HTTP_CLIENT:event_hooks.py:28 Получаем ответ: 401 Unauthorized от http://localhost:8001/api/v1/authentication/refresh
+INFO     BASE_ASSERTIONS:base.py:24 Проверяем, что статус код ответа сервера соответствует 401
+INFO     AUTHENTICATION_ASSERTIONS:authentication.py:49 Проверяем ответ сервера после обновления токена с невалидным токеном
+INFO     ERRORS_ASSSERTIONS:errors.py:75 Проверяем ответ сервера с ожидаемой внутренней ошибкой
+INFO     BASE_ASSERTIONS:base.py:45 Проверяем, что значение details соответствует ожидаемому Invalid or expired refresh token
+INFO     SCHEMA_ASSERTIONS:schema.py:26 Проверяем, соответствует ли ответ сервера JSON-схеме

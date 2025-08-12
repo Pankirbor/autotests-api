@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM5OjExLjg2NzYwNSIsInVzZXJfaWQiOiJkYTEzNjM0ZS1kZTAwLTQzN2YtOWNmZS04N2MzOTI3MTYyOWYifQ._QtTDZ7MqUYSvez4HISxcnasK-6pVLfjy2HyOxL-sts' \
+ -H 'content-length: 640' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Перебивать отражение прежний появление возбуждение.","minScore":21,"maxScore":81,"description":"Карман нажать банк банк неожиданный степь. Постоянный цель казнь находить спасть тяжелый пламя скользить. Столетие полоска сравнение пастух необычный. Войти лететь передо казнь четко иной.","estimatedTime":"2 weeks","previewFileId":"7ef7b028-6f54-4b2b-9c1e-7d403ba4ee5e","createdByUserId":"da13634e-de00-437f-9cfe-87c39271629f"}'

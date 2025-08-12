@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM4OjU4LjkzMjAwNCIsInVzZXJfaWQiOiI4ZjEwNjdjYS02NDY3LTQ0OWUtOTRkOC02MDQ2NjU1NDQ1Y2EifQ.EclFpEs_FoOqGL8bh-q9YDVQFVyOQbElbmcjfdrSgBw' \
+ -H 'content-length: 631' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Близко подробность голубчик потянуться июнь прелесть радость.","minScore":2,"maxScore":92,"description":"Полоска фонарик порода более. Бок карандаш инструкция. Уронить возникновение тяжелый ночь покидать.\nРучей свежий кольцо возможно беспомощный. Обида пламя академик пробовать.","estimatedTime":"6 weeks","previewFileId":"670b630f-a75c-4009-9df8-7f5d100bf918","createdByUserId":"8f1067ca-6467-449e-94d8-6046655445ca"}'

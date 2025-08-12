@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM5OjA5LjE0ODAwNSIsInVzZXJfaWQiOiJhNDAxNzUwNS03YWI0LTQwNjQtODJjMC0xMDIzMTAyOTJiMGYifQ.tH_UMcbzdLjpYjlZ5gmZReg68N7NqBu6mMYafhUBRwg' \
+ -H 'content-length: 622' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Горький изменение граница наткнуться премьера.","minScore":23,"maxScore":72,"description":"Каюта сынок костер протягивать изучить.\nКоричневый невыносимый плясать близко роскошный карандаш. Потрясти угол миллиард космос вариант нажать. Встать бок равнодушный ночь сравнение.","estimatedTime":"5 weeks","previewFileId":"54d222d3-7d5c-4cf9-a1b7-98f85c0232d0","createdByUserId":"a4017505-7ab4-4064-82c0-102310292b0f"}'

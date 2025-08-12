@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+ 'http://localhost:8001/api/v1/exercises/94fb6b30-235d-4915-864c-f5cde2e299d9' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM5OjE3LjI1ODU4MiIsInVzZXJfaWQiOiIxZTQyODdjOC0wNzRhLTRhNmUtYTUxYy1hZGI4Y2MzNzU3NTIifQ.xCFCDqwuk-EsqwQwnpy-fLD2PRaorsnDfYAgamwL-yg' \
+ -H 'content-length: 579' \
+ -H 'content-type: application/json' \
+ -d '{"title":"При разнообразный бетонный нажать.","courseId":"cb63e346-7811-48ee-99e7-31b9164cb520","maxScore":0,"minScore":-10,"orderIndex":24,"description":"Заработать слать радость нервно штаб что. Термин проход важный песня. Фонарик очутиться карман магазин похороны совет горький стакан.\nНевыносимый бегать подробность интернет порог полевой секунда.","estimatedTime":"10 weeks"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM4OjU2LjU4NzM2MCIsInVzZXJfaWQiOiIwYWU1ZmVmNi0zNjEwLTRiOTktYjQzMS02ZDhlMjZmMmNjNmIifQ.6T2Kq4rw19tB42j8UVcmxLsHcaN6_9nhj8VsfhauDWg' \
+ -H 'content-length: 521' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Мелочь девка скрытый команда слишком.","minScore":23,"maxScore":56,"description":"Одиннадцать район кпсс рассуждение. Радость госпожа заявление.\nГорький поздравлять плод. Изображать расстегнуть граница равнодушный белье пища оборот.","estimatedTime":"1 weeks","previewFileId":"c8673be4-7734-4228-a014-7ebeedfa9ee8","createdByUserId":"incorrect-id"}'

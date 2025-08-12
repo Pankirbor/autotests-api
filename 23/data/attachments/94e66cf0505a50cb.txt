@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM5OjEwLjYyMjU4MiIsInVzZXJfaWQiOiI4NDUxOTgyZS04N2ZlLTQyMmUtOGJiMy0xNTg0YzVjMjE1YzMifQ.e0GDhwp3AJrqEjAl0kwLZU5mNArkcFz4FQDNaw_RNuc' \
+ -H 'content-length: 592' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Некоторый рот смертельный пробовать пасть.","minScore":25,"maxScore":68,"description":"Порт грудь смертельный. Хозяйка вариант угол хозяйка багровый покинуть.\nГосподь желание жестокий даль ход выдержать заработать. Ночь товар число металл невыносимый парень.","estimatedTime":"8 weeks","previewFileId":"cd44da62-1494-44ab-b7f6-682ba1e18253","createdByUserId":"8451982e-87fe-422e-8bb3-1584c5c215c3"}'

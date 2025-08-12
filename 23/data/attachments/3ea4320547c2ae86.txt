@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM4OjU3LjE2NDM1NiIsInVzZXJfaWQiOiI2YTNiMWI3MC05ZmIwLTQ5NWMtOGE2OS00NjljNjc4YjIyZWQifQ.lfhpoS7Jipvc5E4XImkR3R7wjNF_Vzksedx9RmXHH5Y' \
+ -H 'content-length: 562' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Угодный невыносимый военный левый ручей лапа деньги.","minScore":16,"maxScore":79,"description":"Монета похороны палец пространство намерение интернет выдержать. Покинуть пропаганда заплакать. Низкий поговорить бабочка порода решетка важный.","estimatedTime":"8 weeks","previewFileId":"555adc11-8d62-47b6-97fa-a3d33ee16106","createdByUserId":"6a3b1b70-9fb0-495c-8a69-469c678b22ed"}'

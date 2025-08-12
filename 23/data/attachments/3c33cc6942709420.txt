@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/exercises' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM5OjA3Ljk1ODI0MyIsInVzZXJfaWQiOiI5MjUxNjY5Yy1mZjg0LTRjNWMtOWNkYy1hZTMzZTIzNGJjMjcifQ.ONhwziLYE0TfuTVQBw7RdZAWvLHGHM31Lt5G7fW2oZw' \
+ -H 'content-length: 527' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Беспомощный деловой очутиться угроза угодный зима эффект изучить.","courseId":"76465226-d4e7-4cac-8f23-c3c30153824c","maxScore":95,"minScore":10,"orderIndex":82,"description":"Да бегать холодно рот степь мера коллектив коричневый. Дорогой миллиард эффект миф манера прощение. Домашний подземный падаль достоинство.","estimatedTime":"6 weeks"}'

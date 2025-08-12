@@ -1,0 +1,11 @@
+curl -X 'POST' \
+ 'http://localhost:8001/api/v1/courses' \
+ -H 'host: localhost:8001' \
+ -H 'accept: */*' \
+ -H 'accept-encoding: gzip, deflate' \
+ -H 'connection: keep-alive' \
+ -H 'user-agent: python-httpx/0.28.1' \
+ -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI1LTA4LTEyVDE5OjM4OjUyLjE3NTEwNiIsInVzZXJfaWQiOiI4YTRiZTM4Ny1lOWIzLTRjMzUtOTIzNi0xYTU4MWU2NTRiYmEifQ.HJy9VTvhfVpFwHo0bpnQPsZcKfBrRarp5ZDli1KiCh8' \
+ -H 'content-length: 310' \
+ -H 'content-type: application/json' \
+ -d '{"title":"Изображать спалить неожиданно плод медицина смеяться дыхание.","minScore":13,"maxScore":58,"description":"","estimatedTime":"2 weeks","previewFileId":"661ee22d-7f49-44dc-b6b5-ef9e4568389c","createdByUserId":"1b47e733-84ed-4e4c-8167-c33d10d365e4"}'
