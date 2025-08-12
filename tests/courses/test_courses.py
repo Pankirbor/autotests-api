@@ -4,7 +4,7 @@ import allure
 from allure_commons.types import Severity
 import pytest
 
-from clients.courses.constants import MAX_LENGTH_FIELDS
+from clients.courses.constants import MAX_LENGTH_FIELDS, FIELD_NAME_MAPPING
 from clients.courses.courses_client import CoursesClient
 from clients.courses.courses_schema import (
     GetCoursesQuerySchema,
@@ -211,7 +211,9 @@ class TestCourses:
         response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
 
         assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
-        assert_create_course_with_empty_field_response(response_data, field_name)
+        assert_create_course_with_empty_field_response(
+            response_data, FIELD_NAME_MAPPING.get(field_name)
+        )
 
         validate_json_schema(response.json(), response_data.model_json_schema())
 
@@ -242,7 +244,9 @@ class TestCourses:
         response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
 
         assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
-        assert_create_course_with_incorrect_field_id_response(response_data, field_name)
+        assert_create_course_with_incorrect_field_id_response(
+            response_data, FIELD_NAME_MAPPING.get(field_name)
+        )
 
     @allure.tag(AllureTag.VALIDATE_ENTITY)
     @allure.story(AllureStory.VALIDATE_ENTITY)

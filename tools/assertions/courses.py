@@ -12,20 +12,19 @@ from clients.errors_schema import (
     ValidationErrorResponseSchema,
 )
 from clients.courses.constants import FIELD_NAME_MAPPING, MAX_LENGTH_FIELDS
-from tools.assertions.api_error_constants import ErrorContext
-from tools.assertions.error_builder import ValidationErrorBuilder
 from tools.assertions.base import assert_equal, assert_length
 from tools.assertions.errors import (
     assert_internal_error_response,
     assert_validation_error_for_invalid_id,
-    assert_validation_error_response,
+    assert_validation_error_for_empty_id_field,
+    assert_validation_error_for_too_long_field,
+    assert_validation_error_for_empty_string_field,
 )
 from tools.assertions.files import assert_file
 from tools.assertions.users import assert_user
 from tools.logger import get_logger
 
 
-err_builder = ValidationErrorBuilder()
 logger = get_logger("COURSES_ASSERTIONS")
 
 
@@ -189,23 +188,16 @@ def assert_create_course_with_empty_field_response(
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
 
-    expected = None
-    if field_name in ["title", "description"]:
-        error_param = {"err_context": ErrorContext.STRING_TOO_SHORT, "min_length": 1}
-
-    elif field_name in ["preview_file_id", "created_by_user_id"]:
-        error_param = {"err_context": ErrorContext.INVALID_UUID_LENGTH, "length": 0}
-
-    expected = (
-        err_builder.with_input("")
-        .with_error(**error_param)
-        .at_location("body", FIELD_NAME_MAPPING.get(field_name))
-        .build()
-    )
     logger.info(
         "Проверяем ответ сервера на запрос курса с пустым обязательным параметром"
     )
-    assert_validation_error_response(actual, expected)
+    if field_name in ["title", "description"]:
+        assert_validation_error_for_empty_string_field(
+            actual=actual, field_name=field_name
+        )
+
+    elif field_name in ["preview_file_id", "created_by_user_id"]:
+        assert_validation_error_for_empty_id_field(actual=actual, field_name=field_name)
 
 
 @allure.step(
@@ -226,22 +218,16 @@ def assert_create_course_with_incorrect_field_id_response(
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
 
-    expected = (
-        err_builder.with_input("incorrect-id")
-        .with_error(ErrorContext.INVALID_UUID_CHAR, char="i", position=1)
-        .at_location("body", FIELD_NAME_MAPPING.get(field_name))
-        .build()
-    )
     logger.info(
         "Проверяем ответ сервера на запрос создания курса с некорректным id полем в теле запроса"
     )
-    assert_validation_error_response(actual, expected)
+    assert_validation_error_for_invalid_id(actual=actual, location=["body", field_name])
 
 
 @allure.step("Проверяем ответ сервера на запрос создания курса с слишком длинным title")
 def assert_create_or_update_course_with_too_long_title_response(
     actual: ValidationErrorResponseSchema,
-    input_val: str,
+    input_value: str,
 ):
     """
     Проверяет, что при отправке слишком длинного значения в поле title,
@@ -253,35 +239,62 @@ def assert_create_or_update_course_with_too_long_title_response(
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
-    expected = (
-        err_builder.with_input(input_val)
-        .with_error(
-            ErrorContext.STRING_TOO_LONG, max_length=MAX_LENGTH_FIELDS.get("title")
-        )
-        .at_location("body", "title")
-        .build()
-    )
+
     logger.info(
         "Проверяем ответ сервера на запрос создания курса с слишком длинным title"
     )
-    assert_validation_error_response(actual, expected)
+    assert_validation_error_for_too_long_field(
+        actual=actual,
+        input_value=input_value,
+        location="title",
+        max_length=MAX_LENGTH_FIELDS.get("title"),
+    )
 
 
 @allure.step("Проверяем ответ сервера на запрос курсов с несуществующим user_id")
 def assert_get_courses_with_non_existent_id_response(
     actual: GetCoursesResponseSchema,
 ):
+    """
+    Проверяет, что при запросе курсов с несуществующим user_id сервер возвращает пустой список курсов.
+
+    Args:
+        actual (GetCoursesResponseSchema): Ответ сервера после запроса курсов.
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
     expected = GetCoursesResponseSchema(courses=[])
     assert_get_courses_response(expected_response=expected, response=actual)
 
 
+@allure.step("Проверяем ответ сервера на запрос курсов с некорректным user_id")
 def assert_get_courses_with_incorrect_id_response(
     actual: ValidationErrorResponseSchema,
 ):
+    """
+    Проверяет, что при запросе курсов с некорректным user_id сервер возвращает ошибку.
+
+    Args:
+        actual (ValidationErrorResponseSchema): Ответ сервера после запроса курсов.
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
     assert_validation_error_for_invalid_id(actual=actual, location=["query", "userId"])
 
 
+@allure.step("Проверяем ответ сервера на запрос курса с некорректным id")
 def assert_get_course_with_incorrect_id_response(actual: ValidationErrorResponseSchema):
+    """
+    Проверяет, что при запросе курса с некорректным id сервер возвращает ошибку.
+
+    Args:
+        actual (ValidationErrorResponseSchema): Ответ сервера после запроса курса.
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
     assert_validation_error_for_invalid_id(
         actual=actual, location=["path", "course_id"]
     )

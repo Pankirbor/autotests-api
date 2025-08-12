@@ -102,18 +102,43 @@ def assert_validation_error_for_invalid_id(
     assert_validation_error_response(actual=actual, expected=expected)
 
 
-def assert_validation_error_for_empty_field(
+def assert_validation_error_for_invalid_email(
+    actual: ValidationErrorResponseSchema,
+    input_value: str = "",
+) -> None:
+    err_params = {"err_context": ErrorContext.INVALID_EMAIL, "reason": "@-sign"}
+    expected = (
+        err_builder.with_input(input_value)
+        .with_error(**err_params)
+        .at_location("body", "email")
+        .build()
+    )
+    logger.info(f"Проверям ошибку валидации для отсутствующего значения в поле email")
+    assert_validation_error_response(actual=actual, expected=expected)
+
+
+def assert_validation_error_for_empty_id_field(
     actual: ValidationErrorResponseSchema,
     field_name: str,
 ) -> None:
-    if field_name == "course_id":
-        err_params = {"err_context": ErrorContext.INVALID_UUID_LENGTH, "length": 0}
+    err_params = {"err_context": ErrorContext.INVALID_UUID_LENGTH, "length": 0}
+    expected = (
+        err_builder.with_input("")
+        .with_error(**err_params)
+        .at_location("body", field_name)
+        .build()
+    )
+    logger.info(
+        f"Проверям ошибку валидации для отсутствующего значения в поле {field_name}"
+    )
+    assert_validation_error_response(actual=actual, expected=expected)
 
-    elif field_name == "email":
-        err_params = {"err_context": ErrorContext.INVALID_EMAIL, "reason": "@-sign"}
 
-    else:
-        err_params = {"err_context": ErrorContext.STRING_TOO_SHORT, "min_length": 1}
+def assert_validation_error_for_empty_string_field(
+    actual: ValidationErrorResponseSchema,
+    field_name: str,
+) -> None:
+    err_params = {"err_context": ErrorContext.STRING_TOO_SHORT, "min_length": 1}
 
     expected = (
         err_builder.with_input("")
@@ -133,13 +158,10 @@ def assert_validation_error_for_too_long_field(
     input_value: str,
     max_length: int,
 ) -> None:
-    if location == "email":
-        error_params = {"err_context": ErrorContext.INVALID_EMAIL, "reason": "@-sign"}
-    else:
-        error_params = {
-            "err_context": ErrorContext.STRING_TOO_LONG,
-            "max_length": max_length,
-        }
+    error_params = {
+        "err_context": ErrorContext.STRING_TOO_LONG,
+        "max_length": max_length,
+    }
 
     expected = (
         err_builder.with_input(input_value)

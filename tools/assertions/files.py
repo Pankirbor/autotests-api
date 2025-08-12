@@ -3,7 +3,6 @@ import allure
 from clients.errors_schema import (
     InternalErrorResponseSchema,
     ValidationErrorResponseSchema,
-    ValidationErrorSchema,
 )
 from clients.files.files_schema import (
     FileSchema,
@@ -15,14 +14,12 @@ from config import settings
 from tools.assertions.base import assert_equal, assert_status_code
 from tools.assertions.errors import (
     assert_internal_error_response,
-    assert_validation_error_response,
+    assert_validation_error_for_empty_string_field,
+    assert_validation_error_for_invalid_id,
 )
-from tools.assertions.api_error_constants import ErrorContext
-from tools.assertions.error_builder import ValidationErrorBuilder
 from tools.logger import get_logger
 
 
-err_builder = ValidationErrorBuilder()
 logger = get_logger("FILES_ASSERTIONS")
 
 
@@ -111,7 +108,7 @@ def assert_get_file_response(
 
 @allure.step("Проверяем ответ сервера на запрос создания файла с пустым полем")
 def assert_create_file_with_empty_field_response(
-    actual: ValidationErrorResponseSchema, field: str
+    actual: ValidationErrorResponseSchema, field_name: str
 ):
     """
     Проверяет, что при отправке пустого значения в поле, сервер возвращает ошибку.
@@ -121,14 +118,8 @@ def assert_create_file_with_empty_field_response(
         field (str): Имя поля, в котором должен быть пустой строковый параметр.
     """
 
-    expected = (
-        err_builder.with_input("")
-        .with_error(ErrorContext.STRING_TOO_SHORT, min_length=1)
-        .at_location("body", field)
-        .build()
-    )
     logger.info("Проверяем ответ сервера на запрос создания файла с пустым полем")
-    assert_validation_error_response(actual, expected)
+    assert_validation_error_for_empty_string_field(actual=actual, field_name=field_name)
 
 
 @allure.step("Проверяем ответ сервера на запрос несуществующего файла")
@@ -161,14 +152,8 @@ def assert_get_file_with_incorrect_file_id_response(
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
 
-    expected = (
-        err_builder.with_input("incorrect-file-id")
-        .with_error(ErrorContext.INVALID_UUID_CHAR, char="i", position=1)
-        .at_location("path", "file_id")
-        .build()
-    )
     logger.info("Проверяем ответ сервера на запрос файла с некорректным id")
-    assert_validation_error_response(actual, expected)
+    assert_validation_error_for_invalid_id(actual=actual, location=["path", "file_id"])
 
 
 @allure.step("Проверяем ответ сервера на запрос удаления файла с некорректным id")
@@ -185,11 +170,5 @@ def assert_delete_file_with_incorrect_file_id_response(
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
 
-    expected = (
-        err_builder.with_input("incorrect-id")
-        .with_error(ErrorContext.INVALID_UUID_CHAR, char="i", position=1)
-        .at_location("path", "file_id")
-        .build()
-    )
     logger.info("Проверяем ответ сервера на запрос удаления файла с некорректным id")
-    assert_validation_error_response(actual, expected)
+    assert_validation_error_for_invalid_id(actual=actual, location=["path", "file_id"])

@@ -12,15 +12,13 @@ from clients.users.users_schema import (
     UserSchema,
 )
 from tools.assertions.base import assert_equal
-from tools.assertions.api_error_constants import ErrorContext
 from tools.assertions.errors import (
     assert_internal_error_response,
-    assert_validation_error_for_empty_field,
+    assert_validation_error_for_empty_string_field,
+    assert_validation_error_for_invalid_email,
     assert_validation_error_for_invalid_id,
     assert_validation_error_for_too_long_field,
-    assert_validation_error_response,
 )
-from tools.assertions.error_builder import ValidationErrorBuilder
 from tools.logger import get_logger
 
 logger = get_logger("USERS_ASSERTIONS")
@@ -126,26 +124,17 @@ def assert_create_or_update_user_with_empty_required_field_response(
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
-    # if field_name == "email":
-    #     error_params = {"err_context": ErrorContext.INVALID_EMAIL, "reason": "@-sign"}
-    # else:
-    #     error_params = {"err_context": ErrorContext.STRING_TOO_SHORT, "min_length": 1}
-
-    # expected = (
-    #     err_builder.with_input("")
-    #     .with_error(**error_params)
-    #     .at_location("body", FIELD_NAME_MAPPING.get(field_name))
-    #     .build()
-    # )
     logger.info(
         f"Проверям ответ сервера после запроса на создание "
         f"или обновление пользователя с пустым обязательным параметром."
     )
-    assert_validation_error_for_empty_field(
-        actual=actual,
-        field_name=FIELD_NAME_MAPPING.get(field_name),
-    )
-    # assert_validation_error_response(actual, expected)
+    if field_name == "email":
+        assert_validation_error_for_invalid_email(actual=actual)
+    else:
+        assert_validation_error_for_empty_string_field(
+            actual=actual,
+            field_name=FIELD_NAME_MAPPING.get(field_name),
+        )
 
 
 @allure.step(
@@ -154,7 +143,7 @@ def assert_create_or_update_user_with_empty_required_field_response(
 )
 def assert_create_or_update_user_with_too_long_field_response(
     actual: ValidationErrorResponseSchema,
-    input_val: str,
+    input_value: str,
     field_name: str,
 ) -> None:
     """
@@ -163,37 +152,28 @@ def assert_create_or_update_user_with_too_long_field_response(
 
     Args:
         actual (ValidationErrorResponseSchema): Ответ сервера после запроса.
-        input_val (str): Значение, которое должно быть отправлено в поле.
+        input_value (str): Значение, которое должно быть отправлено в поле.
         field_name (str): Имя поля, в котором должен быть слишком длинный строковый параметр.
 
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
-    # if field_name == "email":
-    #     error_params = {"err_context": ErrorContext.INVALID_EMAIL, "reason": "@-sign"}
-    # else:
-    #     error_params = {
-    #         "err_context": ErrorContext.STRING_TOO_LONG,
-    #         "max_length": MAX_LENGTH_FIELDS.get(field_name),
-    #     }
-
-    # expected = (
-    #     err_builder.with_input(input_val)
-    #     .with_error(**error_params)
-    #     .at_location("body", FIELD_NAME_MAPPING.get(field_name))
-    #     .build()
-    # )
     logger.info(
         f"Проверям ответ сервера после запроса на создание "
         f"или обновление пользователя со значением, превышающим максимальную длину поля."
     )
-    assert_validation_error_for_too_long_field(
-        actual=actual,
-        input_value=input_val,
-        location=FIELD_NAME_MAPPING.get(field_name),
-        max_length=MAX_LENGTH_FIELDS.get(field_name),
-    )
-    # assert_validation_error_response(actual, expected)
+    if field_name == "email":
+        assert_validation_error_for_invalid_email(
+            actual=actual, input_value=input_value
+        )
+
+    else:
+        assert_validation_error_for_too_long_field(
+            actual=actual,
+            input_value=input_value,
+            location=FIELD_NAME_MAPPING.get(field_name),
+            max_length=MAX_LENGTH_FIELDS.get(field_name),
+        )
 
 
 @allure.step(

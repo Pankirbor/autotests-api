@@ -172,7 +172,7 @@ class TestFiles:
         Raises:
             AssertionError: Если данные в ответе не совпадают с ожидаемыми.
         """
-        response = files_client.get_file_api("incorrect-file-id")
+        response = files_client.get_file_api("incorrect-id")
         response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
 
         assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)

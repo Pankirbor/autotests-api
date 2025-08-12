@@ -181,7 +181,7 @@ class TestExercises:
     ):
         """Тест создания упражнения с некоррктным course_id."""
 
-        request = CreateExerciseRequestSchema(course_id="incorrect_course_id")
+        request = CreateExerciseRequestSchema(course_id="incorrect-id")
         response = exercises_client.create_exercise_api(request)
         response_data = ValidationErrorResponseSchema.model_validate_json(response.text)
 

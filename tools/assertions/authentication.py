@@ -8,7 +8,7 @@ from clients.errors_schema import (
 from tools.assertions.base import assert_equal, assert_is_true
 from tools.assertions.errors import (
     assert_internal_error_response,
-    assert_validation_error_for_empty_field,
+    assert_validation_error_for_invalid_email,
 )
 from tools.logger import get_logger
 
@@ -37,6 +37,15 @@ def assert_login_response(response: LoginResponseSchema) -> None:
 def assert_refresh_token_with_incorrect_token_response(
     actual: InternalErrorResponseSchema,
 ) -> None:
+    """
+    Проверяет ответ сервера после обновления токена с невалидным токеном.
+
+    Args:
+        actual (InternalErrorResponseSchema): Ответ сервера после запроса.
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
     logger.info("Проверяем ответ сервера после обновления токена с невалидным токеном")
     expected = InternalErrorResponseSchema(details="Invalid or expired refresh token")
     assert_internal_error_response(actual=actual, expected=expected)
@@ -46,5 +55,14 @@ def assert_refresh_token_with_incorrect_token_response(
 def assert_login_with_incorrect_email_response(
     actual: ValidationErrorResponseSchema,
 ) -> None:
+    """
+    Проверяет ответ сервера на запрос аутентификации с некорректным email.
+
+    Args:
+        actual (ValidationErrorResponseSchema): Ответ сервера после запроса.
+
+    Raises:
+        AssertionError: Если данные в ответе не совпадают с ожидаемыми.
+    """
     logger.info("Проверяем ответ сервера на запрос аутентификации с некорректным email")
-    assert_validation_error_for_empty_field(actual=actual, field_name="email")
+    assert_validation_error_for_invalid_email(actual=actual)

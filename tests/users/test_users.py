@@ -410,7 +410,7 @@ class TestUsers:
 
         assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
         assert_create_or_update_user_with_too_long_field_response(
-            actual=response_data, field_name=field_name, input_val=too_long_string
+            actual=response_data, field_name=field_name, input_value=too_long_string
         )
 
         validate_json_schema(response.json(), response_data.model_json_schema())
@@ -457,7 +457,7 @@ class TestUsers:
 
         assert_status_code(response.status_code, HTTPStatus.UNPROCESSABLE_ENTITY)
         assert_create_or_update_user_with_too_long_field_response(
-            actual=response_data, field_name=field_name, input_val=too_long_string
+            actual=response_data, field_name=field_name, input_value=too_long_string
         )
 
         validate_json_schema(response.json(), response_data.model_json_schema())

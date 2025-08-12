@@ -19,7 +19,10 @@ from tools.assertions.api_error_constants import ErrorContext
 from tools.assertions.error_builder import ValidationErrorBuilder
 from tools.assertions.errors import (
     assert_internal_error_response,
+    assert_validation_error_for_empty_id_field,
+    assert_validation_error_for_empty_string_field,
     assert_validation_error_for_invalid_id,
+    assert_validation_error_for_too_long_field,
     assert_validation_error_response,
 )
 from tools.logger import get_logger
@@ -180,16 +183,11 @@ def assert_create_exercise_with_invalid_course_id_response(
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
-    expected = (
-        err_builder.with_input("incorrect_course_id")
-        .with_error(ErrorContext.INVALID_UUID_CHAR, char="i", position=1)
-        .at_location("body", "courseId")
-        .build()
-    )
+
     logger.info(
         "Проверяем ответ сервера на запрос создания упражнения с некорректным id курса"
     )
-    assert_validation_error_response(actual=actual, expected=expected)
+    assert_validation_error_for_invalid_id(actual=actual, location=["body", "courseId"])
 
 
 @allure.step(
@@ -210,28 +208,25 @@ def assert_create_or_update_exercise_with_empty_required_string_field_response(
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
 
-    if field_name == "course_id":
-        err_params = {"err_context": ErrorContext.INVALID_UUID_LENGTH, "length": 0}
-    else:
-        err_params = {"err_context": ErrorContext.STRING_TOO_SHORT, "min_length": 1}
-
-    expected = (
-        err_builder.with_input("")
-        .with_error(**err_params)
-        .at_location("body", FIELD_NAME_MAPPING.get(field_name))
-        .build()
-    )
     logger.info(
         "Проверям ответ сервера после запроса на создание или обновление упражнения с пустым обязательным параметром"
     )
-    assert_validation_error_response(actual=actual, expected=expected)
+    if field_name == "course_id":
+        assert_validation_error_for_empty_id_field(
+            actual=actual, field_name=FIELD_NAME_MAPPING.get(field_name)
+        )
+
+    else:
+        assert_validation_error_for_empty_string_field(
+            actual=actual, field_name=FIELD_NAME_MAPPING.get(field_name)
+        )
 
 
 @allure.step(
     "Проверям ответ сервера после запроса на создание или обновление упражнения с слишком длинным строковым параметром"
 )
 def assert_create_or_update_exercise_with_too_long_string_field_response(
-    actual: ValidationErrorResponseSchema, field_name: str, input_val: str
+    actual: ValidationErrorResponseSchema, field_name: str, input_value: str
 ):
     """
     Проверяет, что при отправке слишком длинного значения в поле с строковым параметром,
@@ -240,25 +235,21 @@ def assert_create_or_update_exercise_with_too_long_string_field_response(
     Args:
         actual (ValidationErrorResponseSchema): Ответ сервера после запроса упражнения.
         field_name (str): Имя поля, в котором должен быть слишком длинный строковый параметр.
-        input_val (str): Значение, которое должно быть отправлено в поле.
+        input_value (str): Значение, которое должно быть отправлено в поле.
 
     Raises:
         AssertionError: Если данные в ответе не совпадают с ожидаемыми.
     """
 
-    expected = (
-        err_builder.with_input(input_val)
-        .with_error(
-            ErrorContext.STRING_TOO_LONG, max_length=MAX_LENGTH_FIELDS.get(field_name)
-        )
-        .at_location("body", FIELD_NAME_MAPPING.get(field_name))
-        .build()
-    )
-
     logger.info(
         "Проверям ответ сервера после запроса на создание или обновление упражнения с слишком длинным строковым параметром"
     )
-    assert_validation_error_response(actual=actual, expected=expected)
+    assert_validation_error_for_too_long_field(
+        actual=actual,
+        input_value=input_value,
+        location=FIELD_NAME_MAPPING.get(field_name),
+        max_length=MAX_LENGTH_FIELDS.get(field_name),
+    )
 
 
 @allure.step(
